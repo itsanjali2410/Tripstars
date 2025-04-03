@@ -1,67 +1,59 @@
 import React from "react";
-import { CheckCircle, MapPin, Camera, Calendar, Star } from "lucide-react";
+import styled from "styled-components";
+import { MapPin, Calendar } from "lucide-react";
 
+// Styled Components
+const CardWrapper = styled.div`
+  border: 1px solid #000; /* Thicker, visible border */
+  border-radius: 12px; /* Smooth rounded edges */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  width: 100%;
+  max-width: 400px; /* Compact size */
+  margin: 0 auto 20px auto;
+  font-family: Arial, sans-serif;
+`;
+
+const InfoRow = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+
+  svg {
+    margin-right: 10px;
+    color: #e63946; /* Icon color */
+  }
+
+  span {
+    font-weight: 500;
+  }
+`;
+
+// Props Interface
 interface TourDetails {
   nights: number;
   days: number;
   theme: string;
   destinationCovered: string;
   totalPackagePrice: string;
-  highlights: string[]; // ✅ Ensure highlights is an array of strings
 }
 
-const TourCard: React.FC<TourDetails> = ({
-  nights,
-  days,
-  theme,
-  destinationCovered,
-  totalPackagePrice,
-  highlights,
-}) => {
+// Functional Component
+const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered }) => {
   return (
-    <div className="tour-card bg-white">
-      <div className="tour-info">
-        {/* <div className="flex items-center mb-2">
-          <MapPin className="mr-2 text-gray-600" />
-          <span className="text-lg font-semibold">{theme}</span>
-        </div> */}
-        <div className="flex items-center mb-2">
-          <CheckCircle className="mr-2 text-green-600" />
-          <span className="text-sm">{destinationCovered}</span>
-        </div>
-        <div className="flex items-center mb-2">
-          <Calendar className="mr-2 text-yellow-500" />
-          <span className="text-lg">
-            {days} Days, {nights} Nights
-          </span>
-        </div>
-
-        {/* Highlights Section */}
-        <div className="mb-4">
-          <h5 className="text-lg mb-2 font-semibold">Highlights</h5>
-          <div className="flex flex-wrap gap-2">
-            {highlights && highlights.length > 0 ? (
-              highlights.map((highlight, index) => (
-                <span
-                  key={index}
-                  className="text-sm text-gray-700 bg-gray-100 p-2 rounded-md"
-                >
-                  {highlight}
-                </span>
-              ))
-            ) : (
-              <p className="text-sm text-gray-500">No highlights available</p>
-            )}
-          </div>
-        </div>
-        {/* Total Package Price */}
-        {/* <div className="flex items-center mt-4">
-          <span className="text-xl font-bold text-gray-700">
-            Total Price: {totalPackagePrice}
-          </span>
-        </div> */}
-      </div>
-    </div>
+    <CardWrapper>
+      <InfoRow>
+        <Calendar size={22} />
+        <span>{nights} Nights & {days} Days</span>
+      </InfoRow>
+      <InfoRow>
+        <MapPin size={22} />
+        <span>{destinationCovered}</span>
+      </InfoRow>
+    </CardWrapper>
   );
 };
 

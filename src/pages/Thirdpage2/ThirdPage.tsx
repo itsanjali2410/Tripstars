@@ -11,7 +11,10 @@ import Itinerary from "./sections/Itinerary";
 import TabbedTable from "./sections/TabbedTable";
 import PackageOverview from "./sections/PackageOverview";
 import Tourdetails from "./sections/Tourdetails";
-import TravelInclude from "./sections/TravelInclude"
+import TravelInclude from "./sections/TravelInclude";
+import FloatingContactButton from "../Home/sections/Floating";
+import WhyTripstarsholidays from "./sections/WhyTripstarsholidays";
+import { similar, similar2 } from "../../components/data";
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -124,13 +127,17 @@ export default function ThirdPage() {
   return (
     <Container>
       <LeftSection>
-        <h1><PackageName>{packageData.packageName}</PackageName></h1>
+        <h1>
+          <PackageName>{packageData.packageName}</PackageName>
+        </h1>
+
         <img
           src={packageData.packageImage}
           alt={packageData.packageName}
           style={{ width: "100%", borderRadius: "10px", height: "400px", objectFit: "cover" }}
         />
 
+        {/* Package Overview */}
         {packageData.overviewData && (
           <PackageOverview
             title={packageData.overviewData.title}
@@ -138,30 +145,47 @@ export default function ThirdPage() {
           />
         )}
 
+        {/* Tour Details */}
         {packageData && (
-         <Tourdetails
-         nights={packageData.nights}
-         days={packageData.days}
-         highlights={Array.isArray(packageData.highlights) ? packageData.highlights : [packageData.highlights]} // ✅ Ensure array
-         destinationCovered={packageData.destinationCovered}
-         totalPackagePrice={packageData.totalPackagePrice}
-         theme={packageData.theme}
-       />
-       
+          <Tourdetails
+            nights={packageData.nights}
+            days={packageData.days}
+            destinationCovered={packageData.destinationCovered}
+            totalPackagePrice={packageData.totalPackagePrice}
+            theme={packageData.theme}
+          />
         )}
 
-        {packageData.includes && <TravelInclude includes={packageData.includes} />}
+        {/* Tour Includes & Highlights */}
+        {packageData.includes && packageData.highlights && (
+          <TravelInclude
+            includes={packageData.includes}
+            highlights={Array.isArray(packageData.highlights) ? packageData.highlights : [packageData.highlights]}
+          />
+        )}
 
-
+        {/* Price Per Adult */}
         {packageData.pricePerAdult && (
           <p><strong>Price Per Adult:</strong> {packageData.pricePerAdult}</p>
         )}
 
+        {/* Itinerary Section */}
         {packageData.itinerary && <Itinerary itinerary={packageData.itinerary} />}
+
+        {/* Tabbed Table Data */}
         {packageData.tableData && <TabbedTable tableData={packageData.tableData} />}
-        <InclusionsExclusions inclusions={packageData.inclusions} exclusions={packageData.exclusions} />
+
+        {/* Inclusions & Exclusions */}
+        <InclusionsExclusions
+          inclusions={packageData.inclusions}
+          exclusions={packageData.exclusions}
+        />
+
+        {/* Additional Sections */}
+        {/* <WhyTripstarsholidays /> */}
         <TermsAndConditions />
       </LeftSection>
+
 
       <RightSection>
         <PriceCard
@@ -180,6 +204,7 @@ export default function ThirdPage() {
 
         <HelpCard />
       </RightSection>
+      <FloatingContactButton />
     </Container>
   );
 }

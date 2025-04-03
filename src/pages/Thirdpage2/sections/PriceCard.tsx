@@ -5,7 +5,9 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(135deg, #f5f7fa,rgb(230, 202, 133));
+  background: linear-gradient(135deg,rgb(226, 224, 224), #7a7a7a);
+
+
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   width: 100%;
@@ -79,7 +81,7 @@ const EMIContainer = styled.div`
   }
 
   a {
-    color: #B38201;
+    color: #d5a527;
     margin-left: 5px;
     font-weight: 500;
     text-decoration: none;
@@ -116,9 +118,11 @@ const SubmitButton = styled.button`
                 #F4E628 24%,
                 #CD9C01 65%,
                 #B38201 100%);
-  color: #000;
+  color: #333333;
   font-size: 16px;
   font-weight: bold;
+  font-weight: bold; /* To enhance readability */
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Optional, for better contrast */
   padding: 12px 25px;
   border: none;
   border-radius: 8px;
@@ -141,7 +145,7 @@ const SubmitButton = styled.button`
   @media (max-width: 480px) {
     font-size: 14px;
     padding: 10px 20px;
-    width: 100%;
+    width: 57%;
   }
 `;
 

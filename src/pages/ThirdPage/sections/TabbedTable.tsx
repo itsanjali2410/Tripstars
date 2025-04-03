@@ -20,7 +20,7 @@ const Tab = styled.div<{ active: boolean }>`
   cursor: pointer;
   border: 1px solid #d1d9e0;
   background-color: ${(props) => (props.active ? "#ffffff" : "#f9fafc")};
-  color: ${(props) => (props.active ? "#f39c12" : "#333")};
+  color: ${(props) => (props.active ? "#d4ab0d" : "#333")};
   font-weight: ${(props) => (props.active ? "bold" : "500")};
   box-shadow: ${(props) => (props.active ? "0 4px 10px rgba(0, 0, 0, 0.1)" : "none")};
   transition: all 0.3s ease;

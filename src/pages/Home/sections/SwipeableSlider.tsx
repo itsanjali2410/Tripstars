@@ -13,11 +13,11 @@ const SliderContainer = styled.div`
   margin-top:5rem;
   position: relative;
   overflow: hidden;
-  width: 70%;
+  width: 80%;
   max-width: 2000px;
   margin: 20px auto;
   @media (max-width: 2500px) {
-    width: 70%;
+    width: 75%;
     
   }
 
@@ -59,7 +59,7 @@ const Slide = styled.div<{ background: string }>`
   margin: 30px auto;
   cursor: pointer; /* Add pointer cursor to indicate clickability */
   @media (max-width: 2500px) {
-    height: 400px;
+    height: 450px;
   }
 
   @media (max-width: 1024px) {

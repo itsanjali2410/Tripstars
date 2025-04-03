@@ -15,7 +15,7 @@ const Container = styled.div`
   }
 `;
 
-const SectionWrapper = styled.div`
+const SectionWrapper = styled.div`  
   margin-bottom: 15px;
 
   &:last-child {
@@ -28,7 +28,7 @@ const SectionHeader = styled.div<{ isOpen: boolean }>`
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  background: linear-gradient(90deg, #e3f2fd, rgb(230, 202, 133));
+  background: linear-gradient(90deg,rgb(253, 253, 253), rgb(160, 157, 152));
   border-radius: 8px;
   cursor: pointer;
 
@@ -46,7 +46,7 @@ const SectionHeader = styled.div<{ isOpen: boolean }>`
   span {
     font-size: 18px;
     font-weight: bold;
-    color: #007bff;
+    color:rgb(0, 0, 0);
     transform: ${(props) => (props.isOpen ? "rotate(180deg)" : "rotate(0)")};
     transition: transform 0.2s ease-in-out;
 

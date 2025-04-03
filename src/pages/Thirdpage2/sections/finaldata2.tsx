@@ -1,6 +1,6 @@
 import { ElementType, ReactElement } from "react";
 import { Vietnam } from "../../../components/data";
-import { Plane, Hotel, Utensils, Landmark, Bus } from "lucide-react";
+import { Plane, Hotel, Utensils, Landmark, Bus, User } from "lucide-react";
 interface PackageData {
   packageId: string;
   packageName: string;
@@ -61,20 +61,23 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       days: 7,
       theme: "Mumbai",
       destinationCovered: "Bali -- Kuta -- Ubud -- Nusa Penida",
-      "highlights": [
-        "Private Transport",
-        "English speaking guide",
-        "Nusa Penida Island Tour"
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "All meals included in tour price",
+        "Music, fun, and games every day",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
       ],
       totalPackagePrice: "INR 64,499",
 
-    includes : [
+      includes: [
         { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
-        { name: "Meal", icon: Utensils },
         { name: "Sightseeing", icon: Landmark },
-        { name: "Transfer", icon: Bus },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
       ],
-      
+
 
       packageImage:
         "https://www.travelwithcg.com/wp-content/uploads/2023/09/Kelingking-Beach-Nusa-Penida.jpg",
