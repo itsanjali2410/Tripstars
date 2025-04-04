@@ -106,7 +106,7 @@ export default function Tripdetailspage() {
       {trendingOffers && <TrendingOffers title={`Trending Offers in ${location}`} cards={trendingOffers} />}
 
       {/* Video Testimonials */}
-      <VideoTestimonials />
+      {/* <VideoTestimonials /> */}
       <VideoThumbnail />
 
       {/* Why Tripstars Section */}

@@ -41,7 +41,7 @@ export default function HomePage() {
 
       <TrendingOffersHome2 title="Trending Offers" cards={similar2} />
       <ExploreDestinations />
-      <VideoTestimonials/>
+      {/* <VideoTestimonials/> */}
       <VideoThumbnail />
       <WhyTripstars />
       {/* <ExploreEurope /> */}
