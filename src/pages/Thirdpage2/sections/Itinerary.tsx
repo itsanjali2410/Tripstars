@@ -26,7 +26,7 @@ const StyledAccordionSummary = styled(AccordionSummary)`
 `;
 
 const StyledAccordionDetails = styled(AccordionDetails)`
-  background-color: #c99603;
+  background-color: #fff;
   padding: 16px;
   & ul {
     margin: 0;
