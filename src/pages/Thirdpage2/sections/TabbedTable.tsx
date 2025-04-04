@@ -8,7 +8,7 @@ const ContentContainer = styled.div`
   align-items: flex-start;
   margin-top: 40px;
   width: 100%;
-  max-width: 1200px; // match overview wrapper
+  max-width: 1200px; 
 `;
 
 
