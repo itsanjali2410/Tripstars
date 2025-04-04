@@ -26,7 +26,7 @@ const StyledAccordionSummary = styled(AccordionSummary)`
 `;
 
 const StyledAccordionDetails = styled(AccordionDetails)`
-  background-color: #fff;
+  background-color: #c99603;
   padding: 16px;
   & ul {
     margin: 0;
@@ -38,6 +38,16 @@ const StyledAccordionDetails = styled(AccordionDetails)`
     list-style: none;
   }
 `;
+const SectionTitle = styled.h5`
+  font-size: 20px;
+  font-weight: 600;
+  color: #c99603;
+  margin: 20px 0;
+  padding: 15px 15px;
+  border-bottom: 2px solid #c99603;
+  background-color: #fff8e1;
+  border-radius: 8px;
+`;
 
 // Props Interface
 interface ItineraryProps {
@@ -48,7 +58,8 @@ interface ItineraryProps {
 const Itinerary: React.FC<ItineraryProps> = ({ itinerary }) => {
   return (
     <Container>
-      <h5>Day-wise Itinerary</h5>
+      <SectionTitle>Day-wise Itinerary</SectionTitle>
+
       {itinerary.map((dayData, index) => {
         const dayKey = Object.keys(dayData)[0]; // Extract Day number
         const activities = dayData[dayKey]; // Extract activities
