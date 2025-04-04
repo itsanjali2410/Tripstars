@@ -6,10 +6,9 @@ import { FaCheckCircle, FaTimesCircle, FaCheck, FaTimes } from "react-icons/fa";
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding: 20px;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+
 `;
 
 const OverviewWrapper = styled.div`
@@ -38,18 +37,20 @@ const Box = styled.div<{ borderColor: string; bgColor: string; $hiddenOnMobile?:
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-left: 5px solid ${(props) => props.borderColor};
+  /* Removed the border-left */
   width: 100%;
+
+  @media (max-width: 767px) {
+    background-color: transparent;
+    box-shadow: none;
+    display: ${(props) => (props.$hiddenOnMobile ? "none" : "block")};
+  }
 
   @media (min-width: 768px) {
     flex: 1;
-    display: block !important;
-  }
-
-  @media (max-width: 767px) {
-    display: ${(props) => (props.$hiddenOnMobile ? "none" : "block")};
   }
 `;
+
 
 const Title = styled.h3`
   margin: 0 0 15px;
@@ -145,8 +146,9 @@ const InclusionsExclusions: React.FC<InclusionsExclusionsProps> = ({ inclusions,
           </Tab>
         </Tabs>
         <Wrapper>
-          {[{ title: "Inclusions", items: inclusions, borderColor: "#28a745", bgColor: "#f0f9f0", icon: <FaCheckCircle />, iconColor: "#28a745", $hiddenOnMobile: activeTab !== "inclusions" },
-            { title: "Exclusions", items: exclusions, borderColor: "#dc3545", bgColor: "#fdf0f0", icon: <FaTimesCircle />, iconColor: "#dc3545", $hiddenOnMobile: activeTab !== "exclusions" }
+          {[
+            { title: "Inclusions", items: inclusions, borderColor: "#", bgColor: "#fff8e1", icon: <FaCheckCircle />, iconColor: "#000", $hiddenOnMobile: activeTab !== "inclusions" },
+            { title: "Exclusions", items: exclusions, borderColor: "#", bgColor: "#fff8e1", icon: <FaTimesCircle />, iconColor: "#000", $hiddenOnMobile: activeTab !== "exclusions" }
           ].map(({ title, items, borderColor, bgColor, icon, iconColor, $hiddenOnMobile }, index) => (
             <Box key={index} borderColor={borderColor} bgColor={bgColor} $hiddenOnMobile={$hiddenOnMobile}>
               <Title>

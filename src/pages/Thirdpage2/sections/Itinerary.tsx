@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styled from "styled-components";
@@ -6,11 +6,12 @@ import styled from "styled-components";
 // Styled Components
 const Container = styled.div`
   width: 100%;
-
 `;
 
 const StyledAccordion = styled(Accordion)`
-  margin: 10px 0;
+  margin: 8px 0;
+  box-shadow: none;
+  border: 1px solid #ddd;
   &:hover {
     background-color: #f9f9f9;
   }
@@ -18,16 +19,17 @@ const StyledAccordion = styled(Accordion)`
 
 const StyledAccordionSummary = styled(AccordionSummary)`
   font-weight: bold;
-  border-bottom: 1px solid #ddd;
   padding: 12px 16px;
-  & .{
+  background-color: #f5f5f5;
+  & .MuiTypography-root {
     font-size: 1rem;
+    color: #000;
   }
 `;
 
 const StyledAccordionDetails = styled(AccordionDetails)`
   background-color: #fff;
-  padding: 16px;
+  padding: 12px;
   & ul {
     margin: 0;
     padding-left: 20px;
@@ -38,6 +40,7 @@ const StyledAccordionDetails = styled(AccordionDetails)`
     list-style: none;
   }
 `;
+
 const SectionTitle = styled.h5`
   font-size: 20px;
   font-weight: 600;
@@ -51,35 +54,40 @@ const SectionTitle = styled.h5`
 
 // Props Interface
 interface ItineraryProps {
-  itinerary: { [day: string]: string[] }[];
+  itinerary: { day: string; activities: string[] }[];
 }
 
 // Itinerary Component
 const Itinerary: React.FC<ItineraryProps> = ({ itinerary }) => {
+  const [expanded, setExpanded] = useState<string | false>(false); // No section open initially
+
+  const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
+    setExpanded(isExpanded ? panel : false); // Toggle accordion open/close
+  };
+
   return (
     <Container>
       <SectionTitle>Day-wise Itinerary</SectionTitle>
 
-      {itinerary.map((dayData, index) => {
-        const dayKey = Object.keys(dayData)[0]; // Extract Day number
-        const activities = dayData[dayKey]; // Extract activities
+      {itinerary.map((item, index) => (
+        <StyledAccordion
+          key={index}
+          expanded={expanded === item.day}
+          onChange={handleChange(item.day)}
+        >
+          <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>{item.day}</Typography>
+          </StyledAccordionSummary>
 
-        return (
-          <StyledAccordion key={index}>
-            <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <h6>{dayKey}</h6>
-            </StyledAccordionSummary>
-
-            <StyledAccordionDetails>
-
-                {activities.map((activity, i) => (
-                  <li key={i}>{activity}</li>
-                ))}
-
-            </StyledAccordionDetails>
-          </StyledAccordion>
-        );
-      })}
+          <StyledAccordionDetails>
+            <ul>
+              {item.activities.map((activity, i) => (
+                <li key={i}>{activity}</li>
+              ))}
+            </ul>
+          </StyledAccordionDetails>
+        </StyledAccordion>
+      ))}
     </Container>
   );
 };

@@ -55,6 +55,13 @@ const PopupContent = styled.div`
     flex-direction: column;
     max-height: 90vh;
   }
+  @media (max-width: 400px) {
+  width: 95%;
+  flex-direction: column;
+  max-height: 90vh;
+  margin: 0 10px;
+}
+
 `;
 
 const LeftPanel = styled.div`
@@ -217,39 +224,49 @@ const CloseButton = styled.div`
 
 const PaxCounterWrapper = styled.div`
   display: flex;
-  gap: 20px; /* Space between "Number of Pax" and "Number of Children" */
-  align-items: center; /* Align items vertically centered */
-  justify-content: flex-start; /* Ensure they are aligned to the left */
-  flex-wrap: wrap; /* Allow wrapping in case of small screens */
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding-bottom: 10px;
+
+  @media (max-width: 344px) {
+    gap: 1px;
+    justify-content: flex-start;
+    flax-wrap : nowrap;
+  }
 `;
 
+
 const PaxCounter = styled.div`
+  min-width: 140px;
+  flex-shrink: 0;
   display: flex;
-  flex-direction: column; /* Arrange label vertically on top */
-  align-items: center; /* Align label, count, and buttons at the center */
-  gap: 5px; /* Space between label and count + buttons */
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 
   label {
-    font-size: 14px;
-
+    font-size: 13px;
+    text-align: center;
   }
 
   .counter-row {
-    display: flex; /* Make the count and buttons appear in a row */
-    gap: 10px; /* Space between the count and the buttons */
+    display: flex;
+    gap: 8px;
     align-items: center;
   }
 
   span {
     font-size: 16px;
+    min-width: 20px;
+    text-align: center;
   }
 
   button {
     padding: 5px 10px;
     background: #000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    color: #fff;
     font-size: 14px;
 
     &:hover {
@@ -262,6 +279,7 @@ const PaxCounter = styled.div`
     }
   }
 `;
+
 interface PopupProps {
   title?: string;
   image?: string;

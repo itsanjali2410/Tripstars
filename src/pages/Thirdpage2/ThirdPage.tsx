@@ -145,9 +145,9 @@ export default function ThirdPage() {
           <PackageName>{packageData.packageName}</PackageName>
         </h1>
         <PackageImage
-      src={packageData.packageImage}
-      alt={packageData.packageName}
-    />
+          src={packageData.packageImage}
+          alt={packageData.packageName}
+        />
 
 
         {/* Package Overview */}
@@ -163,7 +163,7 @@ export default function ThirdPage() {
           <TourCard
             nights={packageData.nights}
             days={packageData.days}
-            destinationCovered={packageData.destinationCovered} theme={""} totalPackagePrice={""}          />
+            destinationCovered={packageData.destinationCovered} theme={""} totalPackagePrice={""} />
         )}
 
         {/* Tour Includes & Highlights */}
@@ -178,9 +178,16 @@ export default function ThirdPage() {
         {packageData.pricePerAdult && (
           <p><strong>Price Per Adult:</strong> {packageData.pricePerAdult}</p>
         )}
-
         {/* Itinerary Section */}
-        {packageData.itinerary && <Itinerary itinerary={packageData.itinerary} />}
+        {packageData.itinerary && (
+          <Itinerary
+            itinerary={packageData.itinerary.map((item) => {
+              const dayKey = Object.keys(item)[0]; // Extract "Day 1", "Day 2", etc.
+              return { day: dayKey, activities: item[dayKey] }; // Convert to expected format
+            })}
+          />
+        )}
+
 
         {/* Tabbed Table Data */}
         {packageData.tableData && <TabbedTable tableData={packageData.tableData} />}
@@ -193,10 +200,8 @@ export default function ThirdPage() {
 
         {/* Additional Sections */}
         {/* <WhyTripstarsholidays /> */}
-        
+
       </LeftSection>
-
-
       <RightSection>
         <PriceCard
           totalPackagePrice={totalPackagePrice}
