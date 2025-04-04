@@ -184,7 +184,7 @@ export default function ThirdPage() {
 
         {/* Tabbed Table Data */}
         {packageData.tableData && <TabbedTable tableData={packageData.tableData} />}
-
+        <TermsAndConditions />
         {/* Inclusions & Exclusions */}
         <InclusionsExclusions
           inclusions={packageData.inclusions}
@@ -193,7 +193,7 @@ export default function ThirdPage() {
 
         {/* Additional Sections */}
         {/* <WhyTripstarsholidays /> */}
-        <TermsAndConditions />
+        
       </LeftSection>
 
 

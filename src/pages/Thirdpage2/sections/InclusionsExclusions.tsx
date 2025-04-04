@@ -9,6 +9,7 @@ const Container = styled.div`
   padding: 20px;
   flex-direction: column;
   align-items: center;
+  margin-top: 40px;
 `;
 
 const OverviewWrapper = styled.div`

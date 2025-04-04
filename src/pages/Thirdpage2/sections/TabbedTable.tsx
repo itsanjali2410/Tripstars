@@ -4,11 +4,13 @@ import { Star } from "lucide-react";
 
 const ContentContainer = styled.div`
   display: flex;
-  justify-content: center;
-  padding: 20px;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1200px; // match overview wrapper
 `;
+
 
 const OverviewWrapper = styled.div`
   margin-top: 20px;
@@ -26,10 +28,7 @@ const Card = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   border-left: 6px solid #f4c430;
-  max-width: 1200px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
 const Section = styled.div`
