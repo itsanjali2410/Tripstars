@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Popup from "../../../components/common/Popup";// ✅ Make sure the path is correct
 
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background:#000;
+  background: #000;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   width: 100%;
@@ -28,7 +29,7 @@ const CardContainer = styled.div`
 
 const Heading = styled.div`
   font-size: 18px;
-  color:rgb(255, 247, 247);
+  color: rgb(255, 247, 247);
   margin-bottom: 10px;
   font-weight: 600;
 
@@ -48,7 +49,7 @@ const PriceText = styled.div`
   line-height: 1.2;
 
   span {
-    font-size: 16px; /* Slightly larger */
+    font-size: 16px;
     color: #fff;
     font-weight: 500;
     margin-top: 4px;
@@ -58,7 +59,7 @@ const PriceText = styled.div`
     font-size: 32px;
 
     span {
-      font-size: 14px; /* Adjusted for mobile */
+      font-size: 14px;
     }
   }
 `;
@@ -111,16 +112,17 @@ const NightsText = styled.div`
 `;
 
 const SubmitButton = styled.button`
-  background: linear-gradient(to right,
-                #C99603 0%,
-                #F4E628 24%,
-                #CD9C01 65%,
-                #B38201 100%);
+  background: linear-gradient(
+    to right,
+    #c99603 0%,
+    #f4e628 24%,
+    #cd9c01 65%,
+    #b38201 100%
+  );
   color: #333333;
   font-size: 16px;
   font-weight: bold;
-  font-weight: bold; /* To enhance readability */
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Optional, for better contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   padding: 12px 25px;
   border: none;
   border-radius: 8px;
@@ -128,11 +130,6 @@ text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Optional, for better contrast */
   transition: all 0.3s ease;
 
   &:hover {
-    background: linear-gradient(to right,
-                #C99603 0%,
-                #F4E628 24%,
-                #CD9C01 65%,
-                #B38201 100%);
     transform: scale(1.05);
   }
 
@@ -148,47 +145,67 @@ text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Optional, for better contrast */
 `;
 
 interface PriceCardProps {
-    totalPackagePrice: number;
-    pricePerAdult?: number; // ✅ Make pricePerAdult optional
-    nights: number;
-    emiPrice: number;
-    emiLink: string;
-  }
-  
-  const PriceCard: React.FC<PriceCardProps> = ({ totalPackagePrice, pricePerAdult, nights, emiPrice, emiLink }) => {
-    return (
-      <CardContainer>
-        <Heading>Starting from</Heading>
-        
-        {/* Total Package Price */}
-        <PriceText>
-          ₹{totalPackagePrice.toLocaleString()}
-          <span>Per Package</span>
-        </PriceText>
-  
-        {/* Only show price per adult if it exists */}
-        {pricePerAdult !== undefined && (
-          <PriceText>
-            ₹{pricePerAdult.toLocaleString()}
-            <span>Per Person</span>
-          </PriceText>
-        )}
-  
-        <NightsText>{nights} Nights Stay</NightsText>
-  
-        <EMIContainer>
-          <img
-            src="https://img.icons8.com/emoji/48/null/money-bag-emoji.png"
-            alt="EMI Icon"
-          />
-          <span>No Cost EMI Starts from ₹{emiPrice}</span>
-          <a href={emiLink}>see option</a>
-        </EMIContainer>
-  
-        <SubmitButton>SUBMIT YOUR QUERY</SubmitButton>
-      </CardContainer>
-    );
+  totalPackagePrice: number;
+  pricePerAdult?: number;
+  nights: number;
+  emiPrice: number;
+  emiLink: string;
+}
+
+const PriceCard: React.FC<PriceCardProps> = ({
+  totalPackagePrice,
+  pricePerAdult,
+  nights,
+  emiPrice,
+  emiLink,
+}) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleSubmit = () => {
+    setIsPopupOpen(true);
   };
-  
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  return (
+    <CardContainer>
+      <Heading>Starting from</Heading>
+
+      <PriceText>
+        ₹{totalPackagePrice.toLocaleString()}
+        <span>Per Package</span>
+      </PriceText>
+
+      {pricePerAdult !== undefined && (
+        <PriceText>
+          ₹{pricePerAdult.toLocaleString()}
+          <span>Per Person</span>
+        </PriceText>
+      )}
+
+      <NightsText>{nights} Nights Stay</NightsText>
+
+      <EMIContainer>
+        <img
+          src="https://img.icons8.com/emoji/48/null/money-bag-emoji.png"
+          alt="EMI Icon"
+        />
+        <span>No Cost EMI Starts from ₹{emiPrice}</span>
+        <a href={emiLink}>see option</a>
+      </EMIContainer>
+
+      <SubmitButton onClick={handleSubmit}>SUBMIT YOUR QUERY</SubmitButton>
+
+      {isPopupOpen && (
+        <Popup
+
+          onClose={handleClosePopup}
+        />
+      )}
+    </CardContainer>
+  );
+};
 
 export default PriceCard;
