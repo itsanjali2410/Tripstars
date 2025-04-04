@@ -1,53 +1,78 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import { Star } from "lucide-react";
 
-const TabsContainer = styled.div`
+const ContentContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
-  background-color: #f9fafc;
-  border-bottom: 2px solid #d1d9e0;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
 `;
 
-const Tab = styled.div<{ active: boolean }>`
-  padding: 10px 5px;
-  margin: 5px 2px;
+const OverviewWrapper = styled.div`
+  margin-top: 20px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #d1d9e0;
-  background-color: ${(props) => (props.active ? "#ffffff" : "#f9fafc")};
-  color: ${(props) => (props.active ? "#d4ab0d" : "#333")};
-  font-weight: ${(props) => (props.active ? "bold" : "500")};
-  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+`;
 
-  &:hover {
-    background-color: #ffedcc;
+const Card = styled.div`
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-left: 6px solid #f4c430;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const Section = styled.div`
+  margin-bottom: 16px;
+`;
+
+const Title = styled.h4`
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+`;
+
+const HotelList = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
-const ContentContainer = styled.div`
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #f9fafc;
-  border-radius: 8px;
-  color: #333;
-  font-size: 16px;
-  white-space: pre-line;
+const HotelItem = styled.div`
+  padding: 8px 12px;
+  background-color: #f9f6ee;
+  border-radius: 6px;
+  color: #444;
+  font-size: 14px;
+  border: 1px solid #e0d6c2;
 `;
 
 interface TableRow {
-  name?: string;
-  costPerAdult?: string;
+  city?: string;
   star4?: string;
   star5?: string;
-  label?: string;
-  cost4?: string;
-  cost5?: string;
 }
 
 interface TableData {
   tab1: TableRow[];
-  tab2: TableRow[];
-  tab3: TableRow[];
 }
 
 interface TabbedContentProps {
@@ -55,43 +80,44 @@ interface TabbedContentProps {
 }
 
 const TabbedContent: React.FC<TabbedContentProps> = ({ tableData }) => {
-  const [activeTab, setActiveTab] = useState<"tab1" | "tab2" | "tab3">("tab1");
-
-  const renderContent = () => {
-    const data = tableData[activeTab];
-    return (
-      <ContentContainer>
-        {data.map((row, index) => (
-          <div key={index}>
-            {activeTab === "tab3" ? (
-              <p>{row.name} costs {row.costPerAdult} per adult.</p>
-            ) : (
-              <>
-                <p>4-star hotel: {row.star4 || row.cost4}</p>
-                <p>5-star hotel: {row.star5 || row.cost5}</p>
-              </>
-            )}
-          </div>
-        ))}
-      </ContentContainer>
-    );
-  };
+  const filteredHotels = tableData.tab1.filter(
+    (row) =>
+      row.city &&
+      (row.city.toLowerCase().includes("kuta") || row.city.toLowerCase().includes("bali"))
+  );
 
   return (
-    <div>
-      <TabsContainer>
-        <Tab active={activeTab === "tab1"} onClick={() => setActiveTab("tab1")}>
-          Land Package Price
-        </Tab>
-        <Tab active={activeTab === "tab2"} onClick={() => setActiveTab("tab2")}>
-          Package with Flight
-        </Tab>
-        <Tab active={activeTab === "tab3"} onClick={() => setActiveTab("tab3")}>
-          Optional Cost
-        </Tab>
-      </TabsContainer>
-      {renderContent()}
-    </div>
+    <ContentContainer>
+      {filteredHotels.map((row, index) => (
+        <Card key={index}>
+          {row.star4 && (
+            <Section>
+              <Title>
+                <Star size={18} /> 4-Star Hotels
+              </Title>
+              <HotelList>
+                {row.star4.split("\\").map((hotel, i) => (
+                  <HotelItem key={i}>{hotel}</HotelItem>
+                ))}
+              </HotelList>
+            </Section>
+          )}
+
+          {row.star5 && (
+            <Section>
+              <Title>
+                <Star size={18} fill="#c99603" /> 5-Star Hotels
+              </Title>
+              <HotelList>
+                {row.star5.split("\\").map((hotel, i) => (
+                  <HotelItem key={i}>{hotel}</HotelItem>
+                ))}
+              </HotelList>
+            </Section>
+          )}
+        </Card>
+      ))}
+    </ContentContainer>
   );
 };
 

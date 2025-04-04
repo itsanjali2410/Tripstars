@@ -108,7 +108,7 @@ const Tab = styled.div<{ active: boolean }>`
   cursor: pointer;
   border: 1px solid #d1d9e0;
   background-color: ${(props) => (props.active ? "#ffffff" : "#f9fafc")};
-  color: ${(props) => (props.active ? "#d4ab0d" : "#333")};
+  color: ${(props) => (props.active ? "#f39c12" : "#333")};
   font-weight: ${(props) => (props.active ? "bold" : "500")};
   transition: all 0.3s ease;
 
@@ -121,7 +121,12 @@ const Tab = styled.div<{ active: boolean }>`
 interface InclusionsExclusionsProps {
   inclusions: string[];
   exclusions: string[];
+  nights?: number;
+  days?: number;
+  destinationCovered?: string;
 }
+
+
 
 // Main Component
 const InclusionsExclusions: React.FC<InclusionsExclusionsProps> = ({ inclusions, exclusions }) => {

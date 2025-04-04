@@ -4,15 +4,15 @@ import { MapPin, Calendar } from "lucide-react";
 
 // Styled Components
 const CardWrapper = styled.div`
-  border: 1px solid #000; /* Thicker, visible border */
+  border: 1px solid #ddd; /* Thicker, visible border */
   border-radius: 12px; /* Smooth rounded edges */
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow */
   width: 100%;
   max-width: 400px; /* Compact size */
-  margin: 0 auto 20px auto;
   font-family: Arial, sans-serif;
+  margin-bottom: 40px;
 `;
 
 const InfoRow = styled.div`
@@ -24,7 +24,7 @@ const InfoRow = styled.div`
 
   svg {
     margin-right: 10px;
-    color: #e63946; /* Icon color */
+    color: #c99603; /* Icon color */
   }
 
   span {
@@ -47,7 +47,7 @@ const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered }) =
     <CardWrapper>
       <InfoRow>
         <Calendar size={22} />
-        <span>{nights} Nights & {days} Days</span>
+        <span>{nights} Nights, {days} Days</span>
       </InfoRow>
       <InfoRow>
         <MapPin size={22} />

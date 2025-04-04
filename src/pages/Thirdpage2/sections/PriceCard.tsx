@@ -5,9 +5,7 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(135deg,rgb(226, 224, 224), #7a7a7a);
-
-
+  background:#000;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   width: 100%;
@@ -30,7 +28,7 @@ const CardContainer = styled.div`
 
 const Heading = styled.div`
   font-size: 18px;
-  color: #4a4a4a;
+  color:rgb(255, 247, 247);
   margin-bottom: 10px;
   font-weight: 600;
 
@@ -42,7 +40,7 @@ const Heading = styled.div`
 const PriceText = styled.div`
   font-size: 36px;
   font-weight: bold;
-  color: #000;
+  color: #fff;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -51,7 +49,7 @@ const PriceText = styled.div`
 
   span {
     font-size: 16px; /* Slightly larger */
-    color: #555;
+    color: #fff;
     font-weight: 500;
     margin-top: 4px;
   }
@@ -70,7 +68,7 @@ const EMIContainer = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #555;
+  color: #fff;
   margin: 15px 0;
   text-align: center;
 
@@ -103,7 +101,7 @@ const EMIContainer = styled.div`
 
 const NightsText = styled.div`
   font-size: 16px;
-  color: #333;
+  color: #fff;
   font-weight: 600;
   margin-bottom: 10px;
 

@@ -15,6 +15,7 @@ import TravelInclude from "./sections/TravelInclude";
 import FloatingContactButton from "../Home/sections/Floating";
 import WhyTripstarsholidays from "./sections/WhyTripstarsholidays";
 import { similar, similar2 } from "../../components/data";
+import TourCard from "./sections/Tourdetails";
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -49,7 +50,7 @@ const RightSection = styled.div`
 
 const PackageName = styled.span`
   font-size: 19px;  
-  font-weight: 500; 
+  font-weight: 700; 
   color: #333; 
 `;
 
@@ -72,7 +73,20 @@ const IconImage = styled.img`
   width: 40px;
   height: 40px;
 `;
+const PackageImage = styled.img`
+  width: 100%;
+  border-radius: 10px;
+  height: 400px;
+  object-fit: cover;
 
+  @media (max-width: 768px) {
+    height: 250px;
+  }
+
+  @media (max-width: 480px) {
+    height: 200px;
+  }
+`;
 const normalizeString = (str: string): string =>
   str.toLowerCase().trim().replace(/\s+/g, "-");
 
@@ -130,12 +144,11 @@ export default function ThirdPage() {
         <h1>
           <PackageName>{packageData.packageName}</PackageName>
         </h1>
+        <PackageImage
+      src={packageData.packageImage}
+      alt={packageData.packageName}
+    />
 
-        <img
-          src={packageData.packageImage}
-          alt={packageData.packageName}
-          style={{ width: "100%", borderRadius: "10px", height: "400px", objectFit: "cover" }}
-        />
 
         {/* Package Overview */}
         {packageData.overviewData && (
@@ -147,13 +160,10 @@ export default function ThirdPage() {
 
         {/* Tour Details */}
         {packageData && (
-          <Tourdetails
+          <TourCard
             nights={packageData.nights}
             days={packageData.days}
-            destinationCovered={packageData.destinationCovered}
-            totalPackagePrice={packageData.totalPackagePrice}
-            theme={packageData.theme}
-          />
+            destinationCovered={packageData.destinationCovered} theme={""} totalPackagePrice={""}          />
         )}
 
         {/* Tour Includes & Highlights */}
@@ -196,11 +206,11 @@ export default function ThirdPage() {
           {...(packageData.pricePerAdult && { pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0") })}
         />
 
-        <PackageCard
+        {/* <PackageCard
           nights={packageData.nights}
           days={packageData.days}
           destinationCovered={packageData.destinationCovered}
-        />
+        /> */}
 
         <HelpCard />
       </RightSection>

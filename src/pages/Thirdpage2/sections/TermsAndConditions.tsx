@@ -15,62 +15,77 @@ const Container = styled.div`
   }
 `;
 
-const SectionWrapper = styled.div`  
-  margin-bottom: 15px;
+const Title = styled.h2`
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  text-align: center;
+  border-bottom: 3px solid #f4c430;
+  padding-bottom: 8px;
+`;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+const SectionWrapper = styled.div`
+  margin-bottom: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
 `;
 
 const SectionHeader = styled.div<{ isOpen: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
-  background: linear-gradient(90deg,rgb(253, 253, 253), rgb(160, 157, 152));
-  border-radius: 8px;
+  padding: 16px 20px;
+  background: ${(props) =>
+    props.isOpen
+      ? "linear-gradient(90deg, #fdf6e3, #fff9ec)"
+      : "linear-gradient(90deg, #f8f8f8, #f0f0f0)"};
   cursor: pointer;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  color: #333;
+  transition: background 0.3s;
 
   h3 {
     font-size: 16px;
-    font-weight: bold;
     margin: 0;
-    color: #333;
-
-    @media (max-width: 768px) {
-      font-size: 14px;
-    }
   }
 
   span {
     font-size: 18px;
     font-weight: bold;
-    color:rgb(0, 0, 0);
     transform: ${(props) => (props.isOpen ? "rotate(180deg)" : "rotate(0)")};
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease;
+    color: #c99603;
+  }
 
-    @media (max-width: 768px) {
-      font-size: 16px;
-    }
+  &:hover {
+    background: #fff3dc;
   }
 `;
 
 const SectionContent = styled.div`
-  padding: 10px 15px;
-  font-size: 14px;
+  padding: 16px 20px;
+  font-size: 14.5px;
   color: #555;
-  line-height: 1.5;
-  border: 1px solid #ddd;
+  line-height: 1.6;
+  background-color: #fcfcfc;
+  border: 1px solid #eee;
   border-top: none;
-  background-color: #f9f9f9;
-  border-radius: 0 0 8px 8px;
+  animation: slideDown 0.3s ease forwards;
 
-  @media (max-width: 768px) {
-    font-size: 12px;
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `;
-
 // Main Component
 const TermsAndConditions: React.FC = () => {
   const sections = [

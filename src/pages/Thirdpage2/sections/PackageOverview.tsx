@@ -8,12 +8,14 @@ const OverviewWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 1.25rem;
+  font-size: 20px;
+  font-weight: bold;
   color: #333;
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 20px;
+    font-weight: bold;
   }
 `;
 
