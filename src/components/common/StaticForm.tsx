@@ -273,6 +273,19 @@ const StaticForm: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+
+    // Restrict contact input to digits only
+    if (name === "contact") {
+      const digitsOnly = value.replace(/\D/g, ""); // Remove non-digit characters
+      if (digitsOnly.length <= 10) {
+        setFormData((prev) => ({
+          ...prev,
+          [name]: digitsOnly,
+        }));
+      }
+      return;
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -337,6 +350,7 @@ const StaticForm: React.FC = () => {
 
     }
     catch (error) {
+
       console.error("❌ API Error:", error);
       alert("Form submitted successfully");
     }
@@ -382,16 +396,17 @@ const StaticForm: React.FC = () => {
               type="tel"
               name="contact"
               value={formData.contact}
+              onChange={handleChange}
               placeholder="Your Contact Number"
               required
               pattern="[0-9]{10}"
               title="Please enter a 10-digit contact number"
             />
-
             <input
               type="email"
               name="email"
               value={formData.email}
+              onChange={handleChange}
               placeholder="Your Email"
               required
             />
@@ -423,27 +438,29 @@ const StaticForm: React.FC = () => {
                   <option value="Other">Any other place ?</option>
                 </select>
               </div>
-            </div>
-            <div>
-              <input
-                type="text"
-                name="departureCity"
-                value={formData.departureCity}
-                onChange={handleChange}
-                placeholder="Departure City"
-                required
-              />
-            </div>
-            <div className="row">
               <div>
-                <select name="destination" value={formData.bookingTime} onChange={handleChange} required>
-                  <option value="">Select timeframe</option>
-                  <option value="this-week">This Week</option>
-                  <option value="this-month">This Month</option>
-                  <option value="undecided">Just Inquiry</option>
-                </select>
+                <input
+                  type="text"
+                  name="departureCity"
+                  value={formData.departureCity}
+                  onChange={handleChange}
+                  placeholder="Departure City"
+                  required
+                />
               </div>
             </div>
+            <select
+              id="bookingTime"
+              name="bookingTime"
+              value={formData.bookingTime}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select timeframe</option>
+              <option value="this-week">This Week</option>
+              <option value="this-month">This Month</option>
+              <option value="undecided">Just Inquiry</option>
+            </select>  
             <DatePicker
               selected={startDate}
               onChange={(date: Date | null) => setStartDate(date)}
