@@ -268,6 +268,7 @@ const StaticForm: React.FC = () => {
     email: "",
     destination: "",
     departureCity: "",
+    bookingTime: "",
   });
   const navigate = useNavigate();
   const handleChange = (
@@ -306,6 +307,7 @@ const StaticForm: React.FC = () => {
       destination: formData.destination,
       departure_city: formData.departureCity, // ✅ Fixed field name
       travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
+      booking_time: formData.bookingTime,
       pax,
       child,
     };
@@ -340,6 +342,8 @@ const StaticForm: React.FC = () => {
         email: "",
         destination: "",
         departureCity: "",
+        bookingTime: "",
+
       });
       setStartDate(null);
       setPax(1);
@@ -443,19 +447,19 @@ const StaticForm: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="booking-timeline">
-              <label htmlFor="bookingTime">When are you looking to book?</label>
-              <select
-                name="bookingTime"
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select timeframe</option>
-                <option value="this-week">This Week</option>
-                <option value="this-month">This Month</option>
-                <option value="undecided">Just Inquiry</option>
-              </select>
-            </div>
+            <select
+              id="bookingTime"
+              name="bookingTime"
+              value={formData.bookingTime}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select timeframe</option>
+              <option value="this-week">This Week</option>
+              <option value="this-month">This Month</option>
+              <option value="undecided">Just Inquiry</option>
+            </select>
+
             <DatePicker
               selected={startDate}
               onChange={(date: Date | null) => setStartDate(date)}
