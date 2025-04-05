@@ -325,7 +325,7 @@ const footerSections: { title: string; links: FooterLink[] }[] = [
       { label: "+91-9875097169", href: "+919875097169" },
       { label: "+91-8655351948", href: "tel:+918655351948" },
       { label: "+91 7969790000", href: "tel:+917969790000" },
-      { label: "Info@tripstars.in", href: "mailto:info@travellandindia.com" },
+      { label: "Info@tripstars.in", href: "mailto:Info@tripstars.in" },
     ],
   },
   {

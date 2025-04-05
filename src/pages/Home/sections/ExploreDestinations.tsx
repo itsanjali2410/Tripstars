@@ -25,7 +25,7 @@ const Container = styled.div`
 `;
 
 const TitleContainer = styled.div`
-
+  text-transform: uppercase;
   @media (max-width: 768px) {
     p {
       font-size: 1.1rem;

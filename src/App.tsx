@@ -17,7 +17,6 @@ import Footer from "./components/common/Footer";
 import Contact from "./pages/Faq/Contact";
 import Thankyou from "./components/common/thankyou";
 // Styles
-// import GlobalStyles from "./GlobalStyles"; 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -30,7 +29,6 @@ function App() {
 
   return (
     <>
-      {/* <GlobalStyles />  */}
       <div className="App">
         {!isVideoPage && <Navbar />}
         <ScrollToTop/>

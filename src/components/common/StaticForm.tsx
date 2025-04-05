@@ -291,65 +291,65 @@ const StaticForm: React.FC = () => {
   const API_URL = "https://stagingbackend.tripstars.in"; // ✅ Correct API URL
 
   const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-  
-      if (!startDate) {
-          alert("Please select a travel date!");
-          return;
-      }
-  
-      // Prepare the form data
-      const formDataToSend = {
-          name: formData.name,
-          contact: formData.contact,
-          email: formData.email,
-          destination: formData.destination,
-          departure_city: formData.departureCity, // ✅ Fixed field name
-          travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
-          pax,
-          child,
-      };
-  
-      try {
-        // ✅ Send form data to backend API
-        const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);
+    e.preventDefault();
 
-        if (response.status === 200) {
+    if (!startDate) {
+      alert("Please select a travel date!");
+      return;
+    }
 
-            navigate("/thankyou");
-        } 
-  
-          // ✅ Send email using EmailJS (optional)
-          // try {
-          //     await emailjs.send(
-          //         "service_eamkhsr", // Your Service ID
-          //         "template_1nh5ps2", // Your Template ID
-          //         formDataToSend,
-          //         "gScHv791km1kt3vL1" // Your Public Key
-          //     );
-          //     alert("📧 Email sent successfully to Admin!");
-          // } catch (emailError) {
-          //     console.warn("⚠️ Failed to send email via EmailJS:", emailError);
-          // }
-  
-          // ✅ Reset the form after successful submission
-          setIsVisible(false); // Close popup
-          setFormData({
-              name: "",
-              contact: "",
-              email: "",
-              destination: "",
-              departureCity: "",
-          });
-          setStartDate(null);
-          setPax(1);
-          setChild(0);
-  
-      } 
-      catch (error) {
-          console.error("❌ API Error:", error);
-          alert("Form submitted successfully");
+    // Prepare the form data
+    const formDataToSend = {
+      name: formData.name,
+      contact: formData.contact,
+      email: formData.email,
+      destination: formData.destination,
+      departure_city: formData.departureCity, // ✅ Fixed field name
+      travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
+      pax,
+      child,
+    };
+
+    try {
+      // ✅ Send form data to backend API
+      const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);
+
+      if (response.status === 200) {
+
+        navigate("/thankyou");
       }
+
+      // ✅ Send email using EmailJS (optional)
+      // try {
+      //     await emailjs.send(
+      //         "service_eamkhsr", // Your Service ID
+      //         "template_1nh5ps2", // Your Template ID
+      //         formDataToSend,
+      //         "gScHv791km1kt3vL1" // Your Public Key
+      //     );
+      //     alert("📧 Email sent successfully to Admin!");
+      // } catch (emailError) {
+      //     console.warn("⚠️ Failed to send email via EmailJS:", emailError);
+      // }
+
+      // ✅ Reset the form after successful submission
+      setIsVisible(false); // Close popup
+      setFormData({
+        name: "",
+        contact: "",
+        email: "",
+        destination: "",
+        departureCity: "",
+      });
+      setStartDate(null);
+      setPax(1);
+      setChild(0);
+
+    }
+    catch (error) {
+      console.error("❌ API Error:", error);
+      alert("Form submitted successfully");
+    }
   };
 
   return (
@@ -406,7 +406,7 @@ const StaticForm: React.FC = () => {
             />
             <div className="row">
               <div>
-              <select name="destination" value={formData.destination} onChange={handleChange} required>
+                <select name="destination" value={formData.destination} onChange={handleChange} required>
                   <option value="maldives">Maldives</option>
                   <option value="bali">Bali</option>
                   <option value="dubai">Dubai</option>
@@ -442,6 +442,19 @@ const StaticForm: React.FC = () => {
                   required
                 />
               </div>
+            </div>
+            <div className="booking-timeline">
+              <label htmlFor="bookingTime">When are you looking to book?</label>
+              <select
+                name="bookingTime"
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select timeframe</option>
+                <option value="this-week">This Week</option>
+                <option value="this-month">This Month</option>
+                <option value="undecided">Just Inquiry</option>
+              </select>
             </div>
             <DatePicker
               selected={startDate}
