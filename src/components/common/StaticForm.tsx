@@ -385,7 +385,10 @@ const StaticForm: React.FC = () => {
               onChange={handleChange}
               placeholder="Your Contact Number"
               required
+              pattern="[0-9]{10}"
+              title="Please enter a 10-digit contact number"
             />
+
             <input
               type="email"
               name="email"
@@ -433,7 +436,7 @@ const StaticForm: React.FC = () => {
                 />
               </div>
             </div>
-            <select
+            <input
               id="bookingTime"
               name="bookingTime"
               value={formData.bookingTime}
@@ -444,7 +447,7 @@ const StaticForm: React.FC = () => {
               <option value="this-week">This Week</option>
               <option value="this-month">This Month</option>
               <option value="undecided">Just Inquiry</option>
-            </select>
+            </input>
 
             <DatePicker
               selected={startDate}
