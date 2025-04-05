@@ -68,7 +68,7 @@ const Title = styled.h2`
   font-family: "Cursive", !important;
   @media (max-width: 768px) {
     width: 100%;
-    font-size:1.7rem;
+    font-size:1.1rem;
   }
 `;
 
@@ -77,7 +77,7 @@ const Subtitle = styled.p`
   color: white !important; 
   @media (max-width: 768px) {
     width: 100%;
-    font-size:0.9rem;
+    font-size:0.8rem;
   }
 `;
 
@@ -176,7 +176,7 @@ export default function VideoTestimonials() {
                       <img src={item.videoUrl} alt={item.title} />
                     </ImageWrapper>
                   </a>
-                  <p style={{ color: "white" }}>{item.title}</p>
+                  <p style={{ color: "white"}}>{item.title}</p>
 
                 </Card>
               </SwiperSlide>

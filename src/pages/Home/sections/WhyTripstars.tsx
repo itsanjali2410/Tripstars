@@ -31,21 +31,20 @@ const CardsWrapper = styled.div`
 `;
 
 const SectionTitle = styled.div`
-  padding-top:3rem;
-  padding-bottom: 1rem;
+  padding-top:1rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (max-width: 1340px) {
-    padding-top: 4rem;
-    padding-bottom: 1rem;
+   padding-top:0rem;
   }
   @media (max-width: 1080px) {
+  padding-top:0rem;
   }
   @media (max-width: 768px) {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+padding-top:0rem;
   }
 `;
 
@@ -99,20 +98,20 @@ export default function WhyTripstars() {
         <TitileHeading>Why Tripstars? </TitileHeading>
       </SectionTitle>
       <CardsWrapper>
-      <Swiper
-  slidesPerView={2}
-  spaceBetween={10} /* Reduced space */
-  breakpoints={{
-    1080: {
-      slidesPerView: 5,
-      spaceBetween: 20, /* Reduced */
-    },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 15, /* Reduced */
-    },
-  }}
->
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={10} /* Reduced space */
+          breakpoints={{
+            1080: {
+              slidesPerView: 5,
+              spaceBetween: 20, /* Reduced */
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 15, /* Reduced */
+            },
+          }}
+        >
 
           {data.map((item, index) => (
             <SwiperSlide key={index}>

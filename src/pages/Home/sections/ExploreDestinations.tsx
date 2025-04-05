@@ -25,12 +25,12 @@ const Container = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  padding-top: 5rem;
-  padding-bottom: 1rem;
+
   @media (max-width: 768px) {
-    padding-top: 2rem;
     p {
-      font-size: 1.6rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+
     }
   }
 `;
@@ -113,7 +113,7 @@ const MobileWrapper = styled.div`
   display: none;
   @media (max-width: 768px) {
     display: block;
-    padding-top: 1rem;
+
   }
 `;
 

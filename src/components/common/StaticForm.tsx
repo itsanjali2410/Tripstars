@@ -131,13 +131,22 @@ const RightPanel = styled.div`
 
   input,
   select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 12px;
-    outline: none;
-    transition: border-color 0.3s;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 12px;
+  outline: none;
+  background-color: white !important; /* remove blue background on iPhone */
+  color: #333  !important;
+  -webkit-appearance: none; /* ✅ Normalize Safari/iPhone */
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
 
     &:focus {
       border-color: #0a0a52;
@@ -145,14 +154,18 @@ const RightPanel = styled.div`
 
     @media (max-width: 768px) {
       padding: 15px;
+      font-size: 14px; /* Adjust font size for smaller screens */
     }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 
   .custom-datepicker {
     width: 100%;
     border: 1px solid #ddd;
     padding: 12px;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
     outline: none;

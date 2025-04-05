@@ -111,7 +111,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       },
       overviewData: {
         title: "Package Overview",
-        content: "Enjoy 6 days in Bali with 4 nights in Kuta for beaches & nightlife, and 2 nights in Ubud for nature & culture. A perfect mix of adventure and relaxation! 🌴✨",
+        content: "Enjoy 7 days in Bali with 4 nights in Kuta for beaches & nightlife, and 2 nights in Ubud for nature & culture. A perfect mix of adventure and relaxation! 🌴✨",
       },
       duration: "6 Days",
       country: "Indonesia",

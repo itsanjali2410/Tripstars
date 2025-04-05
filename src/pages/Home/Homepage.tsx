@@ -44,6 +44,7 @@ export default function HomePage() {
       <VideoTestimonials/>
       <VideoThumbnail />
       <WhyTripstars />
+      
       {/* <ExploreEurope /> */}
       <TrendingOffersHome2 title="Explore India" cards={similar} />
       {/* <Reviews/> */}

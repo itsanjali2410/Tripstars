@@ -13,7 +13,6 @@ import { Autoplay } from "swiper/modules";
 
 const Container = styled.div`
   padding: 0 15rem;
-  margin-bottom: 4rem;
   margin-top: 2rem;
   @media (max-width: 1340px) {
     padding: 0 5rem;
@@ -22,9 +21,7 @@ const Container = styled.div`
     padding: 0 3rem;
   }
   @media (max-width: 768px) {
-    padding: 0 1rem;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
+
   }
 `;
 

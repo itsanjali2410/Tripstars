@@ -213,7 +213,7 @@ const RightPanel = styled.div`
     transition: background 0.3s;
 
     &:hover {
-      background: #218838;
+      background:rgb(0, 0, 0);
     }
   }
 `;

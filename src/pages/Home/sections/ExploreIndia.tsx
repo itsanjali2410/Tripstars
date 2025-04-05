@@ -85,13 +85,13 @@ const SectionTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   @media (max-width: 1340px) {
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 1rem;
   }
   @media (max-width: 1080px) {
   }
   @media (max-width: 768px) {
-    padding-top: rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
   }
 `;
@@ -105,6 +105,7 @@ const TitileHeading = styled.h2`
   }
   @media (max-width: 768px) {
     font-size: 1.1rem;
+    margin-top:20px;
   }
 `;
 
@@ -129,6 +130,7 @@ const Title = styled.div`
 
   @media (max-width: 768px) {
     font-size: 14px;
+    margin-top:20px;
   }
 `;
 

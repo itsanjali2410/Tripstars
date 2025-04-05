@@ -10,7 +10,7 @@ import image4 from "../../../assets/advertisebanner/banner-4.webp";
 import image5 from "../../../assets/advertisebanner/banner-5.webp";
 
 const SliderContainer = styled.div`
-  margin-top:5rem;
+  margin: 5rem auto 2rem auto; /* Top and bottom spacing */
   position: relative;
   overflow: hidden;
   width: 80%;
@@ -31,12 +31,11 @@ const SliderContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 90%;
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   @media (max-width: 480px) {
     width: 90%;
-    margin-top: 40px;
   }
 `;
 
@@ -78,7 +77,7 @@ const Slide = styled.div<{ background: string }>`
 const DotsContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+
 `;
 
 const Dot = styled.div<{ active: boolean }>`

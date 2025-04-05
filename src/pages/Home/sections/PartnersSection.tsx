@@ -22,7 +22,7 @@ const Container = styled.div`
   }
   @media (max-width: 768px) {
     padding: 0 1rem;
-    margin-bottom: 3rem;
+
     margin-top: 1rem;
   }
 `;
@@ -44,13 +44,13 @@ const SectionTitle = styled.div`
   @media (max-width: 1080px) {
   }
   @media (max-width: 768px) {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
   }
 `;
 
 const TitileHeading = styled.h2`
-  padding-top:4rem;
+
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
