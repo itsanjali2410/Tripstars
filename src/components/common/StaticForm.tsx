@@ -382,7 +382,6 @@ const StaticForm: React.FC = () => {
               type="tel"
               name="contact"
               value={formData.contact}
-              onChange={handleChange}
               placeholder="Your Contact Number"
               required
               pattern="[0-9]{10}"
@@ -393,7 +392,6 @@ const StaticForm: React.FC = () => {
               type="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
               placeholder="Your Email"
               required
             />
@@ -425,30 +423,27 @@ const StaticForm: React.FC = () => {
                   <option value="Other">Any other place ?</option>
                 </select>
               </div>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="departureCity"
+                value={formData.departureCity}
+                onChange={handleChange}
+                placeholder="Departure City"
+                required
+              />
+            </div>
+            <div className="row">
               <div>
-                <input
-                  type="text"
-                  name="departureCity"
-                  value={formData.departureCity}
-                  onChange={handleChange}
-                  placeholder="Departure City"
-                  required
-                />
+                <select name="destination" value={formData.bookingTime} onChange={handleChange} required>
+                  <option value="">Select timeframe</option>
+                  <option value="this-week">This Week</option>
+                  <option value="this-month">This Month</option>
+                  <option value="undecided">Just Inquiry</option>
+                </select>
               </div>
             </div>
-            <input
-              id="bookingTime"
-              name="bookingTime"
-              value={formData.bookingTime}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select timeframe</option>
-              <option value="this-week">This Week</option>
-              <option value="this-month">This Month</option>
-              <option value="undecided">Just Inquiry</option>
-            </input>
-
             <DatePicker
               selected={startDate}
               onChange={(date: Date | null) => setStartDate(date)}
