@@ -68,7 +68,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Daily curated itineraries for a stress-free experience",
         "Seamless airport transfers for hassle-free travel"
       ],
-      totalPackagePrice: "INR 64,499",
+      totalPackagePrice: "INR 75,000",
 
       includes: [
         { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },

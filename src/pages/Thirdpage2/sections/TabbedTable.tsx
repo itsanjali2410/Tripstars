@@ -92,7 +92,7 @@ const TabbedContent: React.FC<TabbedContentProps> = ({ tableData }) => {
           {row.star4 && (
             <Section>
               <Title>
-                <Star size={18} /> 4-Star Hotels
+                <Star size={18}  fill="#c99603"  /> 4-Star Hotels
               </Title>
               <HotelList>
                 {row.star4.split("\\").map((hotel, i) => (

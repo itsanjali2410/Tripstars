@@ -153,13 +153,22 @@ const RightPanel = styled.div`
 
   input,
   select {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 12px; /* Increased font size */
-    outline: none;
-    transition: border-color 0.3s;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 12px;
+  outline: none;
+  background-color: white !important; /* remove blue background on iPhone */
+  color: #333  !important;
+  -webkit-appearance: none; /* ✅ Normalize Safari/iPhone */
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
 
     &:focus {
       border-color: #0a0a52;
@@ -226,21 +235,20 @@ const PaxCounterWrapper = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   overflow-x: auto;
   padding-bottom: 10px;
 
-  @media (max-width: 344px) {
-    gap: 1px;
-    justify-content: flex-start;
-    flax-wrap : nowrap;
+  /* Add a min-width to PaxCounter to prevent shrinking too much */
+  @media (max-width: 768px) {
+    gap: 8px;
   }
 `;
 
-
 const PaxCounter = styled.div`
-  min-width: 140px;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  min-width: 160px; /* increase if needed */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -279,6 +287,7 @@ const PaxCounter = styled.div`
     }
   }
 `;
+
 
 interface PopupProps {
   title?: string;
@@ -452,6 +461,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
             <div className="row">
               <div>
                 <select name="destination" value={formData.destination} onChange={handleChange} required>
+                <option value="maldives">Select Destinations</option>
                   <option value="maldives">Maldives</option>
                   <option value="bali">Bali</option>
                   <option value="dubai">Dubai</option>

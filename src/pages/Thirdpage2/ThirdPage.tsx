@@ -191,18 +191,6 @@ export default function ThirdPage() {
 
         {/* Tabbed Table Data */}
         {packageData.tableData && <TabbedTable tableData={packageData.tableData} />}
-        <TermsAndConditions />
-        {/* Inclusions & Exclusions */}
-        <InclusionsExclusions
-          inclusions={packageData.inclusions}
-          exclusions={packageData.exclusions}
-        />
-
-        {/* Additional Sections */}
-        {/* <WhyTripstarsholidays /> */}
-
-      </LeftSection>
-      <RightSection>
         <PriceCard
           totalPackagePrice={totalPackagePrice}
           nights={packageData.nights}
@@ -210,6 +198,20 @@ export default function ThirdPage() {
           emiLink="/emi-options"
           {...(packageData.pricePerAdult && { pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0") })}
         />
+        <InclusionsExclusions
+          inclusions={packageData.inclusions}
+          exclusions={packageData.exclusions}
+        />
+
+        <TermsAndConditions />
+        {/* Inclusions & Exclusions */}
+        
+        {/* Additional Sections */}
+        {/* <WhyTripstarsholidays /> */}
+
+      </LeftSection>
+      <RightSection>
+        
 
         {/* <PackageCard
           nights={packageData.nights}
