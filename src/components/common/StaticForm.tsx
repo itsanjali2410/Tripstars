@@ -256,8 +256,6 @@ const PaxCounter = styled.div`
   }
 `;
 
-
-
 const StaticForm: React.FC = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [pax, setPax] = useState(1);
@@ -311,6 +309,7 @@ const StaticForm: React.FC = () => {
       pax,
       child,
     };
+    console.log("Booking Time value:", formData.bookingTime);
 
     try {
       // ✅ Send form data to backend API
@@ -320,19 +319,6 @@ const StaticForm: React.FC = () => {
 
         navigate("/thankyou");
       }
-
-      // ✅ Send email using EmailJS (optional)
-      // try {
-      //     await emailjs.send(
-      //         "service_eamkhsr", // Your Service ID
-      //         "template_1nh5ps2", // Your Template ID
-      //         formDataToSend,
-      //         "gScHv791km1kt3vL1" // Your Public Key
-      //     );
-      //     alert("📧 Email sent successfully to Admin!");
-      // } catch (emailError) {
-      //     console.warn("⚠️ Failed to send email via EmailJS:", emailError);
-      // }
 
       // ✅ Reset the form after successful submission
       setIsVisible(false); // Close popup
