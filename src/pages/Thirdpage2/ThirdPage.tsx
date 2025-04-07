@@ -16,6 +16,7 @@ import FloatingContactButton from "../Home/sections/Floating";
 import WhyTripstarsholidays from "./sections/WhyTripstarsholidays";
 import { similar, similar2 } from "../../components/data";
 import TourCard from "./sections/Tourdetails";
+import Cta from "./sections/cta"
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -191,28 +192,28 @@ export default function ThirdPage() {
 
         {/* Tabbed Table Data */}
         {packageData.tableData && <TabbedTable tableData={packageData.tableData} />}
-        <PriceCard
+        
+        <InclusionsExclusions
+          inclusions={packageData.inclusions}
+          exclusions={packageData.exclusions}
+        />
+        <Cta totalPackagePrice={0} nights={0}/>
+        <TermsAndConditions />
+        {/* Inclusions & Exclusions */}
+        
+        {/* Additional Sections */}
+        {/* <WhyTripstarsholidays /> */}
+        
+      </LeftSection>
+      <RightSection>
+        
+      <PriceCard
           totalPackagePrice={totalPackagePrice}
           nights={packageData.nights}
           emiPrice={3590}
           emiLink="/emi-options"
           {...(packageData.pricePerAdult && { pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0") })}
         />
-        <InclusionsExclusions
-          inclusions={packageData.inclusions}
-          exclusions={packageData.exclusions}
-        />
-
-        <TermsAndConditions />
-        {/* Inclusions & Exclusions */}
-        
-        {/* Additional Sections */}
-        {/* <WhyTripstarsholidays /> */}
-
-      </LeftSection>
-      <RightSection>
-        
-
         {/* <PackageCard
           nights={packageData.nights}
           days={packageData.days}

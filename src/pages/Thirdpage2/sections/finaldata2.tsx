@@ -1,3 +1,7 @@
+import bali1 from "../../../assets/thirdpage/bali/Bali 3rd page1.png";
+import bali2 from "../../../assets/thirdpage/bali/Bali 3rd page2.png";
+import bali3 from "../../../assets/thirdpage/bali/Bali 3rd page3.png";
+import bali4 from "../../../assets/thirdpage/bali/Bali 3rd page4.png";
 import { ElementType, ReactElement } from "react";
 import { Vietnam } from "../../../components/data";
 import { Plane, Hotel, Utensils, Landmark, Bus, User } from "lucide-react";
@@ -63,13 +67,11 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       destinationCovered: "Bali -- Kuta -- Ubud -- Nusa Penida",
       highlights: [
         "Expert tour manager all throughout the tour",
-        "All meals included in tour price",
-        "Music, fun, and games every day",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
         "Daily curated itineraries for a stress-free experience",
         "Seamless airport transfers for hassle-free travel"
       ],
-      totalPackagePrice: "INR 75,000",
-
       includes: [
         { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
         { name: "Sightseeing", icon: Landmark },
@@ -78,9 +80,9 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Guide", icon: User },
       ],
 
+      totalPackagePrice: "INR 75,000",
 
-      packageImage:
-        "https://www.travelwithcg.com/wp-content/uploads/2023/09/Kelingking-Beach-Nusa-Penida.jpg",
+      packageImage:bali1,
       itinerary: [
         { "Day 1: Arrival in Bali & Transfer to Hotel": ["Welcome to Bali! Today is the First day of your trip you will arrive at Denpasar Bali airport and will be transferred to your hotel in Bali. Your first day's schedule depends on the flight arrival time. Usually, this day will be free for you at leisure. Overnight stay at Hotel accommodation"] },
         { "Day 2: Benoa Water Sports": ["Experience a water-filled adventure at Benoa Bay with an exciting. An ideal Bali is incomplete without Bali Water Sport at famous Tanjung Benoa Beach. This beach based know for each aquatic adventure is located in the benoa peninsula far away from the Hustle and bustle. watersport with Banana Boat, Parasailing, Jet Ski."] },
@@ -165,15 +167,20 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       packageId: "S04390",
       packageName: "Bali with gili",
       totalGuests: 2,
-      nights: 6,
-      days: 7,
+      nights: 7,
+      days: 8,
       theme: "Mumbai",
-      destinationCovered: "Bali",
-      highlights: "Private Transport English speaking guide, Nusa penida Iland Tour",
-      totalPackagePrice: "INR 64,499",
+      destinationCovered: "Bali -- Kuta -- Ubud",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      totalPackagePrice: "INR 82,499",
 
-      packageImage:
-        "https://hoponworld.com/wp-content/uploads/2022/05/Gili-Meno-Lombok-indonesia-beach-1200x900.jpg",
+      packageImage:bali2,
       itinerary: [
         { " Day 1: Arrival in Bali & Transfer to Hotel": ["Welcome to Bali! Today is the First day of your trip you will arrive at Denpasar Bali airport and will be transferred to your hotel in Bali. Your first day's schedule depends on the flight arrival time. Usually, this day will be free for you at leisure. Overnight stay at Hotel accommodation"] },
         { "Day 2: Benoa Water Sports": ["Experience a water-filled adventure at Benoa Bay with an exciting. An ideal Bali is incomplete without Bali Water Sport at famous Tanjung Benoa Beach. This beach based know for each aquatic adventure is located in the benoa peninsula far away from the Hustle and bustle. watersport with Banana Boat, Parasailing, Jet Ski."] },
@@ -182,6 +189,13 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { "Day 5: Ubud Exploration & Scenic Attractions": ["The Ubud Art Market is a great place to find beautiful silk scarves, lightweight shirts, statues, kites, handmade woven bags, baskets or hats and many other hand-crafted goods. Locally known as Pasar Seni Ubud, the market is opposite the Puri Saren Royal Ubud Palace and opens daily. Most of the goods found at the Ubud Market are made in the neighbouring villages of Pengosekan, Tegallalang, Payangan and Peliatan. The location of the Ubud Art Market, which is centred among the art producing villages and at the centre of Ubud itself, makes it a strategic shopping place for Balinese handicrafts and souvenirs."] },
         { "Day 6: Relax & Explore Bali at Your Own Pace": ["Day at Leisure Day free at leisure, enjoy by your own."] },
         { "Day 7: Departure – Bali to Denpasar Airport": ["Take a bag full of memories to cherish | Check out from the hotel and meet the representative who will take you to the Denpasar airport to board board your return flight back home."] },
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
       ],
 
       inclusions: [
@@ -259,15 +273,28 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       packageId: "S04390",
       packageName: "Island hopping Tour",
       totalGuests: 2,
-      nights: 7,
-      days: 8,
+      nights: 5,
+      days: 6,
       theme: "Mumbai",
-      destinationCovered: "Bali",
-      highlights: "Private Transport English speaking guide, Nusa penida Iland Tour",
-      totalPackagePrice: "INR 82,999",
+      destinationCovered: "Bali -- Kuta -- Ubud",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
+      ],
+      totalPackagePrice: "INR 65,499",
 
       packageImage:
-        "https://balipedia.com/wp-content/uploads/2023/03/Gili-Kedis-island-shutterstock.jpg",
+        bali3,
       itinerary: [
         { " Day 1: Arrival in Bali & Transfer to Hotel": ["Welcome to Bali! Today is the First day of your trip you will arrive at Denpasar Bali airport and will be transferred to your hotel in Bali. Your first day's schedule depends on the flight arrival time. Usually, this day will be free for you at leisure. Overnight stay at Hotel accommodation"] },
         { "Day 2: Benoa Water Sports": ["Experience a water-filled adventure at Benoa Bay with an exciting. An ideal Bali is incomplete without Bali Water Sport at famous Tanjung Benoa Beach. This beach based know for each aquatic adventure is located in the benoa peninsula far away from the Hustle and bustle. watersport with Banana Boat, Parasailing, Jet Ski."] },
@@ -275,7 +302,6 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { " Day 4: Full-Day West Nusa Penida Tour": ["You will be taken to witness Tegalalang Rice Terraces - probably the busiest and most famous waterfall in Bali, and it’s super easy to reach from Ubud. It only takes about 15 minutes to hike down the steps to the waterfall, but the way back up is a good workout with a lot of humidity and uneven stone steps (the steps feel like they were made for giants!)."] },
         { "Day 5: Ubud Exploration & Scenic Attractions": ["The Ubud Art Market is a great place to find beautiful silk scarves, lightweight shirts, statues, kites, handmade woven bags, baskets or hats and many other hand-crafted goods. Locally known as Pasar Seni Ubud, the market is opposite the Puri Saren Royal Ubud Palace and opens daily. Most of the goods found at the Ubud Market are made in the neighbouring villages of Pengosekan, Tegallalang, Payangan and Peliatan. The location of the Ubud Art Market, which is centred among the art producing villages and at the centre of Ubud itself, makes it a strategic shopping place for Balinese handicrafts and souvenirs."] },
         { "Day 6: Relax & Explore Bali at Your Own Pace": ["Day at Leisure Day free at leisure, enjoy by your own."] },
-        { "Day 7: Departure – Bali to Denpasar Airport": ["Take a bag full of memories to cherish | Check out from the hotel and meet the representative who will take you to the Denpasar airport to board board your return flight back home."] },
       ],
       inclusions: [
         "Arrival in Bali Denpasar and transfer to hotel by private car.",
@@ -356,16 +382,28 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 6,
       days: 7,
       theme: "Mumbai",
-      destinationCovered: "Bali",
-      highlights: "Private Transport English speaking guide, Nusa penida Iland Tour",
+      destinationCovered: "Bali -- Kuta -- Ubud",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
+      ],
       totalPackagePrice: "INR 64,999",
 
-      packageImage:
-        "https://res.klook.com/image/upload/c_fill,w_1265,h_712/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/oq1rrjjxnrgodmzrcy3q.webp",
+      packageImage:bali4,
       itinerary: [
-        { " Day 1: Arrival in Bali & Transfer to Hotel": ["Welcome to Bali! Today is the First day of your trip you will arrive at Denpasar Bali airport and will be transferred to your hotel in Bali. Your first day's schedule depends on the flight arrival time. Usually, this day will be free for you at leisure. Overnight stay at Hotel accommodation"] },
+        { "Day 1: Arrival in Bali & Transfer to Hotel": ["Welcome to Bali! Today is the First day of your trip you will arrive at Denpasar Bali airport and will be transferred to your hotel in Bali. Your first day's schedule depends on the flight arrival time. Usually, this day will be free for you at leisure. Overnight stay at Hotel accommodation"] },
         { "Day 2: Benoa Water Sports": ["Experience a water-filled adventure at Benoa Bay with an exciting. An ideal Bali is incomplete without Bali Water Sport at famous Tanjung Benoa Beach. This beach based know for each aquatic adventure is located in the benoa peninsula far away from the Hustle and bustle. watersport with Banana Boat, Parasailing, Jet Ski."] },
-        { " Day 3: Uluwatu Sunset Tour with Kecak Dance": ["Visit the beautiful Uluwatu temple, built on the top of a cliff about 825 feet high facing the vast deep blue Indian Ocean, and catch a wonderful view of sunset. The beautiful Uluwatu temple, built on the top of a cliff about 825 feet high facing the vast deep blue Indian Ocean, and catch a wonderful view of sunset. Post sunset witness the Kecak and Fire Dance - Completely dramatic. Originally from Ramayana this show depicts the famous ‘Lanka Dahan’ episode wherein Hanuman sets fire to the kingdom of Ravana. The enthralling ‘kecak, kecak’ chant is the USP."] },
+        { "Day 3: Uluwatu Sunset Tour with Kecak Dance": ["Visit the beautiful Uluwatu temple, built on the top of a cliff about 825 feet high facing the vast deep blue Indian Ocean, and catch a wonderful view of sunset. The beautiful Uluwatu temple, built on the top of a cliff about 825 feet high facing the vast deep blue Indian Ocean, and catch a wonderful view of sunset. Post sunset witness the Kecak and Fire Dance - Completely dramatic. Originally from Ramayana this show depicts the famous ‘Lanka Dahan’ episode wherein Hanuman sets fire to the kingdom of Ravana. The enthralling ‘kecak, kecak’ chant is the USP."] },
         { " Day 4: Full-Day West Nusa Penida Tour": ["You will be taken to witness Tegalalang Rice Terraces - probably the busiest and most famous waterfall in Bali, and it’s super easy to reach from Ubud. It only takes about 15 minutes to hike down the steps to the waterfall, but the way back up is a good workout with a lot of humidity and uneven stone steps (the steps feel like they were made for giants!)."] },
         { "Day 5: Ubud Exploration & Scenic Attractions": ["The Ubud Art Market is a great place to find beautiful silk scarves, lightweight shirts, statues, kites, handmade woven bags, baskets or hats and many other hand-crafted goods. Locally known as Pasar Seni Ubud, the market is opposite the Puri Saren Royal Ubud Palace and opens daily. Most of the goods found at the Ubud Market are made in the neighbouring villages of Pengosekan, Tegallalang, Payangan and Peliatan. The location of the Ubud Art Market, which is centred among the art producing villages and at the centre of Ubud itself, makes it a strategic shopping place for Balinese handicrafts and souvenirs."] },
         { "Day 6: Relax & Explore Bali at Your Own Pace": ["Day at Leisure Day free at leisure, enjoy by your own."] },
@@ -448,8 +486,21 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 6,
       days: 7,
       theme: "Mumbai",
-      destinationCovered: "vietnam",
-      highlights: "Private Transport English speaking guide, Nusa penida Iland Tour",
+      destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
+      ],
 
       totalPackagePrice: "INR ₹ 1,00,999/-",
 
@@ -510,8 +561,8 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       packageId: "S04390",
       packageName: "Vietnam Explorer",
       totalGuests: 2,
-      nights: 7,
-      days: 8,
+      nights: 8,
+      days: 9,
       overviewData: {
         title: "Package Overview",
         content: "Enjoy a 6-night, 7-day journey through Vietnam, from Hanoi’s charm to Halong Bay’s beauty, Da Nang’s beaches, and Ho Chi Minh City’s vibrant energy. A perfect mix of relaxation, adventure, and culture!",
@@ -520,8 +571,22 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       country: "Indonesia",
       cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
       theme: "Mumbai",
-      highlights: "Private Transport English speaking guide, Nusa penida Iland Tour",
-      destinationCovered: "Vietnam",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
+      ],
+
+      destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
       totalPackagePrice: "INR ₹ 1,04,599/-",
 
       packageImage:
@@ -563,10 +628,22 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 8,
       days: 9,
       theme: "Mumbai",
-      destinationCovered: "Vietnam",
-      totalPackagePrice: "INR ₹ 1,10,490/-",
-      highlights: "Private Transport English speaking guide, Nusa penida Iland Tour",
-
+      destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      totalPackagePrice: "INR ₹ 1,10,499/-",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
+      ],
       overviewData: {
         title: "Package Overview",
         content: "Experience the best of Vietnam on this 8-day tour, exploring the bustling streets of Hanoi, the serene beauty of Halong Bay, the historical charm of Da Nang, and the tropical paradise of Phu Quoc. Stay in deluxe accommodations throughout the journey, ensuring comfort and relaxation as you uncover the rich culture, history, and natural beauty of this stunning country.",
@@ -608,15 +685,27 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
     },
     vietnam4: {
       packageId: "S04390",
-      packageName: "Vietnam Highlights with Phu Quoc Island",
+      packageName: "Classic Vietnam",
       totalGuests: 2,
       nights: 8,
       days: 9,
-      highlights: "Private Transport English speaking guide, Nusa penida Iland Tour",
-
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
+      ],
       theme: "Mumbai",
-      destinationCovered: "Vietnam",
-      totalPackagePrice: "INR 70,000",
+      destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      totalPackagePrice: "INR 92,599",
       overviewData: {
         title: "Package Overview",
         content: "Enjoy a 6N7D adventure in Bali and Nusa Penida with scenic views and luxury accommodations.",
@@ -655,7 +744,128 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "19DaysOrLess": "100% of total cost",
       },
     },
-
+    vietnam5: {
+      packageId: "S04390",
+      packageName: "Vietnam with sapa",
+      totalGuests: 2,
+      nights: 9,
+      days: 10,
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
+      ],
+      theme: "Mumbai",
+      destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      totalPackagePrice: "INR 1,22,999",
+      overviewData: {
+        title: "Package Overview",
+        content: "Enjoy a 6N7D adventure in Bali and Nusa Penida with scenic views and luxury accommodations.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Phu Quoc",
+      packageImage:
+        "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+      "itinerary": [
+        { "Day 1: Arrival in Hanoi ": ["Welcome to Vietnam! Arrive at Noi Bai International Airport, Hanoi. Transfer to the hotel and check-in. Depending on the arrival time, explore Hanoi’s Old Quarter, Hoan Kiem Lake, and Ngoc Son Temple. Enjoy a traditional Vietnamese dinner. Overnight stay in a Deluxe Room in Hanoi."] },
+        { "Day 2: Explore Hanoi": ["Breakfast at the hotel. Explore the historic sites of Hanoi, such as the Ho Chi Minh Mausoleum, One Pillar Pagoda, and the Temple of Literature. Enjoy lunch at a local restaurant and visit the Vietnam Fine Arts Museum. Dinner and overnight stay in a Deluxe Room in Hanoi."] },
+        { "Day 3: Hanoi - Halong Bay ": ["Breakfast at the hotel. Depart for Halong Bay (approx. 3.5-4 hours drive). Check-in to the cruise and enjoy a welcome drink. Explore the stunning limestone islands, caves, and floating villages. Participate in onboard activities like kayaking or swimming. Dinner and overnight stay in a Deluxe Room on the cruise in Halong Bay."] },
+        { "Day 4: Halong Bay - Da Nang": ["Early morning Tai Chi session on the deck. Breakfast while cruising back to the shore. Visit a limestone cave before disembarking. Transfer back to Hanoi and take a flight to Da Nang. Check-in to the hotel in Da Nang. Explore My Khe Beach and Han River Bridge. Overnight stay in a Deluxe Room in Da Nang."] },
+        { "Day 5: Explore Da Nang ": ["Breakfast at the hotel. Visit the Marble Mountains and Linh Ung Pagoda. Explore the scenic spots around Da Nang. Enjoy a relaxing day at My Khe Beach or explore local markets. Overnight stay in a Deluxe Room in Da Nang."] },
+        { "Day 6: Da Nang - Hoi An Excursion ": ["Visit the ancient town of Hoi An, including the Japanese Covered Bridge and Old Houses. Enjoy a boat ride on the Thu Bon River. Return to Da Nang for some leisure time. Overnight stay in a Deluxe Room in Da Nang."] },
+        { "Day 7: Da Nang - Phu Quoc": ["Breakfast at the hotel. Transfer to the airport for a flight to Phu Quoc. Check-in to the hotel in Phu Quoc. Spend the day relaxing on the beautiful beaches of Phu Quoc or explore local markets. Overnight stay in a Deluxe Room in Phu Quoc."] },
+        { "Day 8: Explore Phu Quoc  ": ["Breakfast at the hotel. Explore the stunning beaches of Phu Quoc, visit Vinpearl Safari, or enjoy water sports. Relax and enjoy the peaceful island atmosphere. Overnight stay in a Deluxe Room in Phu Quoc."] }
+      ],
+      inclusions: [
+        "Arrival in Bali Denpasar and transfer to hotel by private car.",
+        "Benoa Water Sports - By Private Car.",
+        "Uluwatu Sunset Tour with Kecak Dance on Private car.",
+        "Ulundanu Temple of Bedugul tour on Private car.",
+        "Git Git Waterfall on Private car.",
+        "Tanah Lot Temple on Private car.",
+      ],
+      exclusions: [
+        "International Tourism Levy of IDR 150000 per person.",
+        "Visa on Arrival: USD 35 per person.",
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+    },
+    vietnam6: {
+      packageId: "S04390",
+      packageName: "Vietnam with sapa",
+      totalGuests: 2,
+      nights: 9,
+      days: 10,
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Utensils", icon: Utensils },
+        { name: "Guide", icon: User },
+      ],
+      theme: "Mumbai",
+      destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      totalPackagePrice: "INR 1,15,999",
+      overviewData: {
+        title: "Package Overview",
+        content: "Enjoy a 6N7D adventure in Bali and Nusa Penida with scenic views and luxury accommodations.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Phu Quoc",
+      packageImage:
+        "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+      "itinerary": [
+        { "Day 1: Arrival in Hanoi ": ["Welcome to Vietnam! Arrive at Noi Bai International Airport, Hanoi. Transfer to the hotel and check-in. Depending on the arrival time, explore Hanoi’s Old Quarter, Hoan Kiem Lake, and Ngoc Son Temple. Enjoy a traditional Vietnamese dinner. Overnight stay in a Deluxe Room in Hanoi."] },
+        { "Day 2: Explore Hanoi": ["Breakfast at the hotel. Explore the historic sites of Hanoi, such as the Ho Chi Minh Mausoleum, One Pillar Pagoda, and the Temple of Literature. Enjoy lunch at a local restaurant and visit the Vietnam Fine Arts Museum. Dinner and overnight stay in a Deluxe Room in Hanoi."] },
+        { "Day 3: Hanoi - Halong Bay ": ["Breakfast at the hotel. Depart for Halong Bay (approx. 3.5-4 hours drive). Check-in to the cruise and enjoy a welcome drink. Explore the stunning limestone islands, caves, and floating villages. Participate in onboard activities like kayaking or swimming. Dinner and overnight stay in a Deluxe Room on the cruise in Halong Bay."] },
+        { "Day 4: Halong Bay - Da Nang": ["Early morning Tai Chi session on the deck. Breakfast while cruising back to the shore. Visit a limestone cave before disembarking. Transfer back to Hanoi and take a flight to Da Nang. Check-in to the hotel in Da Nang. Explore My Khe Beach and Han River Bridge. Overnight stay in a Deluxe Room in Da Nang."] },
+        { "Day 5: Explore Da Nang ": ["Breakfast at the hotel. Visit the Marble Mountains and Linh Ung Pagoda. Explore the scenic spots around Da Nang. Enjoy a relaxing day at My Khe Beach or explore local markets. Overnight stay in a Deluxe Room in Da Nang."] },
+        { "Day 6: Da Nang - Hoi An Excursion ": ["Visit the ancient town of Hoi An, including the Japanese Covered Bridge and Old Houses. Enjoy a boat ride on the Thu Bon River. Return to Da Nang for some leisure time. Overnight stay in a Deluxe Room in Da Nang."] },
+        { "Day 7: Da Nang - Phu Quoc": ["Breakfast at the hotel. Transfer to the airport for a flight to Phu Quoc. Check-in to the hotel in Phu Quoc. Spend the day relaxing on the beautiful beaches of Phu Quoc or explore local markets. Overnight stay in a Deluxe Room in Phu Quoc."] },
+        { "Day 8: Explore Phu Quoc  ": ["Breakfast at the hotel. Explore the stunning beaches of Phu Quoc, visit Vinpearl Safari, or enjoy water sports. Relax and enjoy the peaceful island atmosphere. Overnight stay in a Deluxe Room in Phu Quoc."] }
+      ],
+      inclusions: [
+        "Arrival in Bali Denpasar and transfer to hotel by private car.",
+        "Benoa Water Sports - By Private Car.",
+        "Uluwatu Sunset Tour with Kecak Dance on Private car.",
+        "Ulundanu Temple of Bedugul tour on Private car.",
+        "Git Git Waterfall on Private car.",
+        "Tanah Lot Temple on Private car.",
+      ],
+      exclusions: [
+        "International Tourism Levy of IDR 150000 per person.",
+        "Visa on Arrival: USD 35 per person.",
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+    },
   },
 };
 

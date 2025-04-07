@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Popup from "../../../components/common/Popup";// ✅ Make sure the path is correct
+import Popup from "../../../components/common/Popup"; // ✅ Make sure the path is correct
 
 const CardContainer = styled.div`
   display: flex;
@@ -64,42 +64,6 @@ const PriceText = styled.div`
   }
 `;
 
-const EMIContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #fff;
-  margin: 15px 0;
-  text-align: center;
-
-  img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-
-  a {
-    color: #d5a527;
-    margin-left: 5px;
-    font-weight: 500;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  @media (max-width: 480px) {
-    font-size: 13px;
-
-    img {
-      width: 18px;
-      height: 18px;
-    }
-  }
-`;
-
 const NightsText = styled.div`
   font-size: 16px;
   color: #fff;
@@ -148,16 +112,12 @@ interface PriceCardProps {
   totalPackagePrice: number;
   pricePerAdult?: number;
   nights: number;
-  emiPrice: number;
-  emiLink: string;
 }
 
 const PriceCard: React.FC<PriceCardProps> = ({
   totalPackagePrice,
   pricePerAdult,
-  nights,
-  emiPrice,
-  emiLink,
+  nights
 }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -173,30 +133,17 @@ const PriceCard: React.FC<PriceCardProps> = ({
     <CardContainer>
       <Heading>Starting from</Heading>
 
-      <PriceText>
-        ₹{totalPackagePrice.toLocaleString()}
-        <span>Per Package</span>
-      </PriceText>
-
       {pricePerAdult !== undefined && (
         <PriceText>
-          ₹{pricePerAdult.toLocaleString()}
           <span>Per Person</span>
         </PriceText>
       )}
 
       <NightsText>{nights} Nights Stay</NightsText>
 
-
-
       <SubmitButton onClick={handleSubmit}>SUBMIT YOUR QUERY</SubmitButton>
 
-      {isPopupOpen && (
-        <Popup
-
-          onClose={handleClosePopup}
-        />
-      )}
+      {isPopupOpen && <Popup onClose={handleClosePopup} />}
     </CardContainer>
   );
 };
