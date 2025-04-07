@@ -310,6 +310,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
     email: "",
     destination: "",
     departureCity: "",
+    bookingTime:"",
   });
 
   // Open popup after 1 seconds
@@ -354,8 +355,9 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
       contact: formData.contact,
       email: formData.email,
       destination: formData.destination,
-      departure_city: formData.departureCity, // ✅ Correct field name
-      travel_date: startDate.toISOString().split("T")[0], // ✅ Ensuring correct date format
+      departure_city: formData.departureCity, // ✅ Fixed field name
+      travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
+      booking_time: formData.bookingTime,
       pax,
       child,
     };
@@ -390,6 +392,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
         email: "",
         destination: "",
         departureCity: "",
+        bookingTime:"",
       });
       setStartDate(null);
       setPax(1);
@@ -499,6 +502,18 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
                 />
               </div>
             </div>
+            <select
+              id="bookingTime"
+              name="bookingTime"
+              value={formData.bookingTime}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select timeframe</option>
+              <option value="this-week">This Week</option>
+              <option value="this-month">This Month</option>
+              <option value="undecided">Just Inquiry</option>
+            </select>     
             <DatePicker
               selected={startDate}
               onChange={(date: Date | null) => setStartDate(date)}
