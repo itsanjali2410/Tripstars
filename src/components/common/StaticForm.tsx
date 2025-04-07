@@ -318,7 +318,7 @@ const StaticForm: React.FC = () => {
       destination: formData.destination,
       departure_city: formData.departureCity, // ✅ Fixed field name
       travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
-      booking_time: formData.bookingTime,
+      bookingTime: formData.bookingTime,
       pax,
       child,
     };
