@@ -850,7 +850,7 @@ export const similar = [
   {
     title: 'Andaman',
     image: andaman,  // ✅ Correct imported image
-    pricing: '₹32,999/- Onwards',
+    pricing: '₹39,499/- Onwards',
     info: [
       { icon: 'https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png', text: '5N/6D' },
       { icon: 'https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png', text: 'Flight' },
@@ -859,7 +859,7 @@ export const similar = [
   {
     title: 'Kashmir',
     image: kashmir,  // ✅ Correct imported image
-    pricing: '₹32,999/- Onwards',
+    pricing: '₹55,299/- Onwards',
     info: [
       { icon: 'https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png', text: '5N/6D' },
       { icon: 'https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png', text: 'Flight' },
