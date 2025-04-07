@@ -522,7 +522,7 @@ export const Ladakh = [
   {
     title: "Glimpse of Ladakh",
     image: ladakh3,
-    pricing: "₹76,199/- Onwards",
+    pricing: "₹47,699/- Onwards",
     info: [
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "3N/4D" },
       { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
@@ -531,7 +531,7 @@ export const Ladakh = [
   {
     title: "Little Tibet Experience",
     image: ladakh4,
-    pricing: "₹76,199/- Onwards",
+    pricing: "₹61,699/- Onwards",
     info: [
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "4N/5D" },
       { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
@@ -796,9 +796,9 @@ export const similar = [
   {
     title: 'Goa',
     image: goa,  // ✅ Correct imported image
-    pricing: '₹19,999/- Onwards',
+    pricing: '₹19,699/- Onwards',
     info: [
-      { icon: 'https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png', text: '4N/5D' },
+      { icon: 'https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png', text: '3N/4D' },
       { icon: 'https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png', text: 'Flight' },
     ],
   },
@@ -814,18 +814,18 @@ export const similar = [
   {
     title: 'Himachal',
     image: himachal,  // ✅ Correct imported image
-    pricing: '₹39,999/- Onwards',
+    pricing: '₹39,929/- Onwards',
     info: [
-      { icon: 'https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png', text: '7N/8D' },
+      { icon: 'https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png', text: '5N/6D' },
       { icon: 'https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png', text: 'Flight' },
     ],
   },
   {
     title: 'Ladakh',
     image: ladakh,  // ✅ Correct imported image
-    pricing: '₹59,999/- Onwards',
+    pricing: '₹47,699/- Onwards',
     info: [
-      { icon: 'https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png', text: '6N/7D' },
+      { icon: 'https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png', text: '3N/4D' },
       { icon: 'https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png', text: 'Flight' },
     ],
   },
