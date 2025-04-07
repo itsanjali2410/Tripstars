@@ -993,22 +993,22 @@ export const Andaman1 = [
   },
   {
     title: "Essence of Andamans",
-    image: southafrica6,
+    image: andaman,
     pricing: "₹45,999/- Onwards",
     info: [
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "5N/6D" },
       { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
     ],
   },
-  {
-    title: "Andamans- Iconic Nature",
-    image: southafrica6,
-    pricing: "₹55,399/- Onwards",
-    info: [
-      { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "6N/7D" },
-      { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
-    ],
-  },
+  // {
+  //   title: "Andamans- Iconic Nature",
+  //   image: andaman,
+  //   pricing: "₹55,399/- Onwards",
+  //   info: [
+  //     { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "6N/7D" },
+  //     { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
+  //   ],
+  // },
 ];
 
 
