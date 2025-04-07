@@ -197,7 +197,7 @@ export default function ThirdPage() {
           inclusions={packageData.inclusions}
           exclusions={packageData.exclusions}
         />
-        <Cta totalPackagePrice={0} nights={0}/>
+        {/* <Cta totalPackagePrice={0} nights={0}/> */}
         <TermsAndConditions />
         {/* Inclusions & Exclusions */}
         
