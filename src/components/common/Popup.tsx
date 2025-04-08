@@ -310,7 +310,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
     email: "",
     destination: "",
     departureCity: "",
-    bookingTime:"",
+    bookingTime: "",
   });
 
   // Open popup after 1 seconds
@@ -330,11 +330,15 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+
+    if (name === "contact" && !/^\d*$/.test(value)) return; // prevents non-numeric input
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
+
 
   const handlePaxChange = (increment: boolean) => setPax((prev) => (increment ? prev + 1 : prev - 1));
   const handleChildChange = (increment: boolean) => setChild((prev) => (increment ? prev + 1 : prev - 1));
@@ -357,7 +361,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
       destination: formData.destination,
       departure_city: formData.departureCity, // ✅ Fixed field name
       travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
-      bookingTime: formData.bookingTime,
+      bookingime: formData.bookingTime,
       pax,
       child,
     };
@@ -392,7 +396,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
         email: "",
         destination: "",
         departureCity: "",
-        bookingTime:"",
+        bookingTime: "",
       });
       setStartDate(null);
       setPax(1);
@@ -450,9 +454,13 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
               name="contact"
               value={formData.contact}
               onChange={handleChange}
-              placeholder="Your Contact Number"
+              pattern="[0-9]*"
+              inputMode="numeric"
+              maxLength={10}
+              placeholder="Contact Number"
               required
             />
+
             <input
               type="email"
               name="email"
@@ -464,7 +472,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
             <div className="row">
               <div>
                 <select name="destination" value={formData.destination} onChange={handleChange} required>
-                <option value="maldives">Select Destinations</option>
+                  <option value="maldives">Select Destinations</option>
                   <option value="maldives">Maldives</option>
                   <option value="bali">Bali</option>
                   <option value="dubai">Dubai</option>
@@ -513,7 +521,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
               <option value="this-week">This Week</option>
               <option value="this-month">This Month</option>
               <option value="undecided">Just Inquiry</option>
-            </select>     
+            </select>
             <DatePicker
               selected={startDate}
               onChange={(date: Date | null) => setStartDate(date)}
