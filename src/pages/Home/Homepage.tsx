@@ -42,7 +42,7 @@ export default function HomePage() {
       <TrendingOffersHome2 title="Trending Offers" cards={similar2} />
       <ExploreDestinations />
       <VideoTestimonials/>
-       <Cta              />
+      <Cta              />
       <VideoThumbnail />
       <WhyTripstars />
       

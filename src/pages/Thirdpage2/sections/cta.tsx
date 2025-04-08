@@ -7,7 +7,6 @@ const MobileCTA = styled.button`
   background: linear-gradient(
     to right,
     #c99603 0%,
-    #f4e628 24%,
     #cd9c01 65%,
     #b38201 100%
   );
@@ -19,15 +18,16 @@ const MobileCTA = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  &:focus {
+  outline: none;
+  box-shadow: none;
+}
 
-  &:hover {
-    transform: scale(1.05);
-  }
+&:active {
+  transform: none;
+}
 
-  &:active {
-    transform: scale(1);
-  }
+
 
   @media (max-width: 480px) {
     font-size: 14px;

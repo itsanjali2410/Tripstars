@@ -25,14 +25,13 @@ const fadeIn = keyframes`
 `;
 
 // Styled components
-const PopupContainer = styled.div<{ isVisible: boolean }>`
+const PopupContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  display: ${({ isVisible }) => (isVisible ? "flex" : "none")};
   justify-content: center;
   align-items: center;  // This ensures vertical centering
   z-index: 10000;
@@ -273,9 +272,7 @@ interface PopupProps {
 }
 
 
-
 const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) => {
-  const [isVisible, setIsVisible] = useState(false);
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [pax, setPax] = useState(1);
   const [child, setChild] = useState(0);
@@ -289,12 +286,8 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
   });
 
   // Open popup after 1 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
-  const closePopup = () => setIsVisible(false);
+  const closePopup = () => onClose();
   const navigate = useNavigate();
   const handleOutsideClick = (e: React.MouseEvent) => {
     if ((e.target as HTMLElement).id === "popup-container") {
@@ -350,19 +343,6 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
         navigate("/thankyou");
       }
 
-      // ✅ Send email using EmailJS
-      // try {
-      //     await emailjs.send(
-      //         "service_eamkhsr", // Your Service ID
-      //         "template_1nh5ps2", // Your Template ID
-      //         formDataToSend,
-      //         "gScHv791km1kt3vL1" // Your Public Key
-      //     );
-      //     alert("📧 Email sent successfully to Admin!");
-      // } catch (emailError) {
-      //     console.warn("⚠️ Failed to send email via EmailJS:", emailError);
-      // }
-
       // ✅ Reset the form and close popup
       closePopup(); // ✅ Using correct function
       setFormData({
@@ -386,7 +366,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
 
 
   return (
-    <PopupContainer id="popup-container" isVisible={isVisible} onClick={handleOutsideClick}>
+    <PopupContainer id="popup-container" onClick={handleOutsideClick}>
       <PopupContent>
         <LeftPanel>
           <div className="main-logo">
@@ -543,3 +523,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
 };
 
 export default Popup;
+
+function setIsVisible(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
