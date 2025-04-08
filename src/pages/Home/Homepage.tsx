@@ -31,7 +31,7 @@ import TrustindexWidget from "./sections/TrustindexWidget";
 import StaticForm from "../../components/common/StaticForm";
 import FloatingWhatsAppButton from "./sections/Floating";
 import TrendingOffersHome2 from "./sections/TrendingOffersHome2"
-
+import Cta from "../../pages/Thirdpage2/sections/cta"
 export default function HomePage() {
   return (
     <>
@@ -42,6 +42,9 @@ export default function HomePage() {
       <TrendingOffersHome2 title="Trending Offers" cards={similar2} />
       <ExploreDestinations />
       <VideoTestimonials/>
+       <Cta onSubmitQuery={function (): void {
+        throw new Error("Function not implemented.");
+      } }              />
       <VideoThumbnail />
       <WhyTripstars />
       

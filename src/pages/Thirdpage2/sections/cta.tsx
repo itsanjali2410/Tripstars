@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import Popup from "../../../components/common/Popup"; // ✅ Make sure the path is correct
 
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000;
-  border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   width: 100%;
   text-align: center;
   padding: 30px 0;
-  margin: 30px 0;
+  margin: 0px 0;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
@@ -26,6 +23,21 @@ const CardContainer = styled.div`
     margin: 20px 0;
   }
 `;
+const MobileOnlyStickyFooter = styled.div`
+  display: none;
+
+  @media (max-width: 480px) {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 100;
+    text-align: center;
+  }
+`;
+
 
 const Heading = styled.div`
   font-size: 18px;
@@ -35,32 +47,6 @@ const Heading = styled.div`
 
   @media (max-width: 480px) {
     font-size: 16px;
-  }
-`;
-
-const PriceText = styled.div`
-  font-size: 36px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.2;
-
-  span {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 500;
-    margin-top: 4px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 32px;
-
-    span {
-      font-size: 14px;
-    }
   }
 `;
 
@@ -79,7 +65,6 @@ const SubmitButton = styled.button`
   background: linear-gradient(
     to right,
     #c99603 0%,
-    #f4e628 24%,
     #cd9c01 65%,
     #b38201 100%
   );
@@ -104,48 +89,30 @@ const SubmitButton = styled.button`
   @media (max-width: 480px) {
     font-size: 14px;
     padding: 10px 20px;
-    width: 57%;
+    width: 100%;
   }
 `;
 
 interface PriceCardProps {
-  totalPackagePrice: number;
-  pricePerAdult?: number;
-  nights: number;
+  onSubmitQuery: () => void;
 }
 
-const PriceCard: React.FC<PriceCardProps> = ({
-  totalPackagePrice,
-  pricePerAdult,
-  nights
-}) => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const handleSubmit = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
-
+const PriceCard: React.FC<PriceCardProps> = ({ onSubmitQuery }) => {
   return (
-    <CardContainer>
-      <Heading>Starting from</Heading>
+    <>
+      {/* Keep desktop content if any */}
+      <CardContainer>
+        {/* Desktop content can go here */}
+      </CardContainer>
 
-      {pricePerAdult !== undefined && (
-        <PriceText>
-          <span>Per Person</span>
-        </PriceText>
-      )}
-
-      <NightsText>{nights} Nights Stay</NightsText>
-
-      <SubmitButton onClick={handleSubmit}>SUBMIT YOUR QUERY</SubmitButton>
-
-      {isPopupOpen && <Popup onClose={handleClosePopup} />}
-    </CardContainer>
+      {/* Mobile sticky button at bottom */}
+      <MobileOnlyStickyFooter>
+        <SubmitButton onClick={onSubmitQuery}>Let’s Begin</SubmitButton>
+      </MobileOnlyStickyFooter>
+    </>
   );
 };
+
+
 
 export default PriceCard;

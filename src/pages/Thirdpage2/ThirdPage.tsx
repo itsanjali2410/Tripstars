@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Finaldata from "./sections/finaldata2";
@@ -16,7 +16,9 @@ import FloatingContactButton from "../Home/sections/Floating";
 import WhyTripstarsholidays from "./sections/WhyTripstarsholidays";
 import { similar, similar2 } from "../../components/data";
 import TourCard from "./sections/Tourdetails";
-import Cta from "./sections/cta"
+import Cta from "./sections/cta";
+import Popup from "../../components/common/Popup"; // Import the Popup component
+
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -50,30 +52,11 @@ const RightSection = styled.div`
 `;
 
 const PackageName = styled.span`
-  font-size: 19px;  
-  font-weight: 700; 
-  color: #333; 
+  font-size: 19px;
+  font-weight: 700;
+  color: #333;
 `;
 
-const IconContainer = styled.div`
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-`;
-
-const IconWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-size: 14px;
-`;
-
-const IconImage = styled.img`
-  width: 40px;
-  height: 40px;
-`;
 const PackageImage = styled.img`
   width: 100%;
   border-radius: 10px;
@@ -88,6 +71,7 @@ const PackageImage = styled.img`
     height: 200px;
   }
 `;
+
 const normalizeString = (str: string): string =>
   str.toLowerCase().trim().replace(/\s+/g, "-");
 
@@ -118,8 +102,14 @@ export default function ThirdPage() {
     );
   }
 
-  const destinationData = Finaldata[destination] || {};
+  const [isPopupVisible, setPopupVisible] = useState(false);
 
+  // Handle toggling the popup visibility
+  const togglePopup = () => {
+    setPopupVisible((prev) => !prev); // Toggle the visibility state
+  };
+
+  const destinationData = Finaldata[destination] || {};
   const normalizedPackageName = normalizeString(decodeURIComponent(packageName));
 
   const packageData = Object.values(destinationData).find(
@@ -145,11 +135,7 @@ export default function ThirdPage() {
         <h1>
           <PackageName>{packageData.packageName}</PackageName>
         </h1>
-        <PackageImage
-          src={packageData.packageImage}
-          alt={packageData.packageName}
-        />
-
+        <PackageImage src={packageData.packageImage} alt={packageData.packageName} />
 
         {/* Package Overview */}
         {packageData.overviewData && (
@@ -164,7 +150,10 @@ export default function ThirdPage() {
           <TourCard
             nights={packageData.nights}
             days={packageData.days}
-            destinationCovered={packageData.destinationCovered} theme={""} totalPackagePrice={""} />
+            destinationCovered={packageData.destinationCovered}
+            theme={""}
+            totalPackagePrice={""}
+          />
         )}
 
         {/* Tour Includes & Highlights */}
@@ -179,6 +168,7 @@ export default function ThirdPage() {
         {packageData.pricePerAdult && (
           <p><strong>Price Per Adult:</strong> {packageData.pricePerAdult}</p>
         )}
+
         {/* Itinerary Section */}
         {packageData.itinerary && (
           <Itinerary
@@ -189,40 +179,37 @@ export default function ThirdPage() {
           />
         )}
 
-
         {/* Tabbed Table Data */}
         {packageData.tableData && <TabbedTable tableData={packageData.tableData} />}
-        
+
         <InclusionsExclusions
           inclusions={packageData.inclusions}
           exclusions={packageData.exclusions}
         />
-        {/* <Cta totalPackagePrice={0} nights={0}/> */}
+        {/* <Cta
+          onSubmitQuery={togglePopup} // Pass the function to open the popup
+          {...(packageData.pricePerAdult && { pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0") })}        
+        /> */}
         <TermsAndConditions />
-        {/* Inclusions & Exclusions */}
-        
-        {/* Additional Sections */}
-        {/* <WhyTripstarsholidays /> */}
-        
       </LeftSection>
+
       <RightSection>
-        
-      <PriceCard
+        <PriceCard
+          emiPrice={0}
+          emiLink={""}
+          onSubmitQuery={togglePopup} // Pass the function to open the popup
           totalPackagePrice={totalPackagePrice}
           nights={packageData.nights}
-          emiPrice={3590}
-          emiLink="/emi-options"
           {...(packageData.pricePerAdult && { pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0") })}
         />
-        {/* <PackageCard
-          nights={packageData.nights}
-          days={packageData.days}
-          destinationCovered={packageData.destinationCovered}
-        /> */}
-
         <HelpCard />
       </RightSection>
+
+      {/* Floating Contact Button */}
       <FloatingContactButton />
+
+      {/* Conditionally Render Popup */}
+      {isPopupVisible && <Popup onClose={togglePopup} />}
     </Container>
   );
 }

@@ -37,79 +37,20 @@ const Heading = styled.div`
     font-size: 16px;
   }
 `;
-
 const PriceText = styled.div`
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 24px;
   color: #fff;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.2;
-
   span {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 500;
-    margin-top: 4px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 32px;
-
-    span {
-      font-size: 14px;
-    }
+    font-size: 14px;
+    color: #888;
   }
 `;
 
-const EMIContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #fff;
-  margin: 15px 0;
-  text-align: center;
-
-  img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-
-  a {
-    color: #d5a527;
-    margin-left: 5px;
-    font-weight: 500;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  @media (max-width: 480px) {
-    font-size: 13px;
-
-    img {
-      width: 18px;
-      height: 18px;
-    }
-  }
-`;
-
-const NightsText = styled.div`
+const NightsText = styled.p`
   font-size: 16px;
   color: #fff;
-  font-weight: 600;
-  margin-bottom: 10px;
-
-  @media (max-width: 480px) {
-    font-size: 14px;
-  }
 `;
+
 
 const SubmitButton = styled.button`
   background: linear-gradient(
@@ -150,6 +91,7 @@ interface PriceCardProps {
   nights: number;
   emiPrice: number;
   emiLink: string;
+  onSubmitQuery: () => void; // New prop to handle submit query
 }
 
 const PriceCard: React.FC<PriceCardProps> = ({
@@ -158,17 +100,8 @@ const PriceCard: React.FC<PriceCardProps> = ({
   nights,
   emiPrice,
   emiLink,
+  onSubmitQuery, // Get the function passed from parent component
 }) => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const handleSubmit = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
-
   return (
     <CardContainer>
       <Heading>Starting from</Heading>
@@ -187,16 +120,11 @@ const PriceCard: React.FC<PriceCardProps> = ({
 
       <NightsText>{nights} Nights Stay</NightsText>
 
+      {/* Display EMI details if available */}
 
 
-      <SubmitButton onClick={handleSubmit}>SUBMIT YOUR QUERY</SubmitButton>
-
-      {isPopupOpen && (
-        <Popup
-
-          onClose={handleClosePopup}
-        />
-      )}
+      {/* Button triggers the popup visibility */}
+      <SubmitButton onClick={onSubmitQuery}>SUBMIT YOUR QUERY</SubmitButton>
     </CardContainer>
   );
 };

@@ -23,10 +23,10 @@ const FloatingButton = styled.div`
   }
 
   @media (max-width: 600px) {
-    width: 50px;
-    height: 50px;
-    bottom: 15px;
-    right: 15px;
+        width: 42px;
+        height: 40px;
+        bottom: 60px;
+        right: 15px;
   }
 `;
 

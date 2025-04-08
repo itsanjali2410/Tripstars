@@ -34,35 +34,41 @@ const PopupContainer = styled.div<{ isVisible: boolean }>`
   background: rgba(0, 0, 0, 0.7);
   display: ${({ isVisible }) => (isVisible ? "flex" : "none")};
   justify-content: center;
-  align-items: center;
+  align-items: center;  // This ensures vertical centering
   z-index: 10000;
   animation: ${fadeIn} 0.3s ease-out;
 `;
-
 const PopupContent = styled.div`
   background: white;
   border-radius: 15px;
-  width: 700px;
   display: flex;
   position: relative;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
   max-height: 90vh;
   overflow-y: auto;
+  width: 700px;
+  flex-direction: row;  // Ensure horizontal layout by default
 
   @media (max-width: 768px) {
-    width: 90%;
+ @media (max-width: 768px) {
+  .row {
     flex-direction: column;
-    max-height: 90vh;
   }
-  @media (max-width: 400px) {
-  width: 95%;
-  flex-direction: column;
-  max-height: 90vh;
-  margin: 0 10px;
+
+  .counter-row {
+    flex-direction: column;  // Stack counter buttons vertically on small screens
+  }
+
+  /* Adjust padding and font size for mobile view */
+  input,
+  select {
+    padding: 12px;
+    font-size: 14px;
+  }
 }
 
 `;
+
 
 const LeftPanel = styled.div`
   background: rgb(11, 11, 11);
@@ -153,22 +159,13 @@ const RightPanel = styled.div`
 
   input,
   select {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 12px;
-  outline: none;
-  background-color: white !important; /* remove blue background on iPhone */
-  color: #333  !important;
-  -webkit-appearance: none; /* ✅ Normalize Safari/iPhone */
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
-}
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 12px; /* Increased font size */
+    outline: none;
+    transition: border-color 0.3s;
 
     &:focus {
       border-color: #0a0a52;
@@ -213,7 +210,7 @@ const RightPanel = styled.div`
     transition: background 0.3s;
 
     &:hover {
-      background:rgb(0, 0, 0);
+      background: #218838;
     }
   }
 `;
@@ -233,48 +230,39 @@ const CloseButton = styled.div`
 
 const PaxCounterWrapper = styled.div`
   display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 10px;
-
-  /* Add a min-width to PaxCounter to prevent shrinking too much */
-  @media (max-width: 768px) {
-    gap: 8px;
-  }
+  gap: 20px; /* Space between "Number of Pax" and "Number of Children" */
+  align-items: center; /* Align items vertically centered */
+  justify-content: flex-start; /* Ensure they are aligned to the left */
+  flex-wrap: wrap; /* Allow wrapping in case of small screens */
 `;
 
 const PaxCounter = styled.div`
-  flex: 0 0 auto;
-  min-width: 160px; /* increase if needed */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+  flex-direction: column; /* Arrange label vertically on top */
+  align-items: center; /* Align label, count, and buttons at the center */
+  gap: 5px; /* Space between label and count + buttons */
 
   label {
-    font-size: 13px;
-    text-align: center;
+    font-size: 14px;
+
   }
 
   .counter-row {
-    display: flex;
-    gap: 8px;
+    display: flex; /* Make the count and buttons appear in a row */
+    gap: 10px; /* Space between the count and the buttons */
     align-items: center;
   }
 
   span {
     font-size: 16px;
-    min-width: 20px;
-    text-align: center;
   }
 
   button {
     padding: 5px 10px;
     background: #000;
-    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 14px;
 
     &:hover {
@@ -287,7 +275,6 @@ const PaxCounter = styled.div`
     }
   }
 `;
-
 
 interface PopupProps {
   title?: string;
