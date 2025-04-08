@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const CardContainer = styled.div`
   display: flex;
@@ -23,6 +23,7 @@ const CardContainer = styled.div`
     margin: 20px 0;
   }
 `;
+
 const MobileOnlyStickyFooter = styled.div`
   display: none;
 
@@ -35,29 +36,6 @@ const MobileOnlyStickyFooter = styled.div`
     padding: 10px;
     z-index: 100;
     text-align: center;
-  }
-`;
-
-
-const Heading = styled.div`
-  font-size: 18px;
-  color: rgb(255, 247, 247);
-  margin-bottom: 10px;
-  font-weight: 600;
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
-`;
-
-const NightsText = styled.div`
-  font-size: 16px;
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 10px;
-
-  @media (max-width: 480px) {
-    font-size: 14px;
   }
 `;
 
@@ -100,19 +78,15 @@ interface PriceCardProps {
 const PriceCard: React.FC<PriceCardProps> = ({ onSubmitQuery }) => {
   return (
     <>
-      {/* Keep desktop content if any */}
       <CardContainer>
-        {/* Desktop content can go here */}
+        {/* Other content can go here */}
       </CardContainer>
 
-      {/* Mobile sticky button at bottom */}
       <MobileOnlyStickyFooter>
         <SubmitButton onClick={onSubmitQuery}>Let’s Begin</SubmitButton>
       </MobileOnlyStickyFooter>
     </>
   );
 };
-
-
 
 export default PriceCard;

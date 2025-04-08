@@ -38,37 +38,25 @@ const PopupContainer = styled.div<{ isVisible: boolean }>`
   z-index: 10000;
   animation: ${fadeIn} 0.3s ease-out;
 `;
+
+
 const PopupContent = styled.div`
   background: white;
   border-radius: 15px;
+  width: 700px;
   display: flex;
   position: relative;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
   max-height: 90vh;
   overflow-y: auto;
-  width: 700px;
-  flex-direction: row;  // Ensure horizontal layout by default
 
   @media (max-width: 768px) {
- @media (max-width: 768px) {
-  .row {
+    width: 90%;
     flex-direction: column;
+    max-height: 90vh;
   }
-
-  .counter-row {
-    flex-direction: column;  // Stack counter buttons vertically on small screens
-  }
-
-  /* Adjust padding and font size for mobile view */
-  input,
-  select {
-    padding: 12px;
-    font-size: 14px;
-  }
-}
-
 `;
-
 
 const LeftPanel = styled.div`
   background: rgb(11, 11, 11);
