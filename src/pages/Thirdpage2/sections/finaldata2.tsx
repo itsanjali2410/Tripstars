@@ -995,7 +995,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       cities: "Hanoi, Halong Bay, Da nang, Phu Quoc",
       packageImage:
         "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
-      "itinerary": [
+      itinerary: [
         {
           "Day 1": [
             "Arrival in Hanoi – airport pickup by private car",
@@ -1240,7 +1240,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       cities: "Hanoi, Halong Bay, Da nang, Phu Quoc",
       packageImage:
         "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
-      "itinerary": [
+      itinerary: [
         {
           "Day 1": [
             "Arrive in Hanoi and transfer to hotel",
@@ -1333,6 +1333,473 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Tips, peak season surcharges, and early check-in/late check-out",
         "Wax museum, wine cellar, alpine coaster, and game tokens at Ba Na Hills",
         "Anything not mentioned in the inclusions"
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+    },
+  },
+  baku: {
+    baku1: {
+      packageId: "S04390",
+      packageName: "Super Saver Baku",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "Baku -- Gabala",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Guide", icon: User },
+      ],
+
+      totalPackagePrice: "INR ₹87,399/-",
+
+      packageImage:
+        "https://static.toiimg.com/photo/109784668.cms",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrival at Baku Airport",
+            "Transfer to hotel and check-in",
+            "Free time to relax"
+          ]
+        },
+        {
+          "Day 2": [
+            "Visit Highland Park and Alley of Martyrs",
+            "See National Assembly and Flame Towers",
+            "Walk along Baku Boulevard",
+            "Free time in evening for leisure",
+            "Overnight in Baku"
+          ]
+        },
+        {
+          "Day 3": [
+            "Explore Baku Old City - Shirvanshah Palace & Maiden Tower",
+            "Stroll through Nizami Street for shopping",
+            "Photo stop at Heydar Aliyev Center",
+            "Overnight in Baku"
+          ]
+        },
+        {
+          "Day 4": [
+            "Visit Ateshgah (Fire Temple)",
+            "Explore Yanardag (Burning Mountain)",
+            "Free evening for personal activities",
+            "Overnight in Baku"
+          ]
+        },
+        {
+          "Day 5": [
+            "Travel to Gabala (3-hour drive)",
+            "Experience Tufandaq Winter-Summer Tourism Complex - cable car & activities",
+            "Visit Nohur Lake for scenic views",
+            "Return to Baku and overnight stay"
+          ]
+        },
+        {
+          "Day 6": [
+            "Breakfast at hotel",
+            "Hotel check-out",
+            "Transfer to Baku Airport for departure"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the vibrant city of Baku and surrounding gems with this 6-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      inclusions: [
+        "5 nights accommodation in standard hotel on double sharing basis",
+        "Daily breakfast at hotel",
+        "Airport transfers in private car",
+        "Baku City Tour, Flame Tour, Gabala Tour on sharing basis",
+        "Entry tickets to mentioned sightseeing spots",
+        "Professional English-speaking guide during tours"
+      ],
+      exclusions: [
+        "Airfare and Visa charges",
+        "Meals other than those mentioned",
+        "Personal expenses like tips, laundry, shopping, etc.",
+        "Optional tours or activities not mentioned in the itinerary",
+        "Travel Insurance (mandatory)",
+        "Any increase in fuel charges or taxes"
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+    },
+    baku2: {
+      packageId: "S04390",
+      packageName: "Baku Bliss",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Baku -- Gabala",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Guide", icon: User },
+      ],
+
+      totalPackagePrice: "INR ₹1,20,199/-",
+
+      packageImage:
+        "https://static.toiimg.com/photo/109784668.cms",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrival at Baku Airport and transfer to hotel",
+            "Hotel check-in and rest",
+            "Panoramic Tour: Visit Highland Park, Alley of Martyrs, National Assembly, and Flame Towers",
+            "Walk along Baku Boulevard (Freedom Square to Old City)",
+            "Free evening for personal activities and overnight stay in hotel"
+          ]
+        },
+        {
+          "Day 2": [
+
+            "Visit Baku Old City (Shirvanshahs Palace and Maiden Tower - UNESCO Site)",
+            "Shopping and walk on Nizami Street",
+            "Photo stop at Heydar Aliyev Center",
+            "Overnight stay in Baku"
+          ]
+        },
+        {
+          "Day 3": [
+
+            "Excursion to Shahdag Mountain – scenic journey through the Caucasus",
+            "Stop at Candy Cane Mountain for photo opportunity",
+            "Enjoy alpine views and outdoor activities at Shahdag",
+            "Return and overnight in Baku"
+          ]
+        },
+        {
+          "Day 4": [
+          
+            "Visit Qobustan Rock Art Museum (UNESCO Site with 40,000-year-old petroglyphs)",
+            "Explore Mud Volcanoes - natural bubbling mud formations",
+            "Return and overnight stay in Baku"
+          ]
+        },
+        {
+          "Day 5": [
+            "Transfer from Baku to Gabala",
+            "Enroute stop at Shamakhi: Visit Diri Baba Mausoleum and Juma Mosque",
+            "Optional: Visit Alpaca Farm (yoga, picnic, gift shop, children’s playground)",
+            "Optional: Visit Meysari Winery for wine tasting and vineyard tour",
+            "Arrival in Gabala and check-in to hotel",
+            "Overnight stay in Gabala"
+          ]
+        },
+        {
+          "Day 6": [
+            "Breakfast at hotel and check-out",
+            "Gabala Tour: Visit Tufandaq Winter-Summer Tourism Complex (cable car, skiing, entertainment)",
+            "Visit Nohur Lake for scenic mountain views",
+            "Transfer back to Baku and overnight stay"
+          ]
+        },
+        {
+          "Day 7": [
+
+            "Check-out from hotel and transfer to Baku Airport",
+            "Departure from Baku"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the vibrant city of Baku and surrounding gems with this 7-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      inclusions: [
+        "5 nights accommodation in standard hotel on double sharing basis",
+        "Daily breakfast at hotel",
+        "Airport transfers in private car",
+        "Baku City Tour, Flame Tour, Gabala Tour on sharing basis",
+        "Entry tickets to mentioned sightseeing spots",
+        "Professional English-speaking guide during tours"
+      ],
+      exclusions: [
+        "Airfare and Visa charges",
+        "Meals other than those mentioned",
+        "Personal expenses like tips, laundry, shopping, etc.",
+        "Optional tours or activities not mentioned in the itinerary",
+        "Travel Insurance (mandatory)",
+        "Any increase in fuel charges or taxes"
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+    },
+    baku3: {
+      packageId: "S04390",
+      packageName: "Baku & Gabala",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Baku -- Gabala",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Guide", icon: User },
+      ],
+
+      totalPackagePrice: "INR ₹1,22,599/-",
+
+      packageImage:
+        "https://static.toiimg.com/photo/109784668.cms",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrival at Baku Airport and transfer to hotel",
+            "Hotel check-in and rest",
+            "Panoramic Tour: Visit Highland Park, Alley of Martyrs, National Assembly (Milli Majlis), and Flame Towers",
+            "Stroll along Baku Boulevard from Freedom Square to the Old City including Yeni Bulvar",
+            "Free time for evening activities on your own",
+            "Overnight stay at the hotel in Baku"
+          ]
+        },
+        {
+          "Day 2": [
+            "Explore Baku Old City (Icherisheher) including Shirvanshah’s Palace and Maiden Tower (UNESCO Site)",
+            "Leisure walk and shopping at Nizami Street",
+            "Photo stop at Heydar Aliyev Center (exterior)",
+            "Overnight stay at the hotel in Baku"
+          ]
+        },
+        {
+          "Day 3": [
+            "Full-day Shahdag Tour: Scenic drive through the Caucasus Mountains",
+            "Photo stop at Candy Cane Mountain - striped red and white hills",
+            "Outdoor experiences and natural sightseeing at Shahdag Mountain Resort",
+            "Return and overnight stay in Baku"
+          ]
+        },
+        {
+          "Day 4": [
+            "Absheron Peninsula Tour: Visit Ateshgah Fire Temple and Yanar Dag (Burning Mountain)",
+            "Continue with Qobustan Tour: Explore UNESCO Rock Art Museum with ancient petroglyphs",
+            "Visit the world-famous Mud Volcanoes – natural bubbling landscapes",
+            "Return and overnight stay at the hotel in Baku"
+          ]
+        },
+        {
+          "Day 5": [
+            "Transfer from Baku to Gabala (approx. 3–4 hours)",
+            "Enroute sightseeing at Shamakhi: Visit Diri Baba Mausoleum and Juma Mosque",
+            "Optional visit to Alpaca Farm (yoga, picnic, photo ops, kids’ play area, souvenir shop)",
+            "Optional visit to Meysari Winery (requires pre-booking)",
+            "Arrival and hotel check-in at Gabala",
+            "Overnight stay at hotel in Gabala"
+          ]
+        },
+        {
+          "Day 6": [
+            "Visit Nohur Lake – serene views surrounded by mountains",
+            "Excursion to 7 Gozel Waterfall – scenic multi-tiered waterfall",
+            "Explore Tufandag Mountain Resort – panoramic cable car views and activities",
+            "Return and overnight stay in Gabala"
+          ]
+        },
+        {
+          "Day 7": [
+            "Breakfast at hotel and check-out",
+            "Transfer from Gabala to Baku Airport (approx. 3–4 hours)",
+            "Departure from Baku"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the vibrant city of Baku and surrounding gems with this 7-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      inclusions: [
+        "5 nights accommodation in standard hotel on double sharing basis",
+        "Daily breakfast at hotel",
+        "Airport transfers in private car",
+        "Baku City Tour, Flame Tour, Gabala Tour on sharing basis",
+        "Entry tickets to mentioned sightseeing spots",
+        "Professional English-speaking guide during tours"
+      ],
+      exclusions: [
+        "Airfare and Visa charges",
+        "Meals other than those mentioned",
+        "Personal expenses like tips, laundry, shopping, etc.",
+        "Optional tours or activities not mentioned in the itinerary",
+        "Travel Insurance (mandatory)",
+        "Any increase in fuel charges or taxes"
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+    },
+    baku4: {
+      packageId: "S04390",
+      packageName: "Azerbaijan Explorer",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Baku -- Gabala",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Guide", icon: User },
+      ],
+
+      totalPackagePrice: "INR ₹1,26,999/-",
+
+      packageImage:
+        "https://static.toiimg.com/photo/109784668.cms",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrival at Baku Airport and transfer to hotel",
+            "Hotel check-in and rest",
+            "Panoramic Tour: Visit Highland Park, Alley of Martyrs, National Assembly (Milli Majlis), and Flame Towers",
+            "Stroll along Baku Boulevard from Freedom Square to the Old City including Yeni Bulvar",
+            "Free time for evening activities on your own",
+            "Overnight stay at the hotel in Baku"
+          ]
+        },
+        {
+          "Day 2": [
+            "Explore Baku Old City (Icherisheher) including Shirvanshah’s Palace and Maiden Tower (UNESCO Site)",
+            "Leisure walk and shopping at Nizami Street",
+            "Photo stop at Heydar Aliyev Center (exterior)",
+            "Overnight stay at the hotel in Baku"
+          ]
+        },
+        {
+          "Day 3": [
+            "Full-day Shahdag Tour: Scenic drive through the Caucasus Mountains",
+            "Photo stop at Candy Cane Mountain - striped red and white hills",
+            "Outdoor experiences and natural sightseeing at Shahdag Mountain Resort",
+            "Return and overnight stay in Baku"
+          ]
+        },
+        {
+          "Day 4": [
+            "Absheron Peninsula Tour: Visit Ateshgah Fire Temple and Yanar Dag (Burning Mountain)",
+            "Continue with Qobustan Tour: Explore UNESCO Rock Art Museum with ancient petroglyphs",
+            "Visit the world-famous Mud Volcanoes – natural bubbling landscapes",
+            "Return and overnight stay at the hotel in Baku"
+          ]
+        },
+        {
+          "Day 5": [
+            "Transfer from Baku to Gabala (approx. 3–4 hours)",
+            "Enroute sightseeing at Shamakhi: Visit Diri Baba Mausoleum and Juma Mosque",
+            "Optional visit to Alpaca Farm (yoga, picnic, photo ops, kids’ play area, souvenir shop)",
+            "Optional visit to Meysari Winery (requires pre-booking)",
+            "Arrival and hotel check-in at Gabala",
+            "Overnight stay at hotel in Gabala"
+          ]
+        },
+        {
+          "Day 6": [
+            "Visit Nohur Lake – serene views surrounded by mountains",
+            "Excursion to 7 Gozel Waterfall – scenic multi-tiered waterfall",
+            "Explore Tufandag Mountain Resort – panoramic cable car views and activities",
+            "Return and overnight stay in Gabala"
+          ]
+        },
+        {
+          "Day 7": [
+            "Breakfast at hotel and check-out",
+            "Transfer from Gabala to Baku Airport (approx. 3–4 hours)",
+            "Departure from Baku"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the vibrant capital city of Baku and the scenic beauty of Gabala on this 7-day journey through Azerbaijan. Discover ancient landmarks, marvel at modern architecture, witness natural fire phenomena, and relax amidst mountains and lakes. This package offers a perfect blend of cultural discovery, historical exploration, and natural adventure.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      inclusions: [
+        "5 nights accommodation in standard hotel on double sharing basis",
+        "Daily breakfast at hotel",
+        "Airport transfers in private car",
+        "Baku City Tour, Flame Tour, Gabala Tour on sharing basis",
+        "Entry tickets to mentioned sightseeing spots",
+        "Professional English-speaking guide during tours"
+      ],
+      exclusions: [
+        "Airfare and Visa charges",
+        "Meals other than those mentioned",
+        "Personal expenses like tips, laundry, shopping, etc.",
+        "Optional tours or activities not mentioned in the itinerary",
+        "Travel Insurance (mandatory)",
+        "Any increase in fuel charges or taxes"
       ],
       termsConditions: ["All payment should be cleared at least 30 days before departure."],
       cancellationPolicy: {
