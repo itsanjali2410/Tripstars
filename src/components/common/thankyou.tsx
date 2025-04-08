@@ -24,7 +24,7 @@ const Title = styled.h1`
 `;
 
 const Message = styled.p`
-  font-size: 18px;
+  font-size: 18px;                                                                                                       
   color: #555;
   margin-bottom: 20px;
 `;

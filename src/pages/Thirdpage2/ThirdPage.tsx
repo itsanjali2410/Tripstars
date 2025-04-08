@@ -152,8 +152,7 @@ export default function ThirdPage() {
             days={packageData.days}
             destinationCovered={packageData.destinationCovered}
             theme={""}
-            totalPackagePrice={""}
-          />
+            totalPackagePrice={""} country={""}          />
         )}
 
         {/* Tour Includes & Highlights */}

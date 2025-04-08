@@ -433,7 +433,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
                   onChange={handleChange}
                   required
                 >
-                  <option value="">Select Destination</option> {/* <- empty value here */}
+                  <option value="">Select Destination</option>
                   <option value="maldives">Maldives</option>
                   <option value="bali">Bali</option>
                   <option value="dubai">Dubai</option>

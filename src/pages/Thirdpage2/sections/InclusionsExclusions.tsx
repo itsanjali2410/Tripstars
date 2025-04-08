@@ -8,7 +8,6 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
 `;
 
 const OverviewWrapper = styled.div`
@@ -51,7 +50,6 @@ const Box = styled.div<{ borderColor: string; bgColor: string; $hiddenOnMobile?:
   }
 `;
 
-
 const Title = styled.h3`
   margin: 0 0 15px;
   display: flex;
@@ -69,7 +67,6 @@ const Icon = styled.span`
     flex-shrink: 0;
   }
 `;
-
 const List = styled.ul`
   list-style: none;
   padding: 0;
@@ -92,7 +89,6 @@ const ListItem = styled.li<{ iconColor: string }>`
     flex-shrink: 0;
   }
 `;
-
 const Tabs = styled.div`
   display: flex;
   justify-content: center;
@@ -102,7 +98,6 @@ const Tabs = styled.div`
     display: none;
   }
 `;
-
 const Tab = styled.div<{ active: boolean }>`
   padding: 10px 5px;
   margin: 5px 2px;
@@ -118,7 +113,6 @@ const Tab = styled.div<{ active: boolean }>`
     background-color: #ffedcc;
   }
 `;
-
 // Props Interface
 interface InclusionsExclusionsProps {
   inclusions: string[];
@@ -127,8 +121,6 @@ interface InclusionsExclusionsProps {
   days?: number;
   destinationCovered?: string;
 }
-
-
 
 // Main Component
 const InclusionsExclusions: React.FC<InclusionsExclusionsProps> = ({ inclusions, exclusions }) => {

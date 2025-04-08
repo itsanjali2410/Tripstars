@@ -148,7 +148,6 @@ const FooterSection = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-
 const FooterContact = styled.div`
   text-align: center;
   margin-top: 20px;

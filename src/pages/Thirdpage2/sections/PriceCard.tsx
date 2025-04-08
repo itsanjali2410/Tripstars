@@ -108,7 +108,7 @@ const PriceCard: React.FC<PriceCardProps> = ({
 
       <PriceText>
         ₹{totalPackagePrice.toLocaleString()}
-        <span>Per Package</span>
+        <span>Per Person</span>
       </PriceText>
 
       {pricePerAdult !== undefined && (

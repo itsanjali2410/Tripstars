@@ -39,10 +39,11 @@ interface TourDetails {
   theme: string;
   destinationCovered: string;
   totalPackagePrice: string;
+  country : string;
 }
 
 // Functional Component
-const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered }) => {
+const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered, country}) => {
   return (
     <CardWrapper>
       <InfoRow>
@@ -52,6 +53,9 @@ const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered }) =
       <InfoRow>
         <MapPin size={22} />
         <span>{destinationCovered}</span>
+      </InfoRow>
+      <InfoRow>
+        <span>{country}</span>
       </InfoRow>
     </CardWrapper>
   );
