@@ -427,8 +427,13 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
             />
             <div className="row">
               <div>
-                <select name="destination" value={formData.destination} onChange={handleChange} required>
-                  <option value="maldives">Select Destinations</option>
+                <select
+                  name="destination"
+                  value={formData.destination}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select Destination</option> {/* <- empty value here */}
                   <option value="maldives">Maldives</option>
                   <option value="bali">Bali</option>
                   <option value="dubai">Dubai</option>
@@ -451,10 +456,10 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
                   <option value="bangkok">Bangkok</option>
                   <option value="baku">Baku</option>
                   <option value="turkey">Turkey</option>
-                  <option value="Other">Any other place ?</option>
+                  <option value="Other">Any other place?</option>
                 </select>
-
               </div>
+
               <div>
                 <input
                   type="text"
@@ -466,6 +471,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
                 />
               </div>
             </div>
+
             <select
               id="bookingTime"
               name="bookingTime"
