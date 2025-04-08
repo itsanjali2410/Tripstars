@@ -186,10 +186,9 @@ export default function ThirdPage() {
           inclusions={packageData.inclusions}
           exclusions={packageData.exclusions}
         />
-        {/* <Cta
-          onSubmitQuery={togglePopup} // Pass the function to open the popup
-          {...(packageData.pricePerAdult && { pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0") })}        
-        /> */}
+        <Cta
+               
+        />
         <TermsAndConditions />
       </LeftSection>
 

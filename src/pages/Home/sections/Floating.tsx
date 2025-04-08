@@ -25,8 +25,9 @@ const FloatingButton = styled.div`
   @media (max-width: 600px) {
         width: 42px;
         height: 40px;
-        bottom: 60px;
-        right: 15px;
+        bottom: 45px;
+        right: 0px;
+    }
   }
 `;
 
