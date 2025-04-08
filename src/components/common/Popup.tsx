@@ -29,14 +29,15 @@ const PopupContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); // semi-transparent overlay
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;  // This ensures vertical centering
-  z-index: 10000;
-  animation: ${fadeIn} 0.3s ease-out;
+  z-index: 9999;
 `;
+
 
 
 const PopupContent = styled.div`
@@ -329,7 +330,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
       destination: formData.destination,
       departure_city: formData.departureCity, // ✅ Fixed field name
       travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
-      bookingime: formData.bookingTime,
+      bookingTime: formData.bookingTime,
       pax,
       child,
     };
