@@ -837,13 +837,13 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
     },
     vietnam3: {
       packageId: "S04390",
-      packageName: "vietnam wonders",
+      packageName: "Vietnam Wonders",
       totalGuests: 2,
       nights: 8,
       days: 9,
       theme: "Mumbai",
       destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
-      totalPackagePrice: "INR ₹ 1,10,499/-",
+      totalPackagePrice: "INR ₹1,10,499/-",
       highlights: [
         "Expert tour manager all throughout the tour",
         "Breakfast included in tour price",
@@ -866,7 +866,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       country: "Indonesia",
       cities: "Bali, Ubud",
       packageImage:
-        "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+        "https://www.odysseytravels.net/uploads/package/map_pic/the-wonders-of-vietnam--cambodia-232.jpg",
       itinerary: [
         {
           "Day 1": [
@@ -988,13 +988,13 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       totalPackagePrice: "INR 92,599",
       overviewData: {
         title: "Package Overview",
-        content: "Enjoy a 6N7D adventure in Bali and Nusa Penida with scenic views and luxury accommodations.",
+        content: "Enjoy a 6 dys 5 nights adventure in Vietnam, sapa with scenic views and luxury accommodations.",
       },
       duration: "7 Days",
       country: "Indonesia",
       cities: "Hanoi, Halong Bay, Da nang, Phu Quoc",
       packageImage:
-        "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+        "https://www.vjv.com/media/y4rhjy5j/tran-quoc-pagoda-the-oldest-temple-in-hanoi-vietnam.jpg?width=1920&height=1080&quality=60",
       itinerary: [
         {
           "Day 1": [
@@ -1111,9 +1111,9 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       },
       duration: "9 Days",
       country: "Indonesia",
-      cities: "Hanoi, Halong Bay, Da nang, Phu Quoc",
+      cities: "Hanoi, Halong Bay, Da nang, Sapa",
       packageImage:
-        "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPsj-oP4hEAriDtq3uNcwRwvp7wiTkDBmmpw&s",
       itinerary: [
 
         {
@@ -1239,7 +1239,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       country: "Indonesia",
       cities: "Hanoi, Halong Bay, Da nang, Phu Quoc",
       packageImage:
-        "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_qIastzELruHsgXDCAujfKteIVY2eM7SN5A&s",
       itinerary: [
         {
           "Day 1": [
@@ -1369,7 +1369,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       totalPackagePrice: "INR ₹87,399/-",
 
       packageImage:
-        "https://static.toiimg.com/photo/109784668.cms",
+        "https://www.salamair.com/images/gyd.jpg.jpg",
 
       itinerary: [
         {
@@ -1476,7 +1476,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       totalPackagePrice: "INR ₹1,20,199/-",
 
       packageImage:
-        "https://static.toiimg.com/photo/109784668.cms",
+        "https://www.swiss.com/aircore/media/65/eyJpZGVudGlmaWVyIjozMjY0MjksInR5cGUiOiJhc3NldCJ9.png",
 
       itinerary: [
         {
@@ -1596,7 +1596,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       totalPackagePrice: "INR ₹1,22,599/-",
 
       packageImage:
-        "https://static.toiimg.com/photo/109784668.cms",
+        "https://cdn.rt.emap.com/wp-content/uploads/sites/4/2014/01/30051846/HAC_Exterior_Photo_by_Hufton_Crow__1__1-1.jpg",
 
       itinerary: [
         {
@@ -1715,7 +1715,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       totalPackagePrice: "INR ₹1,26,999/-",
 
       packageImage:
-        "https://static.toiimg.com/photo/109784668.cms",
+        "https://d36tnp772eyphs.cloudfront.net/blogs/1/2019/11/Modern-skyscraper-in-Baku-Azerbaijan.jpg",
 
       itinerary: [
         {
