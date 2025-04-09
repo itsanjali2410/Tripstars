@@ -2122,7 +2122,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       totalPackagePrice: "INR ₹77,599/-",
 
       packageImage:
-        "https://travelites.co.in/uploads/IMG_6481892c31c6a1.60601628_425.webp",
+        "https://www.duomasters.com/wp-content/uploads/Dubais-Delectable-Delights-Savoring-the-Citys-Rich-Culinary-Scene.png",
 
       itinerary: [
         {
@@ -2141,7 +2141,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
             "Overnight stay at the hotel in Dubai"
           ]
         },
-        {
+        {    
           "Day 3": [
             "Visit to Museum of the Future – immersive futuristic experience",
             "Evening Desert Safari with dune bashing, belly dance, BBQ dinner at desert camp",
