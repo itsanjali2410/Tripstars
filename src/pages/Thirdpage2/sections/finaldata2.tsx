@@ -1641,7 +1641,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
           ]
         },
         {
-          "Day 6: Dubai Departure": [
+          "Day 7: Dubai Departure": [
             "Breakfast at hotel",
             "Hotel check-out",
             "Transfer to Dubai International Airport for departure"
