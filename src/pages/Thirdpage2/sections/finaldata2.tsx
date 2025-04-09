@@ -284,7 +284,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
           ]
         },
         {
-          "Day 8: Departure from Ubud Hotel - Bali Denpasar Airport": [
+          "Day 6: Departure from Ubud Hotel - Bali Denpasar Airport": [
             "Take a bag full of memories to cherish. Check out from your hotel and transfer to Denpasar Airport for your return flight home."
           ]
         }
