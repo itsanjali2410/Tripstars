@@ -39,18 +39,6 @@ interface PackageData {
       cost4?: string;
       cost5?: string;
     }[];
-    tab2: {
-      city?: string;
-      star4?: string;
-      star5?: string;
-      label?: string;
-      cost4?: string;
-      cost5?: string;
-    }[];
-    tab3: {
-      name: string;
-      costPerAdult: string;
-    }[];
   };
 }
 
@@ -176,31 +164,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
             cost5: "₹43,999",
           },
         ],
-        tab2: [
-          {
-            city: "Kuta",
-            star4: "Swiss-Belhotel Rainforest, Kuta\The One Legion\Golden Tulip Jineng Resort",
-            star5: "Bintang Bali Resort\Royal Tulip Springhill Resort\Pullman Bali Legian Beach",
-          },
-          {
-            city: "Ubud",
-            star4: "Alam Puisi Ubud\Ashoka Tree Resort Ubud\Bhumi Linggah",
-            star5: "Asvara Villa Ubud\FuramaXclusive Resort & Villas\Hideaway Village Bali",
-          },
-          {
-            label: "Cost per Adult",
-            cost4: "₹64,499",
-            cost5: "₹74,999",
-          },
-        ],
-        tab3: [
-          { name: "ATV Quad Bike & White Water Rafting Adventure", costPerAdult: "₹5000/-" },
-          { name: "Bali Safari with Marine Park & Jungle Hopper Pass", costPerAdult: "₹6000/-" },
-          { name: "Candle Light Dinner", costPerAdult: "₹3000/-" },
-          { name: "Lempuyang Temple, Tirta Gangga & Waterfall Tour", costPerAdult: "₹2999/-" },
-          { name: "Floating Breakfast", costPerAdult: "₹2499/-" },
-
-        ],
+        
       }, // ✅ Closing
     },
     bali2: {
@@ -281,32 +245,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
             cost5: "₹34,999",
           },
         ],
-        tab2: [
-          {
-            city: "Kuta",
-            star4: "Swiss-Belhotel Rainforest, The One Legion, Golden Tulip Jineng Resort",
-            star5: "Bintang Bali Resort,Royal Tulip Springhill Resort,Pullman Bali Legian Beach",
-          },
-          {
-            city: "Ubud",
-            star4: "Alam Puisi Ubud, Ashoka Tree Resort Ubud, Bhumi Linggah",
-            star5: "Asvara Villa Ubud, FuramaXclusive Resort & Villas, Hideaway Village Bali",
-          },
-          {
-            label: "Cost per Adult",
-            cost4: "₹64,499",
-            cost5: "₹74,999",
-          },
-        ],
-        tab3: [
-          { name: "ATV Quad Bike & White Water Rafting Adventure", costPerAdult: "₹4999/-" },
-          { name: "Bali Safari with Marine Park & Jungle Hopper Pass", costPerAdult: "₹5999/-" },
-          { name: "Candle Light Dinner", costPerAdult: "₹2999/-" },
-          { name: "Lempuyang Temple, Tirta Gangga & Waterfall Tour", costPerAdult: "₹2999/-" },
-          { name: "Nusa Penida Tour with Snorkelling", costPerAdult: "₹7799/-" },
-          { name: "Floating Breakfast", costPerAdult: "₹2499/-" },
-
-        ],
+       
       },
     },
     bali3: {
@@ -436,28 +375,6 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
             cost5: "₹58,999",
           },
         ],
-        tab2: [
-          {
-            city: "Kuta",
-            star4: "Swiss-Belhotel Rainforest, The One Legion, Golden Tulip Jineng Resort",
-            star5: "Bintang Bali Resort, Royal Tulip Springhill Resort, Pullman Bali Legian Beach",
-          },
-          {
-            city: "Ubud",
-            star4: "Alam Puisi Ubud, Ashoka Tree Resort Ubud, Bhumi Linggah",
-            star5: "Asvara Villa Ubud, FuramaXclusive Resort & Villas, Hideaway Village Bali",
-          },
-          {
-            label: "Cost per Adult",
-            cost4: "₹89,999",
-            cost5: "₹95,999",
-          },
-        ],
-        tab3: [
-          { name: "Candle Light Dinner", costPerAdult: "₹2999/-" },
-          { name: "Floating Breakfast", costPerAdult: "₹2499/-" },
-
-        ],
       },
     },
     bali4: {
@@ -578,28 +495,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
             cost5: "₹58,999",
           },
         ],
-        tab2: [
-          {
-            city: "Kuta - 4N Deluxe Room",
-            star4: "Swiss-Belhotel Rainforest Kuta/The One Legion/Golden Tulip Jineng Resort/Kuta Central",
-            star5: "Bintang Bali Resort/Royal Tulip Springhill Resort /Pullman Bali Legian Beach",
-          },
-          {
-            city: "Ubud - 2N Deluxe Room",
-            star4: "Alam Puisi Ubud/Ashoka Tree Resort Ubud/ Bhumi Linggah/Ubud Heaven Sayan",
-            star5: "Asvara Villa Ubud/FuramaXclusive Resort & Villas/Hideaway village bali",
-          },
-          {
-            label: "Cost per Adult",
-            cost4: "₹64,999",
-            cost5: "₹78,999",
-          },
-        ],
-        tab3: [
-          { name: "Candle Light Dinner", costPerAdult: "₹2999/-" },
-          { name: "Floating Breakfast", costPerAdult: "₹2499/-" },
-
-        ],
+       
       },
     },
 
@@ -1508,7 +1404,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         },
         {
           "Day 4": [
-          
+
             "Visit Qobustan Rock Art Museum (UNESCO Site with 40,000-year-old petroglyphs)",
             "Explore Mud Volcanoes - natural bubbling mud formations",
             "Return and overnight stay in Baku"
@@ -1806,6 +1702,513 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "30DaysOrMore": "25% of total cost",
         "29To20Days": "50% of total cost",
         "19DaysOrLess": "100% of total cost",
+      },
+    },
+  },
+  dubai: {
+    dubai1: {
+      packageId: "S04390",
+      packageName: "Dream Dubai",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-5N",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Guide", icon: User },
+      ],
+
+      totalPackagePrice: "INR ₹82,999/-",
+
+      packageImage:
+        "https://i0.wp.com/reconasia.csis.org/wp-content/uploads/2017/01/chasing_the_dubai_dreamii-e1619813205979.jpeg?fit=2000%2C1333&ssl=1",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrival at Dubai International Airport",
+            "Transfer to hotel and check-in",
+            "Evening Marina Dhow Cruise with dinner - enjoy the illuminated skyline along Dubai Marina",
+            "Overnight in Dubai"
+          ]
+        },
+        {
+          "Day 2": [
+            "Half-day Dubai City Tour - Gold Souk, Jumeirah Mosque, Jumeirah Beach (photo stop), Burj Al Arab, Souk Madinat Jumeirah, Atlantis the Palm (photo stop), drive along Sheikh Zayed Road",
+            "Visit Burj Khalifa - 124th floor observation deck (Non-prime time)",
+            "Enjoy Dubai Fountain show at Dubai Mall",
+          ]
+        },
+        {
+          "Day 3": [
+            "Morning free for leisure or optional activities",
+            "Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
+
+          ]
+        },
+        {
+          "Day 4": [
+            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery",
+            "Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
+            "Return to Dubai and overnight stay"
+          ]
+        },
+        {
+          "Day 5": [
+            "Day at leisure - relax or explore Dubai on your own",
+            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
+            "Overnight in Dubai"
+          ]
+        },
+        {
+          "Day 6": [
+            "Breakfast at hotel",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        }
+
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the vibrant city of Baku and surrounding gems with this 6-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      inclusions: [
+        "5 nights hotel stay with breakfast",
+        "Airport transfers (SIC basis)",
+        "Marina Dhow Cruise with dinner",
+        "Dubai City Tour (Half-day)",
+        "Burj Khalifa 124th Floor ticket (non-prime time)",
+        "Desert Safari with BBQ dinner",
+        "Abu Dhabi City Tour",
+        "Ferrari World entry",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "Tourism Dirham (to be paid at hotel)",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+      tableData: {
+        tab1: [
+          {
+            city: "Kuta - 4N Deluxe Room",
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+          {
+            city: "Ubud - 2N Deluxe Room",
+            star4: "Alam Puisi Ubud/Ashoka Tree Resort Ubud/ Bhumi Linggah/Ubud Heaven Sayan",
+            star5: "Asvara Villa Ubud/FuramaXclusive Resort & Villas/Hideaway village bali",
+          },
+          {
+            label: "Cost per Adult",
+            cost4: "₹42,499",
+            cost5: "₹58,999",
+          },
+        ],
+      },
+    },
+    dubai2: {
+      packageId: "S04390",
+      packageName: "Dubai with Abu dhabi",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-4N -- Abu Dhabi-1N",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Guide", icon: User },
+      ],
+
+      totalPackagePrice: "INR ₹91,499/-",
+
+      packageImage:
+        "https://asset.providentestate.com/x/1000x/Dubai_vs_Abu_Dhabi_Where_Should_International_Buyers_Invest_for_Maximum_Returns_e1b4651020.webp",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrive in Dubai in the evening and meet our representative at the airport",
+            "Transfer to hotel and check-in",
+            "Dinner at the hotel",
+            "Evening Marina Dhow Cruise with onboard dinner",
+            "Overnight stay in Dubai"
+          ]
+        },
+        {
+          "Day 2": [
+            "Half-day panoramic Dubai city tour: Gold Souk, Al Seef, Bastakiya, Meena Bazar",
+            "Photo stops at Dubai Frame, Burj Al Arab, Palm Jumeirah (Atlantis)",
+            "Drive past Burj Khalifa, Dubai Mall, Sheikh Zayed Road, Mall of the Emirates, Ski Dubai",
+            "Lunch at an Indian restaurant",
+            "Visit Burj Khalifa 124th Floor (non-prime time entry at 15:00)",
+            "Watch the Fountain Show at Dubai Mall (18:30 or 19:00)",
+            "Return to hotel and overnight stay in Dubai"
+          ]
+        },
+        {
+          "Day 3": [
+            "Free morning for shopping or personal activities",
+            "Visit the Museum of the Future",
+            "Lunch at an Indian restaurant",
+            "Evening Desert Safari: dune bashing, belly dance, camel rides, henna, BBQ dinner at desert camp",
+            "Return to hotel and overnight stay in Dubai"
+          ]
+        },
+        {
+          "Day 4": [
+            "Day at leisure to explore Dubai at your own pace",
+            "Optional activities and excursions available",
+            "Overnight stay in Dubai"
+          ]
+        },
+        {
+          "Day 5": [
+            "Check out from hotel and transfer to Abu Dhabi",
+            "Abu Dhabi city tour including visit to BAPS Hindu Temple",
+            "Lunch at an Indian restaurant",
+            "Check in to hotel in Abu Dhabi",
+            "Visit Ferrari World for thrilling rides and entertainment",
+            "Dinner at an Indian restaurant",
+            "Overnight stay in Abu Dhabi"
+          ]
+        },
+        {
+          "Day 6": [
+            "Free morning at leisure",
+            "Lunch at an Indian restaurant",
+            "Transfer to the airport for departure from Abu Dhabi"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the best of Dubai and Abu Dhabi in this 5-night getaway. Cruise along Dubai Marina, visit the Burj Khalifa, enjoy a thrilling desert safari, and experience the wonders of the Museum of the Future.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      inclusions: [
+        "5 nights hotel stay with breakfast",
+        "Airport transfers",
+        "Marina Dhow Cruise with dinner",
+        "Dubai city tour & Burj Khalifa (124th floor)",
+        "Museum of the Future entry",
+        "Desert Safari with BBQ dinner",
+        "Abu Dhabi city tour & Ferrari World entry",
+        "Visa assistance"
+      ],
+
+      exclusions: [
+        "Tourism Dirham fee",
+        "Travel insurance",
+        "Personal expenses",
+        "Meals not mentioned",
+        "Optional activities",
+        "Early check-in / late check-out"
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+      tableData: {
+        tab1: [
+          {
+            city: "Kuta - 4N Deluxe Room",
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+          {
+            city: "Ubud - 2N Deluxe Room",
+            star4: "Alam Puisi Ubud/Ashoka Tree Resort Ubud /Bhumi Linggah/Ubud Heaven Sayan",
+            star5: "Asvara Villa Ubud/FuramaXclusive Resort & Villas/Hideaway village bali",
+          },
+          {
+            city: "Gili - 1N Deluxe Room",
+            star4: "Hotel Ombak sunset/Aston Sunset Beach/Similar",
+            star5: "Jambuluwuk Oceano Gili Trawangan Resort/Similar",
+          },
+          {
+            label: "Cost per Adult",
+            cost4: "₹42,499",
+            cost5: "₹58,999",
+          },
+        ],
+      },
+    },
+    dubai3: {
+      packageId: "S04390",
+      packageName: "Dubai & Abu Dhabi Wonders",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-4N -- Abu Dhabi-2N",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Guide", icon: User },
+      ],
+
+      totalPackagePrice: "INR ₹1,01,499/-",
+
+      packageImage:
+        "https://cdn.rt.emap.com/wp-content/uploads/sites/4/2014/01/30051846/HAC_Exterior_Photo_by_Hufton_Crow__1__1-1.jpg",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrival in Dubai and hotel check-in",
+            "Evening Marina Dhow Cruise with dinner"
+          ]
+        },
+        {
+          "Day 2": [
+            "Half-day Dubai City Tour",
+            "Visit Burj Khalifa 124th floor (non-prime time) and Fountain Show"
+          ]
+        },
+        {
+          "Day 3": [
+            "Visit Museum of the Future",
+            "Evening Desert Safari with BBQ Dinner and entertainment"
+          ]
+        },
+        {
+          "Day 4": [
+            "Day at leisure to explore Dubai on your own"
+          ]
+        },
+        {
+          "Day 5": [
+            "Transfer to Abu Dhabi and hotel check-in",
+            "Abu Dhabi City Tour with Sheikh Zayed Grand Mosque",
+            "Visit BAPS Hindu Mandir",
+            "Evening visit to Ferrari World"
+          ]
+        },
+        {
+          "Day 6": [
+            "Visit Sea World Yas Island"
+          ]
+        },
+        {
+          "Day 7": [
+            "Check-out and transfer to Abu Dhabi Airport for departure"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Discover Dubai & Abu Dhabi in 6 nights – iconic landmarks, thrilling experiences, and cultural wonders, all in one unforgettable trip.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      inclusions: [
+        "6 nights accommodation in standard hotel on double sharing basis",
+        "Daily breakfast at hotel",
+        "Airport transfers in private car",
+        "Entry tickets to mentioned sightseeing spots",
+        "Professional English-speaking guide during tours"
+      ],
+      exclusions: [
+        "Airfare and Visa charges",
+        "Meals other than those mentioned",
+        "Personal expenses like tips, laundry, shopping, etc.",
+        "Optional tours or activities not mentioned in the itinerary",
+        "Travel Insurance (mandatory)",
+        "Any increase in fuel charges or taxes"
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+      tableData: {
+        tab1: [
+          {
+            city: "Kuta - 4N Deluxe Room",
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+          {
+            city: "Ubud - 2N Deluxe Room",
+            star4: "Alam Puisi Ubud/Ashoka Tree Resort Ubud /Bhumi Linggah/Ubud Heaven Sayan",
+            star5: "Asvara Villa Ubud/FuramaXclusive Resort & Villas/Hideaway village bali",
+          },
+          {
+            city: "Gili - 1N Deluxe Room",
+            star4: "Hotel Ombak sunset/Aston Sunset Beach/Similar",
+            star5: "Jambuluwuk Oceano Gili Trawangan Resort/Similar",
+          },
+          {
+            label: "Cost per Adult",
+            cost4: "₹42,499",
+            cost5: "₹58,999",
+          },
+        ],
+      },
+    },
+    dubai4: {
+      packageId: "S04390",
+      packageName: "Dubai Delights",
+      totalGuests: 2,
+      nights: 4,
+      days: 5,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-4N",
+      highlights: [
+        "Expert tour manager all throughout the tour",
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Guide", icon: User },
+      ],
+
+      totalPackagePrice: "INR ₹77,599/-",
+
+      packageImage:
+        "https://travelites.co.in/uploads/IMG_6481892c31c6a1.60601628_425.webp",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrival at Dubai International Airport and transfer to hotel",
+            "Hotel check-in and rest",
+            "Evening Marina Dhow Cruise with dinner and views of illuminated skyline",
+            "Overnight stay at the hotel in Dubai"
+          ]
+        },
+        {
+          "Day 2": [
+            "Half Day Dubai City Tour – Gold Souk, Jumeirah Mosque, Burj Al Arab, Atlantis, Sheikh Zayed Road",
+            "Visit to Burj Khalifa 124th Floor – Non-prime time entry",
+            "Enjoy the Dubai Fountain Show at Dubai Mall",
+            "Overnight stay at the hotel in Dubai"
+          ]
+        },
+        {
+          "Day 3": [
+            "Visit to Museum of the Future – immersive futuristic experience",
+            "Evening Desert Safari with dune bashing, belly dance, BBQ dinner at desert camp",
+            "Overnight stay at the hotel in Dubai"
+          ]
+        },
+        {
+          "Day 4": [
+            "Day at leisure – explore Dubai on your own or opt for optional activities",
+            "Shopping at malls or local markets",
+            "Overnight stay at the hotel in Dubai"
+          ]
+        },
+        {
+          "Day 5": [
+            "Breakfast at hotel and check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the dazzling city of Dubai with this 4-night holiday. Enjoy iconic attractions like Burj Khalifa, Dubai City Tour, Marina Dhow Cruise, Desert Safari with BBQ dinner, and a visit to the Museum of the Future. Perfect blend of sightseeing, culture, and leisure in the heart of the UAE.",
+      },
+      duration: "7 Days",
+      country: "Indonesia",
+      cities: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      inclusions: [
+        "5 nights accommodation in standard hotel on double sharing basis",
+        "Daily breakfast at hotel",
+        "Airport transfers in private car",
+        "Entry tickets to mentioned sightseeing spots",
+        "Professional English-speaking guide during tours"
+      ],
+      exclusions: [
+        "Airfare and Visa charges",
+        "Meals other than those mentioned",
+        "Personal expenses like tips, laundry, shopping, etc.",
+        "Optional tours or activities not mentioned in the itinerary",
+        "Travel Insurance (mandatory)",
+        "Any increase in fuel charges or taxes"
+      ],
+      termsConditions: ["All payment should be cleared at least 30 days before departure."],
+      cancellationPolicy: {
+        "30DaysOrMore": "25% of total cost",
+        "29To20Days": "50% of total cost",
+        "19DaysOrLess": "100% of total cost",
+      },
+      tableData: {
+        tab1: [
+          {
+            city: "Kuta - 4N Deluxe Room",
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+          {
+            city: "Ubud - 2N Deluxe Room",
+            star4: "Alam Puisi Ubud/Ashoka Tree Resort Ubud/ Bhumi Linggah/Ubud Heaven Sayan",
+            star5: "Asvara Villa Ubud/FuramaXclusive Resort & Villas/Hideaway village bali",
+          },
+          {
+            label: "Cost per Adult",
+            cost4: "₹42,499",
+            cost5: "₹58,999",
+          },
+        ],
+        
       },
     },
   },

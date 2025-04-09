@@ -90,21 +90,25 @@ const SectionContent = styled.div`
 const TermsAndConditions: React.FC = () => {
   const sections = [
     {
-      title: "Travel Validity",
-      content: "Fixed Travel Dates: (07, 13, 21 Feb) - (07, 14, 20, 27 March 2025)",
+      "title": "Payment Policy",
+      "content": "All payments should be cleared at least 30 days prior to departure."
     },
     {
-      title: "Easy Cancellation",
-      content: "100% Non-refundable.",
+      "title": "Date Change Policy (Prepone/Postpone)",
+      "content": "If a client wishes to prepone or postpone their travel dates, please notify us at least 15 days before the journey via email or message. Some service providers (Hotels, Transporters, etc.) may apply additional charges, which will be deducted from the advance amount."
     },
     {
-      title: "Guaranteed Dates",
-      content: "Travel dates are fixed and non-changeable.",
+      "title": "Availability & Pricing on Date Change",
+      "content": "All prepone/postpone requests are subject to availability of hotels/transport and may vary depending on season or off-season pricing."
     },
     {
-      title: "Visa Easy",
-      content: "Visa assistance will be provided by our visa specialist.",
+      "title": "Changes Close to Travel Date",
+      "content": "No changes are accepted within 15 days of the departure date. In rare cases such as natural calamities or strikes, the package may be postponed with prior notice."
     },
+    {
+      "title": "Cancellation Policy",
+      "content": "30 days or more before departure: 25% cancellation fee; 29–20 days: 50% cancellation fee; 19 days or less: 100% cancellation fee. Airfare is subject to airline policy and may be non-refundable. Actual cancellation amount may vary depending on airline, hotel, and local transport conditions."
+    }
   ];
 
   const [openSections, setOpenSections] = useState<number[]>([]);
