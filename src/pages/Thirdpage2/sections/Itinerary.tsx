@@ -22,7 +22,7 @@ const StyledAccordionSummary = styled(AccordionSummary)`
   padding: 12px 16px;
   background-color: #f5f5f5;
   & .MuiTypography-root {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #000;
   }
 `;
