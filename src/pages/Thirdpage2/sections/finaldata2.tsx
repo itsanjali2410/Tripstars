@@ -1383,5 +1383,397 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       },
     },
   },
+  dubai: {
+    dubai1: {
+      packageId: "S04390",
+      packageName: "Dream Dubai",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-5N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹82,999/-",
+      packageImage:
+        "https://i0.wp.com/reconasia.csis.org/wp-content/uploads/2017/01/chasing_the_dubai_dreamii-e1619813205979.jpeg?fit=2000%2C1333&ssl=1",
+
+      itinerary: [
+        {
+          "Day 1: Arrival in Dubai & Evening Marina Dhow Cruise": [
+            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+          ]
+        },
+        {
+          "Day 2: Dubai City Tour & Burj Khalifa Visit": [
+            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
+          ]
+        },
+        {
+          "Day 3: Desert Safari with BBQ Dinner": [
+            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
+
+          ]
+        },
+        {
+          "Day 4: Abu Dhabi City Tour": [
+            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
+            "Return to Dubai and overnight stay"
+          ]
+        },
+        {
+          "Day 5: Day at Leisure": [
+            "Day at leisure - relax or explore Dubai on your own",
+            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
+            "Overnight in Dubai"
+          ]
+        },
+        {
+          "Day 6: Dubai Departure": [
+            "Breakfast at hotel",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        }
+
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the vibrant city of Baku and surrounding gems with this 6-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Evening Marina Dhow cruise",
+        "Burj Khalifa 124th Floor Non Prime time( Subject to Availibilty)Airport transfers (SIC basis)",
+        "Marina Dhow Cruise with dinner",
+        "Dubai City Tour (Half-day)",
+        "Desert Safari with BBQ dinner",
+        "Ferrari World entry",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "Tourism Dirham (to be paid at hotel)",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+        ],
+      },
+    },
+    dubai2: {
+      packageId: "S04390",
+      packageName: "Dubai with Abu dhabi",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-4N -- Abu Dhabi-1N",
+      highlights: [
+
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹91,499/-",
+
+      packageImage:
+        "https://asset.providentestate.com/x/1000x/Dubai_vs_Abu_Dhabi_Where_Should_International_Buyers_Invest_for_Maximum_Returns_e1b4651020.webp",
+
+      itinerary: [
+        {
+          "Day 1: Arrival in Dubai & Evening Marina Dhow Cruise": [
+            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+          ]
+        },
+        {
+          "Day 2: Dubai City Tour & Burj Khalifa Visit": [
+            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
+          ]
+        },
+        {
+          "Day 3: Desert Safari with BBQ Dinner": [
+            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
+
+          ]
+        },
+        {
+          "Day 4: Abu Dhabi City Tour": [
+            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
+            "Return to Dubai and overnight stay"
+          ]
+        },
+        {
+          "Day 5: Day at Leisure": [
+            "Day at leisure - relax or explore Dubai on your own",
+            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
+            "Overnight in Dubai"
+          ]
+        },
+        {
+          "Day 6: Dubai Departure": [
+            "Breakfast at hotel",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the best of Dubai and Abu Dhabi in this 5-night getaway. Cruise along Dubai Marina, visit the Burj Khalifa, enjoy a thrilling desert safari, and experience the wonders of the Museum of the Future.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Evening Marina Dhow cruise",
+        "Burj Khalifa 124th Floor Non Prime time( Subject to Availibilty)Airport transfers (SIC basis)",
+        "Marina Dhow Cruise with dinner",
+        "Dubai City Tour (Half-day)",
+        "Desert Safari with BBQ dinner",
+        "Ferrari World entry",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "Tourism Dirham (to be paid at hotel)",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+        ],
+      },
+    },
+    dubai3: {
+      packageId: "S04390",
+      packageName: "Dubai & Abu Dhabi Wonders",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-4N -- Abu Dhabi-2N",
+      highlights: [
+
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹1,01,499/-",
+
+      packageImage:
+        "https://cdn.rt.emap.com/wp-content/uploads/sites/4/2014/01/30051846/HAC_Exterior_Photo_by_Hufton_Crow__1__1-1.jpg",
+
+      itinerary: [
+        {
+          "Day 1: Arrival in Dubai & Evening Marina Dhow Cruise": [
+            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+          ]
+        },
+        {
+          "Day 2: Dubai City Tour & Burj Khalifa Visit": [
+            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
+          ]
+        },
+        {
+          "Day 3: Desert Safari with BBQ Dinner": [
+            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
+
+          ]
+        },
+        {
+          "Day 4: Abu Dhabi City Tour": [
+            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
+            "Return to Dubai and overnight stay"
+          ]
+        },
+        {
+          "Day 5: Day at Leisure": [
+            "Day at leisure - relax or explore Dubai on your own",
+            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
+            "Overnight in Dubai"
+          ]
+        },
+        {
+          "Day 6: Sea view": [
+            "Sea view at your place",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        },
+        {
+          "Day 6: Dubai Departure": [
+            "Breakfast at hotel",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        },
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Discover Dubai & Abu Dhabi in 6 nights – iconic landmarks, thrilling experiences, and cultural wonders, all in one unforgettable trip.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Evening Marina Dhow cruise",
+        "Burj Khalifa 124th Floor Non Prime time( Subject to Availibilty)Airport transfers (SIC basis)",
+        "Marina Dhow Cruise with dinner",
+        "Dubai City Tour (Half-day)",
+        "Desert Safari with BBQ dinner",
+        "Ferrari World entry",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "Tourism Dirham (to be paid at hotel)",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+        ],
+      },
+    },
+    dubai4: {
+      packageId: "S04390",
+      packageName: "Dubai Delights",
+      totalGuests: 2,
+      nights: 4,
+      days: 5,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-4N",
+      highlights: [
+
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹77,599/-",
+
+      packageImage:
+        "https://www.duomasters.com/wp-content/uploads/Dubais-Delectable-Delights-Savoring-the-Citys-Rich-Culinary-Scene.png",
+
+      itinerary: [
+        {
+          "Day 1": [
+            "Arrival at Dubai International Airport and transfer to hotel",
+            "Hotel check-in and rest",
+            "Evening Marina Dhow Cruise with dinner and views of illuminated skyline",
+            "Overnight stay at the hotel in Dubai"
+          ]
+        },
+        {
+          "Day 2": [
+            "Half Day Dubai City Tour – Gold Souk, Jumeirah Mosque, Burj Al Arab, Atlantis, Sheikh Zayed Road",
+            "Visit to Burj Khalifa 124th Floor – Non-prime time entry",
+            "Enjoy the Dubai Fountain Show at Dubai Mall",
+            "Overnight stay at the hotel in Dubai"
+          ]
+        },
+        {
+          "Day 3": [
+            "Visit to Museum of the Future – immersive futuristic experience",
+            "Evening Desert Safari with dune bashing, belly dance, BBQ dinner at desert camp",
+            "Overnight stay at the hotel in Dubai"
+          ]
+        },
+        {
+          "Day 4": [
+            "Day at leisure – explore Dubai on your own or opt for optional activities",
+            "Shopping at malls or local markets",
+            "Overnight stay at the hotel in Dubai"
+          ]
+        },
+        {
+          "Day 5": [
+            "Breakfast at hotel and check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the dazzling city of Dubai with this 4-night holiday. Enjoy iconic attractions like Burj Khalifa, Dubai City Tour, Marina Dhow Cruise, Desert Safari with BBQ dinner, and a visit to the Museum of the Future. Perfect blend of sightseeing, culture, and leisure in the heart of the UAE.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Evening Marina Dhow cruise",
+        "Burj Khalifa 124th Floor Non Prime time( Subject to Availibilty)",
+        "Marina Dhow Cruise with dinner",
+        "Dubai City Tour (Half-day)",
+        "Desert Safari with BBQ dinner",
+        "Ferrari World entry",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "Tourism Dirham (to be paid at hotel)",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+        ],
+      },
+    },
+  }
 };
 export default Finaldata;
