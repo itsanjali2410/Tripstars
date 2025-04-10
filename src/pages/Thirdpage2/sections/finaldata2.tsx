@@ -904,7 +904,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
-        "Daily curated itineraries for a stress-free experience",
+        "Daily curated itineraries for a stress-free experience",   
         "Seamless airport transfers for hassle-free travel"
       ],
       includes: [
