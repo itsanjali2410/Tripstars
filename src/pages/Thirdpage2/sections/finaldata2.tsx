@@ -2180,8 +2180,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         },
         {
           "Day 4: Princess Islands": [
-            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
-            "Return to Dubai and overnight stay"
+            "Take a relaxing ferry ride to Buyukada, the largest of the Princes’ Islands. Enjoy views of historic landmarks and pass charming Ottoman homes. On the island, explore elegant wooden mansions and lush scenery with an electric vehicle tour. A peaceful escape from the city, offering a blend of history, nature, and local charm."
           ]
         },
         {
@@ -2193,16 +2192,12 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         },
         {
           "Day 6: Cappadocia Tour": [
-            "Breakfast at hotel",
-            "Hotel check-out",
-            "Transfer to Dubai International Airport for departure"
+            "Explore Devrent Valley’s unique fairy chimneys, then visit Pasabag (Monk’s Valley) with its iconic rock formations. Enjoy lunch in Avanos, known for pottery and the Red River. Continue to the Goreme Open-Air Museum to see ancient cave churches with stunning frescoes. End the day at Uchisar Castle. Overnight in Cappadocia."
           ]
         },
         {
-          "Day 7: Cappadocia to Istanbul": [
-            "Breakfast at hotel",
-            "Hotel check-out",
-            "Transfer to Dubai International Airport for departure"
+          "Day 7: Return to Istanbul": [
+            "After breakfast, transfer to the airport for your flight to Istanbul. Tour ends on arrival."
           ]
         }
   
@@ -2267,46 +2262,45 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "https://img.freepik.com/free-photo/panoramic-istanbul-city-twilight-turkey_335224-1278.jpg?t=st=1744282100~exp=1744285700~hmac=f9e4b1ac0cbd40cc919c68ad27daa6ddac58b5084982c5119cac59ad279c14ec&w=1380",
   
       itinerary: [
-        {
-          "Day 1: Arrival to Istanbul": [
-            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
-          ]
-        },
-        {
-          "Day 2:Istanbul Old city Tour": [
-            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
-          ]
-        },
-        {
-          "Day 3:Istanbul to Cappadocia- Flight": [
-            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
-  
-          ]
-        },
-        {
-          "Day 4: Cappadocia Tour": [
-            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
-            "Return to Dubai and overnight stay"
-          ]
-        },
-        {
-          "Day 5: Cappadocia to Kusadasi": [
-            "Day at leisure - relax or explore Dubai on your own",
-            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
-            "Overnight in Dubai"
-          ]
-        },
-        {
-          "Day 6:Istanbul - Departure": [
-            "Breakfast at hotel",
-            "Hotel check-out",
-            "Transfer to Dubai International Airport for departure"
-          ]
-        }
+          {
+            "Day 1: Arrival in Istanbul": [
+              "Arrive in Istanbul and transfer to your hotel. The rest of the day is free to relax or explore the local area. Overnight in Istanbul."
+            ]
+          },
+          {
+            "Day 2: Istanbul City Tour": [
+              "Explore the historical heart of Istanbul with visits to Hagia Sophia, Blue Mosque, Hippodrome, and Grand Bazaar. Enjoy the city's rich heritage. Overnight in Istanbul."
+            ]
+          },
+          {
+            "Day 3: Flight to Cappadocia": [
+              "Transfer to the airport and fly to Cappadocia. Upon arrival, transfer to your hotel. Free time to explore or relax. Overnight in Cappadocia."
+            ]
+          },
+          {
+            "Day 4: Cappadocia Tour": [
+              "Visit Devrent Valley, Pasabag (Monk Valley), Avanos for pottery, and the Open Air Museum. End the day with a visit to Uchisar Castle. Overnight in Cappadocia."
+            ]
+          },
+          {
+            "Day 5: Flight to Kusadasi": [
+              "Transfer to the airport for your flight to Izmir. Upon arrival, drive to Kusadasi and check into your hotel. Overnight in Kusadasi."
+            ]
+          },
+          {
+            "Day 6: Ephesus Tour": [
+              "Explore ancient Ephesus including the Library of Celsus and the Great Theatre. Visit the House of Virgin Mary. Overnight in Kusadasi."
+            ]
+          },
+          {
+            "Day 7: Departure from Turkey": [
+              "Check out from the hotel and transfer to the airport for your departure flight."
+            ]
+          }
       ],
       overviewData: {
         title: "Package Overview",
-        content: "Explore the best of Dubai and Abu Dhabi in this 5-night getaway. Cruise along Dubai Marina, visit the Burj Khalifa, enjoy a thrilling desert safari, and experience the wonders of the Museum of the Future.",
+        content: "Experience the highlights of Dubai and Abu Dhabi in this 5-night escape. Marvel at the cityscape from Burj Khalifa, relax on a scenic Marina Dhow Cruise, dive into adventure with a desert safari, and explore innovation at the Museum of the Future. A perfect blend of culture, luxury, and unforgettable sights awaits.",
       },
       country: "Indonesia",
       inclusions: [
@@ -2528,7 +2522,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 4,
       days: 5,
       theme: "Mumbai",
-      destinationCovered: "Singapore-4N",
+      destinationCovered: "Pattaya-4N -- Bankok-2N",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -2543,10 +2537,10 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹76,499/- Onwards",
+      totalPackagePrice: "INR ₹49,399/- Onwards",
 
       packageImage:
-        "https://www.vistra.com/sites/default/files/2019-03/Singapore.jpg",
+        "https://etimg.etb2bimg.com/photo/92912550.cms",
 
       itinerary: [
         {
@@ -2555,26 +2549,111 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
           ]
         },
         {
-          "Day 2: City Tour & Sentosa Island": [
-            "Explore Singapore’s top highlights with a half-day city tour covering Orchard Road, Little India, Chinatown, Merlion Park, and Marina Bay views. Later, enjoy Sentosa Island via cable car, visit Madame Tussauds 5-in-1 experience including Marvel 4D and Images of Singapore, and end your day with the stunning Wings of Time show. A perfect mix of culture and fun!",
+          "Day 2: Coral Island Tour": [
+            "Coral Island, 10 km south of Phuket, features white sandy beaches, crystal-clear waters, and colorful coral reefs. Enjoy by own a short speedboat ride to the island for relaxing, swimming, and snorkeling among tropical fish.",
           ]
         },
         {
-          "Day 3: Full Day Universal Studios Tour": [
-            "Enjoy a full day at Universal Studios Singapore with thrilling rides and shows based on blockbuster films. Experience Shrek’s 4D adventure at Far Far Away Castle, face mummies on the Revenge of the Mummy ride, and explore themed zones like Madagascar, Hollywood, Sci-Fi City, and The Lost World—fun and excitement for all ages!",
+          "Day 3: Transfer to Bangkok & City Temple Tour": [
+            "After checking out from your Pattaya hotel, you’ll be transferred to Bangkok for check-in. Later, explore Bangkok's spiritual landmarks including Wat Traimit, home to the 5.5-ton Golden Buddha, and Mahaputram Temple, known for its small reclining Buddha.",
 
           ]
         },
         {
-          "Day 4: Marina Bay Sands": [
-            "Visit Marina Bay Sands SkyPark for breathtaking panoramic views of Singapore’s skyline. Then explore Gardens by the Bay, a stunning nature park featuring the futuristic Cloud Forest and the Supertree Observatory—an iconic blend of nature and innovation, making it a must-see attraction in the heart of the city."
+          "Day 4: Safari World Tour with Indian Lunch": [
+            "Experience a full-day visit to Bangkok’s Safari World, featuring Safari Park and Marine Park. Spot lions, zebras, and more during the safari tour, enjoy a jungle cruise, and watch entertaining shows with dolphins, sea lions, and orangutans. Includes Indian buffet lunch and transfers."
           ]
         },
         {
-          "Day 5: Departure from Singapore": [
-            "After breakfast at hotel, check out from hotel and transfer to Airport"
+          "Day 5: Departure from Thailand": [
+            "Take a bag full of memories to cherish. Check out from your hotel and transfer to Denpasar Airport for your return flight home."
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Experience the best of Thailand with vibrant city tours, tropical island escapes, and rich cultural sights. Explore Bangkok’s temples, enjoy Pattaya’s beaches and nightlife, and unwind with island adventures and scenic beauty.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Accommodation in Season Siam Hotel",
+        "Golden Buddha",
+        "Mahaputaram Temple",
+        "Full Day Safari World ",
+        "Coral Island Tour - Full Day - Shared Transfers (Including Lunch)",
+
+      ],
+      exclusions: [
+        "5% TCS Shall Be Extra (Which is refundable at the time of Filing your CY ITR)",
+        "Early Check in & Late Check Out.",
+        "Meals other than mentioned in the itinerary",
+        "Optional tours & activities",
+        "Early check-in / late check-out",
+        "All rates are subject to availability at the time of booking"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star3: "Vista pataya, Golden Tulip Mandison Suite or similar",
+            star4: "Movenpick Sukhumvit, Royal Cliff Beach Hotel Pattaya or similar",
+          },
+        ],
+      },
+    },
+    thailand2: {
+      packageId: "S04390",
+      packageName: "Fun and Fiesta Thailand",
+      totalGuests: 2,
+      nights: 4,
+      days: 5,
+      theme: "Mumbai",
+      destinationCovered: "Pattaya-3N -- Bankok-1N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹46,999/- Onwards",
+
+      packageImage:
+        "https://images.herzindagi.info/image/2022/Jul/places-to-visit-in-thailand.jpg",
+
+      itinerary: [
+        {
+          "Day 1: Arrival in Bangkok - Transfer to Pattaya": [
+            "Upon arrival at Bangkok, meet our representative at airport. You will be transfered to your hotel in Pattaya. Check-in."
           ]
         },
+        {
+          "Day 2: Coral Island Tour": [
+            "Coral Island, 10 km south of Phuket, features white sandy beaches, crystal-clear waters, and colorful coral reefs. Enjoy by own a short speedboat ride to the island for relaxing, swimming, and snorkeling among tropical fish.",
+          ]
+        },
+        {
+          "Day 3: Transfer to Bangkok & City Temple Tour": [
+            "After checking out from your Pattaya hotel, you’ll be transferred to Bangkok for check-in. Later, explore Bangkok's spiritual landmarks including Wat Traimit, home to the 5.5-ton Golden Buddha, and Mahaputram Temple, known for its small reclining Buddha.",
+
+          ]
+        },
+        {
+          "Day 4: Safari World Tour with Indian Lunch": [
+            "Experience a full-day visit to Bangkok’s Safari World, featuring Safari Park and Marine Park. Spot lions, zebras, and more during the safari tour, enjoy a jungle cruise, and watch entertaining shows with dolphins, sea lions, and orangutans. Includes Indian buffet lunch and transfers."
+          ]
+        },
+        {
+          "Day 5: Departure from Thailand": [
+            "Take a bag full of memories to cherish. Check out from your hotel and transfer to Denpasar Airport for your return flight home."
+          ]
+        }
       ],
       overviewData: {
         title: "Package Overview",
@@ -2582,27 +2661,26 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       },
       country: "Indonesia",
       inclusions: [
-        "Night Safari",
-        "Orchard Road",
-        "Little India",
-        "Chinatown",
-        "Merlion Park",
-        "Marina Bay",
-        "Sentosa Island",
+        "Accommodation in Season Siam Hotel",
+        "Golden Buddha",
+        "Mahaputaram Temple",
+        "Full Day Safari World ",
+        "Coral Island Tour - Full Day - Shared Transfers (Including Lunch)",
+
       ],
       exclusions: [
-        "Travel insurance",
-        "All rates are subject to availability at the time of booking.",
-        "5% TCS (refundable)",
-        "Personal expenses",
+        "5% TCS Shall Be Extra (Which is refundable at the time of Filing your CY ITR)",
+        "Early Check in & Late Check Out.",
+        "Meals other than mentioned in the itinerary",
         "Optional tours & activities",
-        "Early check-in / late check-out"
+        "Early check-in / late check-out",
+        "All rates are subject to availability at the time of booking"
       ],
       tableData: {
         tab1: [
           {
-            star3: "Value Thomsono Hotel or similar",
-            star4: "Hotel Boss, or similar",
+            star3: "Vista pataya, Golden Tulip Mandison Suite or similar",
+            star4: "Movenpick Sukhumvit, Royal Cliff Beach Hotel Pattaya or similar",
           },
         ],
       },

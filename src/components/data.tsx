@@ -369,7 +369,7 @@ export const Thailand = [
     ],
   },
   {
-    title: "Fun & Fiesta Thailand ",
+    title: "Fun and Fiesta Thailand ",
     image: thailand4,
     pricing: "₹46,999/- Onwards",
     info: [
