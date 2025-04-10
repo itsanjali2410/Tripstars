@@ -68,7 +68,7 @@ const Home = () => {
       {/* Your main content here */}
 
       <MobileCTA onClick={() => setShowPopup(true)}>
-        Plan Your Trip
+        Submit your query
       </MobileCTA>
 
       {showPopup && (
