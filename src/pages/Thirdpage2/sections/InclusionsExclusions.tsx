@@ -9,9 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
 const OverviewWrapper = styled.div`
-  margin-top: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
@@ -19,7 +17,6 @@ const OverviewWrapper = styled.div`
   max-width: 1200px;
   width: 100%;
 `;
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,7 +27,6 @@ const Wrapper = styled.div`
     flex-direction: row;
   }
 `;
-
 const Box = styled.div<{ borderColor: string; bgColor: string; $hiddenOnMobile?: boolean }>`
   background-color: ${(props) => props.bgColor};
   border-radius: 8px;
@@ -49,7 +45,6 @@ const Box = styled.div<{ borderColor: string; bgColor: string; $hiddenOnMobile?:
     flex: 1;
   }
 `;
-
 const Title = styled.h3`
   margin: 0 0 15px;
   display: flex;
@@ -57,7 +52,6 @@ const Title = styled.h3`
   font-size: 18px;
   color: #333;
 `;
-
 const Icon = styled.span`
   margin-right: 10px;
 
