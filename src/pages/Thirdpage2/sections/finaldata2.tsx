@@ -28,6 +28,7 @@ interface PackageData {
   country: string;
   tableData?: {
     tab1: {
+      star3?: string,
       star4?: string;
       star5?: string;
 
@@ -1397,7 +1398,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Seamless airport transfers for hassle-free travel"
       ],
       includes: [
-        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Flights", icon: Plane },
         { name: "Sightseeing", icon: Landmark },
         { name: "Transport", icon: Bus },
         { name: "Hotel", icon: Hotel },
@@ -1411,7 +1412,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       itinerary: [
         {
           "Day 1: Arrival in Dubai & Evening Marina Dhow Cruise": [
-            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+            "Arrive at Dubai International Airport and enjoy private transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
           ]
         },
         {
@@ -1426,26 +1427,20 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
           ]
         },
         {
-          "Day 4: Abu Dhabi City Tour": [
-            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
-            "Return to Dubai and overnight stay"
+          "Day 4:  Abu Dhabi City Tour & Ferrari World": [
+            "Begin the day with a scenic drive to Abu Dhabi. Visit the stunning Sheikh Zayed Grand Mosque and admire the city's mix of modern architecture and green spaces. Later, head to Ferrari World on Yas Island, home to Formula Rossa—the world’s fastest roller coaster. Return to Dubai in the evening."
           ]
         },
         {
           "Day 5: Day at Leisure": [
-            "Day at leisure - relax or explore Dubai on your own",
-            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
-            "Overnight in Dubai"
+            "Day at leisure - relax or explore Dubai on your own. Optional - Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
           ]
         },
         {
           "Day 6: Dubai Departure": [
-            "Breakfast at hotel",
-            "Hotel check-out",
-            "Transfer to Dubai International Airport for departure"
+            "Have a filling breakfast at your hotel and proceed for the airport. Board your flight back home with beautiful memories of your amazing holiday in Dubai."
           ]
         }
-
       ],
       overviewData: {
         title: "Package Overview",
@@ -1508,7 +1503,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       itinerary: [
         {
           "Day 1: Arrival in Dubai & Evening Marina Dhow Cruise": [
-            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+            "Arrive at Dubai International Airport and enjoy private transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
           ]
         },
         {
@@ -1523,23 +1518,18 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
           ]
         },
         {
-          "Day 4: Abu Dhabi City Tour": [
-            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
-            "Return to Dubai and overnight stay"
+          "Day 4:  Abu Dhabi City Tour & Ferrari World": [
+            "Begin the day with a scenic drive to Abu Dhabi. Visit the stunning Sheikh Zayed Grand Mosque and admire the city's mix of modern architecture and green spaces. Later, head to Ferrari World on Yas Island, home to Formula Rossa—the world’s fastest roller coaster. Return to Dubai in the evening."
           ]
         },
         {
           "Day 5: Day at Leisure": [
-            "Day at leisure - relax or explore Dubai on your own",
-            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
-            "Overnight in Dubai"
+            "Day at leisure - relax or explore Dubai on your own. Optional - Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
           ]
         },
         {
           "Day 6: Dubai Departure": [
-            "Breakfast at hotel",
-            "Hotel check-out",
-            "Transfer to Dubai International Airport for departure"
+            "Have a filling breakfast at your hotel and proceed for the airport. Board your flight back home with beautiful memories of your amazing holiday in Dubai."
           ]
         }
       ],
@@ -1776,14 +1766,13 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
   singapore: {
     singapore1: {
       packageId: "S04390",
-      packageName: "Singapore",
+      packageName: "Singapore Highlights",
       totalGuests: 2,
-      nights: 6,
-      days: 7,
+      nights: 4,
+      days: 5,
       theme: "Mumbai",
-      destinationCovered: "Dubai-4N -- Abu Dhabi-2N",
+      destinationCovered: "Singapore-4N",
       highlights: [
-
         "Breakfast included in tour price",
         "English Speaking certified drivers",
         "Daily curated itineraries for a stress-free experience",
@@ -1797,72 +1786,56 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹1,01,499/- Onwards",
+      totalPackagePrice: "INR ₹76,499/- Onwards",
 
       packageImage:
-        "https://cdn.rt.emap.com/wp-content/uploads/sites/4/2014/01/30051846/HAC_Exterior_Photo_by_Hufton_Crow__1__1-1.jpg",
+        "https://www.vistra.com/sites/default/files/2019-03/Singapore.jpg",
 
       itinerary: [
         {
-          "Day 1: Arrival in Dubai & Evening Marina Dhow Cruise": [
-            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+          "Day 1: Arrival & Night Safari": [
+            "Arrive at Singapore Airport and meet our representative for your transfer to the hotel. After check-in and some rest, get ready for a thrilling experience at the Night Safari – the world’s first nocturnal wildlife park. Set in 40 hectares of lush forest, this unique adventure lets you explore the jungle and observe wildlife in their natural nighttime habitats."
           ]
         },
         {
-          "Day 2: Dubai City Tour & Burj Khalifa Visit": [
-            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
+          "Day 2: City Tour & Sentosa Island": [
+            "Explore Singapore’s top highlights with a half-day city tour covering Orchard Road, Little India, Chinatown, Merlion Park, and Marina Bay views. Later, enjoy Sentosa Island via cable car, visit Madame Tussauds 5-in-1 experience including Marvel 4D and Images of Singapore, and end your day with the stunning Wings of Time show. A perfect mix of culture and fun!",
           ]
         },
         {
-          "Day 3: Desert Safari with BBQ Dinner": [
-            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
+          "Day 3: Full Day Universal Studios Tour": [
+            "Enjoy a full day at Universal Studios Singapore with thrilling rides and shows based on blockbuster films. Experience Shrek’s 4D adventure at Far Far Away Castle, face mummies on the Revenge of the Mummy ride, and explore themed zones like Madagascar, Hollywood, Sci-Fi City, and The Lost World—fun and excitement for all ages!",
 
           ]
         },
         {
-          "Day 4: Abu Dhabi City Tour": [
-            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
-            "Return to Dubai and overnight stay"
+          "Day 4: Marina Bay Sands": [
+            "Visit Marina Bay Sands SkyPark for breathtaking panoramic views of Singapore’s skyline. Then explore Gardens by the Bay, a stunning nature park featuring the futuristic Cloud Forest and the Supertree Observatory—an iconic blend of nature and innovation, making it a must-see attraction in the heart of the city."
           ]
         },
         {
-          "Day 5: Day at Leisure": [
-            "Day at leisure - relax or explore Dubai on your own",
-            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
-            "Overnight in Dubai"
-          ]
-        },
-        {
-          "Day 6: Sea view": [
-            "Sea view at your place",
-            "Hotel check-out",
-            "Transfer to Dubai International Airport for departure"
-          ]
-        },
-        {
-          "Day 7: Dubai Departure": [
-            "Breakfast at hotel",
-            "Hotel check-out",
-            "Transfer to Dubai International Airport for departure"
+          "Day 5: Departure from Singapore": [
+            "After breakfast at hotel, check out from hotel and transfer to Airport"
           ]
         },
       ],
       overviewData: {
         title: "Package Overview",
-        content: "Discover Dubai & Abu Dhabi in 6 nights – iconic landmarks, thrilling experiences, and cultural wonders, all in one unforgettable trip.",
+        content: "Discover Singapore’s best with a night safari, city tour, Sentosa fun, and Universal Studios thrills. Enjoy skyline views from Marina Bay Sands and explore the beauty of Gardens by the Bay.",
       },
       country: "Indonesia",
       inclusions: [
-        "Evening Marina Dhow cruise",
-        "Burj Khalifa 124th Floor Non Prime time( Subject to Availibilty)Airport transfers (SIC basis)",
-        "Marina Dhow Cruise with dinner",
-        "Dubai City Tour (Half-day)",
-        "Desert Safari with BBQ dinner",
-        "Ferrari World entry",
+        "Night Safari",
+        "Orchard Road",
+        "Little India",
+        "Chinatown",
+        "Merlion Park",
+        "Marina Bay",
+        "Sentosa Island",
       ],
       exclusions: [
         "Travel insurance",
-        "Tourism Dirham (to be paid at hotel)",
+        "All rates are subject to availability at the time of booking.",
         "5% TCS (refundable)",
         "Personal expenses",
         "Optional tours & activities",
@@ -1871,12 +1844,769 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       tableData: {
         tab1: [
           {
-            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
-            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+            star3: "Value Thomsono Hotel or similar",
+            star4: "Hotel Boss, or similar",
+          },
+        ],
+      },
+    },
+    singapore2: {
+      packageId: "S04390",
+      packageName: "Enchanting Singapore",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "Singapore-5N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹81,499/- Onwards",
+
+      packageImage:
+        "https://www.vistra.com/sites/default/files/2019-03/Singapore.jpg",
+
+      itinerary: [
+        {
+          "Day 1: Arrival & Night Safari": [
+            "Arrive at Singapore Airport and meet our representative for your transfer to the hotel. After check-in and some rest, get ready for a thrilling experience at the Night Safari – the world’s first nocturnal wildlife park. Set in 40 hectares of lush forest, this unique adventure lets you explore the jungle and observe wildlife in their natural nighttime habitats."
+          ]
+        },
+        {
+          "Day 2: City Tour & Sentosa Island": [
+            "Explore Singapore’s top highlights with a half-day city tour covering Orchard Road, Little India, Chinatown, Merlion Park, and Marina Bay views. Later, enjoy Sentosa Island via cable car, visit Madame Tussauds 5-in-1 experience including Marvel 4D and Images of Singapore, and end your day with the stunning Wings of Time show. A perfect mix of culture and fun!",
+          ]
+        },
+        {
+          "Day 3: Full Day Universal Studios Tour": [
+            "Enjoy a full day at Universal Studios Singapore with thrilling rides and shows based on blockbuster films. Experience Shrek’s 4D adventure at Far Far Away Castle, face mummies on the Revenge of the Mummy ride, and explore themed zones like Madagascar, Hollywood, Sci-Fi City, and The Lost World—fun and excitement for all ages!",
+
+          ]
+        },
+        {
+          "Day 4: Marina Bay Sands": [
+            "Visit Marina Bay Sands SkyPark for breathtaking panoramic views of Singapore’s skyline. Then explore Gardens by the Bay, a stunning nature park featuring the futuristic Cloud Forest and the Supertree Observatory—an iconic blend of nature and innovation, making it a must-see attraction in the heart of the city."
+          ]
+        },
+        {
+          "Day 5:Day at Leisure - Shopping": [
+            "You can spend your day doing shopping and exploring Singapore"
+          ]
+        },
+        {
+          "Day 6:Departure from Singapore": [
+            "After breakfast at hotel, check out from hotel and transfer to Airport"
+          ]
+        },
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Experience Singapore’s top highlights with Night Safari, Sentosa Island, Universal Studios, Marina Bay Sands, and Gardens by the Bay. A perfect mix of adventure and city charm!",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Night Safari",
+        "Orchard Road",
+        "Little India",
+        "Chinatown",
+        "Merlion Park",
+        "Marina Bay",
+        "Sentosa Island",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "All rates are subject to availability at the time of booking.",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star3: "Value Thomsono Hotel or similar",
+            star4: "Hotel Boss, or similar",
+          },
+        ],
+      },
+    },
+    singapore3: {
+      packageId: "S04390",
+      packageName: "Singapore malaysia delights",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Singapore-4N -- Malaysis-2N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹95,199/- Onwards",
+
+      packageImage:
+        "https://bsmedia.business-standard.com/_media/bs/img/article/2024-12/13/full/1734081378-1884.jpg",
+
+      itinerary: [
+        {
+          "Day 1: Arrival & Night Safari": [
+            "Arrive at Singapore Airport and meet our representative for your transfer to the hotel. After check-in and some rest, get ready for a thrilling experience at the Night Safari – the world’s first nocturnal wildlife park. Set in 40 hectares of lush forest, this unique adventure lets you explore the jungle and observe wildlife in their natural nighttime habitats."
+          ]
+        },
+        {
+          "Day 2: City Tour & Sentosa Island": [
+            "Explore Singapore’s top highlights with a half-day city tour covering Orchard Road, Little India, Chinatown, Merlion Park, and Marina Bay views. Later, enjoy Sentosa Island via cable car, visit Madame Tussauds 5-in-1 experience including Marvel 4D and Images of Singapore, and end your day with the stunning Wings of Time show. A perfect mix of culture and fun!",
+          ]
+        },
+        {
+          "Day 3: Full Day Universal Studios Tour": [
+            "Enjoy a full day at Universal Studios Singapore with thrilling rides and shows based on blockbuster films. Experience Shrek’s 4D adventure at Far Far Away Castle, face mummies on the Revenge of the Mummy ride, and explore themed zones like Madagascar, Hollywood, Sci-Fi City, and The Lost World—fun and excitement for all ages!",
+
+          ]
+        },
+        {
+          "Day 4: Singapore to Kuala Lumpur(Malaysia)": [
+            "After breakfast, check out from your hotel in Singapore and transfer to the airport. Upon arrival in Kuala Lumpur in malaysia, meet our representative and proceed to your hotel for check-in."
+          ]
+        },
+        {
+          "Day 5: Kuala Lumpur City Tour with KL Tower": [
+            "Visit the iconic Batu Caves en route to Genting Highlands. Enjoy a scenic cable car ride (subject to weather) and explore the attractions at 2,000 meters above sea level. Return to Kuala Lumpur after a fun-filled day."
+          ]
+        },
+        {
+          "Day 6: Putrajaya Tour & Departure": [
+            "Explore Putrajaya’s modern architecture and visit the beautiful Putra Mosque. Later, check out and transfer to the airport for your departure."
+          ]
+        },
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Experience Singapore’s top highlights with Night Safari, Sentosa Island, Universal Studios, Marina Bay Sands, and Gardens by the Bay. A perfect mix of adventure and city charm!",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Night Safari",
+        "Orchard Road",
+        "Little India",
+        "Chinatown",
+        "Merlion Park",
+        "Marina Bay",
+        "Sentosa Island",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "All rates are subject to availability at the time of booking.",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star3: "Value Thomsono Hotel, Ramada Encore - First World Hotel or similar",
+            star4: "Hotel Boss, Verdant Hill or similar",
+          },
+        ],
+      },
+    },
+    singapore4: {
+      packageId: "S04390",
+      packageName: "Singapore and Malaysia",
+      totalGuests: 2,
+      nights: 7,
+      days: 8,
+      theme: "Mumbai",
+      destinationCovered: "Singapore-4N -- Malaysia-2N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹97,999/- Onwards",
+
+      packageImage:
+        "https://www.budgetholidaytours.com/public/assets/admin/assets/img/package/inside_667be466641dd.webp",
+
+      itinerary: [
+        {
+          "Day 1: Arrival & Night Safari": [
+            "Arrive at Singapore Airport and meet our representative for your transfer to the hotel. After check-in and some rest, get ready for a thrilling experience at the Night Safari – the world’s first nocturnal wildlife park. Set in 40 hectares of lush forest, this unique adventure lets you explore the jungle and observe wildlife in their natural nighttime habitats."
+          ]
+        },
+        {
+          "Day 2: City Tour & Sentosa Island": [
+            "Explore Singapore’s top highlights with a half-day city tour covering Orchard Road, Little India, Chinatown, Merlion Park, and Marina Bay views. Later, enjoy Sentosa Island via cable car, visit Madame Tussauds 5-in-1 experience including Marvel 4D and Images of Singapore, and end your day with the stunning Wings of Time show. A perfect mix of culture and fun!",
+          ]
+        },
+        {
+          "Day 3: Full Day Universal Studios Tour": [
+            "Enjoy a full day at Universal Studios Singapore with thrilling rides and shows based on blockbuster films. Experience Shrek’s 4D adventure at Far Far Away Castle, face mummies on the Revenge of the Mummy ride, and explore themed zones like Madagascar, Hollywood, Sci-Fi City, and The Lost World—fun and excitement for all ages!",
+
+          ]
+        },
+        {
+          "Day 4: Marina Bay Sands & Gardens by the Bay": [
+            "Begin with panoramic city views from the Marina Bay Sands SkyPark. Then explore Gardens by the Bay’s Flower Dome and Cloud Forest, featuring exotic plants and unique climates inspired by Mediterranean and tropical regions. A perfect mix of modern architecture and natural beauty awaits on this scenic day in Singapore."
+          ]
+        },
+        {
+          "Day 5: Departure from Singapore & Arrival in Kuala Lumpur": [
+            "After breakfast, check out from your hotel and transfer to the airport for your flight to Kuala Lumpur. Upon arrival at KUL Airport, proceed to your hotel for check-in and settle in for the next leg of your journey."
+          ]
+        },
+        {
+          "Day 6: Putrajaya Tour & Departure": [
+            "Explore Putrajaya’s modern architecture and visit the beautiful Putra Mosque. Later, check out and transfer to the airport for your departure."
+          ]
+        },
+        {
+          "Day7: Genting Highlands Tour with Batu Caves": [
+            "After breakfast, visit the iconic Batu Caves for a quick photostop. Then, head to Genting Highlands via Skyway cable car (subject to weather). Enjoy a fun-filled day at the hilltop resort before returning to Kuala Lumpur. (Includes 2-way cable car ride)."
+          ]
+        },
+        {
+          "Day 8: Kuala Lumpur Departure": [
+            "After breakfast check-out from the hotel. Later you will be transfered to the airport to catch your flight back home."
+          ]
+        },
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Experience Singapore’s top highlights with Night Safari, Sentosa Island, Universal Studios, Marina Bay Sands, and Gardens by the Bay. A perfect mix of adventure and city charm!",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Night Safari",
+        "Orchard Road",
+        "Little India",
+        "Chinatown",
+        "Merlion Park",
+        "Marina Bay",
+        "Sentosa Island",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "All rates are subject to availability at the time of booking.",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star3: "Value Thomsono Hotel, Ramada Encore - First World Hotel or similar",
+            star4: "Hotel Boss, Verdant Hill or similar",
           },
         ],
       },
     },
   },
+  turkey: {
+    turkey1: {
+      packageId: "S04802",
+      packageName: "Mystical Turkey",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Istanbul-4N--Cappadocia-2N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+  
+      totalPackagePrice: "INR ₹1,23,699/- Onwards",
+      packageImage:
+        "https://img.freepik.com/free-photo/hot-air-balloon-adventure_23-2151762971.jpg?t=st=1744282158~exp=1744285758~hmac=3aa201726915f3b387ac2c6bbf096b13cda01642f8b5dee3b56447c63ad99c4d&w=1380",
+  
+      itinerary: [
+        {
+          "Day 1:Arrival to Istanbul": [
+            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+          ]
+        },
+        {
+          "Day 2: Istanbul Old city Tour": [
+            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
+          ]
+        },
+        {
+          "Day 3: Istanbul Bosphorus , Spice Market & Fener Balat, Pierre Loti Hill Tour": [
+            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
+  
+          ]
+        },
+        {
+          "Day 4: Princess Islands": [
+            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
+            "Return to Dubai and overnight stay"
+          ]
+        },
+        {
+          "Day 5: Istanbul to Cappadocia- Flight": [
+            "Day at leisure - relax or explore Dubai on your own",
+            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
+            "Overnight in Dubai"
+          ]
+        },
+        {
+          "Day 6: Cappadocia Tour": [
+            "Breakfast at hotel",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        },
+        {
+          "Day 7: Cappadocia to Istanbul": [
+            "Breakfast at hotel",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        }
+  
+      ],
+      overviewData: {
+        title: "Turkish Wonders",
+        content: "Explore the vibrant city of Baku and surrounding gems with this 6-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Istanbul Old City",
+        "Bosphorus",
+        "Spice Market",
+        "Fener Balat",
+        "Pierre Loti Hill",
+        "Princess Islands",
+        "Cappadocia",
+      ]
+  ,    
+      exclusions: [
+        "All rates are subject to availability at the time of booking.",
+        "Personal meals and personal expenses like entry tickets, telephone, laundry etc.",
+        "Anything other than mentioned in inclusions",
+        "Meals other than mentioned in the itinerary",
+        "Early Check in & Late Check Out. Standard Check in time Normally is 1400 Hours and Check out time is 1100 Hours."
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Four Side Taksim Lion, Metropolitan Taksim, 1811 Cave Hotel, Dedeli Konak Cave, or similar",
+            star5: "Hilton Double Tree Piyalepasa Hotel, MDC Cave Hotel, Hanedan Cave Hotel, Acer Cave Hotel, or similar",
+          },
+        ],
+      },
+    },
+    turkey2: {
+      packageId: "S04390",
+      packageName: "Turkish Wonders",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Istanbul-2N -- Cappadocia-2N -- Kusadasi-2N",
+      highlights: [
+  
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+  
+      totalPackagePrice: "INR ₹1.36,299/- Onwards",
+  
+      packageImage:
+        "https://img.freepik.com/free-photo/panoramic-istanbul-city-twilight-turkey_335224-1278.jpg?t=st=1744282100~exp=1744285700~hmac=f9e4b1ac0cbd40cc919c68ad27daa6ddac58b5084982c5119cac59ad279c14ec&w=1380",
+  
+      itinerary: [
+        {
+          "Day 1: Arrival to Istanbul": [
+            "Arrive at Dubai International Airport and transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+          ]
+        },
+        {
+          "Day 2:Istanbul Old city Tour": [
+            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
+          ]
+        },
+        {
+          "Day 3:Istanbul to Cappadocia- Flight": [
+            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
+  
+          ]
+        },
+        {
+          "Day 4: Cappadocia Tour": [
+            "Full-day Abu Dhabi City Tour - drive past Jebel Ali Port, visit Sheikh Zayed Grand Mosque, explore the city’s skyline and greenery. Visit Ferrari World - world's first Ferrari-themed indoor amusement park",
+            "Return to Dubai and overnight stay"
+          ]
+        },
+        {
+          "Day 5: Cappadocia to Kusadasi": [
+            "Day at leisure - relax or explore Dubai on your own",
+            "Optional: Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
+            "Overnight in Dubai"
+          ]
+        },
+        {
+          "Day 6:Istanbul - Departure": [
+            "Breakfast at hotel",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport for departure"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the best of Dubai and Abu Dhabi in this 5-night getaway. Cruise along Dubai Marina, visit the Burj Khalifa, enjoy a thrilling desert safari, and experience the wonders of the Museum of the Future.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Cappadocia",
+    "Hierapolis Ancient City",
+    "Istanbul Old City",
+    "Pamukkale"
+      ],
+      exclusions: [
+  
+        "Early Check in & Late Check Out. Standard Check in time Normally is 1400 Hours and Check out time is 1100 Hours",
+        "All rates are subject to availability at the time of booking",
+        "Anything other than mentioned in inclusions",
+        "Personal meals and personal expenses like entry tickets, telephone, laundry etc.",
+        "Any Optional Tours and Services"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Four Sides Taksim Lion Hotel, Erboy Hotel, 1811 Cave Hotel, Dedeli Konak Cave, Efe Boutique Hotel, Suhan Seaport Boutique, or similar",
+            star5: "Hilton Double Tree Piyalepasa Hotel, MDC Cave Hotel, Hanedan Cave Hotel, Acer Cave Hotel, Ramada Suites Hotel, Charisma Deluxe & Spa Hotel, or similar",
+          },
+        ],
+      },
+    },
+    turkey3: {
+      packageId: "S04390",
+      packageName: "Turkish Delight",
+      totalGuests: 2,
+      nights: 7,
+      days: 8,
+      theme: "Mumbai",
+      destinationCovered: "Istanbul-2N--Cappadocia-2N--Antalya-3N",
+      highlights: [
+  
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+  
+      totalPackagePrice: "INR ₹1,42,799/- Onwards",
+  
+      packageImage:
+        "https://img.freepik.com/free-photo/majestic-mosque-islamic-new-year-celebration-with-fantasy-architecture_23-2151457467.jpg?t=st=1744282231~exp=1744285831~hmac=5c0ea8e801bfb0dd4d33f8f0a1254f69878f37e7ac34b49639c8c3a2e99eddbe&w=996",
+  
+      itinerary: [
+        {
+          "Day 1: Arrival to Istanbul & Istanbul Old city Tour": [
+            "Arrive in Istanbul and transfer to your hotel in the Old City with a welcome package provided. Enjoy free time to relax. The next day, explore Istanbul on a guided tour visiting Hagia Sophia (exterior), Blue Mosque, Hippodrome, Topkapi Palace, and Grand Bazaar. Overnight in Istanbul. (*Topkapi Palace closed Tuesdays; Grand Bazaar closed Sundays—alternatives provided.)"
+          ]
+        },
+        {
+          "Day 2: Istanbul to Cappadocia- Flight": [
+            "You'll be picked up from your Istanbul hotel and transferred to the airport for a one-hour direct flight to Cappadocia. Upon arrival, a representative will greet you with a name board and transfer you to your hotel. Enjoy the rest of the day at leisure to explore the beautiful region at your own pace. Overnight stay in Cappadocia.",
+          ]
+        },
+        {
+          "Day 3: Cappadocia Tour": [
+            "After breakfast, begin your Cappadocia tour with Devrent Valley’s unique fairy chimneys, followed by Pasabag (Monk Valley) featuring double and triple-headed rock formations. Enjoy lunch in Avanos, known for pottery and the Red River. Visit the famous Open-Air Museum with 10th-century Christian frescoes, then explore Uchisar Castle, the region’s tallest fairy chimney. Overnight in Cappadocia.",
+  
+          ]
+        },
+        {
+          "Day 4: Cappadocia to Antalya -Flight": [
+            " Upon arrival to Antalya airport, welcomed and transferred to your hotel in Antalya. Overnight in Antalya."
+          ]
+        },
+        {
+          "Day 5: Pamukkale & Hierapolis Ancient City": [
+            " Explore its vast necropolis, Great Baths, Frontinus Street, Theatre, Martyrion of St. Philip, and Cleopatra’s antique pool. End the tour at Pamukkale’s stunning white travertine terraces, where you can enjoy a relaxing barefoot walk across the unique mineral-rich formations."
+          ]
+        },
+        {
+          "Day 6: Antalya City Tour": [
+            "Visit Karpuzkaldıran Waterfalls, enjoy a photo break at Konyaalti Beach, and explore Kaleiçi’s old town featuring Hadrian’s Gate, Clock Tower, Fluted Minaret, Palm Street, and the ancient harbor. Continue to Kurşunlu Waterfalls for some free time before returning to the hotel. Overnight in Antalya."
+          ]
+        },
+        {
+          "Day 7: Istanbul - Departure": [
+            "you will be transferred to the airport for your flight to Istanbul and our tour concludes upon arrival in Istanbul. You can connect to your outbound flight."
+          ]
+        },
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore Turkey in 7 nights with guided tours of Istanbul, Cappadocia, Pamukkale, and Antalya. Enjoy historical sites, scenic landscapes, cultural experiences, and seamless transfers with expert guidance.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Istanbul Old City Tour",
+        "Istanbul to Cappadocia – Flight",
+        "Cappadocia Tour",
+        "Cappadocia to Antalya – Flight",
+        "Pamukkale & Hierapolis Ancient City",
+        "Antalya City Tour"
+      ]
+  ,    
+      exclusions: [
+        "5% TCS Shall Be Extra (Which is refundable at the time of Filing your CY ITR)",
+        "All rates are subject to availability at the time of booking.",
+        "Personal meals and personal expenses like entry tickets, telephone, laundry etc",
+        "Early Check in & Late Check Out."
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Four Sides Taksim Lion Hotel, Erboy Hotel, 1811 Cave Hotel, Dedeli Konak Cave, Ring Down Town Hotel, Prime Hotel, BW Khan Hotel, or similar",
+            star5: "Hilton Double Tree Piyalepasa Hotel, MDC Cave Hotel, Hanedan Cave Hotel, Acer Cave Hotel, Ramada Plaza Hotel, Hilton Double Tree City Center, or similar",
+          },
+        ],
+      },
+    },
+    turkey4: {
+      packageId: "S04390",
+      packageName: "Turkey Highlights",
+      totalGuests: 2,
+      nights: 7,
+      days: 8,
+      theme: "Mumbai",
+      destinationCovered: "Istanbul-2N--Cappadocia-2N--Kusadasi-3N",
+      highlights: [
+  
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+  
+      totalPackagePrice: "INR ₹1,42,799/- Onwards",
+  
+      packageImage:
+        "https://img.freepik.com/free-photo/fantastic-mosque-architecture-islamic-new-year-celebration_23-2151457366.jpg?t=st=1744282268~exp=1744285868~hmac=35ee7694e781a6e5d096c7b0f0bbfaa938d86633ae74958d300778dcd1e6181f&w=996",
+  
+      itinerary: [
+        {
+          "Day 1: Arrival to Istanbul & Istanbul Old city Tour": [
+            "Upon arrival in Istanbul, you'll be transferred to your hotel in the Old City with a welcome package. The next morning, enjoy a full-day guided tour covering the Hagia Sophia (exterior), Blue Mosque, Hippodrome, Topkapi Palace, and Grand Bazaar. Overnight in Istanbul. (*Topkapi Palace closed Tuesdays—replaced by Underground Cistern or Islamic Arts Museum; Grand Bazaar closed Sundays—replaced by Spice Bazaar.)"
+          ]
+        },
+        {
+          "Day 2:Istanbul to Cappadocia- Flight": [
+            "You'll be picked up from your Istanbul hotel and transferred to the airport for a direct one-hour flight to Cappadocia. Upon arrival, a representative will greet you with your name at the airport exit and escort you to your hotel. Enjoy the rest of the day at leisure to explore the unique surroundings. Overnight stay in Cappadocia.",
+          ]
+        },
+        {
+          "Day 3:Cappadocia Tour ": [
+            "You'll be picked up from your hotel for a tour of Devrent Valley’s fairy chimneys and Pasabag’s unique rock formations. Enjoy lunch in Avanos, known for pottery and the Red River. Visit the Open-Air Museum, famous for 10th-century Christian frescoes, then explore Uchisar Castle, Cappadocia’s largest fairy chimney. Overnight stay in Cappadocia.",
+  
+          ]
+        },
+        {
+          "Day 4: Cappadocia to Kusadasi": [
+            "After breakfast, transfer to the airport for a flight to Izmir. Upon arrival, you'll be welcomed and driven to your hotel in Kusadasi. The next day, enjoy a guided tour of ancient Ephesus, visiting highlights like the Temple of Hadrian and Celsius Library, followed by a visit to Sirince village. Return and overnight stay in Kusadasi."
+          ]
+        },
+        {
+          "Day 5: Ephesus Tour & Pamukkale & Hierapolis Ancient City": [
+            "After breakfast, visit Hierapolis, the ancient Greco-Roman city atop natural hot springs. Explore its necropolis, Great Baths, Theatre, Martyrion of St. Phillip, and Cleopatra’s Antique Pool. End the tour with a walk on the stunning white travertine terraces formed by mineral-rich waters—an unforgettable natural wonder. Enjoy this unique barefoot experience."
+          ]
+        },
+        {
+          "Day 6:Istanbul - Departure": [
+            "After breakfast, you will be transferred to the airport for your flight to Istanbul and our tour concludes upon arrival in Istanbul. You can connect to your outbound flight."
+          ]
+        },
+     
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore Istanbul, Cappadocia, Ephesus, and Pamukkale in 8 days with guided tours, flights, hotels, meals, and transfers included—an unforgettable journey through Turkey’s rich history and landscapes.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Istanbul Old city Tour ",
+        "Istanbul to Cappadocia- Flight",
+        "Cappadocia Tour  ",
+        "Ephesus Tour",
+        "Pamukkale & Hierapolis Ancient City",
+     
+      ],
+      exclusions: [
+        "All rates are subject to availability at the time of booking.",
+        "Early Check in & Late Check Out",
+        "Meals other than mentioned in the itinerary",
+    
+        "5% TCS Shall Be Extra (Which is refundable at the time of Filing your CY ITR)",
+       
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Four Sides Taksim Lion Hotel, Erboy Hotel, 1811 Cave Hotel, Dedeli Konak Cave, Efe Boutique Hotel, Suhan Seaport Boutique, or similar",
+            star5: "Hilton Double Tree Piyalepasa Hotel, MDC Cave Hotel, Hanedan Cave Hotel, Acer Cave Hotel, Ramada Suites Hotel, Charisma Deluxe & Spa Hotel, or similar",
+          },
+        ],
+      },
+    },
+  },
+  thailand: {
+    thailand1: {
+      packageId: "S04390",
+      packageName: "Vibrant Thailand",
+      totalGuests: 2,
+      nights: 4,
+      days: 5,
+      theme: "Mumbai",
+      destinationCovered: "Singapore-4N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹76,499/- Onwards",
+
+      packageImage:
+        "https://www.vistra.com/sites/default/files/2019-03/Singapore.jpg",
+
+      itinerary: [
+        {
+          "Day 1: Arrival in Bangkok - Transfer to Pattaya": [
+            "Upon arrival at Bangkok, meet our representative at airport. You will be transfered to your hotel in Pattaya. Check-in."
+          ]
+        },
+        {
+          "Day 2: City Tour & Sentosa Island": [
+            "Explore Singapore’s top highlights with a half-day city tour covering Orchard Road, Little India, Chinatown, Merlion Park, and Marina Bay views. Later, enjoy Sentosa Island via cable car, visit Madame Tussauds 5-in-1 experience including Marvel 4D and Images of Singapore, and end your day with the stunning Wings of Time show. A perfect mix of culture and fun!",
+          ]
+        },
+        {
+          "Day 3: Full Day Universal Studios Tour": [
+            "Enjoy a full day at Universal Studios Singapore with thrilling rides and shows based on blockbuster films. Experience Shrek’s 4D adventure at Far Far Away Castle, face mummies on the Revenge of the Mummy ride, and explore themed zones like Madagascar, Hollywood, Sci-Fi City, and The Lost World—fun and excitement for all ages!",
+
+          ]
+        },
+        {
+          "Day 4: Marina Bay Sands": [
+            "Visit Marina Bay Sands SkyPark for breathtaking panoramic views of Singapore’s skyline. Then explore Gardens by the Bay, a stunning nature park featuring the futuristic Cloud Forest and the Supertree Observatory—an iconic blend of nature and innovation, making it a must-see attraction in the heart of the city."
+          ]
+        },
+        {
+          "Day 5: Departure from Singapore": [
+            "After breakfast at hotel, check out from hotel and transfer to Airport"
+          ]
+        },
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Discover Singapore’s best with a night safari, city tour, Sentosa fun, and Universal Studios thrills. Enjoy skyline views from Marina Bay Sands and explore the beauty of Gardens by the Bay.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Night Safari",
+        "Orchard Road",
+        "Little India",
+        "Chinatown",
+        "Merlion Park",
+        "Marina Bay",
+        "Sentosa Island",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "All rates are subject to availability at the time of booking.",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star3: "Value Thomsono Hotel or similar",
+            star4: "Hotel Boss, or similar",
+          },
+        ],
+      },
+    },
+  }
 };
 export default Finaldata;

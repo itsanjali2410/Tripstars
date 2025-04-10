@@ -1041,7 +1041,7 @@ export const Singapore = [
     ],
   },
  {
-    title: "Singapore & Malaysia",
+    title: "Singapore and Malaysia",
     image: singapore3,
     pricing: "₹97,999/- Onwards",
     info: [
