@@ -925,7 +925,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       },
       country: "Indonesia",
       packageImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_qIastzELruHsgXDCAujfKteIVY2eM7SN5A&s",
+        "https://image.vietnam.travel/sites/default/files/styles/article_photo_large/public/2021-05/Topas%20Ecolodge%20Sapa%20Vietnam%20Tourism.jpg?itok=aNzS8Kss",
       itinerary: [
         {
           "Day 1: Hanoi Arrival & Half-Day City Tour": [
