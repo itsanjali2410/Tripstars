@@ -94,24 +94,27 @@ const LeftPanel = styled.div`
 
 const RightPanel = styled.div`
   padding: 20px;
-  flex: 1;
+  flex: 2;
   position: relative;
 
+
   @media (max-width: 768px) {
+    flex: none;
     padding-left: 33px;
-    padding-top: 14%;
+    padding-top: 10%;
+    padding-bottom: 10%
     height: 80vh;
+    width: 100%; /* Ensures form still takes full width on smaller devices */
   }
 
   h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 15px;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
   .row {
@@ -120,7 +123,6 @@ const RightPanel = styled.div`
 
     @media (max-width: 768px) {
       flex-direction: column;
-      gap: 10px;
     }
   }
 
@@ -131,22 +133,13 @@ const RightPanel = styled.div`
 
   input,
   select {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 12px;
-  outline: none;
-  background-color: white !important; /* remove blue background on iPhone */
-  color: #333  !important;
-  -webkit-appearance: none; /* ✅ Normalize Safari/iPhone */
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
-}
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 12px; /* Increased font size */
+    outline: none;
+    transition: border-color 0.3s;
 
     &:focus {
       border-color: #0a0a52;
@@ -180,7 +173,7 @@ const RightPanel = styled.div`
   }
 
   button {
-    padding: 10px;
+    padding: 6px;
     background: rgb(9, 9, 9);
     color: white;
     border: none;
@@ -191,7 +184,7 @@ const RightPanel = styled.div`
     transition: background 0.3s;
 
     &:hover {
-      background:gold;
+      background: #218838;
     }
   }
 `;

@@ -21,7 +21,7 @@ const StyledAccordionSummary = styled(AccordionSummary)`
   font-weight: bold;
   padding: 12px 16px;
   background-color: #f5f5f5;
-  & .MuiTypography-root {
+  & {
     font-size: 0.9rem;
     color: #000;
   }
@@ -76,7 +76,8 @@ const Itinerary: React.FC<ItineraryProps> = ({ itinerary }) => {
           onChange={handleChange(item.day)}
         >
           <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>{item.day}</Typography>
+          <Typography sx={{ fontFamily: 'inherit' }}>{item.day}</Typography>
+
           </StyledAccordionSummary>
 
           <StyledAccordionDetails>

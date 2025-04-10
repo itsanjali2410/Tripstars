@@ -44,7 +44,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 6,
       days: 7,
       theme: "Mumbai",
-      destinationCovered: "Kuta4N -- Ubud2N",
+      destinationCovered: "Kuta-3N -- Nusa Penida-1N -- Ubud-2N",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -138,7 +138,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 7,
       days: 8,
       theme: "Mumbai",
-      destinationCovered: "Kuta4N -- Gili1N -- Ubud2N",
+      destinationCovered: "Kuta-3N --Nusa Penida-1N -- Gili-1N -- Ubud-2N",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -218,7 +218,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
 
       overviewData: {
         title: "Package Overview",
-        content: "Enjoy 8 days in Bali with 4 nights in lively Kuta, 1 night on the serene Gili Island, and 2 nights in peaceful Ubud. A perfect escape with beaches, culture, island adventure, and scenic wonders! 🌊🌴",
+        content: "Enjoy a perfect mix of Bali’s best—stay in lively Kuta, relax on the peaceful Gili Islands, and unwind in the cultural heart of Ubud. Beaches, nature, and island charm all in one trip. 🌊🌴",
       },
 
       country: "Indonesia",
@@ -239,7 +239,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 5,
       days: 6,
       theme: "Mumbai",
-      destinationCovered: "Kuta-4N -- Ubud-2N",
+      destinationCovered: "Kuta-3N -- Ubud-2N",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -330,7 +330,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       days: 7,
       totalGuests: 2,
       theme: "Mumbai",
-      destinationCovered: "Bali -- Kuta -- Ubud",
+      destinationCovered: "Kuta-4N -- Ubud-2N",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -419,7 +419,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 6,
       days: 7,
       theme: "Mumbai",
-      destinationCovered: "Hanoi--Halong Bay--Da nang--Ho chi Minh  ",
+      destinationCovered: "Hanoi-1N -- Halong Bay-1N -- Da nang-2N -- Ho chi Minh-2N",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -427,7 +427,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Seamless airport transfers for hassle-free travel"
       ],
       includes: [
-        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Flights", icon: Plane }, 
         { name: "Sightseeing", icon: Landmark },
         { name: "Transport", icon: Bus },
         { name: "Hotel", icon: Hotel },
@@ -532,7 +532,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      destinationCovered: "Hanoi-1N -- Halong Bay-1N -- Da nang-3N -- Ho chi Minh-2N",
       totalPackagePrice: "INR ₹ 1,04,599/-",
 
       packageImage:
@@ -611,7 +611,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 8,
       days: 9,
       theme: "Mumbai",
-      destinationCovered: "Hanoi--Halong Bay--Da nang--Ho chi Minh",
+      destinationCovered: "Hanoi-2N -- Halong Bay-1N -- Da nang-3N -- Ho chi Minh-2N",
       totalPackagePrice: "INR ₹1,10,499/-",
       highlights: [
         "Breakfast included in tour price",
@@ -726,7 +726,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
       theme: "Mumbai",
-      destinationCovered: "Hanoi, Halong Bay, Da nang, Ho chi Minh",
+      destinationCovered: "Hanoi-1N -- Sapa-1N -- Halong Bay-1N -- Da nang-2N",
       totalPackagePrice: "INR 92,599",
       overviewData: {
         title: "Package Overview",
@@ -811,7 +811,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
       theme: "Mumbai",
-      destinationCovered: "Hanoi -- Halong Bay -- Da nang -- Sapa",
+      destinationCovered: "Hanoi-2N -- Sapa-1N -- Halong Bay-1N -- Da nang-3N -- Ho chi minh-2N",
       totalPackagePrice: "INR 1,22,999",
       overviewData: {
         title: "Package Overview",
@@ -917,7 +917,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
       theme: "Mumbai",
-      destinationCovered: "Hanoi -- Halong Bay -- Da nang -- Phu Quoc",
+      destinationCovered: "Hanoi-2N -- Phu Quac-1N -- Halong Bay-1N -- Da nang-3N -- Ho chi minh-2N",
       totalPackagePrice: "INR 1,15,999",
       overviewData: {
         title: "Package Overview",

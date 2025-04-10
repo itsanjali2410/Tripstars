@@ -34,7 +34,7 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     justify-content: flex-start; /* Left-align items */
-    gap: 14px;
+    gap: 10px;
   }
 `;
 

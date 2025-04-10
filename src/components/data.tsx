@@ -194,7 +194,7 @@ import himachal4 from "../../src/assets/Tripdetails/domestic/Himachal/Himachal (
 export const Bali = [
   {
     title: "Ultimate Bali & Nusa Penida",
-    image: bali1,
+    image: bali4,
     pricing: "₹74,999/- Onwards",
     destination: "bali", 
     packageName: "Ultimate Bali & Nusa Penida Adventure", 
@@ -227,7 +227,7 @@ export const Bali = [
   },
   {
     title: "Enchanting Bali",
-    image: bali4,
+    image: bali1,
     pricing: "₹64,999/- Onwards",
     destination: "bali", 
     packageName: "Enchanting Bali Getaway without Nusa Penida", 

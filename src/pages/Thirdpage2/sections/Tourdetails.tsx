@@ -11,7 +11,6 @@ const CardWrapper = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow */
   width: 100%;
   max-width: 400px; /* Compact size */
-  font-family: Arial, sans-serif;
   margin-bottom: 40px;
 `;
 
@@ -23,13 +22,22 @@ const InfoRow = styled.div`
   margin-bottom: 12px;
 
   svg {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
     margin-right: 10px;
-    color: #c99603; /* Icon color */
+    color: #c99603;
   }
 
   span {
     font-weight: 500;
+    word-break: break-word;
   }
+`;
+
+const DestinationText = styled.span<{ isLong: boolean }>`
+  font-weight: 500;
+  font-size: ${(props) => (props.isLong ? "14px" : "16px")};
 `;
 
 // Props Interface
@@ -39,11 +47,11 @@ interface TourDetails {
   theme: string;
   destinationCovered: string;
   totalPackagePrice: string;
-  country : string;
+  country: string;
 }
 
 // Functional Component
-const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered, country}) => {
+const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered, country }) => {
   return (
     <CardWrapper>
       <InfoRow>
@@ -52,8 +60,11 @@ const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered, cou
       </InfoRow>
       <InfoRow>
         <MapPin size={22} />
-        <span>{destinationCovered}</span>
+        <DestinationText isLong={destinationCovered.length > 25}>
+          {destinationCovered}
+        </DestinationText>
       </InfoRow>
+
       <InfoRow>
         <span>{country}</span>
       </InfoRow>
