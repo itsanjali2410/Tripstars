@@ -225,14 +225,34 @@ const TrendingOffers: React.FC<TrendingOffersProps> = ({ title, cards }) => {
   const [selectedCard, setSelectedCard] = React.useState<TrendingOffersProps["cards"][0] | null>(null);
 
   const handleCardClick = (card: TrendingOffersProps["cards"][0]) => {
-    // Close any existing popup first to ensure re-render
-    setSelectedCard(null); 
+    const lowerTitle = card.title.toLowerCase();
+    const destinationsWithRedirect = ["bali", "vietnam",];
   
-    // Use a short delay to allow state reset and force re-render
+    const matchedDestination = destinationsWithRedirect.find(dest =>
+      lowerTitle.includes(dest)
+    );
+  
+    if (matchedDestination) {
+      const packageSlug = card.title
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/gi, "") // Remove special characters
+        .trim()
+        .replace(/\s+/g, "-"); // Replace spaces with hyphens
+  
+      navigate(`/${matchedDestination}/${packageSlug}`);
+      return;
+    }
+  
+    // If no match, open popup as usual
+    setSelectedCard(null);
     setTimeout(() => {
       setSelectedCard(card);
     }, 0);
   };
+  
+  
+  
+  
 
   const handleClosePopup = () => {
     setSelectedCard(null); // Reset the selected card state when closing the popup

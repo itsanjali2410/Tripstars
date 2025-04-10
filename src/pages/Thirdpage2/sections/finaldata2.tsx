@@ -39,7 +39,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
   bali: {
     bali1: {
       packageId: "S04390",
-      packageName: "Ultimate Bali & Nusa Penida Adventure",
+      packageName: "Ultimate Bali and Nusa Penida",
       totalGuests: 2,
       nights: 6,
       days: 7,
@@ -133,7 +133,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
     },
     bali2: {
       packageId: "S04391",
-      packageName: "Bali & Gili",
+      packageName: "Bali with Gili",
       totalGuests: 2,
       nights: 7,
       days: 8,
@@ -325,7 +325,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
     },
     bali4: {
       packageId: "S04390",
-      packageName: "Enchanting Bali Getaway without Nusa Penida",
+      packageName: "Enchanting Bali",
       nights: 6,
       days: 7,
       totalGuests: 2,
@@ -434,7 +434,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹1,00,999/-",
+      totalPackagePrice: "INR ₹1,00,999/- Onwards",
 
       packageImage:
         "https://static.toiimg.com/photo/109784668.cms",
@@ -533,7 +533,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       ],
 
       destinationCovered: "Hanoi-1N -- Halong Bay-1N -- Da nang-3N -- Ho chi Minh-2N",
-      totalPackagePrice: "INR ₹ 1,04,599/-",
+      totalPackagePrice: "INR ₹ 1,04,599/- Onwards",
 
       packageImage:
         "https://plus.unsplash.com/premium_photo-1661955632358-85564b2810b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFsaSUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
@@ -612,7 +612,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       days: 9,
       theme: "Mumbai",
       destinationCovered: "Hanoi-2N -- Halong Bay-1N -- Da nang-3N -- Ho chi Minh-2N",
-      totalPackagePrice: "INR ₹1,10,499/-",
+      totalPackagePrice: "INR ₹1,10,499/- Onwards",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -711,15 +711,13 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 5,
       days: 6,
       highlights: [
-        "Airport Transfers in Hanoi and Da Nang",
-        "City Tour of Hanoi – including Tran Quoc Pagoda, Temple of Literature, and Hoa Lo Prison",
-        "Ha Long Bay Cruise – kayaking, cave exploration, island hike & sunset party",
-        "Ninh Binh Adventure – cycling through villages, boat trip through caves, panoramic view from Mua Cave",
-        "Marble Mountains & Hoi An – cultural landmarks and iconic lantern-lit streets",
-        "Ba Na Hills Day Tour – record-breaking cable car, Golden Bridge, French village & Fantasy Park"
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
       ],
       includes: [
-        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Flights", icon: Plane }, 
         { name: "Sightseeing", icon: Landmark },
         { name: "Transport", icon: Bus },
         { name: "Hotel", icon: Hotel },
@@ -730,7 +728,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       totalPackagePrice: "INR 92,599",
       overviewData: {
         title: "Package Overview",
-        content: "Explore Hanoi, Halong Bay, and Ninh Binh in 7 days. Enjoy a Halong Bay cruise, visit Hoa Lu Ancient Capital, and discover the caves and landscapes of Trang An. Hike to Mua Cave for stunning views and cycle through local villages, blending nature, culture, and adventure.",
+        content: "Explore Hanoi, Halong Bay, and Ninh Binh in 6 days. Enjoy a Halong Bay cruise, visit Hoa Lu Ancient Capital, and discover the caves and landscapes of Trang An. Hike to Mua Cave for stunning views and cycle through local villages, blending nature, culture, and adventure.",
       },
       country: "Indonesia",
       packageImage:
@@ -899,7 +897,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
     },
     vietnam6: {
       packageId: "S04390",
-      packageName: "Vietnam with Phu quac",
+      packageName: "Vietnam with Phu Quoc",
       totalGuests: 2,
       nights: 9,
       days: 10,
@@ -1027,7 +1025,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹87,399/-",
+      totalPackagePrice: "INR ₹87,399/- Onwards",
 
       packageImage:
         "https://www.salamair.com/images/gyd.jpg.jpg",
@@ -1116,7 +1114,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹1,20,199/-",
+      totalPackagePrice: "INR ₹1,20,199/- Onwards",
 
       packageImage:
         "https://www.swiss.com/aircore/media/65/eyJpZGVudGlmaWVyIjozMjY0MjksInR5cGUiOiJhc3NldCJ9.png",
@@ -1211,7 +1209,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹1,22,599/-",
+      totalPackagePrice: "INR ₹1,22,599/- Onwards",
 
       packageImage:
         "https://cdn.rt.emap.com/wp-content/uploads/sites/4/2014/01/30051846/HAC_Exterior_Photo_by_Hufton_Crow__1__1-1.jpg",
@@ -1309,7 +1307,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹1,26,999/-",
+      totalPackagePrice: "INR ₹1,26,999/- Onwards",
 
       packageImage:
         "https://d36tnp772eyphs.cloudfront.net/blogs/1/2019/11/Modern-skyscraper-in-Baku-Azerbaijan.jpg",
@@ -1406,7 +1404,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹82,999/-",
+      totalPackagePrice: "INR ₹82,999/- Onwards",
       packageImage:
         "https://i0.wp.com/reconasia.csis.org/wp-content/uploads/2017/01/chasing_the_dubai_dreamii-e1619813205979.jpeg?fit=2000%2C1333&ssl=1",
 
@@ -1502,7 +1500,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹91,499/-",
+      totalPackagePrice: "INR ₹91,499/- Onwards",
 
       packageImage:
         "https://asset.providentestate.com/x/1000x/Dubai_vs_Abu_Dhabi_Where_Should_International_Buyers_Invest_for_Maximum_Returns_e1b4651020.webp",
@@ -1598,7 +1596,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹1,01,499/-",
+      totalPackagePrice: "INR ₹1,01,499/- Onwards",
 
       packageImage:
         "https://cdn.rt.emap.com/wp-content/uploads/sites/4/2014/01/30051846/HAC_Exterior_Photo_by_Hufton_Crow__1__1-1.jpg",
@@ -1701,7 +1699,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹77,599/-",
+      totalPackagePrice: "INR ₹77,599/- Onwards",
 
       packageImage:
         "https://www.duomasters.com/wp-content/uploads/Dubais-Delectable-Delights-Savoring-the-Citys-Rich-Culinary-Scene.png",
@@ -1799,7 +1797,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Breakfast", icon: Utensils },
       ],
 
-      totalPackagePrice: "INR ₹1,01,499/-",
+      totalPackagePrice: "INR ₹1,01,499/- Onwards",
 
       packageImage:
         "https://cdn.rt.emap.com/wp-content/uploads/sites/4/2014/01/30051846/HAC_Exterior_Photo_by_Hufton_Crow__1__1-1.jpg",

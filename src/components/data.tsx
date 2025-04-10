@@ -193,7 +193,7 @@ import himachal4 from "../../src/assets/Tripdetails/domestic/Himachal/Himachal (
 // Card 1 - Bali Popular Destination
 export const Bali = [
   {
-    title: "Ultimate Bali & Nusa Penida",
+    title: "Ultimate Bali and Nusa Penida",
     image: bali4,
     pricing: "₹74,999/- Onwards",
     destination: "bali", 
