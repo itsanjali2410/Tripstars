@@ -27,8 +27,6 @@ const MobileCTA = styled.button`
   transform: none;
 }
 
-
-
   @media (max-width: 480px) {
     font-size: 14px;
     padding: 10px 20px;

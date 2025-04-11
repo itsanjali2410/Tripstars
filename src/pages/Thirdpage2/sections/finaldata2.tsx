@@ -428,7 +428,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Seamless airport transfers for hassle-free travel"
       ],
       includes: [
-        { name: "Flights", icon: Plane }, 
+        { name: "Flights", icon: Plane },
         { name: "Sightseeing", icon: Landmark },
         { name: "Transport", icon: Bus },
         { name: "Hotel", icon: Hotel },
@@ -718,7 +718,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Seamless airport transfers for hassle-free travel"
       ],
       includes: [
-        { name: "Flights", icon: Plane }, 
+        { name: "Flights", icon: Plane },
         { name: "Sightseeing", icon: Landmark },
         { name: "Transport", icon: Bus },
         { name: "Hotel", icon: Hotel },
@@ -905,7 +905,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
-        "Daily curated itineraries for a stress-free experience",   
+        "Daily curated itineraries for a stress-free experience",
         "Seamless airport transfers for hassle-free travel"
       ],
       includes: [
@@ -2156,11 +2156,11 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Hotel", icon: Hotel },
         { name: "Breakfast", icon: Utensils },
       ],
-  
+
       totalPackagePrice: "INR ₹1,23,699/- Onwards",
       packageImage:
         "https://img.freepik.com/free-photo/hot-air-balloon-adventure_23-2151762971.jpg?t=st=1744282158~exp=1744285758~hmac=3aa201726915f3b387ac2c6bbf096b13cda01642f8b5dee3b56447c63ad99c4d&w=1380",
-  
+
       itinerary: [
         {
           "Day 1:Arrival to Istanbul": [
@@ -2175,7 +2175,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         {
           "Day 3: Istanbul Bosphorus , Spice Market & Fener Balat, Pierre Loti Hill Tour": [
             "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
-  
+
           ]
         },
         {
@@ -2200,7 +2200,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
             "After breakfast, transfer to the airport for your flight to Istanbul. Tour ends on arrival."
           ]
         }
-  
+
       ],
       overviewData: {
         title: "Turkish Wonders",
@@ -2216,7 +2216,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Princess Islands",
         "Cappadocia",
       ]
-  ,    
+      ,
       exclusions: [
         "All rates are subject to availability at the time of booking.",
         "Personal meals and personal expenses like entry tickets, telephone, laundry etc.",
@@ -2242,7 +2242,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       theme: "Mumbai",
       destinationCovered: "Istanbul-2N -- Cappadocia-2N -- Kusadasi-2N",
       highlights: [
-  
+
         "Breakfast included in tour price",
         "English Speaking certified drivers",
         "Daily curated itineraries for a stress-free experience",
@@ -2255,48 +2255,48 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Hotel", icon: Hotel },
         { name: "Breakfast", icon: Utensils },
       ],
-  
+
       totalPackagePrice: "INR ₹1.36,299/- Onwards",
-  
+
       packageImage:
         "https://img.freepik.com/free-photo/panoramic-istanbul-city-twilight-turkey_335224-1278.jpg?t=st=1744282100~exp=1744285700~hmac=f9e4b1ac0cbd40cc919c68ad27daa6ddac58b5084982c5119cac59ad279c14ec&w=1380",
-  
+
       itinerary: [
-          {
-            "Day 1: Arrival in Istanbul": [
-              "Arrive in Istanbul and transfer to your hotel. The rest of the day is free to relax or explore the local area. Overnight in Istanbul."
-            ]
-          },
-          {
-            "Day 2: Istanbul City Tour": [
-              "Explore the historical heart of Istanbul with visits to Hagia Sophia, Blue Mosque, Hippodrome, and Grand Bazaar. Enjoy the city's rich heritage. Overnight in Istanbul."
-            ]
-          },
-          {
-            "Day 3: Flight to Cappadocia": [
-              "Transfer to the airport and fly to Cappadocia. Upon arrival, transfer to your hotel. Free time to explore or relax. Overnight in Cappadocia."
-            ]
-          },
-          {
-            "Day 4: Cappadocia Tour": [
-              "Visit Devrent Valley, Pasabag (Monk Valley), Avanos for pottery, and the Open Air Museum. End the day with a visit to Uchisar Castle. Overnight in Cappadocia."
-            ]
-          },
-          {
-            "Day 5: Flight to Kusadasi": [
-              "Transfer to the airport for your flight to Izmir. Upon arrival, drive to Kusadasi and check into your hotel. Overnight in Kusadasi."
-            ]
-          },
-          {
-            "Day 6: Ephesus Tour": [
-              "Explore ancient Ephesus including the Library of Celsus and the Great Theatre. Visit the House of Virgin Mary. Overnight in Kusadasi."
-            ]
-          },
-          {
-            "Day 7: Departure from Turkey": [
-              "Check out from the hotel and transfer to the airport for your departure flight."
-            ]
-          }
+        {
+          "Day 1: Arrival in Istanbul": [
+            "Arrive in Istanbul and transfer to your hotel. The rest of the day is free to relax or explore the local area. Overnight in Istanbul."
+          ]
+        },
+        {
+          "Day 2: Istanbul City Tour": [
+            "Explore the historical heart of Istanbul with visits to Hagia Sophia, Blue Mosque, Hippodrome, and Grand Bazaar. Enjoy the city's rich heritage. Overnight in Istanbul."
+          ]
+        },
+        {
+          "Day 3: Flight to Cappadocia": [
+            "Transfer to the airport and fly to Cappadocia. Upon arrival, transfer to your hotel. Free time to explore or relax. Overnight in Cappadocia."
+          ]
+        },
+        {
+          "Day 4: Cappadocia Tour": [
+            "Visit Devrent Valley, Pasabag (Monk Valley), Avanos for pottery, and the Open Air Museum. End the day with a visit to Uchisar Castle. Overnight in Cappadocia."
+          ]
+        },
+        {
+          "Day 5: Flight to Kusadasi": [
+            "Transfer to the airport for your flight to Izmir. Upon arrival, drive to Kusadasi and check into your hotel. Overnight in Kusadasi."
+          ]
+        },
+        {
+          "Day 6: Ephesus Tour": [
+            "Explore ancient Ephesus including the Library of Celsus and the Great Theatre. Visit the House of Virgin Mary. Overnight in Kusadasi."
+          ]
+        },
+        {
+          "Day 7: Departure from Turkey": [
+            "Check out from the hotel and transfer to the airport for your departure flight."
+          ]
+        }
       ],
       overviewData: {
         title: "Package Overview",
@@ -2305,12 +2305,12 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       country: "Indonesia",
       inclusions: [
         "Cappadocia",
-    "Hierapolis Ancient City",
-    "Istanbul Old City",
-    "Pamukkale"
+        "Hierapolis Ancient City",
+        "Istanbul Old City",
+        "Pamukkale"
       ],
       exclusions: [
-  
+
         "Early Check in & Late Check Out. Standard Check in time Normally is 1400 Hours and Check out time is 1100 Hours",
         "All rates are subject to availability at the time of booking",
         "Anything other than mentioned in inclusions",
@@ -2335,7 +2335,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       theme: "Mumbai",
       destinationCovered: "Istanbul-2N--Cappadocia-2N--Antalya-3N",
       highlights: [
-  
+
         "Breakfast included in tour price",
         "English Speaking certified drivers",
         "Daily curated itineraries for a stress-free experience",
@@ -2348,12 +2348,12 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Hotel", icon: Hotel },
         { name: "Breakfast", icon: Utensils },
       ],
-  
+
       totalPackagePrice: "INR ₹1,42,799/- Onwards",
-  
+
       packageImage:
         "https://img.freepik.com/free-photo/majestic-mosque-islamic-new-year-celebration-with-fantasy-architecture_23-2151457467.jpg?t=st=1744282231~exp=1744285831~hmac=5c0ea8e801bfb0dd4d33f8f0a1254f69878f37e7ac34b49639c8c3a2e99eddbe&w=996",
-  
+
       itinerary: [
         {
           "Day 1: Arrival to Istanbul & Istanbul Old city Tour": [
@@ -2368,7 +2368,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         {
           "Day 3: Cappadocia Tour": [
             "After breakfast, begin your Cappadocia tour with Devrent Valley’s unique fairy chimneys, followed by Pasabag (Monk Valley) featuring double and triple-headed rock formations. Enjoy lunch in Avanos, known for pottery and the Red River. Visit the famous Open-Air Museum with 10th-century Christian frescoes, then explore Uchisar Castle, the region’s tallest fairy chimney. Overnight in Cappadocia.",
-  
+
           ]
         },
         {
@@ -2405,7 +2405,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Pamukkale & Hierapolis Ancient City",
         "Antalya City Tour"
       ]
-  ,    
+      ,
       exclusions: [
         "5% TCS Shall Be Extra (Which is refundable at the time of Filing your CY ITR)",
         "All rates are subject to availability at the time of booking.",
@@ -2430,7 +2430,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       theme: "Mumbai",
       destinationCovered: "Istanbul-2N--Cappadocia-2N--Kusadasi-3N",
       highlights: [
-  
+
         "Breakfast included in tour price",
         "English Speaking certified drivers",
         "Daily curated itineraries for a stress-free experience",
@@ -2443,12 +2443,12 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         { name: "Hotel", icon: Hotel },
         { name: "Breakfast", icon: Utensils },
       ],
-  
+
       totalPackagePrice: "INR ₹1,42,799/- Onwards",
-  
+
       packageImage:
         "https://img.freepik.com/free-photo/fantastic-mosque-architecture-islamic-new-year-celebration_23-2151457366.jpg?t=st=1744282268~exp=1744285868~hmac=35ee7694e781a6e5d096c7b0f0bbfaa938d86633ae74958d300778dcd1e6181f&w=996",
-  
+
       itinerary: [
         {
           "Day 1: Arrival to Istanbul & Istanbul Old city Tour": [
@@ -2463,7 +2463,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         {
           "Day 3:Cappadocia Tour ": [
             "You'll be picked up from your hotel for a tour of Devrent Valley’s fairy chimneys and Pasabag’s unique rock formations. Enjoy lunch in Avanos, known for pottery and the Red River. Visit the Open-Air Museum, famous for 10th-century Christian frescoes, then explore Uchisar Castle, Cappadocia’s largest fairy chimney. Overnight stay in Cappadocia.",
-  
+
           ]
         },
         {
@@ -2481,7 +2481,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
             "After breakfast, you will be transferred to the airport for your flight to Istanbul and our tour concludes upon arrival in Istanbul. You can connect to your outbound flight."
           ]
         },
-     
+
       ],
       overviewData: {
         title: "Package Overview",
@@ -2494,15 +2494,15 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Cappadocia Tour  ",
         "Ephesus Tour",
         "Pamukkale & Hierapolis Ancient City",
-     
+
       ],
       exclusions: [
         "All rates are subject to availability at the time of booking.",
         "Early Check in & Late Check Out",
         "Meals other than mentioned in the itinerary",
-    
+
         "5% TCS Shall Be Extra (Which is refundable at the time of Filing your CY ITR)",
-       
+
       ],
       tableData: {
         tab1: [
@@ -2657,7 +2657,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       ],
       overviewData: {
         title: "Package Overview",
-        content: "Discover Singapore’s best with a night safari, city tour, Sentosa fun, and Universal Studios thrills. Enjoy skyline views from Marina Bay Sands and explore the beauty of Gardens by the Bay.",
+        content: "Discover Thailand’s charm with a relaxing Pattaya getaway, Coral Island adventure, iconic Bangkok temple tour, thrilling Safari World experience, and vibrant city vibes—all in one unforgettable trip!",
       },
       country: "Indonesia",
       inclusions: [
@@ -2681,6 +2681,96 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
           {
             star3: "Vista pataya, Golden Tulip Mandison Suite or similar",
             star4: "Movenpick Sukhumvit, Royal Cliff Beach Hotel Pattaya or similar",
+          },
+        ],
+      },
+    },
+    thailand3: {
+      packageId: "S03904",
+      packageName: "Krabi and Phuket",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "krabi-2N -- Phuket-3N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹46,999/- Onwards",
+
+      packageImage:
+        "https://images.herzindagi.info/image/2022/Jul/places-to-visit-in-thailand.jpg",
+
+      itinerary: [
+        {
+          "Day 1: Arrival at Phuket - Transfer to Krabi": [
+            "Upon arrival at Bangkok, meet our representative at airport. You will be transfered to your hotel in Pattaya. Check-in."
+          ]
+        },
+        {
+          "Day 2: Krabi Four Island Tour": [
+            "Explore Krabi's Four Islands on a day trip to Koh Tup, Koh Gai, Koh Poda, and Phra Nang Cave Beach. Walk along the tidal sandbank at Koh Tup, snorkel at Koh Gai, enjoy a picnic on Koh Poda’s white sands, and end the day swimming and exploring caves at Phra Nang Beach.",
+          ]
+        },
+        {
+          "Day 3: Transfer from Krabi to Phuket City Tour": [
+            "After checking out from your hotel in Krabi, proceed with a scenic transfer to Phuket. Later, enjoy a half-day city tour covering Karon and Kata Beaches, the Karon Viewpoint, Chalong Temple, colonial Phuket Town, Cashew Nut Factory, Big Buddha, and the Gems Gallery. Return to your hotel and relax.",
+
+          ]
+        },
+        {
+          "Day 4: Phi Phi Island Tour": [
+            "Explore Phi Phi Islands on a full-day tour from Phuket. Visit Maya Bay, Monkey Beach, Pileh Cove, Viking Cave, and Loh Samah Bay. Enjoy a buffet lunch at Phi Phi Don, go snorkeling, and unwind at Khai Island. Optional water sports are available. End the day with a transfer back to your hotel."
+          ]
+        },
+        {
+          "Day 5: Day at Leisure - Shopping": [
+            "You can spend your day doing shopping and exploring Thailand"
+          ]
+        },
+        {
+          "Day 6: Departure from Phuket": [
+            "After breakfast, checkout from your hotel. You will be picked up and transferred to the airport to catch your flight back home. Your trip ends with sweet memories."
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Unwind on a tropical escape to Phuket and Krabi. From the stunning Four Island Tour in Krabi to Phuket’s vibrant cityscapes and iconic Phi Phi Islands, this journey blends beach bliss with cultural charm. Enjoy scenic views, island adventures, shopping time, and laid-back vibes, wrapped in a memorable 6-day getaway.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Phuket Airport to Krabi - Private Transfer by Road",
+        "Return Airport and Inter-Hotel Transfers on Private Basis",
+        "Half-Day Phuket City Tour",
+        "Daily Breakfast (Except on Day of Arrival)",
+        "2 Nights Accommodation in Krabi",
+        "3 Nights Accommodation in Phuket"
+      ],
+      exclusions: [
+        "5% TCS extra",
+        "Early check-in/late check-out",
+        "Optional tours & meals",
+        "Personal expenses",
+        "Price changes due to taxes or fuel",
+        "Anything not in inclusions"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star3: "Deevana Krabi Resort, ASHLEE Plaza Patong Hotel & Spa or similar",
+            star4: "Holiday Ao Nang Beach Resort, Crest Resort & Pool Villas or similar",
           },
         ],
       },
