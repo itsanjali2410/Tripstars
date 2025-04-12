@@ -31,7 +31,7 @@ const MobileCTA = styled.button`
     display: block;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0;  
     width: 100%;
     background: linear-gradient(to right, #d39c0a 0%, #d39c0a 100%);
   color:rgb(0, 0, 0);
