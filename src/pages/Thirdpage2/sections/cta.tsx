@@ -6,7 +6,7 @@ const MobileCTA = styled.button`
   display: none;
   background: linear-gradient(to right, #e9b318 0%, #ebac07 100%);
   color: #000;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   padding: 12px 25px;
@@ -23,7 +23,7 @@ const MobileCTA = styled.button`
 }
 
   @media (max-width: 480px) {
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 20px;
     width: 57%;
   }
@@ -34,7 +34,7 @@ const MobileCTA = styled.button`
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to right, #e9b318 0%, #ebac07 100%);
+    background: linear-gradient(to right, #d39c0a 0%, #d39c0a 100%);
   color:rgb(0, 0, 0);
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
