@@ -8,7 +8,6 @@ const MobileCTA = styled.button`
   color: #000;
   font-size: 18px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   padding: 12px 25px;
   border: none;
   border-radius: 8px;
