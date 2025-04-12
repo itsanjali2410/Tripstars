@@ -2203,7 +2203,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
 
       ],
       overviewData: {
-        title: "Turkish Wonders",
+        title: "Package Overview",
         content: "Explore the vibrant city of Baku and surrounding gems with this 6-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
       },
       country: "Indonesia",
