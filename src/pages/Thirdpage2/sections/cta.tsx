@@ -4,7 +4,7 @@ import Popup from "../../../components/common/Popup"; // adjust path as needed
 
 const MobileCTA = styled.button`
   display: none;
-  background: linear-gradient(to right, #e9b318 0%, #ebac07 100%);
+  background: #FFD700;
   color: #000;
   font-size: 18px;
   font-weight: bold;
@@ -33,10 +33,9 @@ const MobileCTA = styled.button`
     bottom: 0;
     left: 0;  
     width: 100%;
-    background: linear-gradient(to right, #d39c0a 0%, #d39c0a 100%);
+    background: #FFD700;
   color:rgb(0, 0, 0);
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   border: none;
   border-radius: 8px;
   cursor: pointer;
