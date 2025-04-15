@@ -45,7 +45,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 6,
       days: 7,
       theme: "Mumbai",
-      destinationCovered: "Kuta-3N -- Nusa Penida-1N -- Ubud-2N",
+      destinationCovered: "Kuta-4N -- Ubud-2N",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",

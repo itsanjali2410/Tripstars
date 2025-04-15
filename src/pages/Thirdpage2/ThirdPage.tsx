@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Finaldata from "./sections/finaldata2";
@@ -104,10 +104,21 @@ export default function ThirdPage() {
 
   const [isPopupVisible, setPopupVisible] = useState(false);
 
-  // Handle toggling the popup visibility
+  // Show popup on mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPopupVisible(true);
+    }, 2000); // 2000ms = 2 seconds
+  
+    return () => clearTimeout(timer); // Clean up on unmount
+  }, []);
+  
+
+  // Toggle handler (if you still need to manually control popup later)
   const togglePopup = () => {
-    setPopupVisible((prev) => !prev); // Toggle the visibility state
+    setPopupVisible((prev) => !prev);
   };
+
 
   const destinationData = Finaldata[destination] || {};
   const normalizedPackageName = normalizeString(decodeURIComponent(packageName));
@@ -152,7 +163,7 @@ export default function ThirdPage() {
             days={packageData.days}
             destinationCovered={packageData.destinationCovered}
             theme={""}
-            totalPackagePrice={""} country={""}          />
+            totalPackagePrice={""} country={""} />
         )}
 
         {/* Tour Includes & Highlights */}
@@ -186,7 +197,7 @@ export default function ThirdPage() {
           exclusions={packageData.exclusions}
         />
         <Cta
-               
+
         />
         <TermsAndConditions />
       </LeftSection>
