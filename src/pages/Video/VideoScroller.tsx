@@ -64,13 +64,13 @@ const videoData = [
     video: Video7,
     tags: ["Relaxation", "Hospitality", "Travel"],
   },
-  // {
-  //   title: "Bonani Chatterjee",
-  //   description:
-  //     "An organized and well managed trip A special thanks to Alex for so efficiently planning everything. Also to our guides Lien in Hanoi, key in Da Nang and Leon in Saigon a big thank you for a wonderful job done. Also all the drivers were excellent and the cars were in excellent condition.",
-  //   video: Video1,
-  //   tags: ["Bali", "Vacation", "Beaches", "Culture"],
-  // },
+  {
+    title: "Bonani Chatterjee",
+    description:
+      "An organized and well managed trip A special thanks to Alex for so efficiently planning everything. Also to our guides Lien in Hanoi, key in Da Nang and Leon in Saigon a big thank you for a wonderful job done. Also all the drivers were excellent and the cars were in excellent condition.",
+    video: Video1,
+    tags: ["Bali", "Vacation", "Beaches", "Culture"],
+  },
 ];
 // Styled Components
 const Container = styled.div`
