@@ -5,7 +5,7 @@ import InclusionsExclusions from "./sections/InclusionsExclusions";
 import PriceCard from "./sections/PriceCard";
 import PackageOverview from "./sections/PackageOverview";
 import Itinerary from "./sections/Itinerary";
-import HelpCard from "../ThirdPage/sections/HelpCard";
+import HelpCard from "../Thirdpage2/sections/HelpCard";
 import FloatingContactButton from "../Home/sections/Floating";
 import TermsAndConditions from "./sections/TermsAndConditions";
 import TabbedTable from "./sections/TabbedTable";
