@@ -112,7 +112,7 @@ const ContactInfo = styled.div`
 `;
 
 const contactDetails = [
-  { icon: <FaPhone />, label: "9875097169" },
+  { icon: <FaPhone />, label: "9875097159" },
   { icon: <FaEnvelope />, label: "Info@tripstars.in" },
   { icon: <FaMapMarkerAlt />, label: "1817/1818-B, Navratna Corporate Park, Iscon-Ambli Road, Ahmedabad - 380058" },
   { icon: <FaMapMarkerAlt />, label: "105 & 315, Sai Arcade, Mulund W, Mumbai 400080" }
@@ -126,35 +126,35 @@ const Contact: React.FC = () => {
     setFormData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
   }, []);
 
-  const API_URL = "https://backend.tripstarsholidays.com"; // ✅ Ensure the correct backend URL
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Prepare the form data
-    const formDataToSend = {
-        name: formData.name,
-        
-        email: formData.email,
-        
-    };
-
+  
     try {
-        // ✅ Send form data to backend API
-        const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);
-
-        if (response.status === 200) {
-
-            navigate("/thankyou");
-        } else {
-            alert("❌ Failed to save data to the database.");
-        }
-
+      const response = await fetch("https://tripstars.in/contact.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }).toString(),
+      });
+  
+      const result = await response.text();
+  
+      if (result.includes("✅")) {
+        navigate("/thankyou");
+      } else {
+        alert("❌ Something went wrong. " + result);
+      }
     } catch (error) {
-        console.error("❌ API Error:", error);
-        alert("❌ Failed to submit the form. Please try again.");
+      console.error("❌ PHP API Error:", error);
+      alert("❌ Failed to send the message.");
     }
-};
+  };
+  
 
   return (
     <ContactContainer>
