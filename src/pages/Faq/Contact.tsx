@@ -130,30 +130,24 @@ const Contact: React.FC = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("https://tripstars.in/contact.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        }).toString(),
+      const response = await axios.post("http://localhost:5000/api/contact", {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
       });
   
-      const result = await response.text();
-  
-      if (result.includes("✅")) {
+      if (response.data.success) {
         navigate("/thankyou");
       } else {
-        alert("❌ Something went wrong. " + result);
+        alert("❌ Something went wrong. " + response.data.error);
       }
     } catch (error) {
-      console.error("❌ PHP API Error:", error);
+      console.error("❌ API Error:", error);
       alert("❌ Failed to send the message.");
     }
   };
+  
+  
   
 
   return (

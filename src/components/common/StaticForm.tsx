@@ -452,7 +452,7 @@ const StaticForm: React.FC = () => {
               <option value="">Select timeframe</option>
               <option value="this-week">This Week</option>
               <option value="this-month">This Month</option>
-              <option value="undecided">Just Inquiry</option>
+              <option value="Just Inquiry">Just Inquiry</option>
             </select>     
             
             <DatePicker
