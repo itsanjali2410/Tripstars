@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Finaldata from "./sections/finaldata2";
 import PriceCard from "./sections/PriceCard";
 import PackageCard from "./sections/PackageCard";
-import HelpCard from "../ThirdPage/sections/HelpCard";
+import HelpCard from "./sections/HelpCard";
 import InclusionsExclusions from "./sections/InclusionsExclusions";
 import TermsAndConditions from "./sections/TermsAndConditions";
 import Itinerary from "./sections/Itinerary";
