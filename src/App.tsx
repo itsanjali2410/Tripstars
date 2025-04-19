@@ -22,7 +22,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ScrollToTop from "./ScrollToTop";
-
+import Dashboard from "./pages/Admin/Dashboard";
+import EditPackage from "./pages/Admin/EditPackage";
+import AddPackage from "./pages/Admin/AddPackage";
+import PackageList from "./pages/Admin/PAckageList";
+import { Package } from "lucide-react";
+import TestingAPI from "./pages/Thirdpage2/TestingAPI";
 function App() {
   const location = useLocation();
   const isVideoPage = location.pathname === "/video";
@@ -31,8 +36,13 @@ function App() {
     <>
       <div className="App">
         {!isVideoPage && <Navbar />}
-        <ScrollToTop/>
+        <ScrollToTop />
         <Routes>
+        <Route path="/test" element={<TestingAPI />} />
+          <Route path="/admin" element={<Dashboard />} />
+          <Route path="/admin/add" element={<AddPackage />} />
+          <Route path="/admin/edit/:id" element={<EditPackage />} />
+          <Route path="/admin/Package" element={<PackageList />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/faqs" element={<Faq />} />
           <Route path="/:location" element={<Tripdetailspage />} />
