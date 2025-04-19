@@ -112,7 +112,7 @@ const ContactInfo = styled.div`
 `;
 
 const contactDetails = [
-  { icon: <FaPhone />, label: "8655351948" },
+  { icon: <FaPhone />, label: "9875097169" },
   { icon: <FaEnvelope />, label: "Info@tripstars.in" },
   { icon: <FaMapMarkerAlt />, label: "1817/1818-B, Navratna Corporate Park, Iscon-Ambli Road, Ahmedabad - 380058" },
   { icon: <FaMapMarkerAlt />, label: "105 & 315, Sai Arcade, Mulund W, Mumbai 400080" }

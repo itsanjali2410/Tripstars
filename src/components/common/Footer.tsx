@@ -479,10 +479,10 @@ const Footer: React.FC = () => {
             <a href="mailto:Info@tripstars.in">Info@tripstars.in</a>
           </p>
           <p>
-            <a href="tel:+919875097159">+91 9875097159</a>
+            <a href="tel:+919875097169">+91 9875097169</a>
           </p>
           <p>
-            <a href="http://tripstars.in/">https://tripstars.in</a>
+            <a href="https://tripstars.in/">https://tripstars.in</a>
           </p>
         </div>
       </FooterContact>
