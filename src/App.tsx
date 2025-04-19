@@ -1,7 +1,10 @@
+
+
+
 import { Route, Routes, useLocation } from "react-router-dom";
 import HomePage from "./pages/Home/Homepage";
 import Themes from "./pages/Themes/Themes";
-import Thirdpage from "./pages/ThirdPage/ThirdPage";
+// import Thirdpage from "./pages/ThirdPage/ThirdPage";
 import Thirdpage2 from "./pages/Thirdpage2/ThirdPage"
 import PrivacyPolicyPage from "./pages/PrivacyPolicy/PrivacyPolicyPage";
 import Tripdetailspage from "./pages/Tripdetails/Tripdetailspage";
@@ -46,7 +49,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/faqs" element={<Faq />} />
           <Route path="/:location" element={<Tripdetailspage />} />
-          <Route path="/tripdetails" element={<Thirdpage />} />
+          {/* <Route path="/tripdetails" element={<Thirdpage />} /> */}
           <Route path="/:destination/:packageName" element={<Thirdpage2 />} />
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/terms-conditions" element={<PrivacyPolicyPage title="Terms & Conditions" />} />
