@@ -322,7 +322,7 @@ const StaticForm: React.FC = () => {
       const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);
 
       if (response.status === 200) {
-        window.open("/thankyou", "_blank");
+        window.location.href = "/thankyou";
       }
       
       // ✅ Reset the form after successful submission
