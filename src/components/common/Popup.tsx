@@ -341,7 +341,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
 
       if (response.status === 200) {
 
-        navigate("/thankyou");
+        window.location.href = "/thankyou";
       }
 
       // ✅ Reset the form and close popup
