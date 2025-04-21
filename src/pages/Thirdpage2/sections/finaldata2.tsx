@@ -1287,7 +1287,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
     },
     baku4: {
       packageId: "S04390",
-      packageName: "Azerbaijan Explorer",
+      packageName: "Azerbaijan Explorer baku",
       totalGuests: 2,
       nights: 6,
       days: 7,
