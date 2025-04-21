@@ -1943,7 +1943,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
     },
     singapore3: {
       packageId: "S04390",
-      packageName: "Singapore malaysia delights",
+      packageName: "Singapore Malaysia Delights",
       totalGuests: 2,
       nights: 6,
       days: 7,
