@@ -322,7 +322,7 @@ const footerSections: { title: string; links: FooterLink[] }[] = [
     title: "Talk to us",
     links: [
       { label: "+91-9875097169", href: "+919875097169" },
-      { label: "+91-9875097159", href: "tel:+919875097159" },
+      { label: "+91-9875097169", href: "tel:+919875097169" },
       // { label: "+91 7969790000", href: "tel:+917969790000" },
       { label: "Info@tripstars.in", href: "mailto:Info@tripstars.in" },
     ],
@@ -340,7 +340,7 @@ const footerSections: { title: string; links: FooterLink[] }[] = [
       {
         label: "1817/1818, Navratna Corporate Park - B, Iscon - Ambli Road, Ahmedabad - 380058",
         href: "#",
-        contacts: [{ phone: "+91-9875097159", whatsapp: "+91-9875097159" }],
+        contacts: [{ phone: "+91-9875097169", whatsapp: "+91-9875097169" }],
       },
     ],
   },

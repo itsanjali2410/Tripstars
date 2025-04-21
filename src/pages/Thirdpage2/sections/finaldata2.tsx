@@ -2522,7 +2522,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       nights: 4,
       days: 5,
       theme: "Mumbai",
-      destinationCovered: "Pattaya-4N -- Bankok-2N",
+      destinationCovered: "Pattaya-2N -- Bankok-2N",
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -2566,7 +2566,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         },
         {
           "Day 5: Departure from Thailand": [
-            "Take a bag full of memories to cherish. Check out from your hotel and transfer to Denpasar Airport for your return flight home."
+            "Take a bag full of memories to cherish. Check out from your hotel and transfer to Bankok Airport for your return flight home."
           ]
         }
       ],
@@ -2651,7 +2651,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         },
         {
           "Day 5: Departure from Thailand": [
-            "Take a bag full of memories to cherish. Check out from your hotel and transfer to Denpasar Airport for your return flight home."
+            "Take a bag full of memories to cherish. Check out from your hotel and transfer to Bankok Airport for your return flight home."
           ]
         }
       ],
@@ -2687,7 +2687,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
     },
     thailand3: {
       packageId: "S03904",
-      packageName: "Krabi and Phuket",
+      packageName: "Super Saver Krabi and Phuket Thailand",
       totalGuests: 2,
       nights: 5,
       days: 6,
@@ -2741,6 +2741,101 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         },
         {
           "Day 6: Departure from Phuket": [
+            "After breakfast, checkout from your hotel. You will be picked up and transferred to the airport to catch your flight back home. Your trip ends with sweet memories."
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Unwind on a tropical escape to Phuket and Krabi. From the stunning Four Island Tour in Krabi to Phuket’s vibrant cityscapes and iconic Phi Phi Islands, this journey blends beach bliss with cultural charm. Enjoy scenic views, island adventures, shopping time, and laid-back vibes, wrapped in a memorable 6-day getaway.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Phuket Airport to Krabi - Private Transfer by Road",
+        "Return Airport and Inter-Hotel Transfers on Private Basis",
+        "Half-Day Phuket City Tour",
+        "Daily Breakfast (Except on Day of Arrival)",
+        "2 Nights Accommodation in Krabi",
+        "3 Nights Accommodation in Phuket"
+      ],
+      exclusions: [
+        "5% TCS extra",
+        "Early check-in/late check-out",
+        "Optional tours & meals",
+        "Personal expenses",
+        "Price changes due to taxes or fuel",
+        "Anything not in inclusions"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star3: "Deevana Krabi Resort, ASHLEE Plaza Patong Hotel & Spa or similar",
+            star4: "Holiday Ao Nang Beach Resort, Crest Resort & Pool Villas or similar",
+          },
+        ],
+      },
+    },
+    thailand4: {
+      packageId: "S03904",
+      packageName: "Phuket Krabi and Bangkok Thailand",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "krabi-2N -- Phuket-2N -- Bankok-2N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹89,299/- Onwards",
+
+      packageImage:
+        "https://lp-cms-production.imgix.net/2020-11/500pxRF_241509159.jpg?fit=crop&ar=1%3A1&w=1200&auto=format&q=75",
+
+      itinerary: [
+        {
+          "Day 1: Arrival at Phuket - Transfer to Krabi": [
+            "Upon arrival at Bangkok, meet our representative at airport. You will be transfered to your hotel in Pattaya. Check-in."
+          ]
+        },
+        {
+          "Day 2: Krabi Four Island Tour": [
+            "Explore Krabi's Four Islands on a day trip to Koh Tup, Koh Gai, Koh Poda, and Phra Nang Cave Beach. Walk along the tidal sandbank at Koh Tup, snorkel at Koh Gai, enjoy a picnic on Koh Poda’s white sands, and end the day swimming and exploring caves at Phra Nang Beach.",
+          ]
+        },
+        {
+          "Day 3: Transfer from Krabi to Phuket City Tour": [
+            "After checking out from your hotel in Krabi, proceed with a scenic transfer to Phuket. Later, enjoy a half-day city tour covering Karon and Kata Beaches, the Karon Viewpoint, Chalong Temple, colonial Phuket Town, Cashew Nut Factory, Big Buddha, and the Gems Gallery. Return to your hotel and relax.",
+
+          ]
+        },
+        {
+          "Day 4: Phi Phi Island Tour": [
+            "Explore Phi Phi Islands on a full-day tour from Phuket. Visit Maya Bay, Monkey Beach, Pileh Cove, Viking Cave, and Loh Samah Bay. Enjoy a buffet lunch at Phi Phi Don, go snorkeling, and unwind at Khai Island. Optional water sports are available. End the day with a transfer back to your hotel."
+          ]
+        },
+        {
+          "Day 5: Transfer from Phuket to Bangkok & Bangkok City Temple Tour (SIC)": [
+            "Fly to Bangkok and transfer to your hotel upon arrival. Later, enjoy a half-day city and temple tour exploring Bangkok’s cultural highlights. Visit Wat Traimit, home to the 5.5-ton Golden Buddha, and Mahaputram Temple, known for its serene Reclining Buddha. Spend the evening at leisure, exploring the city’s vibrant markets or experiencing its lively nightlife."
+          ]
+        },
+        {
+          "Day 6: Full Day Safari World and Marine Park ": [
+            "Explore Bangkok Safari World with a guided full-day tour, featuring two main zones: Safari Park and Marine Park. Spot lions, zebras, and more on an African-style safari drive, enjoy a jungle cruise past crocodiles and gorillas, and catch entertaining dolphin, sea lion, and orangutan shows. Includes Indian buffet lunch and transport."
+          ]
+        },
+        {
+          "Day 7: Departure from Bangkok": [
             "After breakfast, checkout from your hotel. You will be picked up and transferred to the airport to catch your flight back home. Your trip ends with sweet memories."
           ]
         }

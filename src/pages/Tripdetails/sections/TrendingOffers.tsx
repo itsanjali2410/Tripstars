@@ -226,33 +226,30 @@ const TrendingOffers: React.FC<TrendingOffersProps> = ({ title, cards }) => {
 
   const handleCardClick = (card: TrendingOffersProps["cards"][0]) => {
     const lowerTitle = card.title.toLowerCase();
-    const destinationsWithRedirect = ["bali", "vietnam","dubai", "singapore","thailand"];
-  
+    const destinationsWithRedirect = ["bali", "vietnam", "dubai", "singapore", "thailand"];
+
     const matchedDestination = destinationsWithRedirect.find(dest =>
       lowerTitle.includes(dest)
     );
-  
+
     if (matchedDestination) {
       const packageSlug = card.title
         .toLowerCase()
-        .replace(/[^a-z0-9\s]/gi, "") // Remove special characters
+        .replace(/[^a-z0-9\s]/gi, "")
         .trim()
-        .replace(/\s+/g, "-"); // Replace spaces with hyphens
-  
+        .replace(/\s+/g, "-"); // slugifies the title
+
+
       navigate(`/${matchedDestination}/${packageSlug}`);
       return;
     }
-  
+
     // If no match, open popup as usual
     setSelectedCard(null);
     setTimeout(() => {
       setSelectedCard(card);
     }, 0);
   };
-  
-  
-  
-  
 
   const handleClosePopup = () => {
     setSelectedCard(null); // Reset the selected card state when closing the popup
@@ -345,14 +342,14 @@ const TrendingOffers: React.FC<TrendingOffersProps> = ({ title, cards }) => {
         ))}
       </Swiper>
       {selectedCard && (
-  <Popup
-    title={selectedCard.title}
-    image={selectedCard.image}
-    pricing={selectedCard.pricing}
-    info={selectedCard.info}
-    onClose={handleClosePopup}
-  />
-)}
+        <Popup
+          title={selectedCard.title}
+          image={selectedCard.image}
+          pricing={selectedCard.pricing}
+          info={selectedCard.info}
+          onClose={handleClosePopup}
+        />
+      )}
 
     </SliderContainer>
   );
