@@ -68,7 +68,7 @@ const PackageImage = styled.img`
   }
 
   @media (max-width: 480px) {
-    height: 200px;
+    height: 210px;
   }
 `;
 

@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styled from "styled-components";
 
@@ -59,14 +64,14 @@ interface ItineraryProps {
 
 // Itinerary Component
 const Itinerary: React.FC<ItineraryProps> = ({ itinerary }) => {
-  const [expanded, setExpanded] = useState<string | false>(false); // No section open initially
+  const [expanded, setExpanded] = useState<string | false>(false);
 
   const handleChange = (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
-    setExpanded(isExpanded ? panel : false); // Toggle accordion open/close
+    setExpanded(isExpanded ? panel : false);
   };
 
   return (
-    <Container>
+    <Container id="itinerary"> {/* 🟢 scroll target here */}
       <SectionTitle>Day-wise Itinerary</SectionTitle>
 
       {itinerary.map((item, index) => (
@@ -76,8 +81,7 @@ const Itinerary: React.FC<ItineraryProps> = ({ itinerary }) => {
           onChange={handleChange(item.day)}
         >
           <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography sx={{ fontFamily: 'inherit' }}>{item.day}</Typography>
-
+            <Typography sx={{ fontFamily: 'inherit' }}>{item.day}</Typography>
           </StyledAccordionSummary>
 
           <StyledAccordionDetails>

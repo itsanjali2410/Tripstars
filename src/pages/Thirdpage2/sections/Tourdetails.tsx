@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { MapPin, Calendar } from "lucide-react";
+import { MapPin, Calendar, ChevronDown, ChevronUp } from "lucide-react";
+import Itinerary from "./Itinerary"; // Adjust path if needed
 
 // Styled Components
 const CardWrapper = styled.div`
-  border: 1px solid #ddd; /* Thicker, visible border */
-  border-radius: 12px; /* Smooth rounded edges */
+  border: 1px solid #ddd;
+  border-radius: 12px;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 400px; /* Compact size */
+  max-width: 400px;
   margin-bottom: 40px;
 `;
 
@@ -40,6 +41,26 @@ const DestinationText = styled.span<{ isLong: boolean }>`
   font-size: ${(props) => (props.isLong ? "14px" : "16px")};
 `;
 
+const ToggleItinerary = styled.button`
+    border: none;
+    color: #c99603;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 22px;
+    text-decoration: none;
+  svg {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
 // Props Interface
 interface TourDetails {
   nights: number;
@@ -52,12 +73,21 @@ interface TourDetails {
 
 // Functional Component
 const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered, country }) => {
+  const [showItinerary, setShowItinerary] = useState(false);
+
   return (
     <CardWrapper>
       <InfoRow>
-        <Calendar size={22} />
-        <span>{nights} Nights, {days} Days</span>
+        <div className="left">
+          <Calendar size={22} />
+          <span>{nights} Nights, {days} Days</span>
+        </div>
+
+        <ToggleItinerary as="a" href="#itinerary">
+        See Itinerary <ChevronDown size={18} />
+        </ToggleItinerary>
       </InfoRow>
+
       <InfoRow>
         <MapPin size={22} />
         <DestinationText isLong={destinationCovered.length > 25}>
@@ -68,6 +98,13 @@ const TourCard: React.FC<TourDetails> = ({ nights, days, destinationCovered, cou
       <InfoRow>
         <span>{country}</span>
       </InfoRow>
+
+      {/* <ToggleItinerary as="a" href="#itinerary">
+        See Itinerary <ChevronDown size={18} />
+      </ToggleItinerary> */}
+
+
+      {showItinerary && <Itinerary itinerary={[]} />}
     </CardWrapper>
   );
 };

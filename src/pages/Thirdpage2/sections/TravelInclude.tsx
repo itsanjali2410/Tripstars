@@ -13,7 +13,6 @@ const Wrapper = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 40px;
 
   @media (max-width: 768px) {
     flex-direction: column;

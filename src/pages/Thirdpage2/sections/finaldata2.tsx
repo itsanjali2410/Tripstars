@@ -1,6 +1,6 @@
-import bali1 from "../../../assets/thirdpage/bali/Bali 3rd page1.png";
-import bali2 from "../../../assets/thirdpage/bali/Bali 3rd page2.png";
-import bali3 from "../../../assets/thirdpage/bali/Bali 3rd page3.png";
+import bali1 from "../../../assets/thirdpage/bali/Bali 3rd page6 (1).png";
+import bali2 from "../../../assets/thirdpage/bali/Bali 3rd page7 (1).png";
+import bali3 from "../../../assets/thirdpage/bali/Bali 3rd page8 (1).png";
 import bali4 from "../../../assets/thirdpage/bali/Bali 3rd page4.png";
 import { ElementType, ReactElement } from "react";
 import { Vietnam } from "../../../components/data";
