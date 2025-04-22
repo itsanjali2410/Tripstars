@@ -448,7 +448,7 @@ const StaticForm: React.FC = () => {
               onChange={handleChange}
               required
             >
-              <option value="">Select timeframe</option>
+              <option value="">When are you looking to Book?</option>
               <option value="this-week">This Week</option>
               <option value="this-month">This Month</option>
               <option value="Just Inquiry">Just Inquiry</option>
