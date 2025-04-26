@@ -2775,7 +2775,6 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         ],
       },
     },
-<<<<<<< HEAD
   },
   similar: {
     dubai1: {
@@ -2786,16 +2785,6 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       days: 6,
       theme: "Mumbai",
       destinationCovered: "Dubai-5N",
-=======
-    thailand4: {
-      packageId: "S03904",
-      packageName: "Phuket Krabi and Bangkok Thailand",
-      totalGuests: 2,
-      nights: 6,
-      days: 7,
-      theme: "Mumbai",
-      destinationCovered: "krabi-2N -- Phuket-2N -- Bankok-2N",
->>>>>>> 8a65405292dcbc73bfce41b461f45a3c8c8ae40c
       highlights: [
         "Breakfast included in tour price",
         "English Speaking certified drivers",
@@ -2803,37 +2792,13 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Seamless airport transfers for hassle-free travel"
       ],
       includes: [
-<<<<<<< HEAD
-        { name: "Flights", icon: Plane },
-=======
         { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
->>>>>>> 8a65405292dcbc73bfce41b461f45a3c8c8ae40c
         { name: "Sightseeing", icon: Landmark },
         { name: "Transport", icon: Bus },
         { name: "Hotel", icon: Hotel },
         { name: "Breakfast", icon: Utensils },
       ],
 
-<<<<<<< HEAD
-      totalPackagePrice: "INR ₹82,999/- Onwards",
-      packageImage:
-        "https://i0.wp.com/reconasia.csis.org/wp-content/uploads/2017/01/chasing_the_dubai_dreamii-e1619813205979.jpeg?fit=2000%2C1333&ssl=1",
-
-      itinerary: [
-        {
-          "Day 1: Arrival in Dubai & Evening Marina Dhow Cruise": [
-            "Arrive at Dubai International Airport and enjoy private transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
-          ]
-        },
-        {
-          "Day 2: Dubai City Tour & Burj Khalifa Visit": [
-            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
-          ]
-        },
-        {
-          "Day 3: Desert Safari with BBQ Dinner": [
-            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
-=======
       totalPackagePrice: "INR ₹89,299/- Onwards",
 
       packageImage:
@@ -2853,25 +2818,10 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         {
           "Day 3: Transfer from Krabi to Phuket City Tour": [
             "After checking out from your hotel in Krabi, proceed with a scenic transfer to Phuket. Later, enjoy a half-day city tour covering Karon and Kata Beaches, the Karon Viewpoint, Chalong Temple, colonial Phuket Town, Cashew Nut Factory, Big Buddha, and the Gems Gallery. Return to your hotel and relax.",
->>>>>>> 8a65405292dcbc73bfce41b461f45a3c8c8ae40c
 
           ]
         },
         {
-<<<<<<< HEAD
-          "Day 4:  Abu Dhabi City Tour & Ferrari World": [
-            "Begin the day with a scenic drive to Abu Dhabi. Visit the stunning Sheikh Zayed Grand Mosque and admire the city's mix of modern architecture and green spaces. Later, head to Ferrari World on Yas Island, home to Formula Rossa—the world’s fastest roller coaster. Return to Dubai in the evening."
-          ]
-        },
-        {
-          "Day 5: Day at Leisure": [
-            "Day at leisure - relax or explore Dubai on your own. Optional - Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
-          ]
-        },
-        {
-          "Day 6: Dubai Departure": [
-            "Have a filling breakfast at your hotel and proceed for the airport. Board your flight back home with beautiful memories of your amazing holiday in Dubai."
-=======
           "Day 4: Phi Phi Island Tour": [
             "Explore Phi Phi Islands on a full-day tour from Phuket. Visit Maya Bay, Monkey Beach, Pileh Cove, Viking Cave, and Loh Samah Bay. Enjoy a buffet lunch at Phi Phi Don, go snorkeling, and unwind at Khai Island. Optional water sports are available. End the day with a transfer back to your hotel."
           ]
@@ -2889,32 +2839,11 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         {
           "Day 7: Departure from Bangkok": [
             "After breakfast, checkout from your hotel. You will be picked up and transferred to the airport to catch your flight back home. Your trip ends with sweet memories."
->>>>>>> 8a65405292dcbc73bfce41b461f45a3c8c8ae40c
           ]
         }
       ],
       overviewData: {
         title: "Package Overview",
-<<<<<<< HEAD
-        content: "Explore the vibrant city of Baku and surrounding gems with this 6-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
-      },
-      country: "Indonesia",
-      inclusions: [
-        "Evening Marina Dhow cruise",
-        "Burj Khalifa 124th Floor Non Prime time( Subject to Availibilty)Airport transfers (SIC basis)",
-        "Marina Dhow Cruise with dinner",
-        "Dubai City Tour (Half-day)",
-        "Desert Safari with BBQ dinner",
-        "Ferrari World entry",
-      ],
-      exclusions: [
-        "Travel insurance",
-        "Tourism Dirham (to be paid at hotel)",
-        "5% TCS (refundable)",
-        "Personal expenses",
-        "Optional tours & activities",
-        "Early check-in / late check-out"
-=======
         content: "Unwind on a tropical escape to Phuket and Krabi. From the stunning Four Island Tour in Krabi to Phuket’s vibrant cityscapes and iconic Phi Phi Islands, this journey blends beach bliss with cultural charm. Enjoy scenic views, island adventures, shopping time, and laid-back vibes, wrapped in a memorable 6-day getaway.",
       },
       country: "Indonesia",
@@ -2933,23 +2862,16 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         "Personal expenses",
         "Price changes due to taxes or fuel",
         "Anything not in inclusions"
->>>>>>> 8a65405292dcbc73bfce41b461f45a3c8c8ae40c
       ],
       tableData: {
         tab1: [
           {
-<<<<<<< HEAD
-            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
-            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
-=======
             star3: "Deevana Krabi Resort, ASHLEE Plaza Patong Hotel & Spa or similar",
             star4: "Holiday Ao Nang Beach Resort, Crest Resort & Pool Villas or similar",
->>>>>>> 8a65405292dcbc73bfce41b461f45a3c8c8ae40c
           },
         ],
       },
     },
-<<<<<<< HEAD
     baku1: {
       packageId: "S04390",
       packageName: "Super Saver Baku",
@@ -3227,8 +3149,6 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
 
       }, // ✅ Closing
     },
-=======
->>>>>>> 8a65405292dcbc73bfce41b461f45a3c8c8ae40c
   }
 };
 export default Finaldata;
