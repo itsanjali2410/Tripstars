@@ -350,17 +350,17 @@ export const Thailand = [
       { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
     ],
   },
-  // {
-  //   title: "Phuket, Krabi and Bangkok Explorer",
-  //   image: thailand2,
-  //   pricing: "₹83,899/- Onwards",
-  //   info: [
-  //     { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "6N/7D" },
-  //     { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
-  //   ],
-  // },
   {
-    title: "Krabi and Phuket",
+    title: "Phuket, Krabi and Bangkok Thailand",
+    image: thailand2,
+    pricing: "₹89,299/- Onwards",
+    info: [
+      { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "6N/7D" },
+      { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
+    ],
+  },
+  {
+    title: "Super Saver Krabi and Phuket Thailand",
     image: thailand3,
     pricing: "₹64,999/- Onwards",
     info: [
@@ -369,7 +369,7 @@ export const Thailand = [
     ],
   },
   {
-    title: "Fun and Fiesta Thailand ",
+    title: "Fun and Fiesta Thailand",
     image: thailand4,
     pricing: "₹46,999/- Onwards",
     info: [
@@ -1032,7 +1032,7 @@ export const Singapore = [
     ],
   },
   {
-    title: "Singapore Malaysia Delight",
+    title: "Singapore Malaysia Delights",
     image: singapore4,
     pricing: "₹95,199/- Onwards",
     info: [

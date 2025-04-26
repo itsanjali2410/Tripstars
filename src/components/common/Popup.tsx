@@ -341,7 +341,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
 
       if (response.status === 200) {
 
-        navigate("/thankyou");
+        window.location.href = "/thankyou";
       }
 
       // ✅ Reset the form and close popup
@@ -479,7 +479,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
               onChange={handleChange}
               required
             >
-              <option value="">Select timeframe</option>
+              <option value="">When are you looking to Book?</option>
               <option value="this-week">This Week</option>
               <option value="this-month">This Month</option>
               <option value="Just Inquiry">Just Inquiry</option>

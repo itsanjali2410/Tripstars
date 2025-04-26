@@ -226,7 +226,11 @@ const TrendingOffers: React.FC<TrendingOffersProps> = ({ title, cards }) => {
 
   const handleCardClick = (card: TrendingOffersProps["cards"][0]) => {
     const lowerTitle = card.title.toLowerCase();
+<<<<<<< HEAD
     const destinationsWithRedirect = ["bali", "vietnam", "dubai", "singapore", "thailand","baku","turkey"];
+=======
+    const destinationsWithRedirect = ["bali", "vietnam", "dubai", "singapore", "thailand","baku"];
+>>>>>>> 8a65405292dcbc73bfce41b461f45a3c8c8ae40c
 
     const matchedDestination = destinationsWithRedirect.find(dest =>
       lowerTitle.includes(dest)

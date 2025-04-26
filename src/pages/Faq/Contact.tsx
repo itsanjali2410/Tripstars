@@ -115,7 +115,8 @@ const contactDetails = [
   { icon: <FaPhone />, label: "9875097169" },
   { icon: <FaEnvelope />, label: "Info@tripstars.in" },
   { icon: <FaMapMarkerAlt />, label: "1817/1818-B, Navratna Corporate Park, Iscon-Ambli Road, Ahmedabad - 380058" },
-  { icon: <FaMapMarkerAlt />, label: "105 & 315, Sai Arcade, Mulund W, Mumbai 400080" }
+  { icon: <FaMapMarkerAlt />, label: "105 Sai Arcade, Mulund W, Mumbai 400080" },
+  { icon: <FaMapMarkerAlt />, label: "601 Bhairaav Milestone, Thane W, Mumbai 400080" }
 ];
 
 const Contact: React.FC = () => {
@@ -148,8 +149,6 @@ const Contact: React.FC = () => {
   };
   
   
-  
-
   return (
     <ContactContainer>
       <Banner>

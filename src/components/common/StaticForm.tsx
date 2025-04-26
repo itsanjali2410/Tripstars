@@ -190,25 +190,26 @@ const RightPanel = styled.div`
 `;
 const PaxCounterWrapper = styled.div`
   display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  gap: 20px; /* Space between "Number of Pax" and "Number of Children" */
+  align-items: center; /* Align items vertically centered */
+  justify-content: flex-start; /* Ensure they are aligned to the left */
+  flex-wrap: wrap; /* Allow wrapping in case of small screens */
 `;
 
 const PaxCounter = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+  flex-direction: column; /* Arrange label vertically on top */
+  align-items: center; /* Align label, count, and buttons at the center */
+  gap: 5px; /* Space between label and count + buttons */
 
   label {
     font-size: 14px;
+
   }
 
   .counter-row {
-    display: flex;
-    gap: 10px;
+    display: flex; /* Make the count and buttons appear in a row */
+    gap: 10px; /* Space between the count and the buttons */
     align-items: center;
   }
 
@@ -217,34 +218,20 @@ const PaxCounter = styled.div`
   }
 
   button {
-    padding: 5px 12px;
+    padding: 5px 10px;
     background: #000;
-    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
 
     &:hover {
-      background: #333;
+      background: #bbb;
     }
 
     &:disabled {
+      background: #000;
       cursor: not-allowed;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .counter-row {
-      flex-direction: row;
-      gap: 5px; /* Reduce gap on small screens */
-      justify-content: center; /* Center align */
-    }
-
-    button {
-      flex: 1;
-      min-width: 25px;
-      text-align: center;
     }
   }
 `;
@@ -322,7 +309,7 @@ const StaticForm: React.FC = () => {
       const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);
 
       if (response.status === 200) {
-        window.open("/thankyou", "_blank");
+        window.location.href = "/thankyou";
       }
       
       // ✅ Reset the form after successful submission
@@ -448,7 +435,7 @@ const StaticForm: React.FC = () => {
               onChange={handleChange}
               required
             >
-              <option value="">Select timeframe</option>
+              <option value="">When are you looking to Book?</option>
               <option value="this-week">This Week</option>
               <option value="this-month">This Month</option>
               <option value="Just Inquiry">Just Inquiry</option>

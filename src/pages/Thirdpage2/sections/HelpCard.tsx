@@ -120,7 +120,7 @@ export default function NeedHelpCard() {
         <Title>Need Assistance?</Title>
         <ContactDetail>
           <FaPhoneAlt />
-          <a href="tel:011-43030303">+91 9875097159</a>  <a href="tel:+91 9875097159"></a>
+          <a href="tel:011-43030303">+91 9875097169</a>  <a href="tel:+91 9875097169"></a>
         </ContactDetail>
         <ContactDetail>
           <FaEnvelope />
