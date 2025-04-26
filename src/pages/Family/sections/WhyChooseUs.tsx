@@ -36,23 +36,7 @@ const CTAButton = styled.button`
   }
 `;
 
-// Mobile CTA fixed at bottom
-const MobileCTA = styled(CTAButton)`
-  display: none;
-  @media (max-width: 768px) {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-radius: 0;
-    z-index: 9999;
-    padding: 16px;
-    font-size: 18px;
-  }
-`;
-
-// Custom Title styling
+// Title styling
 const Title = styled.h2`
   color: #ffffff;
   font-size: 3.5rem;
@@ -73,7 +57,7 @@ const Title = styled.h2`
   }
 `;
 
-// Wrapper for better control
+// Wrapper
 const ContentWrapper = styled.div`
   background-color: rgba(4, 26, 34, 0.8); /* Cyan overlay */
   border-radius: 20px;
@@ -117,11 +101,6 @@ const ConnectNowSection = () => {
           </CTAButton>
         </ContentWrapper>
       </div>
-
-      {/* Mobile Fixed CTA */}
-      <MobileCTA onClick={() => setShowPopup(true)}>
-        Submit your query
-      </MobileCTA>
 
       {/* Popup Component */}
       {showPopup && (

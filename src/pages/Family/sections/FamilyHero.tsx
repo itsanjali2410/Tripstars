@@ -1,28 +1,31 @@
 import React, { useState, useEffect, useMemo } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useSwipeable } from "react-swipeable";
 
-// Desktop image URLs
+// Images
 const desktopImageUrls = [
   "https://www.andbeyond.com/wp-content/uploads/sites/5/Family-travel.jpg",
- 
 ];
 
-// Mobile image URLs (you can use same or different)
 const mobileImageUrls = [
   "https://4.imimg.com/data4/II/II/GLADMIN-/img-col-2-blog-2-col3-500x500.jpg",
- 
 ];
+
+// Animations
+const zoom = keyframes`
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+`;
 
 // Styled Components
 const SliderContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    height: 30vh;
+    height: 40vh;
   }
 `;
 
@@ -38,9 +41,21 @@ const SlideImage = styled.img<{ active: boolean }>`
   height: 100%;
   object-fit: cover;
   opacity: ${(props) => (props.active ? 1 : 0)};
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
   position: absolute;
   inset: 0;
+  animation: ${zoom} 20s ease-in-out infinite alternate;
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 10%,
+    rgba(0, 0, 0, 0.7) 90%
+  );
+  z-index: 1;
 `;
 
 const SearchBarWrapper = styled.div`
@@ -48,24 +63,33 @@ const SearchBarWrapper = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 2;
   text-align: center;
+  padding: 0 20px;
+  width: 100%;
 
   @media (max-width: 768px) {
-    top: 60%;
-    width: 90%;
+    top: 55%;
   }
 `;
 
 const HeroText = styled.h1`
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 3rem;
+  color: #ffffff;
+  
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 2rem;
+  }
+`;
+
+const HeroSubText = styled.p`
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
@@ -119,10 +143,12 @@ const HeroSection: React.FC = () => {
         ))}
       </SlideWrapper>
 
+      <Overlay />
+
       <SearchBarWrapper>
-        {/* <HeroText>Find Your Dream Destination</HeroText>
-        <SearchBar />
-        <RatingBar /> */}
+        <HeroText>Find Your Dream Destination</HeroText>
+        <HeroSubText>Tailored experiences, unforgettable memories</HeroSubText>
+        {/* You can also add a searchbar or button here */}
       </SearchBarWrapper>
     </SliderContainer>
   );
