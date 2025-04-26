@@ -328,7 +328,7 @@ export default function Navbar() {
           <Link to="/">Themes</Link>
           <Dropdown isOpen={themeDropdownOpen}>
             <li className="category">
-              <Link to="">Family</Link>
+              <Link to="/family">Family</Link>
               <Link to="/themes" onClick={isMobile ? toggleMenu : undefined}>Honeymoon</Link>
               <Link to="">Adventure</Link>
               <Link to="">Beach</Link>

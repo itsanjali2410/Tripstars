@@ -2775,6 +2775,374 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
         ],
       },
     },
+  },
+  similar: {
+    dubai1: {
+      packageId: "S04390",
+      packageName: "Dream Dubai",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "Dubai-5N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹82,999/- Onwards",
+      packageImage:
+        "https://i0.wp.com/reconasia.csis.org/wp-content/uploads/2017/01/chasing_the_dubai_dreamii-e1619813205979.jpeg?fit=2000%2C1333&ssl=1",
+
+      itinerary: [
+        {
+          "Day 1: Arrival in Dubai & Evening Marina Dhow Cruise": [
+            "Arrive at Dubai International Airport and enjoy private transfer to your hotel for check-in. In the evening, enjoy a Marina Dhow Cruise with dinner, offering views of the illuminated Dubai Marina skyline and iconic architecture. Overnight in Dubai."
+          ]
+        },
+        {
+          "Day 2: Dubai City Tour & Burj Khalifa Visit": [
+            "Begin with a half-day city tour covering Gold Souk, Jumeirah Mosque, Burj Al Arab, and Atlantis photo stops. Later, visit Dubai Mall and ascend to the 124th floor of Burj Khalifa for breathtaking views. End the evening with the magical Dubai Fountain show. Overnight in Dubai.",
+          ]
+        },
+        {
+          "Day 3: Desert Safari with BBQ Dinner": [
+            "Morning free for leisure or optional activities, Afternoon Desert Safari with dune bashing, camel ride, BBQ dinner and live entertainment",
+
+          ]
+        },
+        {
+          "Day 4:  Abu Dhabi City Tour & Ferrari World": [
+            "Begin the day with a scenic drive to Abu Dhabi. Visit the stunning Sheikh Zayed Grand Mosque and admire the city's mix of modern architecture and green spaces. Later, head to Ferrari World on Yas Island, home to Formula Rossa—the world’s fastest roller coaster. Return to Dubai in the evening."
+          ]
+        },
+        {
+          "Day 5: Day at Leisure": [
+            "Day at leisure - relax or explore Dubai on your own. Optional - Visit Museum of the Future, Global Village, or enjoy beach time at La Mer",
+          ]
+        },
+        {
+          "Day 6: Dubai Departure": [
+            "Have a filling breakfast at your hotel and proceed for the airport. Board your flight back home with beautiful memories of your amazing holiday in Dubai."
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the vibrant city of Baku and surrounding gems with this 6-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Evening Marina Dhow cruise",
+        "Burj Khalifa 124th Floor Non Prime time( Subject to Availibilty)Airport transfers (SIC basis)",
+        "Marina Dhow Cruise with dinner",
+        "Dubai City Tour (Half-day)",
+        "Desert Safari with BBQ dinner",
+        "Ferrari World entry",
+      ],
+      exclusions: [
+        "Travel insurance",
+        "Tourism Dirham (to be paid at hotel)",
+        "5% TCS (refundable)",
+        "Personal expenses",
+        "Optional tours & activities",
+        "Early check-in / late check-out"
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Omega Hotel Bur Dubai, Ascot Hotel Bur Dubai, Park Inn by Radisson Yas Island, Crowne Plaz Abu Dhabi Yas Island or similar",
+            star5: "Park Regis Kris Kin Hotel Dubai, The Canvas Hotel MGallery, Park Inn by Radisson Yas Island, Crowne Plaza Abu Dhabi Yas Island, or similar",
+          },
+        ],
+      },
+    },
+    baku1: {
+      packageId: "S04390",
+      packageName: "Super Saver Baku",
+      totalGuests: 2,
+      nights: 5,
+      days: 6,
+      theme: "Mumbai",
+      destinationCovered: "Baku -- Gabala",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹87,399/- Onwards",
+
+      packageImage:
+        "https://www.salamair.com/images/gyd.jpg.jpg",
+
+      itinerary: [
+        {
+          "Day 1: Arrival in Baku": [
+            "Arrive at Baku Airport and enjoy a private transfer to your hotel. After check-in, take time to relax or explore the local surroundings at your leisure. Overnight in Baku."
+          ]
+        },
+        {
+          "Day 2: Baku Panoramic Tour": [
+            "Begin your day at Highland Park and the Alley of Martyrs, offering panoramic views of Baku. See the iconic Flame Towers and the National Assembly. Enjoy a walk along the scenic Baku Boulevard by the Caspian Sea. Evening is free for you to experience Baku’s vibrant nightlife. Overnight in Baku."
+          ]
+        },
+        {
+          "Day 3: Baku City Exploration": [
+            "Explore Baku’s Old City (Icherisheher), including UNESCO-listed sites like the Palace of the Shirvanshahs and Maiden Tower. Stroll down Nizami Street, known for shopping and cafes. Later, visit the stunning Heydar Aliyev Center, a modern architectural masterpiece. Enjoy free time before returning to your hotel. Overnight in Baku."
+          ]
+        },
+        {
+          "Day 4: Fire Tour – Ateshgah & Yanardag": [
+            "After breakfast, visit Ateshgah Fire Temple, an ancient Zoroastrian site. Continue to Yanardag, the legendary ‘Burning Mountain’ where flames rise from the earth. Return to Baku and enjoy your evening at leisure. Overnight in Baku."
+          ]
+        },
+        {
+          "Day 5: Full-Day Gabala Excursion": [
+            "Depart for Gabala, a scenic mountain town about 3 hours from Baku. Visit the Tufandaq Winter-Summer Tourism Complex for activities like cable car rides and skiing (seasonal). Continue to tranquil Nohur Lake for stunning views and relaxation. Return to Baku in the evening. Overnight in Baku."
+          ]
+        },
+        {
+          "Day 6: Departure from Baku": [
+            "Enjoy breakfast at the hotel before checking out. Transfer to Baku Airport for your departure flight."
+          ]
+        }
+
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore the vibrant city of Baku and surrounding gems with this 6-day itinerary including city tours, nature excursions, cultural experiences, and architectural marvels. Perfect for those looking to experience the mix of history, modernity, and natural beauty Azerbaijan has to offer.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Panoramic Tour",
+        "Baku City Tour",
+        "5N Accommodation in Baku and 1N Gabala",
+        "Mud Volcanoes & Gobustan Tour",
+        "Shahdag Tour",
+        "Cable Car Ticket for Gabala Tour",
+      ],
+      exclusions: [
+        "Any Optional Tours and Services",
+        "All rates are subject to availability at the time of booking.",
+        "Early check-in and late check-out at hotels",
+        "Personal expenses (laundry, drinks, phone calls, etc.)",
+        "Optional tours and activities not mentioned in the itinerary",
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Grand Europe, Gabala garden, Grand Europe",
+            star5: "Marriott Boulevard Baku Hotel, Gabala garden, Marriott Boulevard Baku Hotel",
+          },
+        ],
+      },
+    },
+    vietnam1: {
+      packageId: "S04390",
+      packageName: "vietnam highlights",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Hanoi-1N -- Halong Bay-1N -- Da nang-2N -- Ho chi Minh-2N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR ₹1,00,999/- Onwards",
+
+      packageImage:
+        "https://static.toiimg.com/photo/109784668.cms",
+
+      itinerary: [
+        {
+          "Day 1: Hanoi Arrival & Half-Day City Tour": [
+            "Arrive in Hanoi, Vietnam’s vibrant capital. Enjoy a private airport transfer with a stop for traditional Vietnamese lunch (vegetarian options available). Visit Tran Quoc Pagoda, the city’s oldest pagoda, followed by the Temple of Literature, Vietnam’s first university. Explore Hoa Lo Prison, a colonial-era site turned museum. Check in at your hotel and enjoy free time. Overnight in Hanoi."
+          ]
+        },
+        {
+          "Day 2: Hanoi to Ha Long Bay (Overnight Cruise)": [
+            "After breakfast and hotel check-out, travel from Hanoi to Ha Long Bay. At Tuan Chau Harbor, board the Verdure Lotus Cruise, enjoy a welcome drink, and receive a cruise briefing. Savor a seafood or vegetarian lunch while cruising through Halong–Lan Ha Bay. In the afternoon, relax on the sundeck or kayak in the Ba Trai Dao – Tra Bau area. Later, join Happy Hour and a cooking class. Enjoy dinner onboard, then try squid fishing or unwind on deck. Overnight on the cruise."
+          ]
+        },
+        {
+          "Day 3: Halong Departure - Arrival in Da nang": [
+            "Begin the day with sunrise Tai Chi on the sundeck, followed by breakfast with bay views. Explore Dark and Light Cave by kayak or bamboo boat. After cabin check-out, enjoy lunch while cruising back to Tuan Chau Port. Transfer to Noi Bai Airport for your flight to Da Nang. Upon arrival, check in and relax."
+          ]
+        },
+        {
+          "Day 4: Ba Na Hills with Golden Bridge": [
+            "After breakfast, travel to Ba Na Hills via cable car. Visit the iconic Golden Bridge, French Village, Linh Ung Pagoda, and enjoy thrilling rides at Fantasy Park. Savor a buffet lunch with panoramic views. Spend the afternoon exploring and taking photos. Return to Da Nang in the evening for leisure time and an overnight stay at the hotel."
+          ]
+        },
+        {
+          "Day 5: Da Nang Departure – Ho Chi Minh Arrival & Cu Chi Tunnels Tour": [
+            "After breakfast, check out and fly from Da Nang to Ho Chi Minh City. Upon arrival, store your luggage and head to the Cu Chi Tunnels, a 220 km underground network used during the Vietnam War. Explore hidden tunnels, try wartime food, and optional AK-47 shooting. Return to the hotel for check-in. Free leisure and overnight stay."
+          ]
+        },
+        {
+          "Day 6: Mekong Delta Tour": [
+            "After breakfast, depart from Ho Chi Minh City for a scenic drive to My Tho. Cruise along the Mekong River, visiting Dragon, Unicorn, Phoenix, and Turtle Islands. Explore a bee farm, enjoy honey wine, take a rowing boat ride, visit a coconut candy workshop, and enjoy a local lunch. Return by evening. Overnight in Ho Chi Minh City."
+          ]
+        },
+        {
+          "Day 7: Departure - Ho chi minh": [
+            "Have breakfast at hotel, Do hotel check-out, Our driver will take you directly to the Tan Son Nhat International Airport as your departure flight"
+          ]
+        }
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Explore Vietnam’s culture, nature, and history through Hanoi, Ha Long Bay, Da Nang, and Ho Chi Minh in 7 unforgettable days.",
+      },
+      country: "Indonesia",
+      inclusions: [
+        "Hanoi Half Day City Tour - SIC",
+        "Daily Breakfast at Hotel Accommodation",
+        "Flower Garland At Airport During Arrival",
+        "Ba Na Hills with Golden Bridge",
+        "English Speaking Driver during Tours and Transfers",
+        "Ba Na Hills Cable Car"
+      ],
+      exclusions: [
+        "Any Optional Tours and Services",
+        "All rates are subject to availability at the time of booking.",
+        "Early check-in and late check-out at hotels",
+        "Personal expenses (laundry, drinks, phone calls, etc.)",
+        "Optional tours and activities not mentioned in the itinerary",
+
+      ],
+      tableData: {
+        tab1: [
+          {
+            star4: "Hanoian Central Hotel & Spa, Verdure Lotus Cruise, Eden Ocean Da Nang Hotel",
+            star5: "Melia Hanoi Hotel, La Regina Legend Cruise, DLG Da Nang Hotel",
+          },
+        ],
+      },
+    },
+    bali1: {
+      packageId: "S04390",
+      packageName: "Ultimate Bali and Nusa Penida",
+      totalGuests: 2,
+      nights: 6,
+      days: 7,
+      theme: "Mumbai",
+      destinationCovered: "Kuta-4N -- Ubud-2N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR 74,999",
+
+      packageImage: bali1,
+      itinerary: [
+        {
+          "Day 1: Airport Transfer from Bali(Denpasar) to Hotel": [
+            "Welcome to Bali! Today is the First day of your trip. You will arrive at Denpasar Bali airport and will be transferred to your hotel in Bali. Your first day's schedule depends on the flight arrival time. Usually, this day will be free for you at your leisure. Overnight stay at Hotel accommodation"
+          ]
+        },
+        {
+          "Day 2: Benoa Water Sports & Uluwatu Sunset with Kecak Dance": [
+            "Start your day with fun water activities at Benoa Bay. Enjoy Banana Boat, Parasailing, and Jet Ski at Tanjung Benoa Beach, a peaceful place away from the city. In the evening, visit Uluwatu Temple, built on a high cliff with amazing views of the Indian Ocean. Watch a beautiful sunset, then enjoy the Kecak and Fire Dance – a unique show from the Ramayana story, where Hanuman sets fire to Ravana’s kingdom. The “kecak, kecak” chanting makes it even more special."
+          ]
+        },
+        {
+          "Day 3: Ulun Danu Temple, Git Git Waterfall & Tanah Lot Temple": [
+            "Start with a visit to Ulun Danu Beratan Temple, a sacred site on Beratan Lake dedicated to the Goddess of water, symbolizing fertility and prosperity.Then head to Git Git Waterfall in north Bali, a 35-meter-high fall surrounded by lush rainforest. Enjoy the natural beauty, soothing sounds, and spot wild monkeys in the area.Finish the day at Tanah Lot Temple, built on a rocky outcrop by the sea. It’s a must-visit for its unique location and stunning sunset views."
+          ]
+        },
+        {
+          "Day 4: West Nusa Penida": [
+            "Spend a day exploring Nusa Penida Island’s incredible beaches and highlights on this exclusive private tour. Witness the remarkable natural beauty of the area, from crystal clear waters, lush greenery and dramatic cliffs. Visit the renowned Kelingking Beach, otherwise known as T-Rex Beach.  This trip will take you up close & personal with the essence of Bali. It is the most favorite tour of any first-time visitor to Bali."
+          ]
+        },
+        {
+          "Day 5: Ubud Transfer, Kintamani Tour & Ubud Highlights": [
+            "Transfer to your Ubud hotel by private car. Proceed for a full-day Kintamani Tour including visits to Legong Batik, UC Silver in Celuk Village, and wood carving at Mas Village (Rai Shop). Enjoy stunning views of Mount and Lake Batur from Kintamani village. Experience the Romantic Bali Swing, a scenic swing between coconut trees overlooking the jungle. Visit the famous Tegalalang Rice Terraces for scenic beauty and photo ops. End the day at Ubud Art Market, known for handcrafted souvenirs and local goods from nearby villages."
+          ]
+        },
+        {
+          "Day 6: Day at Leisure - Bali": [
+            "Day at Leisure Day free at leisure, enjoy by your own."
+          ]
+        },
+        {
+          "Day 7: Departure from Hotel - Bali Denpasar Airport": [
+            "Take a bag full of memories to cherish. Check out from the hotel and meet the representative who will take you to the Denpasar airport to board board your return flight back home."
+          ]
+        },
+      ],
+
+      inclusions: [
+        "Git Git Waterfall ",
+        "West Nusa Penida",
+        "Kintamani Tour with Ubud village",
+        "Ubud Art Market",
+        "Flower Garland At Airport During Arrival",
+        "Tanah lot temple"
+      ],
+
+      exclusions: [
+        "Anything other than mentioned in inclusions and Itinerary.",
+        "Any Kind of Insurance",
+        "Festival and peak season surcharges",
+        "Optional tours and personal expenses",
+        "Driver Tipping"
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Enjoy 7 days in Bali with 4 nights in Kuta for beaches & nightlife, and 2 nights in Ubud for nature & culture. A perfect mix of adventure and relaxation! 🌴✨",
+      },
+      country: "Indonesia",
+      tableData: {
+        tab1: [
+          {
+            star4: "Swiss-Belhotel Rainforest, Kuta\The One Legion\Golden Tulip Jineng Resort",
+            star5: "Bintang Bali Resort\Royal Tulip Springhill Resort\Pullman Bali Legian Beach",
+          },
+        ],
+
+      }, // ✅ Closing
+    },
   }
 };
 export default Finaldata;

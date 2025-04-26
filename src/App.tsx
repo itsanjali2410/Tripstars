@@ -1,6 +1,4 @@
 
-
-
 import { Route, Routes, useLocation } from "react-router-dom";
 import HomePage from "./pages/Home/Homepage";
 import Themes from "./pages/Themes/Themes";
@@ -31,6 +29,7 @@ import AddPackage from "./pages/Admin/AddPackage";
 import PackageList from "./pages/Admin/PAckageList";
 import { Package } from "lucide-react";
 import TestingAPI from "./pages/Thirdpage2/TestingAPI";
+import Family from "./pages/Family/Family";
 function App() {
   const location = useLocation();
   const isVideoPage = location.pathname === "/video";
@@ -61,6 +60,8 @@ function App() {
           <Route path="/contact/" element={<Contact />} />
           <Route path="/thankyou/" element={<Thankyou />} />
           <Route path="/aboutus/" element={<Aboutus />} />
+          <Route path="/family/" element={<Family />} />
+          <Route path="/family/:location" element={<Family />} />
 
         </Routes>
         {!isVideoPage && <Footer />}
