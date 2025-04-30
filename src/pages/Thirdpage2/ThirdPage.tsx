@@ -108,7 +108,7 @@ export default function ThirdPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setPopupVisible(true);
-    }, 2000); // 2000ms = 2 seconds
+    }, 10000); // 10000ms = 10 seconds
   
     return () => clearTimeout(timer); // Clean up on unmount
   }, []);
