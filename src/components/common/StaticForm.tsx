@@ -240,6 +240,7 @@ const StaticForm: React.FC = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [pax, setPax] = useState(1);
   const [child, setChild] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -311,7 +312,7 @@ const StaticForm: React.FC = () => {
       if (response.status === 200) {
         window.location.href = "/thankyou";
       }
-      
+
       // ✅ Reset the form after successful submission
       setIsVisible(false); // Close popup
       setFormData({
@@ -439,8 +440,8 @@ const StaticForm: React.FC = () => {
               <option value="this-week">This Week</option>
               <option value="this-month">This Month</option>
               <option value="Just Inquiry">Just Inquiry</option>
-            </select>     
-            
+            </select>
+
             <DatePicker
               selected={startDate}
               onChange={(date: Date | null) => setStartDate(date)}
@@ -475,7 +476,10 @@ const StaticForm: React.FC = () => {
                 </div>
               </PaxCounter>
             </PaxCounterWrapper>
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={submitting}>
+              {submitting ? "Submitting..." : "Submit"}
+            </button>
+
           </form>
         </RightPanel>
       </ContentWrapper>
