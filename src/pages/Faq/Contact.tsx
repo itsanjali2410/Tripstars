@@ -129,25 +129,24 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+    
     try {
-      const response = await axios.post("http://localhost:5000/api/contact", {
+      const response = await axios.post("https://contact.tripstars.in", {
         name: formData.name,
         email: formData.email,
         message: formData.message,
       });
-  
+      
       if (response.data.success) {
         navigate("/thankyou");
       } else {
-        alert("❌ Something went wrong. " + response.data.error);
+        alert(` Something went wrong. ${response.data.error || "Please try again later."}`);
       }
     } catch (error) {
-      console.error("❌ API Error:", error);
-      alert("❌ Failed to send the message.");
+      console.error(" API Error:", error);
+      alert(" Failed to send the message. Please check your internet connection and try again.");
     }
   };
-  
   
   return (
     <ContactContainer>

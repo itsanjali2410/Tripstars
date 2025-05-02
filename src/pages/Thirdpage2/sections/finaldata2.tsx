@@ -1875,7 +1875,7 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       totalPackagePrice: "INR ₹81,499/- Onwards",
 
       packageImage:
-        "https://www.vistra.com/sites/default/files/2019-03/Singapore.jpg",
+        "https://lp-cms-production.imgix.net/2021-10/nature-park-travel-landmark-tourist-landscapes-gardens-by-the-bay-singapore-marina-bay-singapore_t20_Xx3KmVCROPPED.jpg",
 
       itinerary: [
         {
@@ -3149,6 +3149,567 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
 
       }, // ✅ Closing
     },
-  }
+  },
+  goa: {
+    goa1: {
+      packageId: "S04390",
+      packageName: "Explore Goa",
+      totalGuests: 2,
+      nights: 4,
+      days: 5,
+      theme: "Mumbai",
+      destinationCovered: "North-2N -- South-2N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR 31,199",
+
+      packageImage: "https://storage.googleapis.com/goa-app-12a91.appspot.com/2023-11-23T14%3A04%3A43.042ZNorth-Goa-Or-South-Goa-1-900x500.webp?GoogleAccessId=firebase-adminsdk-zeqcj%40goa-app-12a91.iam.gserviceaccount.com&Expires=16447017600&Signature=i77jMuwlKnKQALMSrWouzJXyHcELz4q5ciNrzEbmOBOK8P74R0za72jkDq%2Fq%2FZNnYejI49763BRSg9SkyjeYHWeXfAkvpDXtBPNPM73E9px8SLAZVYezVdFip9CBp5CElrEEc8n29TmnNsrZAIVdGZWue0iASA4TKvhA2MTvDX5W%2BN%2BMa8O3AkMFgFdRG3C7G2%2BirnbMVmWYS7RyehfTyghJfMPFMwDHvJgoKmkEmpJ7hVUhMKtDyd4sDQLk38upISw7GV9oRyYuhIMRQCod%2BQxlw3H8xQQHZ1Q3IJbTGp%2FIIQC6swEzCBTWnQiSZ%2FrdROAFTSnFhZkp4IbqIDuIog%3D%3D",
+      itinerary: [
+        {
+          "Day 1: Arrival in Goa - Transfer to Hotel": [
+            "Arrive at Goa at (Airport(Dambolim/ Mopa) / Madgoan Station) & get transferred to your pre-booked hotel at North Goa. Day free for leisure. Overnight at Goa. (Drop Locations of the NG1 Hotels: Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna and Vagator). NG1* - North Goa Hotels. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        },
+        {
+          "Day 2: North Goa Sightseeing Tour": [
+            "Today after breakfast, we proceed for the Local North Goa Sightseeing where we cover Fort Aguada, Candolim Beach, Calangute Beach, Baga Beach, Anjuna, Vagator, (if time permits). Time Duration - 0930AM to 0530PM. NG1 Hotels Location are Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna, Vagator."
+          ]
+        },
+        {
+          "Day 3: South Goa Sightseeing Tour": [
+            "Today after breakfast, we proceed for the South Goa Sightseeing where we cover Old Goa Churches (Basilica of Bom Jesus, Ce Cathedral), Shree Manguesh Temple, time for shopping at Panaji, Dona Paula, Miramar Beach. Time for Mandovi River Cruise. Note: Tickets for Mandovi River Cruise and any other entry tickets during the tour if applicable are at additional cost. Time Duration - 0930AM to 0630PM. NG1 Hotels Location are Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna, Vagator. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        },
+        {
+          "Day 4: Day Free at Leisure": [
+            "Full day free for leisure. Enjoy the amenities."
+          ]
+        },
+        {
+          "Day 5: Departure from Goa": [
+            "Today after breakfast, we check out from the hotel & proceed to the Airport(Dambolim/Mopa) / Madgoan Railway Station. Tour End. Pickup Locations of the NG1 Hotels - Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna and Vagator. NG1* - North Goa. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        }
+      ],
+
+      inclusions: [
+        "North Goa Sightseeing Tour (Fort Aguada, Calangute, Baga, Anjuna, Vagator)",
+        "South Goa Sightseeing Tour (Basilica of Bom Jesus, Se Cathedral, Shree Manguesh Temple, Dona Paula)",
+        "4 Nights Accommodation at Zone Connect by The Park, Calangute - Premium Room with Balcony",
+        "Daily Breakfast at the hotel",
+        "One night complimentary dinner for stays of 3 nights or more",
+        "Hi-Tea with cookies daily (4:00 – 4:30 PM)",
+        "Happy Hours at Co Bar (6:00 – 9:00 PM)",
+        "Complimentary Wi-Fi and use of swimming pool",
+        "Auto room upgrade to Junior Suite on triple occupancy (subject to availability)"
+      ],
+      exclusions: [
+        "5% TCS extra (refundable while filing ITR)",
+        "Early check-in & late check-out (standard check-in at 2 PM, check-out at 11 AM)",
+        "Any optional tours and services not mentioned in the itinerary",
+        "Personal expenses (laundry, entry tickets, telephone, meals not mentioned, etc.)",
+        "Any cost arising due to natural calamities or political disturbances",
+        "Increase in taxes or fuel charges before departure",
+        "Airfare and travel insurance",
+        "All rates subject to availability at the time of booking"
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Experience the best of both worlds with North Goa’s energy and South Goa’s serenity. Includes top beaches, forts, churches, temples, and cruise experiences for a complete Goan getaway.🌴✨",
+      },
+      country: "Indonesia",
+      tableData: {
+        tab1: [
+          {
+            star3: "Hotel Goa Continental Baga, Resort Marinha Dourada, Jasminn South Goa, TreeHouse Stamp and  Similar",
+            star4: "Zone Connect by The Park Hotels - Calangute, Resort De Coracao, De Garland Palolem, Salcete Beach Resort and SimilarSimilar",
+            star5: "Park Regis Goa, The Tanisi Hotels, Royal Orchid Beach Resort Similar",
+          },
+        ],
+
+      }, // ✅ Closing
+    },
+    goa2: {
+      packageId: "S04390",
+      packageName: "Northern Goa",
+      totalGuests: 2,
+      nights: 3,
+      days: 4,
+      theme: "Mumbai",
+      destinationCovered: "North-3N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR 19,699",
+
+      packageImage: "https://www.elanexperiences.in/public/panel_images/img5245011641726486448.jpg",
+      itinerary: [
+        {
+          "Day 1: Arrival in Goa - Transfer to Hotel": [
+            "Arrive at Goa at (Airport(Dambolim/ Mopa) / Madgoan Station) & get transferred to your pre-booked hotel at North Goa. Day free for leisure. Overnight at Goa. (Drop Locations of the NG1 Hotels: Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna and Vagator). NG1* - North Goa Hotels. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        },
+        {
+          "Day 2: North Goa Sightseeing Tour": [
+            "Today after breakfast, we proceed for the Local North Goa Sightseeing where we cover Fort Aguada, Candolim Beach, Calangute Beach, Baga Beach, Anjuna, Vagator, (if time permits). Time Duration - 0930AM to 0530PM. NG1 Hotels Location are Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna, Vagator."
+          ]
+        },
+        {
+          "Day 3: South Goa Sightseeing Tour": [
+            "Today after breakfast, we proceed for the South Goa Sightseeing where we cover Old Goa Churches (Basilica of Bom Jesus, Ce Cathedral), Shree Manguesh Temple, time for shopping at Panaji, Dona Paula, Miramar Beach. Time for Mandovi River Cruise. Note: Tickets for Mandovi River Cruise and any other entry tickets during the tour if applicable are at additional cost. Time Duration - 0930AM to 0630PM. NG1 Hotels Location are Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna, Vagator. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        },
+        {
+          "Day 4: Departure from Goa": [
+            "Today after breakfast, we check out from the hotel & proceed to the Airport(Dambolim/Mopa) / Madgoan Railway Station. Tour End. Pickup Locations of the NG1 Hotels - Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna and Vagator. NG1* - North Goa. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        }
+      ],
+
+
+      inclusions: [
+        "North Goa Sightseeing Tour (Fort Aguada, Calangute, Baga, Anjuna, Vagator)",
+        "South Goa Sightseeing Tour (Basilica of Bom Jesus, Se Cathedral, Shree Manguesh Temple, Dona Paula)",
+        "4 Nights Accommodation at Zone Connect by The Park, Calangute - Premium Room with Balcony",
+        "Daily Breakfast at the hotel",
+        "One night complimentary dinner for stays of 3 nights or more",
+        "Hi-Tea with cookies daily (4:00 – 4:30 PM)",
+        "Happy Hours at Co Bar (6:00 – 9:00 PM)",
+        "Complimentary Wi-Fi and use of swimming pool",
+        "Auto room upgrade to Junior Suite on triple occupancy (subject to availability)"
+      ],
+      exclusions: [
+        "5% TCS extra (refundable while filing ITR)",
+        "Early check-in & late check-out (standard check-in at 2 PM, check-out at 11 AM)",
+        "Any optional tours and services not mentioned in the itinerary",
+        "Personal expenses (laundry, entry tickets, telephone, meals not mentioned, etc.)",
+        "Any cost arising due to natural calamities or political disturbances",
+        "Increase in taxes or fuel charges before departure",
+        "Airfare and travel insurance",
+        "All rates subject to availability at the time of booking"
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Enjoy vibrant North Goa with scenic beaches, historic Fort Aguada, lively nightlife, and bustling markets. Ideal for fun lovers looking to soak in Goa’s youthful and energetic coastal vibe.🌴✨",
+      },
+      country: "Indonesia",
+      tableData: {
+        tab1: [
+          {
+            star3: "Hotel Goa Continental Baga, Resort Marinha Dourada, Jasminn South Goa, TreeHouse Stamp and  Similar",
+            star4: "Zone Connect by The Park Hotels - Calangute, Resort De Coracao, De Garland Palolem, Salcete Beach Resort and SimilarSimilar",
+            star5: "Park Regis Goa, The Tanisi Hotels, Royal Orchid Beach Resort Similar",
+          },
+        ],
+
+      }, // ✅ Closing
+    },
+    goa3: {
+      packageId: "S04390",
+      packageName: "Southern Goa",
+      totalGuests: 2,
+      nights: 3,
+      days: 4,
+      theme: "Mumbai",
+      destinationCovered: "South-3N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
+
+      totalPackagePrice: "INR 20,699",
+
+      packageImage: "https://www.tripplannersindia.com/assets/blog/images/placestovisitinsouthgoa/South_Goa.webp",
+      itinerary: [
+        {
+          "Day 1: Arrival in Goa - Transfer to Hotel": [
+            "Arrive at Goa at (Airport(Dambolim/ Mopa) / Madgoan Station) & get transferred to your pre-booked hotel at North Goa. Day free for leisure. Overnight at Goa. (Drop Locations of the NG1 Hotels: Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna and Vagator). NG1* - North Goa Hotels. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        },
+        {
+          "Day 2: North Goa Sightseeing Tour": [
+            "Today after breakfast, we proceed for the Local North Goa Sightseeing where we cover Fort Aguada, Candolim Beach, Calangute Beach, Baga Beach, Anjuna, Vagator, (if time permits). Time Duration - 0930AM to 0530PM. NG1 Hotels Location are Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna, Vagator."
+          ]
+        },
+        {
+          "Day 3: South Goa Sightseeing Tour": [
+            "Today after breakfast, we proceed for the South Goa Sightseeing where we cover Old Goa Churches (Basilica of Bom Jesus, Ce Cathedral), Shree Manguesh Temple, time for shopping at Panaji, Dona Paula, Miramar Beach. Time for Mandovi River Cruise. Note: Tickets for Mandovi River Cruise and any other entry tickets during the tour if applicable are at additional cost. Time Duration - 0930AM to 0630PM. NG1 Hotels Location are Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna, Vagator. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        },
+        {
+          "Day 4: Departure from Goa": [
+            "Today after breakfast, we check out from the hotel & proceed to the Airport(Dambolim/Mopa) / Madgoan Railway Station. Tour End. Pickup Locations of the NG1 Hotels - Bambolim, Dona Paula, Miramar, Panaji, Betim, Nerul, Sinqurim, Porvorim, Mapusa, Candolim, Calangute, Baga, Arpora, Anjuna and Vagator. NG1* - North Goa. Kindly Note:- Parking charges have to be paid by guests."
+          ]
+        }
+      ],
+
+
+      inclusions: [
+        "South Goa Sightseeing Tour (Basilica of Bom Jesus, Se Cathedral, Shree Manguesh Temple, Dona Paula)",
+        "4 Nights Accommodation at Zone Connect by The Park, Calangute - Premium Room with Balcony",
+        "Daily Breakfast at the hotel",
+        "One night complimentary dinner for stays of 3 nights or more",
+        "Hi-Tea with cookies daily (4:00 – 4:30 PM)",
+        "Happy Hours at Co Bar (6:00 – 9:00 PM)",
+        "Complimentary Wi-Fi and use of swimming pool",
+        "Auto room upgrade to Junior Suite on triple occupancy (subject to availability)"
+      ],
+      exclusions: [
+        "5% TCS extra (refundable while filing ITR)",
+        "Early check-in & late check-out (standard check-in at 2 PM, check-out at 11 AM)",
+        "Any optional tours and services not mentioned in the itinerary",
+        "Personal expenses (laundry, entry tickets, telephone, meals not mentioned, etc.)",
+        "Any cost arising due to natural calamities or political disturbances",
+        "Increase in taxes or fuel charges before departure",
+        "Airfare and travel insurance",
+        "All rates subject to availability at the time of booking"
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Unwind in South Goa’s peaceful beauty, visiting ancient churches, serene temples, quiet beaches, and heritage spots. A perfect escape for those seeking cultural charm and tranquil experiences.🌴✨",
+      },
+      country: "Indonesia",
+      tableData: {
+        tab1: [
+          {
+            star3: "Hotel Goa Continental Baga, Resort Marinha Dourada, Jasminn South Goa, TreeHouse Stamp and  Similar",
+            star4: "Zone Connect by The Park Hotels - Calangute, Resort De Coracao, De Garland Palolem, Salcete Beach Resort and SimilarSimilar",
+            star5: "Park Regis Goa, The Tanisi Hotels, Royal Orchid Beach Resort Similar",
+          },
+        ],
+
+      }, // ✅ Closing
+    },
+  },
+  // Singapore: {
+  //   singapore1: {
+  //     packageId: "S04390",
+  //     packageName: "Enchanting Singapore",
+  //     totalGuests: 2,
+  //     nights: 5,
+  //     days: 6,
+  //     theme: "Mumbai",
+  //     destinationCovered: "Singapore-5N",
+  //     highlights: [
+  //       "Breakfast included in tour price",
+  //       "English Speaking certified drivers",
+  //       "Daily curated itineraries for a stress-free experience",
+  //       "Seamless airport transfers for hassle-free travel"
+  //     ],
+  //     includes: [
+  //       { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+  //       { name: "Sightseeing", icon: Landmark },
+  //       { name: "Transport", icon: Bus },
+  //       { name: "Hotel", icon: Hotel },
+  //       { name: "Breakfast", icon: Utensils },
+  //     ],
+
+  //     totalPackagePrice: "INR 81,499",
+
+  //     packageImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOza-b7DmdC_O8BnZ60cTJgTlt8CM-VbS7g&s",
+  //     itinerary: [
+  //       {
+  //         "Day 1: Arrival in Singapore & Night Safari": [
+  //           "Arrive at Singapore Airport, meet our representative and get transferred to the hotel. In the evening, visit the Night Safari – the world’s first nocturnal wildlife park set in a tropical forest. Enjoy a unique experience. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 2: Half-Day City Tour & Sentosa Island Tour": [
+  //           "After breakfast, enjoy a Singapore Half-Day City Tour covering Civic District, Orchard Road, Little India, Chinatown, and Merlion Park. In the afternoon, visit Sentosa Island via one-way cable car. Visit Madame Tussauds (5-in-1 experience), Spirit of Singapore, Images of Singapore, Bollywood Avenue, and enjoy the Wings of Time show. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 3: Full Day Universal Studios Tour": [
+  //           "After breakfast, proceed to Universal Studios Singapore. Enjoy movie-themed rides and attractions including Shrek 4D, Revenge of the Mummy, Madagascar, New York, and Hollywood. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 4: Marina Bay Sands & Gardens by the Bay": [
+  //           "Visit Marina Bay Sands SkyPark for panoramic city views. Explore Gardens by the Bay including the Flower Dome (Mediterranean climate biome) and Cloud Forest (mist-filled mountains and exotic plants). Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 5: Day at Leisure - Shopping": [
+  //           "You can spend your day shopping and exploring Singapore at your own pace. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 6: Departure from Singapore": [
+  //           "After breakfast at the hotel, check out and transfer to the airport for your departure."
+  //         ]
+  //       }
+  //     ],
+  //     inclusions: [
+  //       "Arrival in Singapore - Private Transfer",
+  //       "Night Safari",
+  //       "Singapore Half Day City Tour",
+  //       "Sentosa Island Tour",
+  //       "Full Day Universal Studios Tour",
+  //       "Marina Bay Sands Observatory Deck",
+  //       "Garden by the Bay (Flower Dome + Cloud Forest)",
+  //       "Singapore Panoramic Drive (2.5 hrs)",
+  //       "MBS SkyPark + Garden by the Bay (Flower Dome including the Impression of Moment experience + Cloud Forest)",
+  //       "Return Airport Transfers on Private Basis",
+  //       "All Tours & Transfers on SIC Basis",
+  //       "Visa",
+  //       "GST"
+  //     ],
+  //     exclusions: [
+  //       "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
+  //       "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
+  //       "Any Optional Tours and Services",
+  //       "Meals other than mentioned in the itinerary",
+  //       "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
+  //       "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
+  //       "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
+  //       "Anything other than mentioned in inclusions",
+  //       "All rates are subject to availability at the time of booking",
+  //       "All prices are based on double occupancy",
+  //       "Insurance",
+  //       "Any airfare"
+  //     ],
+  //     overviewData: {
+  //       title: "Package Overview",
+  //       content: "Discover Singapore’s charm with guided city tours, thrilling attractions like Universal Studios and Night Safari, and serene visits to Gardens by the Bay and Marina Bay Sands. Perfect balance of fun and relaxation.🌴✨",
+  //     },
+  //     country: "Indonesia",
+  //     tableData: {
+  //       tab1: [
+  //         {
+  //           star3: "VALUE HOTEL THOMSON and Similar",
+  //           star4: "Hotel Boss Similar",
+           
+  //         },
+  //       ],
+
+  //     }, // ✅ Closing
+  //   },
+  //   singapore2: {
+  //     packageId: "S04390",
+  //     packageName: "Singapore Highlights",
+  //     totalGuests: 2,
+  //     nights: 4,
+  //     days: 5,
+  //     theme: "Mumbai",
+  //     destinationCovered: "Singapore-4N",
+  //     highlights: [
+  //       "Breakfast included in tour price",
+  //       "English Speaking certified drivers",
+  //       "Daily curated itineraries for a stress-free experience",
+  //       "Seamless airport transfers for hassle-free travel"
+  //     ],
+  //     includes: [
+  //       { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+  //       { name: "Sightseeing", icon: Landmark },
+  //       { name: "Transport", icon: Bus },
+  //       { name: "Hotel", icon: Hotel },
+  //       { name: "Breakfast", icon: Utensils },
+  //     ],
+
+  //     totalPackagePrice: "INR 76,499",
+
+  //     packageImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOza-b7DmdC_O8BnZ60cTJgTlt8CM-VbS7g&s",
+  //     itinerary: [
+  //       {
+  //         "Day 1: Arrival in Singapore & Night Safari": [
+  //           "Arrive at Singapore Airport, meet our representative and get transferred to the hotel. In the evening, visit the Night Safari – the world’s first nocturnal wildlife park set in a tropical forest. Enjoy a unique experience. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 2: Half-Day City Tour & Sentosa Island Tour": [
+  //           "Enjoy a Singapore Half-Day City Tour covering Civic District, Orchard Road, Little India, Chinatown, and Merlion Park. In the afternoon, visit Sentosa Island via one-way cable car. Visit Madame Tussauds (5-in-1 experience), Spirit of Singapore, Images of Singapore, Bollywood Avenue, and enjoy the Wings of Time show. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 3: Full Day Universal Studios Tour": [
+  //           "Proceed to Universal Studios Singapore. Enjoy movie-themed rides and attractions including Shrek 4D, Revenge of the Mummy, Madagascar, New York, and Hollywood. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 4: Marina Bay Sands & Gardens by the Bay": [
+  //           "Visit Marina Bay Sands SkyPark for panoramic city views. Explore Gardens by the Bay including the Flower Dome (Mediterranean climate biome) and Cloud Forest (mist-filled mountains and exotic plants). Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 5: Departure from Singapore": [
+  //           "After breakfast at the hotel, check out and transfer to the airport for your departure."
+  //         ]
+  //       }
+  //     ],
+  //     inclusions: [
+  //       "Arrival in Singapore - Private Transfer",
+  //       "Night Safari",
+  //       "Singapore Half Day City Tour",
+  //       "Sentosa Island Tour",
+  //       "Full Day Universal Studios Tour",
+  //       "Marina Bay Sands Observatory Deck",
+  //       "Garden by the Bay (Flower Dome + Cloud Forest)",
+  //       "Singapore Panoramic Drive (2.5 hrs)",
+  //       "MBS SkyPark + Garden by the Bay (Flower Dome including the Impression of Moment experience + Cloud Forest)",
+  //       "Return Airport Transfers on Private Basis",
+  //       "All Tours & Transfers on SIC Basis",
+  //       "Visa",
+  //       "GST"
+  //     ],
+  //     exclusions: [
+  //       "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
+  //       "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
+  //       "Any Optional Tours and Services",
+  //       "Meals other than mentioned in the itinerary",
+  //       "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
+  //       "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
+  //       "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
+  //       "Anything other than mentioned in inclusions",
+  //       "All rates are subject to availability at the time of booking",
+  //       "All prices are based on double occupancy",
+  //       "Insurance",
+  //       "Any airfare"
+  //     ],
+  //     overviewData: {
+  //       title: "Package Overview",
+  //       content: "Discover Singapore’s charm with guided city tours, thrilling attractions like Universal Studios and Night Safari, and serene visits to Gardens by the Bay and Marina Bay Sands. Perfect balance of fun and relaxation.🌴✨",
+  //     },
+  //     country: "Indonesia",
+  //     tableData: {
+  //       tab1: [
+  //         {
+  //           star3: "VALUE HOTEL THOMSON and Similar",
+  //           star4: "Hotel Boss Similar",
+           
+  //         },
+  //       ],
+
+  //     }, // ✅ Closing
+  //   },
+  //   singapore3: {
+  //     packageId: "S04390",
+  //     packageName: "Singapore Malaysia Delights",
+  //     totalGuests: 2,
+  //     nights: 6,
+  //     days: 7,
+  //     theme: "Mumbai",
+  //     destinationCovered: "Singapore-4N",
+  //     highlights: [
+  //       "Breakfast included in tour price",
+  //       "English Speaking certified drivers",
+  //       "Daily curated itineraries for a stress-free experience",
+  //       "Seamless airport transfers for hassle-free travel"
+  //     ],
+  //     includes: [
+  //       { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+  //       { name: "Sightseeing", icon: Landmark },
+  //       { name: "Transport", icon: Bus },
+  //       { name: "Hotel", icon: Hotel },
+  //       { name: "Breakfast", icon: Utensils },
+  //     ],
+
+  //     totalPackagePrice: "INR 95,199",
+
+  //     packageImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOza-b7DmdC_O8BnZ60cTJgTlt8CM-VbS7g&s",
+  //     itinerary: [
+  //       {
+  //         "Day 1: Arrival in Singapore & Night Safari": [
+  //           "Arrive at Singapore Airport, meet our representative and get transferred to the hotel. In the evening, visit the Night Safari – the world’s first nocturnal wildlife park set in a tropical forest. Enjoy a unique experience. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 2: Half-Day City Tour & Sentosa Island Tour": [
+  //           "Enjoy a Singapore Half-Day City Tour covering Civic District, Orchard Road, Little India, Chinatown, and Merlion Park. In the afternoon, visit Sentosa Island via one-way cable car. Visit Madame Tussauds (5-in-1 experience), Spirit of Singapore, Images of Singapore, Bollywood Avenue, and enjoy the Wings of Time show. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 3: Full Day Universal Studios Tour": [
+  //           "Proceed to Universal Studios Singapore. Enjoy movie-themed rides and attractions including Shrek 4D, Revenge of the Mummy, Madagascar, New York, and Hollywood. Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 4: ": [
+  //           "Visit Marina Bay Sands SkyPark for panoramic city views. Explore Gardens by the Bay including the Flower Dome (Mediterranean climate biome) and Cloud Forest (mist-filled mountains and exotic plants). Overnight at the hotel."
+  //         ]
+  //       },
+  //       {
+  //         "Day 5: Departure from Singapore": [
+  //           "After breakfast at the hotel, check out and transfer to the airport for your departure."
+  //         ]
+  //       }
+  //     ],
+  //     inclusions: [
+  //       "Arrival in Singapore - Private Transfer",
+  //       "Night Safari",
+  //       "Singapore Half Day City Tour",
+  //       "Sentosa Island Tour",
+  //       "Full Day Universal Studios Tour",
+  //       "Marina Bay Sands Observatory Deck",
+  //       "Garden by the Bay (Flower Dome + Cloud Forest)",
+  //       "Singapore Panoramic Drive (2.5 hrs)",
+  //       "MBS SkyPark + Garden by the Bay (Flower Dome including the Impression of Moment experience + Cloud Forest)",
+  //       "Return Airport Transfers on Private Basis",
+  //       "All Tours & Transfers on SIC Basis",
+  //       "Visa",
+  //       "GST"
+  //     ],
+  //     exclusions: [
+  //       "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
+  //       "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
+  //       "Any Optional Tours and Services",
+  //       "Meals other than mentioned in the itinerary",
+  //       "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
+  //       "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
+  //       "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
+  //       "Anything other than mentioned in inclusions",
+  //       "All rates are subject to availability at the time of booking",
+  //       "All prices are based on double occupancy",
+  //       "Insurance",
+  //       "Any airfare"
+  //     ],
+  //     overviewData: {
+  //       title: "Package Overview",
+  //       content: "Discover Singapore’s charm with guided city tours, thrilling attractions like Universal Studios and Night Safari, and serene visits to Gardens by the Bay and Marina Bay Sands. Perfect balance of fun and relaxation.🌴✨",
+  //     },
+  //     country: "Indonesia",
+  //     tableData: {
+  //       tab1: [
+  //         {
+  //           star3: "VALUE HOTEL THOMSON and Similar",
+  //           star4: "Hotel Boss Similar",
+           
+  //         },
+  //       ],
+
+  //     }, // ✅ Closing
+  //   },
+  // }
 };
 export default Finaldata;
