@@ -277,6 +277,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [pax, setPax] = useState(1);
   const [child, setChild] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -521,7 +522,9 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
 
             </PaxCounterWrapper>
 
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={submitting}>
+              {submitting ? "Submitting..." : "Submit"}
+            </button>
           </form>
         </RightPanel>
       </PopupContent>
