@@ -3413,303 +3413,261 @@ const Finaldata: Record<string, Record<string, PackageData>> = {
       }, // ✅ Closing
     },
   },
-  // Singapore: {
-  //   singapore1: {
-  //     packageId: "S04390",
-  //     packageName: "Enchanting Singapore",
-  //     totalGuests: 2,
-  //     nights: 5,
-  //     days: 6,
-  //     theme: "Mumbai",
-  //     destinationCovered: "Singapore-5N",
-  //     highlights: [
-  //       "Breakfast included in tour price",
-  //       "English Speaking certified drivers",
-  //       "Daily curated itineraries for a stress-free experience",
-  //       "Seamless airport transfers for hassle-free travel"
-  //     ],
-  //     includes: [
-  //       { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
-  //       { name: "Sightseeing", icon: Landmark },
-  //       { name: "Transport", icon: Bus },
-  //       { name: "Hotel", icon: Hotel },
-  //       { name: "Breakfast", icon: Utensils },
-  //     ],
+  maldives: {
+    maldives1: {
+      packageId: "S04390",
+      packageName: "Split Stay Paradise",
+      totalGuests: 2,
+      nights: 4,
+      days: 5,
+      theme: "Mumbai",
+      destinationCovered: "Maldives-4N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
 
-  //     totalPackagePrice: "INR 81,499",
+      totalPackagePrice: "INR 1,29,499",
 
-  //     packageImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOza-b7DmdC_O8BnZ60cTJgTlt8CM-VbS7g&s",
-  //     itinerary: [
-  //       {
-  //         "Day 1: Arrival in Singapore & Night Safari": [
-  //           "Arrive at Singapore Airport, meet our representative and get transferred to the hotel. In the evening, visit the Night Safari – the world’s first nocturnal wildlife park set in a tropical forest. Enjoy a unique experience. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 2: Half-Day City Tour & Sentosa Island Tour": [
-  //           "After breakfast, enjoy a Singapore Half-Day City Tour covering Civic District, Orchard Road, Little India, Chinatown, and Merlion Park. In the afternoon, visit Sentosa Island via one-way cable car. Visit Madame Tussauds (5-in-1 experience), Spirit of Singapore, Images of Singapore, Bollywood Avenue, and enjoy the Wings of Time show. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 3: Full Day Universal Studios Tour": [
-  //           "After breakfast, proceed to Universal Studios Singapore. Enjoy movie-themed rides and attractions including Shrek 4D, Revenge of the Mummy, Madagascar, New York, and Hollywood. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 4: Marina Bay Sands & Gardens by the Bay": [
-  //           "Visit Marina Bay Sands SkyPark for panoramic city views. Explore Gardens by the Bay including the Flower Dome (Mediterranean climate biome) and Cloud Forest (mist-filled mountains and exotic plants). Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 5: Day at Leisure - Shopping": [
-  //           "You can spend your day shopping and exploring Singapore at your own pace. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 6: Departure from Singapore": [
-  //           "After breakfast at the hotel, check out and transfer to the airport for your departure."
-  //         ]
-  //       }
-  //     ],
-  //     inclusions: [
-  //       "Arrival in Singapore - Private Transfer",
-  //       "Night Safari",
-  //       "Singapore Half Day City Tour",
-  //       "Sentosa Island Tour",
-  //       "Full Day Universal Studios Tour",
-  //       "Marina Bay Sands Observatory Deck",
-  //       "Garden by the Bay (Flower Dome + Cloud Forest)",
-  //       "Singapore Panoramic Drive (2.5 hrs)",
-  //       "MBS SkyPark + Garden by the Bay (Flower Dome including the Impression of Moment experience + Cloud Forest)",
-  //       "Return Airport Transfers on Private Basis",
-  //       "All Tours & Transfers on SIC Basis",
-  //       "Visa",
-  //       "GST"
-  //     ],
-  //     exclusions: [
-  //       "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
-  //       "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
-  //       "Any Optional Tours and Services",
-  //       "Meals other than mentioned in the itinerary",
-  //       "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
-  //       "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
-  //       "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
-  //       "Anything other than mentioned in inclusions",
-  //       "All rates are subject to availability at the time of booking",
-  //       "All prices are based on double occupancy",
-  //       "Insurance",
-  //       "Any airfare"
-  //     ],
-  //     overviewData: {
-  //       title: "Package Overview",
-  //       content: "Discover Singapore’s charm with guided city tours, thrilling attractions like Universal Studios and Night Safari, and serene visits to Gardens by the Bay and Marina Bay Sands. Perfect balance of fun and relaxation.🌴✨",
-  //     },
-  //     country: "Indonesia",
-  //     tableData: {
-  //       tab1: [
-  //         {
-  //           star3: "VALUE HOTEL THOMSON and Similar",
-  //           star4: "Hotel Boss Similar",
-           
-  //         },
-  //       ],
+      packageImage: "https://media.glamourmagazine.co.uk/photos/6645c61272a9b47788824369/16:9/w_1920,h_1080,c_limit/Nova%20Hotel%20Review%20160524%203-4-SCALED%20COPY.jpg",
+      itinerary: [
+        {
+          "Day 1: Arrival - Maldives": [
+            "After a safe arrival at Male, our tour representative will guide and transfer you to pre-booked Resort Maldives via a 40-minute speedboat ride. After your check-in, use the rest of the day to explore the resort and its beautiful surroundings. Relax and stay overnight at the resort."
+          ]
+        },
+        {
+          "Day 2: Day Free at Leisure - Maldives": [
+            "Spend the day at leisure. Overnight stay at resort."
+          ]
+        },
+        {
+          "Day 3: Day Free at Leisure - Maldives": [
+            "Spend the day at leisure. Overnight stay at resort."
+          ]
+        },
+        {
+          "Day 4: Day Free at Leisure - Maldives": [
+            "Spend the day at leisure. Overnight stay at resort."
+          ]
+        },
+        {
+          "Day 5: Departure - Maldives": [
+            "After breakfast, check out from the resort and proceed for your speedboat transfers to the airport for your flight back home."
+          ]
+        }
+      ],
+      inclusions: [
+        "Full Board Meal",
+        "2 Nights Accommodation in Beach Villa",
+        "2 Nights Accommodation in Water Villa",
+        "Green Tax Included",
+        "Return Transfers by Seaplane",
+        "GST"
+      ],
+      exclusions: [
+        "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
+        "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
+        "Any Optional Tours and Services",
+        "Meals other than mentioned in the itinerary",
+        "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
+        "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
+        "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
+        "Anything other than mentioned in inclusions",
+        "All rates are subject to availability at the time of booking",
+        "All prices are based on double occupancy"
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Experience the best of both worlds with a split stay in Maldives—2 nights in a serene beach villa and 2 nights in a luxurious water villa with full-board meals.🌴✨",
+      },
+      country: "Indonesia",
+      tableData: {
+        tab1: [
+          {
+            star3: "VALUE HOTEL THOMSON and Similar",
+            star4: "Hotel Boss Similar",
 
-  //     }, // ✅ Closing
-  //   },
-  //   singapore2: {
-  //     packageId: "S04390",
-  //     packageName: "Singapore Highlights",
-  //     totalGuests: 2,
-  //     nights: 4,
-  //     days: 5,
-  //     theme: "Mumbai",
-  //     destinationCovered: "Singapore-4N",
-  //     highlights: [
-  //       "Breakfast included in tour price",
-  //       "English Speaking certified drivers",
-  //       "Daily curated itineraries for a stress-free experience",
-  //       "Seamless airport transfers for hassle-free travel"
-  //     ],
-  //     includes: [
-  //       { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
-  //       { name: "Sightseeing", icon: Landmark },
-  //       { name: "Transport", icon: Bus },
-  //       { name: "Hotel", icon: Hotel },
-  //       { name: "Breakfast", icon: Utensils },
-  //     ],
+          },
+        ],
 
-  //     totalPackagePrice: "INR 76,499",
+      }, // ✅ Closing
+    },
+    maldives2: {
+      packageId: "S04390",
+      packageName: "Maldives Beach Villa Getaway",
+      totalGuests: 2,
+      nights: 3,
+      days: 4,
+      theme: "Mumbai",
+      destinationCovered: "Maldives-3N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
 
-  //     packageImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOza-b7DmdC_O8BnZ60cTJgTlt8CM-VbS7g&s",
-  //     itinerary: [
-  //       {
-  //         "Day 1: Arrival in Singapore & Night Safari": [
-  //           "Arrive at Singapore Airport, meet our representative and get transferred to the hotel. In the evening, visit the Night Safari – the world’s first nocturnal wildlife park set in a tropical forest. Enjoy a unique experience. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 2: Half-Day City Tour & Sentosa Island Tour": [
-  //           "Enjoy a Singapore Half-Day City Tour covering Civic District, Orchard Road, Little India, Chinatown, and Merlion Park. In the afternoon, visit Sentosa Island via one-way cable car. Visit Madame Tussauds (5-in-1 experience), Spirit of Singapore, Images of Singapore, Bollywood Avenue, and enjoy the Wings of Time show. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 3: Full Day Universal Studios Tour": [
-  //           "Proceed to Universal Studios Singapore. Enjoy movie-themed rides and attractions including Shrek 4D, Revenge of the Mummy, Madagascar, New York, and Hollywood. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 4: Marina Bay Sands & Gardens by the Bay": [
-  //           "Visit Marina Bay Sands SkyPark for panoramic city views. Explore Gardens by the Bay including the Flower Dome (Mediterranean climate biome) and Cloud Forest (mist-filled mountains and exotic plants). Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 5: Departure from Singapore": [
-  //           "After breakfast at the hotel, check out and transfer to the airport for your departure."
-  //         ]
-  //       }
-  //     ],
-  //     inclusions: [
-  //       "Arrival in Singapore - Private Transfer",
-  //       "Night Safari",
-  //       "Singapore Half Day City Tour",
-  //       "Sentosa Island Tour",
-  //       "Full Day Universal Studios Tour",
-  //       "Marina Bay Sands Observatory Deck",
-  //       "Garden by the Bay (Flower Dome + Cloud Forest)",
-  //       "Singapore Panoramic Drive (2.5 hrs)",
-  //       "MBS SkyPark + Garden by the Bay (Flower Dome including the Impression of Moment experience + Cloud Forest)",
-  //       "Return Airport Transfers on Private Basis",
-  //       "All Tours & Transfers on SIC Basis",
-  //       "Visa",
-  //       "GST"
-  //     ],
-  //     exclusions: [
-  //       "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
-  //       "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
-  //       "Any Optional Tours and Services",
-  //       "Meals other than mentioned in the itinerary",
-  //       "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
-  //       "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
-  //       "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
-  //       "Anything other than mentioned in inclusions",
-  //       "All rates are subject to availability at the time of booking",
-  //       "All prices are based on double occupancy",
-  //       "Insurance",
-  //       "Any airfare"
-  //     ],
-  //     overviewData: {
-  //       title: "Package Overview",
-  //       content: "Discover Singapore’s charm with guided city tours, thrilling attractions like Universal Studios and Night Safari, and serene visits to Gardens by the Bay and Marina Bay Sands. Perfect balance of fun and relaxation.🌴✨",
-  //     },
-  //     country: "Indonesia",
-  //     tableData: {
-  //       tab1: [
-  //         {
-  //           star3: "VALUE HOTEL THOMSON and Similar",
-  //           star4: "Hotel Boss Similar",
-           
-  //         },
-  //       ],
+      totalPackagePrice: "INR 1,00,099",
 
-  //     }, // ✅ Closing
-  //   },
-  //   singapore3: {
-  //     packageId: "S04390",
-  //     packageName: "Singapore Malaysia Delights",
-  //     totalGuests: 2,
-  //     nights: 6,
-  //     days: 7,
-  //     theme: "Mumbai",
-  //     destinationCovered: "Singapore-4N",
-  //     highlights: [
-  //       "Breakfast included in tour price",
-  //       "English Speaking certified drivers",
-  //       "Daily curated itineraries for a stress-free experience",
-  //       "Seamless airport transfers for hassle-free travel"
-  //     ],
-  //     includes: [
-  //       { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
-  //       { name: "Sightseeing", icon: Landmark },
-  //       { name: "Transport", icon: Bus },
-  //       { name: "Hotel", icon: Hotel },
-  //       { name: "Breakfast", icon: Utensils },
-  //     ],
+      packageImage: "https://media.glamourmagazine.co.uk/photos/6645c61272a9b47788824369/16:9/w_1920,h_1080,c_limit/Nova%20Hotel%20Review%20160524%203-4-SCALED%20COPY.jpg",
+      itinerary: [
+        {
+          "Day 1: Arrival - Maldives": [
+            "After a safe arrival at Male, our tour representative will guide and transfer you to pre-booked Resort Maldives via a 40-minute speedboat ride. After your check-in, use the rest of the day to explore the resort and its beautiful surroundings. Relax and stay overnight at the resort."
+          ]
+        },
+        {
+          "Day 2: Day Free at Leisure - Maldives": [
+            "Spend the day at leisure. Overnight stay at resort."
+          ]
+        },
+        {
+          "Day 3: Day Free at Leisure - Maldives": [
+            "Spend the day at leisure. Overnight stay at resort."
+          ]
+        },
+        {
+          "Day 4: Departure - Maldives": [
+            "After breakfast, check out from the resort and proceed for your speedboat transfers to the airport for your flight back home."
+          ]
+        }
+      ],
+      inclusions: [
+        "Full Board Meal",
+        "2 Nights Accommodation in Beach Villa",
+        "2 Nights Accommodation in Water Villa",
+        "Green Tax Included",
+        "Return Transfers by Seaplane",
+        "GST"
+      ],
+      exclusions: [
+        "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
+        "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
+        "Any Optional Tours and Services",
+        "Meals other than mentioned in the itinerary",
+        "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
+        "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
+        "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
+        "Anything other than mentioned in inclusions",
+        "All rates are subject to availability at the time of booking",
+        "All prices are based on double occupancy"
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Unwind in a tranquil beach villa surrounded by white sands and turquoise waters. Enjoy peaceful walks, stunning sunsets, and premium hospitality with full-board meals and seamless transfers included.🌴✨",
+      },
+      country: "Indonesia",
+      tableData: {
+        tab1: [
+          {
+            star3: "VALUE HOTEL THOMSON and Similar",
+            star4: "Hotel Boss Similar",
 
-  //     totalPackagePrice: "INR 95,199",
+          },
+        ],
 
-  //     packageImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOza-b7DmdC_O8BnZ60cTJgTlt8CM-VbS7g&s",
-  //     itinerary: [
-  //       {
-  //         "Day 1: Arrival in Singapore & Night Safari": [
-  //           "Arrive at Singapore Airport, meet our representative and get transferred to the hotel. In the evening, visit the Night Safari – the world’s first nocturnal wildlife park set in a tropical forest. Enjoy a unique experience. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 2: Half-Day City Tour & Sentosa Island Tour": [
-  //           "Enjoy a Singapore Half-Day City Tour covering Civic District, Orchard Road, Little India, Chinatown, and Merlion Park. In the afternoon, visit Sentosa Island via one-way cable car. Visit Madame Tussauds (5-in-1 experience), Spirit of Singapore, Images of Singapore, Bollywood Avenue, and enjoy the Wings of Time show. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 3: Full Day Universal Studios Tour": [
-  //           "Proceed to Universal Studios Singapore. Enjoy movie-themed rides and attractions including Shrek 4D, Revenge of the Mummy, Madagascar, New York, and Hollywood. Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 4: ": [
-  //           "Visit Marina Bay Sands SkyPark for panoramic city views. Explore Gardens by the Bay including the Flower Dome (Mediterranean climate biome) and Cloud Forest (mist-filled mountains and exotic plants). Overnight at the hotel."
-  //         ]
-  //       },
-  //       {
-  //         "Day 5: Departure from Singapore": [
-  //           "After breakfast at the hotel, check out and transfer to the airport for your departure."
-  //         ]
-  //       }
-  //     ],
-  //     inclusions: [
-  //       "Arrival in Singapore - Private Transfer",
-  //       "Night Safari",
-  //       "Singapore Half Day City Tour",
-  //       "Sentosa Island Tour",
-  //       "Full Day Universal Studios Tour",
-  //       "Marina Bay Sands Observatory Deck",
-  //       "Garden by the Bay (Flower Dome + Cloud Forest)",
-  //       "Singapore Panoramic Drive (2.5 hrs)",
-  //       "MBS SkyPark + Garden by the Bay (Flower Dome including the Impression of Moment experience + Cloud Forest)",
-  //       "Return Airport Transfers on Private Basis",
-  //       "All Tours & Transfers on SIC Basis",
-  //       "Visa",
-  //       "GST"
-  //     ],
-  //     exclusions: [
-  //       "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
-  //       "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
-  //       "Any Optional Tours and Services",
-  //       "Meals other than mentioned in the itinerary",
-  //       "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
-  //       "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
-  //       "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
-  //       "Anything other than mentioned in inclusions",
-  //       "All rates are subject to availability at the time of booking",
-  //       "All prices are based on double occupancy",
-  //       "Insurance",
-  //       "Any airfare"
-  //     ],
-  //     overviewData: {
-  //       title: "Package Overview",
-  //       content: "Discover Singapore’s charm with guided city tours, thrilling attractions like Universal Studios and Night Safari, and serene visits to Gardens by the Bay and Marina Bay Sands. Perfect balance of fun and relaxation.🌴✨",
-  //     },
-  //     country: "Indonesia",
-  //     tableData: {
-  //       tab1: [
-  //         {
-  //           star3: "VALUE HOTEL THOMSON and Similar",
-  //           star4: "Hotel Boss Similar",
-           
-  //         },
-  //       ],
+      }, // ✅ Closing
+    },
+    maldives3: {
+      packageId: "S04390",
+      packageName: "Maldives Water Villa getaway",
+      totalGuests: 2,
+      nights: 3,
+      days: 4,
+      theme: "Mumbai",
+      destinationCovered: "Maldives-3N",
+      highlights: [
+        "Breakfast included in tour price",
+        "English Speaking certified drivers",
+        "Daily curated itineraries for a stress-free experience",
+        "Seamless airport transfers for hassle-free travel"
+      ],
+      includes: [
+        { name: "Flights", icon: Plane }, // ✅ Changed "Icon" to "icon"{ name: "Hotel", icon: Hotel },
+        { name: "Sightseeing", icon: Landmark },
+        { name: "Transport", icon: Bus },
+        { name: "Hotel", icon: Hotel },
+        { name: "Breakfast", icon: Utensils },
+      ],
 
-  //     }, // ✅ Closing
-  //   },
-  // }
+      totalPackagePrice: "INR 1,07,199",
+
+      packageImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOza-b7DmdC_O8BnZ60cTJgTlt8CM-VbS7g&s",
+      itinerary: [
+        {
+          "Day 1: Arrival - Maldives": [
+            "After a safe arrival at Male, our tour representative will guide and transfer you to pre-booked Resort Maldives via a 40-minute speedboat ride. After your check-in, use the rest of the day to explore the resort and its beautiful surroundings. Relax and stay overnight at the resort."
+          ]
+        },
+        {
+          "Day 2: Day Free at Leisure - Maldives": [
+            "Spend the day at leisure. Overnight stay at resort."
+          ]
+        },
+        {
+          "Day 3: Day Free at Leisure - Maldives": [
+            "Spend the day at leisure. Overnight stay at resort."
+          ]
+        },
+        {
+          "Day 4: Departure - Maldives": [
+            "After breakfast, check out from the resort and proceed for your speedboat transfers to the airport for your flight back home."
+          ]
+        }
+      ],
+      inclusions: [
+        "Full Board Meal",
+        "2 Nights Accommodation in Beach Villa",
+        "2 Nights Accommodation in Water Villa",
+        "Green Tax Included",
+        "Return Transfers by Seaplane",
+        "GST"
+      ],
+      exclusions: [
+        "5% TCS Shall Be Extra (Refundable at the time of filing your current year ITR)",
+        "Early Check-in & Late Check-out (Standard check-in time is 1400 hrs and check-out time is 1100 hrs)",
+        "Any Optional Tours and Services",
+        "Meals other than mentioned in the itinerary",
+        "Any cost arising due to natural calamities like landslides, road blockages, political disturbances (strikes), etc. (to be borne by the client directly)",
+        "Any increase in taxes or fuel price, leading to an increase in cost of surface transportation & land arrangements before departure",
+        "Personal meals and personal expenses like entry tickets, telephone, laundry, etc.",
+        "Anything other than mentioned in inclusions",
+        "All rates are subject to availability at the time of booking",
+        "All prices are based on double occupancy"
+      ],
+      overviewData: {
+        title: "Package Overview",
+        content: "Indulge in an overwater escape in Maldives. Wake up to ocean views, relax on a private deck, and enjoy all-inclusive dining with luxurious amenities and seaplane transfers.🌴✨",
+      },
+      country: "Indonesia",
+      tableData: {
+        tab1: [
+          {
+            star3: "VALUE HOTEL THOMSON and Similar",
+            star4: "Hotel Boss Similar",
+
+          },
+        ],
+
+      }, // ✅ Closing
+    },
+  }
 };
 export default Finaldata;
