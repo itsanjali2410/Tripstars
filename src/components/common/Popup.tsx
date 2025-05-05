@@ -317,36 +317,36 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     if (!startDate) {
       alert("Please select a travel date!");
-      return;  // ✅ Properly exiting the function
+      return;
     }
-
-    // Prepare the form data
+  
+    setSubmitting(true); // ⏳ Start submitting
+  
     const formDataToSend = {
       name: formData.name,
       contact: formData.contact,
       email: formData.email,
       destination: formData.destination,
-      departure_city: formData.departureCity, // ✅ Fixed field name
-      travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
+      departure_city: formData.departureCity,
+      travel_date: startDate.toISOString().split("T")[0],
       bookingTime: formData.bookingTime,
       pax,
       child,
     };
-
+  
     try {
-      // ✅ Send form data to backend API
       const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);
-
+  
       if (response.status === 200) {
-
-        window.location.href = "/thankyou";
+        // Optionally delay for UX
+        setTimeout(() => {
+          window.location.href = "/thankyou";
+        }, 300);
       }
-
-      // ✅ Reset the form and close popup
-      closePopup(); // ✅ Using correct function
+  
       setFormData({
         name: "",
         contact: "",
@@ -358,15 +358,15 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
       setStartDate(null);
       setPax(1);
       setChild(0);
-
+      closePopup();
     } catch (error) {
       console.error("❌ API Error:", error);
       alert("❌ Failed to submit the form. Please try again.");
+    } finally {
+      setSubmitting(false); // ✅ Always reset
     }
   };
-
-
-
+  
   return (
     <PopupContainer id="popup-container" onClick={handleOutsideClick}>
       <PopupContent>

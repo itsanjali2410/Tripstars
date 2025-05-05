@@ -239,8 +239,8 @@ const PaxCounter = styled.div`
 const StaticForm: React.FC = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [pax, setPax] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [child, setChild] = useState(0);
-  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -285,36 +285,36 @@ const StaticForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     if (!startDate) {
       alert("Please select a travel date!");
+      setIsSubmitting(false);
       return;
     }
 
-    // Prepare the form data
     const formDataToSend = {
       name: formData.name,
       contact: formData.contact,
       email: formData.email,
       destination: formData.destination,
-      departure_city: formData.departureCity, // ✅ Fixed field name
-      travel_date: startDate.toISOString().split("T")[0], // ✅ Fixed format
+      departure_city: formData.departureCity,
+      travel_date: startDate.toISOString().split("T")[0],
       bookingTime: formData.bookingTime,
       pax,
       child,
     };
-    console.log("Booking Time value:", formData.bookingTime);
 
     try {
-      // ✅ Send form data to backend API
       const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);
 
       if (response.status === 200) {
+        // Redirecting to thank you page – this will stop further code execution
         window.location.href = "/thankyou";
+        return;
       }
 
-      // ✅ Reset the form after successful submission
-      setIsVisible(false); // Close popup
+      // Reset the form only if not redirected
       setFormData({
         name: "",
         contact: "",
@@ -322,19 +322,20 @@ const StaticForm: React.FC = () => {
         destination: "",
         departureCity: "",
         bookingTime: "",
-
       });
       setStartDate(null);
       setPax(1);
       setChild(0);
-
-    }
-    catch (error) {
-
+    } catch (error) {
       console.error("❌ API Error:", error);
-      alert("Form submitted successfully");
+      alert("Form submission failed. Please try again later.");
+
+      setTimeout(() => {
+        setIsSubmitting(false); // Re-enable only if staying on the same page
+      }, 2000);
     }
   };
+
 
   return (
     <StaticContainer>
@@ -476,8 +477,8 @@ const StaticForm: React.FC = () => {
                 </div>
               </PaxCounter>
             </PaxCounterWrapper>
-            <button type="submit" disabled={submitting}>
-              {submitting ? "Submitting..." : "Submit"}
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
 
           </form>
