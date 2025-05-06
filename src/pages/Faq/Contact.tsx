@@ -5,6 +5,8 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import contactbanner from "../../assets/contact/contactbanner.webp";
 import ThankYou from "../../components/common/thankyou";
 import axios from "axios";
+import FloatingContactButton from "../Home/sections/Floating";
+import Cta from "../Thirdpage2/sections/cta";
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -112,7 +114,7 @@ const ContactInfo = styled.div`
 `;
 
 const contactDetails = [
-  { icon: <FaPhone />, label: "9875097169" },
+  { icon: <FaPhone />, label: "9875097169", link: "tel:9875097169" },
   { icon: <FaEnvelope />, label: "Info@tripstars.in" },
   { icon: <FaMapMarkerAlt />, label: "1817/1818-B, Navratna Corporate Park, Iscon-Ambli Road, Ahmedabad - 380058" },
   { icon: <FaMapMarkerAlt />, label: "105 Sai Arcade, Mulund W, Mumbai 400080" },
@@ -120,7 +122,13 @@ const contactDetails = [
 ];
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    destination: "",
+    message: "",
+  });
+  
   const navigate = useNavigate();
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -129,25 +137,33 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+  
+    const phoneRegex = /^[6-9]\d{9}$/; // 10 digits, starts with 6-9
+  
+    if (!phoneRegex.test(formData.phone)) {
+      alert("Please enter a valid 10-digit contact number.");
+      return;
+    }
+  
     try {
-      const response = await axios.post("https://contact.tripstars.in", {
+      const response = await axios.post("https://stagingbackend.tripstars.in", {
         name: formData.name,
-        email: formData.email,
+        phone: formData.phone,
+        destination: formData.destination,
         message: formData.message,
       });
-      
+  
       if (response.data.success) {
         navigate("/thankyou");
       } else {
-        alert(` Something went wrong. ${response.data.error || "Please try again later."}`);
+        alert(`Something went wrong. ${response.data.error || "Please try again later."}`);
       }
     } catch (error) {
-      console.error(" API Error:", error);
-      alert(" Failed to send the message. Please check your internet connection and try again.");
+      console.error("API Error:", error);
+      alert("Failed to send the message. Please check your internet connection and try again.");
     }
   };
-  
+   
   return (
     <ContactContainer>
       <Banner>
@@ -155,7 +171,7 @@ const Contact: React.FC = () => {
       </Banner>
       <ContactSection>
         <ContactForm onSubmit={handleSubmit}>
-          <h2>Contact Us</h2>
+          <h2>Plan Your Trip</h2>
           <input
             type="text"
             name="name"
@@ -165,33 +181,53 @@ const Contact: React.FC = () => {
             required
           />
           <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
+            type="tel"
+            name="phone"
+            placeholder="Contact Number"
+            value={formData.phone || ""}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="destination"
+            placeholder="Destination"
+            value={formData.destination || ""}
             onChange={handleChange}
             required
           />
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder="Tell us about your trip..."
             rows={4}
             value={formData.message}
             onChange={handleChange}
             required
           />
-          <button type="submit">Send Message</button>
+          <button type="submit">Send Inquiry</button>
         </ContactForm>
+
         <ContactInfo>
           <h3>Contact Information</h3>
           {contactDetails.map((detail, index) => (
             <div key={index}>
-              {detail.icon} {detail.label}
+              {detail.icon}{" "}
+              {detail.link ? (
+                <a href={detail.link} style={{ color: "inherit", textDecoration: "none" }}>
+                  {detail.label}
+                </a>
+              ) : (
+                detail.label
+              )}
             </div>
           ))}
         </ContactInfo>
+
       </ContactSection>
+      <FloatingContactButton />
+      <Cta />
     </ContactContainer>
+
   );
 };
 

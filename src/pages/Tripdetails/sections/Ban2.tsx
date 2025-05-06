@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SearchBar from "../../Home/sections/SearchBar";
-
+import Stars from "../../../components/common/Stars"
 const Container = styled.div`
   width: 100vw;
   position: relative;
@@ -78,6 +78,7 @@ const Ban2: React.FC<BanProps> = ({ image, destination }) => {
           
           <h2>{destination}</h2>
           {/* <SearchBar/> */}
+          <Stars/>
         </div>
       </div>
     </Container>

@@ -29,6 +29,7 @@ import TrustindexWidget from "../Home/sections/TrustindexWidget";
 import Cta from "../Thirdpage2/sections/cta"
 // import Popup from "../../components/common/Popup";
 import FloatingContactButton from "../Home/sections/Floating";
+import Stars from "../../components/common/Stars";
 type LocationKey = keyof typeof destinationsData;
 
 export default function Tripdetailspage() {
