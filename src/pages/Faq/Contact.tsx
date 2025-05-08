@@ -1,13 +1,12 @@
 import React, { useState, useCallback } from "react";
 import styled from "styled-components";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import contactbanner from "../../assets/contact/contactbanner.webp";
-import ThankYou from "../../components/common/thankyou";
 import axios from "axios";
+
+import contactbanner from "../../assets/contact/contactbanner.webp";
 import FloatingContactButton from "../Home/sections/Floating";
 import Cta from "../Thirdpage2/sections/cta";
-import Stars from "../../components/common/Stars";
 
 const ContactContainer = styled.div`
   display: flex;
@@ -22,7 +21,7 @@ const Banner = styled.div`
   width: 100%;
   text-align: center;
   overflow: hidden;
-  
+
   img {
     width: 100%;
     height: auto;
@@ -69,7 +68,7 @@ const ContactForm = styled.form`
     margin-bottom: 35px;
   }
 
-  input, textarea {
+  input, select {
     ${inputStyles}
   }
 
@@ -85,7 +84,7 @@ const ContactForm = styled.form`
   }
 
   button:hover {
-    background: rgb(0, 0, 0);
+    background: #333;
   }
 `;
 
@@ -120,69 +119,65 @@ const contactDetails = [
   { icon: <FaEnvelope />, label: "Info@tripstars.in" },
   { icon: <FaMapMarkerAlt />, label: "1817/1818-B, Navratna Corporate Park, Iscon-Ambli Road, Ahmedabad - 380058" },
   { icon: <FaMapMarkerAlt />, label: "105 Sai Arcade, Mulund W, Mumbai 400080" },
-  { icon: <FaMapMarkerAlt />, label: "601 Bhairaav Milestone, Thane W, Mumbai 400604" }
+  { icon: <FaMapMarkerAlt />, label: "601 Bhairaav Milestone, Thane W, Mumbai 400604" },
 ];
 
 const Contact: React.FC = () => {
+  const navigate = useNavigate();
+
+  const todayDate = new Date().toISOString().split("T")[0];
+
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
     destination: "",
-    message: "",
+    travel_date: todayDate,
+    bookingTime: "",
   });
-
-  const navigate = useNavigate();
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
-  }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    if (name === "contact" && !/^\d{0,10}$/.test(value)) return;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
-    // Validate 10-digit contact number (starts with 6-9)
+
     const contactRegex = /^[6-9]\d{9}$/;
     if (!contactRegex.test(formData.contact)) {
       alert("Please enter a valid 10-digit contact number.");
       return;
     }
-  
+
     setIsSubmitting(true);
-  
     try {
-      const response = await axios.post("https://stagingbackend.tripstars.in/submit-form", {
-        name: formData.name,
-        contact: formData.contact,
-        destination: formData.destination,
-        message: formData.message,
-      });
-  
-      if (response.data.success) {
+      const response = await axios.post("https://stagingbackend.tripstars.in/submit-form", formData);
+      if (response.status === 200) {
         navigate("/thankyou");
       } else {
-        alert(response.data.message || "Something went wrong. Please try again later.");
+        alert(response.data.message || "Submission failed. Please try again.");
       }
     } catch (error: any) {
       console.error("API Error:", error);
-      alert("Failed to send the message. Please check your internet connection and try again.");
+      alert("Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
   };
-  
 
   return (
     <ContactContainer>
       <Banner>
         <img src={contactbanner} alt="Contact Us" />
-
-
       </Banner>
+
       <ContactSection>
         <ContactForm onSubmit={handleSubmit}>
           <h2>Plan Your Trip</h2>
+
           <input
             type="text"
             name="name"
@@ -191,43 +186,49 @@ const Contact: React.FC = () => {
             onChange={handleChange}
             required
           />
+
           <input
             type="tel"
             name="contact"
             placeholder="Contact Number"
             value={formData.contact}
-            onChange={(e) => {
-              const value = e.target.value;
-              // Allow only digits and up to 10 characters
-              if (/^\d{0,10}$/.test(value)) {
-                setFormData((prevData) => ({ ...prevData, contact: value }));
-              }
-            }}
-            required
+            onChange={handleChange}
             inputMode="numeric"
-            pattern="[6-9]{1}[0-9]{9}"
+            required
           />
 
           <input
             type="text"
             name="destination"
             placeholder="Destination"
-            value={formData.destination || ""}
+            value={formData.destination}
             onChange={handleChange}
             required
           />
-          <textarea
-            name="message"
-            placeholder="Tell us about your trip..."
-            rows={4}
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <button type="submit" disabled={isSubmitting}>
-  {isSubmitting ? "Sending..." : "Send Inquiry"}
-</button>
 
+          <input
+            type="date"
+            name="travel_date"
+            value={formData.travel_date}
+            onChange={handleChange}
+            required
+          />
+
+          <select
+            name="bookingTime"
+            value={formData.bookingTime}
+            onChange={handleChange}
+            required
+          >
+            <option value="">When are you looking to Book?</option>
+            <option value="this-week">This Week</option>
+            <option value="this-month">This Month</option>
+            <option value="Just Inquiry">Just Inquiry</option>
+          </select>
+
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send Inquiry"}
+          </button>
         </ContactForm>
 
         <ContactInfo>
@@ -246,11 +247,10 @@ const Contact: React.FC = () => {
           ))}
         </ContactInfo>
       </ContactSection>
+
       <FloatingContactButton />
       <Cta />
-      
     </ContactContainer>
-
   );
 };
 
