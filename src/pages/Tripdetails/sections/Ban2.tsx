@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Stars from "../../../components/common/Stars";
 import Button from "../../../components/common/Button";
+import RatingBar from "../../Home/sections/RatingBar";
 const Container = styled.div`
   width: 100vw;
   position: relative;
@@ -79,8 +80,9 @@ const Ban2: React.FC<BanProps> = ({ image, destination }) => {
           </div>
         </div>
       </Container>
+      <RatingBar/>
        
-      <Stars />
+      {/* <Stars /> */}
     </>
   );
 };
