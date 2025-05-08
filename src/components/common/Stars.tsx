@@ -5,12 +5,10 @@ import customer from "../../assets/icons/customer-review.png";
 import services from "../../assets/icons/24-hours-support.png";
 
 const StatsWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
   background: #f5f5f5;
-  padding: 1rem 1rem;
-  text-align: center;
+  padding: 1rem 0;
 
   .stat {
     display: flex;
@@ -20,7 +18,6 @@ const StatsWrapper = styled.div`
     img {
       width: 30px;
       height: 30px;
-      margin-bottom: 8px;
     }
 
     .main {
@@ -45,23 +42,32 @@ const StatsWrapper = styled.div`
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    flex-direction: row; /* Ensure icons stay in a horizontal row on small devices */
+    justify-content: space-between;
+    padding: 1rem;
 
     .stat {
+      width: auto; /* Auto width to avoid stretching */
+      margin-bottom: 0;
+      text-align: center;
+
       img {
         width: 24px;
         height: 24px;
       }
+
       .main {
         font-size: 13px;
       }
+
       .sub {
         font-size: 10px;
       }
     }
   }
 `;
+
+
 
 const Stars: React.FC = () => {
   return (
