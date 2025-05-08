@@ -62,7 +62,6 @@ function App() {
           <Route path="/aboutus/" element={<Aboutus />} />
           <Route path="/family/" element={<Family />} />
           <Route path="/family/:location" element={<Family />} />
-
         </Routes>
         {!isVideoPage && <Footer />}
       </div>

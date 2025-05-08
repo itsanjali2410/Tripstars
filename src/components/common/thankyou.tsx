@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import TrustindexWidget from "../../pages/Home/sections/TrustindexWidget";
 const ThankYouContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -45,10 +45,12 @@ const HomeButton = styled.a`
 
 const ThankYou: React.FC = () => {
   return (
+    
     <ThankYouContainer>
       <Title>🎉 Thank You!</Title>
       <Message>Email sent successfully to Admin!</Message>
       <HomeButton href="/">Go Back to Home</HomeButton>
+      
     </ThankYouContainer>
   );
 };

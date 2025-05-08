@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import SearchBar from "../../Home/sections/SearchBar";
-import Stars from "../../../components/common/Stars"
+import Stars from "../../../components/common/Stars";
+import Button from "../../../components/common/Button";
 const Container = styled.div`
   width: 100vw;
   position: relative;
@@ -42,7 +42,7 @@ const Container = styled.div`
       h1 {
         font-size: 2rem;
         font-weight: 500;
-        font-family: 'Dancing Script', cursive; /* Elegant script font */
+        font-family: 'Dancing Script', cursive;
         margin: 0;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
@@ -50,11 +50,10 @@ const Container = styled.div`
       h2 {
         font-size: 3rem;
         font-weight: 700;
-        font-family: 'Poppins', sans-serif; /* Modern bold font */
+        font-family: 'Poppins', sans-serif;
         margin: 0;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
       }
-        
     }
   }
 `;
@@ -66,23 +65,23 @@ type BanProps = {
 
 const Ban2: React.FC<BanProps> = ({ image, destination }) => {
   return (
-    <Container>
-     
-      <div className="image-slider">
-      
-        <img src={image} alt={destination} />
+    <>
+      <Container>
         
-        <div className="overlay"></div>
-        <div className="text-overlay">
-          <h1>Escape to</h1>
-          
-          <h2>{destination}</h2>
-          {/* <SearchBar/> */}
-          <Stars/>
+        <div className="image-slider">
+          <img src={image} alt={destination} />
+          <div className="overlay"></div>
+          <div className="text-overlay">
+            <h1>Escape to</h1>
+            <h2>{destination}</h2>
+            {/* <SearchBar /> */}
+            <Button/>
+          </div>
         </div>
-      </div>
-    </Container>
-    
+      </Container>
+       
+      <Stars />
+    </>
   );
 };
 

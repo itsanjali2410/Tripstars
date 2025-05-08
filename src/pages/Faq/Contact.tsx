@@ -7,13 +7,12 @@ import axios from "axios";
 import contactbanner from "../../assets/contact/contactbanner.webp";
 import FloatingContactButton from "../Home/sections/Floating";
 import Cta from "../Thirdpage2/sections/cta";
-
+import Stars from "../../components/common/Stars";
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: linear-gradient(135deg, #f5f7fa, rgb(255, 255, 255));
   min-height: 100vh;
 `;
 
@@ -58,35 +57,56 @@ const ContactForm = styled.form`
   width: 100%;
   max-width: 500px;
   background: white;
-  padding: 25px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 12px;
   box-shadow: ${formBoxShadow};
-  text-align: center;
+  transition: all 0.3s ease-in-out;
 
   h2 {
-    color: rgb(0, 0, 0);
-    margin-bottom: 35px;
+    color: #222;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
   }
 
   input, select {
     ${inputStyles}
+    font-family: inherit;
+  }
+
+  input[type="date"] {
+    min-height: 44px;
   }
 
   button {
-    background: rgb(0, 0, 0);
-    color: white;
+    margin-top: 10px;
+    background: #000;
+    color: #fff;
     padding: 12px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 18px;
-    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
   }
 
   button:hover {
-    background: #333;
+    background: #444;
+  }
+
+  button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
   }
 `;
+
 
 const ContactInfo = styled.div`
   display: flex;
@@ -172,55 +192,67 @@ const Contact: React.FC = () => {
     <ContactContainer>
       <Banner>
         <img src={contactbanner} alt="Contact Us" />
+        <Stars />
       </Banner>
 
       <ContactSection>
         <ContactForm onSubmit={handleSubmit}>
           <h2>Plan Your Trip</h2>
 
+          <label htmlFor="name">Name</label>
           <input
+            id="name"
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Name"
             value={formData.name}
             onChange={handleChange}
             required
           />
 
+          <label htmlFor="contact">Contact Number</label>
           <input
+            id="contact"
             type="tel"
             name="contact"
-            placeholder="Contact Number"
+            placeholder="10-digit mobile number"
             value={formData.contact}
             onChange={handleChange}
             inputMode="numeric"
             required
           />
 
+          <label htmlFor="destination">Destination</label>
           <input
+            id="destination"
             type="text"
             name="destination"
-            placeholder="Destination"
+            placeholder="Where do you want to go?"
             value={formData.destination}
             onChange={handleChange}
             required
           />
 
+          <label htmlFor="travel_date">Travel Date</label>
           <input
+            id="travel_date"
             type="date"
             name="travel_date"
+            min={todayDate}
             value={formData.travel_date}
             onChange={handleChange}
             required
           />
 
+          <label htmlFor="bookingTime">Booking Time</label>
           <select
+            id="bookingTime"
             name="bookingTime"
             value={formData.bookingTime}
             onChange={handleChange}
             required
           >
-            <option value="">When are you looking to Book?</option>
+            <option value="">When are you looking to book?</option>
             <option value="this-week">This Week</option>
             <option value="this-month">This Month</option>
             <option value="Just Inquiry">Just Inquiry</option>
@@ -229,6 +261,7 @@ const Contact: React.FC = () => {
           <button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Sending..." : "Send Inquiry"}
           </button>
+
         </ContactForm>
 
         <ContactInfo>
