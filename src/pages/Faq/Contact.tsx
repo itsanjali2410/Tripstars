@@ -7,6 +7,8 @@ import ThankYou from "../../components/common/thankyou";
 import axios from "axios";
 import FloatingContactButton from "../Home/sections/Floating";
 import Cta from "../Thirdpage2/sections/cta";
+import Stars from "../../components/common/Stars";
+
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -118,37 +120,41 @@ const contactDetails = [
   { icon: <FaEnvelope />, label: "Info@tripstars.in" },
   { icon: <FaMapMarkerAlt />, label: "1817/1818-B, Navratna Corporate Park, Iscon-Ambli Road, Ahmedabad - 380058" },
   { icon: <FaMapMarkerAlt />, label: "105 Sai Arcade, Mulund W, Mumbai 400080" },
-  { icon: <FaMapMarkerAlt />, label: "601 Bhairaav Milestone, Thane W, Mumbai 400080" }
+  { icon: <FaMapMarkerAlt />, label: "601 Bhairaav Milestone, Thane W, Mumbai 400604" }
 ];
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
+    contact: "",
     destination: "",
     message: "",
   });
-  
+
   const navigate = useNavigate();
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }));
   }, []);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
   
-    const phoneRegex = /^[6-9]\d{9}$/; // 10 digits, starts with 6-9
-  
-    if (!phoneRegex.test(formData.phone)) {
+    // Validate 10-digit contact number (starts with 6-9)
+    const contactRegex = /^[6-9]\d{9}$/;
+    if (!contactRegex.test(formData.contact)) {
       alert("Please enter a valid 10-digit contact number.");
       return;
     }
   
+    setIsSubmitting(true);
+  
     try {
-      const response = await axios.post("https://stagingbackend.tripstars.in", {
+      const response = await axios.post("https://stagingbackend.tripstars.in/submit-form", {
         name: formData.name,
-        phone: formData.phone,
+        contact: formData.contact,
         destination: formData.destination,
         message: formData.message,
       });
@@ -156,18 +162,23 @@ const Contact: React.FC = () => {
       if (response.data.success) {
         navigate("/thankyou");
       } else {
-        alert(`Something went wrong. ${response.data.error || "Please try again later."}`);
+        alert(response.data.message || "Something went wrong. Please try again later.");
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("API Error:", error);
       alert("Failed to send the message. Please check your internet connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
-   
+  
+
   return (
     <ContactContainer>
       <Banner>
         <img src={contactbanner} alt="Contact Us" />
+
+
       </Banner>
       <ContactSection>
         <ContactForm onSubmit={handleSubmit}>
@@ -182,12 +193,21 @@ const Contact: React.FC = () => {
           />
           <input
             type="tel"
-            name="phone"
+            name="contact"
             placeholder="Contact Number"
-            value={formData.phone || ""}
-            onChange={handleChange}
+            value={formData.contact}
+            onChange={(e) => {
+              const value = e.target.value;
+              // Allow only digits and up to 10 characters
+              if (/^\d{0,10}$/.test(value)) {
+                setFormData((prevData) => ({ ...prevData, contact: value }));
+              }
+            }}
             required
+            inputMode="numeric"
+            pattern="[6-9]{1}[0-9]{9}"
           />
+
           <input
             type="text"
             name="destination"
@@ -204,7 +224,10 @@ const Contact: React.FC = () => {
             onChange={handleChange}
             required
           />
-          <button type="submit">Send Inquiry</button>
+          <button type="submit" disabled={isSubmitting}>
+  {isSubmitting ? "Sending..." : "Send Inquiry"}
+</button>
+
         </ContactForm>
 
         <ContactInfo>
@@ -222,10 +245,10 @@ const Contact: React.FC = () => {
             </div>
           ))}
         </ContactInfo>
-
       </ContactSection>
       <FloatingContactButton />
       <Cta />
+      
     </ContactContainer>
 
   );
