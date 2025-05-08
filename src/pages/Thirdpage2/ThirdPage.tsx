@@ -18,7 +18,7 @@ import { similar, similar2 } from "../../components/data";
 import TourCard from "./sections/Tourdetails";
 import Cta from "./sections/cta";
 import Popup from "../../components/common/Popup"; // Import the Popup component
-
+import TripInquiryForm from "../../components/common/Inquiry";
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -212,6 +212,9 @@ export default function ThirdPage() {
           {...(packageData.pricePerAdult && { pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0") })}
         />
         <HelpCard />
+        <div style={{ justifyContent: "center", padding: "40px 20px" }}>
+        <TripInquiryForm />
+        </div>
       </RightSection>
 
       {/* Floating Contact Button */}

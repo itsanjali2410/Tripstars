@@ -42,8 +42,7 @@ const FeatureBanner: React.FC = () => {
     <BannerContainer>
       {/* Rating - Always visible */}
       <FeatureItem alwaysVisible>
-        <FaFacebookF style={{ color: '#4267B2' }} />
-        <FaGoogle style={{ color: '#DB4437' }} />
+        <FaGoogle style={{ color: '#4285F4' }} />
         <Rating>4.9</Rating>
         <FaStar style={{ color: '#FFD700' }} />
         <span>rated</span>
@@ -52,11 +51,11 @@ const FeatureBanner: React.FC = () => {
       {/* Number of Passengers - Always visible */}
       <FeatureItem alwaysVisible>
         <FaUserFriends style={{ color: '#FFD700' }} />
-        <span>20k+ Travelers</span>
+        <span>24x7 Assistence</span>
       </FeatureItem>
       <FeatureItem>
         <FaCheckCircle style={{ color: '#FFD700' }} />
-        <span>24x7 Assistence</span>
+        <span>20k+ Traveler</span>
       </FeatureItem>
             {/* Other features - Hidden on small screens */}
             <FeatureItem>

@@ -137,6 +137,7 @@ const HeroSection: React.FC = () => {
         <SearchBar />
         <RatingBar /> */}
       </SearchBarWrapper>
+
     </SliderContainer>
   );
 };

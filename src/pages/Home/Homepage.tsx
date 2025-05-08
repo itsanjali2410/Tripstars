@@ -33,11 +33,12 @@ import FloatingWhatsAppButton from "./sections/Floating";
 import TrendingOffersHome2 from "./sections/TrendingOffersHome2"
 import Cta from "../../pages/Thirdpage2/sections/cta"
 import Stars from "../../components/common/Stars";
+import RatingBar from "../../services/Home/sections/RatingBar";
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <Stars/>
+      
       <PopularDestinations showPopup={false} />
       <SwipeableSlider />
 

@@ -17,7 +17,7 @@ import ChooseTravelStyle from "./sections/ChooseTravelStyle";
 import TravelStyleCarousel from "./sections/TravelStyleCarousel";
 import ExploreDestinations from "../Home/sections/ExploreDestinations";
 import TrendingOffers2 from "../../components/TrendingOffers2";
-import { Bali,Kashmir,Kerala,Andaman1,similar, Vietnam, Thailand, Europe, Dubai, Australia, Baku, Hongkong, North, Maldives, Mauritius, Singapore, Turkey, Ladakh, Goa, Himachal} from "../../components/data";
+import { Bali, Kashmir, Kerala, Andaman1, similar, Vietnam, Thailand, Europe, Dubai, Australia, Baku, Hongkong, North, Maldives, Mauritius, Singapore, Turkey, Ladakh, Goa, Himachal } from "../../components/data";
 import DestinationSlider from "./sections/DestinationSlider";
 import Choose_your from "./sections/Choose_your";
 import PopularDestinations from "../Home/sections/PopularDestinations";
@@ -27,6 +27,7 @@ import baliImg13 from "../../assets/Tripdetails/bali/ThingsToDoInBali/bali_banne
 import baliImg14 from "../../assets/Tripdetails/bali/ThingsToDoInBali/mobile-banner-bali.jpg";
 import TrustindexWidget from "../Home/sections/TrustindexWidget";
 import Cta from "../Thirdpage2/sections/cta"
+import TripInquiryForm from "../../components/common/Inquiry";
 // import Popup from "../../components/common/Popup";
 import FloatingContactButton from "../Home/sections/Floating";
 import Stars from "../../components/common/Stars";
@@ -83,7 +84,7 @@ export default function Tripdetailspage() {
     ladakh: Ladakh,
     north: North,
     kashmir: Kashmir,
-    kerala : Kerala,
+    kerala: Kerala,
     andaman: Andaman1,
     goa: Goa,
     himachal: Himachal
@@ -106,6 +107,9 @@ export default function Tripdetailspage() {
 
       {/* Dynamic Trending Offers */}
       {trendingOffers && <TrendingOffers title={`Trending Offers in ${location}`} cards={trendingOffers} />}
+      <div style={{ display: "flex", justifyContent: "center", padding: "40px 20px" }}>
+        <TripInquiryForm />
+      </div>
 
       {/* Video Testimonials */}
       <VideoTestimonials />
@@ -122,11 +126,11 @@ export default function Tripdetailspage() {
 
       {/* Trustindex Widget */}
       <TrustindexWidget />
-      
+
       {/* Similar Packages Section */}
       <TrendingOffers title="Similar packages" cards={similar} />
-      <FloatingContactButton/>
-      <Cta/>
+      <FloatingContactButton />
+      <Cta />
     </>
   );
 }

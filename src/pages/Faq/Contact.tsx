@@ -8,6 +8,7 @@ import contactbanner from "../../assets/contact/contactbanner.webp";
 import FloatingContactButton from "../Home/sections/Floating";
 import Cta from "../Thirdpage2/sections/cta";
 import Stars from "../../components/common/Stars";
+import RatingBar from "../../services/Home/sections/RatingBar";
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -151,7 +152,7 @@ const Contact: React.FC = () => {
     name: "",
     contact: "",
     destination: "",
-    travel_date: todayDate,
+    travel_date: "",
     bookingTime: "",
   });
 
@@ -192,7 +193,7 @@ const Contact: React.FC = () => {
     <ContactContainer>
       <Banner>
         <img src={contactbanner} alt="Contact Us" />
-        <Stars />
+        <RatingBar />
       </Banner>
 
       <ContactSection>
