@@ -193,7 +193,7 @@ const Contact: React.FC = () => {
     <ContactContainer>
       <Banner>
         <img src={contactbanner} alt="Contact Us" />
-        <RatingBar />
+
       </Banner>
 
       <ContactSection>
