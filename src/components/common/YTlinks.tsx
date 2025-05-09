@@ -126,7 +126,6 @@ const VideoThumbnail = () => {
 
   return (
     <SliderContainer>
-      <Title>Explore More Memories ❤️</Title>
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={20}

@@ -7,7 +7,6 @@ import YTlinks from "../common/YTlinks";
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   background-color: #000;
 `;
 
@@ -37,7 +36,7 @@ const ThankYouContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 3rem;
-  color: gold;
+  color: white;
   margin-bottom: 1rem;
 
   @media (max-width: 768px) {
@@ -73,9 +72,14 @@ const HomeButton = styled.a`
 
 const SectionWrapper = styled.div`
   color: white;
-  margin-bottom: 10px; /* Small spacing between sections */
+  margin: 20px 20px;
 `;
 
+const SectionHeading = styled.h2`
+  color: white;
+  font-size: 1.5rem;
+  
+`;
 
 const ThankYou: React.FC = () => {
   return (
@@ -87,12 +91,17 @@ const ThankYou: React.FC = () => {
       </ThankYouContainer>
 
       <SectionWrapper>
+        <SectionHeading>What Our Customers Say</SectionHeading>
         <TrustindexWidget />
       </SectionWrapper>
+
       <SectionWrapper>
+        <SectionHeading>Watch Our YouTube Videos</SectionHeading>
         <YTlinks />
       </SectionWrapper>
+
       <SectionWrapper>
+        <SectionHeading>Video Testimonials</SectionHeading>
         <VideoTestimonials />
       </SectionWrapper>
     </PageWrapper>
