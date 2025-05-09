@@ -75,8 +75,6 @@ const HomeButton = styled.a`
 `;
 
 const SectionWrapper = styled.div`
-  padding: 20px 10px; /* Reduced padding */
-  background-color: #111;
   color: white;
   margin-bottom: 10px; /* Small spacing between sections */
 `;
