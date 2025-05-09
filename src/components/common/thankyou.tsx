@@ -9,7 +9,6 @@ const PageWrapper = styled.div`
   flex-direction: column;
   min-height: 100vh;
   background-color: #000;
-  font-family: 'Segoe UI', sans-serif;
 `;
 
 const ThankYouContainer = styled.div`
@@ -59,7 +58,6 @@ const Message = styled.p`
 
 const HomeButton = styled.a`
   padding: 12px 28px;
-  background: #111;
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -70,7 +68,6 @@ const HomeButton = styled.a`
 
   &:hover {
     background: gold;
-    color: #111;
   }
 `;
 
