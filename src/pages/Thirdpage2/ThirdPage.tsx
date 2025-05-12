@@ -213,7 +213,9 @@ export default function ThirdPage() {
         />
         <HelpCard />
         <div style={{ justifyContent: "center", padding: "40px 20px" }}>
-        <TripInquiryForm />
+        <TripInquiryForm onClose={function (): void {
+            throw new Error("Function not implemented.");
+          } } />
         </div>
       </RightSection>
 
