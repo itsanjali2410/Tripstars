@@ -2,6 +2,9 @@ import React, { useState, useCallback } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+interface TripInquiryFormProps {
+  onClose: () => void;
+}
 
 const formBoxShadow = "0px 6px 15px rgba(0, 0, 0, 0.15)";
 const inputStyles = `
@@ -69,7 +72,8 @@ const ContactForm = styled.form`
   }
 `;
 
-const TripInquiryForm: React.FC = () => {
+const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
+
   const navigate = useNavigate();
   const todayDate = new Date().toISOString().split("T")[0];
 

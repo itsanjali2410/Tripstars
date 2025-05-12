@@ -12,6 +12,7 @@ import PaymentPolicies from "./pages/Paymentpolicy/PaymentPolicies";
 import VideoScroller from "./pages/Video/VideoScroller";
 import payments from "./pages/Paymentpolicy/PaymentPolicies"
 import Aboutus from "./pages/About/Aboutus";
+import LandingPage from "./pages/LandingPage/LandingPage";
 // Components
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
@@ -40,6 +41,7 @@ function App() {
         {!isVideoPage && <Navbar />}
         <ScrollToTop />
         <Routes>
+          <Route path="/landingpage" element={<LandingPage/>}/>
         <Route path="/test" element={<TestingAPI />} />
           <Route path="/admin" element={<Dashboard />} />
           <Route path="/admin/add" element={<AddPackage />} />
