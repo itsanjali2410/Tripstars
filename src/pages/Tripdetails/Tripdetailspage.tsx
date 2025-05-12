@@ -108,7 +108,9 @@ export default function Tripdetailspage() {
       {/* Dynamic Trending Offers */}
       {trendingOffers && <TrendingOffers title={`Trending Offers in ${location}`} cards={trendingOffers} />}
       <div style={{ display: "flex", justifyContent: "center", padding: "40px 20px" }}>
-        <TripInquiryForm />
+        <TripInquiryForm onClose={function (): void {
+          throw new Error("Function not implemented.");
+        } } />
       </div>
 
       {/* Video Testimonials */}
