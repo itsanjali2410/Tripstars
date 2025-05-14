@@ -7,6 +7,9 @@ import PartnersSection from "../Home/sections/PartnersSection";
 import ExploreNew from "./Sections/ExploreNew";
 import StaticReviews from "../Tripdetails/sections/StaticReviews";
 import AustraliaFAQ from "./Sections/AustraliaFAQ";
+import AustraliaReviews from "./Sections/AustraliaReviws";
+import BoardingPass from "./Sections/BoardingPass";
+import FloatingContactButton from "../Home/sections/Floating";
 const LandingPage = () => {
   const familyTrendingOffers = Australia;
 
@@ -24,8 +27,12 @@ const LandingPage = () => {
         cards={familyTrendingOffers}
       />
       <PartnersSection/>
-      <ExploreNew/>
+      
       <AustraliaFAQ/>
+      <ExploreNew/>
+      <BoardingPass/>
+      <AustraliaReviews totalReviews={0} averageRating={0} ratingCounts={{}}/>
+      <FloatingContactButton/>
     </>
   );
 };

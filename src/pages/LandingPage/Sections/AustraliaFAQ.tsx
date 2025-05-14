@@ -4,47 +4,83 @@ import styled from "styled-components";
 import { FaChevronDown } from "react-icons/fa";
 
 const FAQContainer = styled.section`
-  padding: 3rem 1rem;
-  max-width: 900px;
-  margin: 0 30px;
+  padding: 0 30px;
+  margin: 15px 30px;
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+    margin: 10px 20px;
+  }
 `;
 
 const FAQTitle = styled.h2`
   font-size: 2rem;
-text-align: left;
-  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #222;
+  text-align: left;
+  margin-bottom: 2.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const FAQItem = styled.div`
-  background: #fff;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  padding: 1.2rem 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: #fefefe;
+  border-radius: 8px;
+  padding: 1.2rem 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: background-color 0.25s ease;
   cursor: pointer;
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 const Question = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 1.05rem;
   color: #333;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const Answer = styled.div<{ show: boolean }>`
   max-height: ${({ show }) => (show ? "1000px" : "0")};
   overflow: hidden;
-  font-size: 0.95rem;
+  opacity: ${({ show }) => (show ? 1 : 0)};
+  font-size: 0.96rem;
   color: #555;
-  margin-top: ${({ show }) => (show ? "1rem" : "0")};
-  transition: all 0.3s ease-in-out;
+  margin-top: ${({ show }) => (show ? "0.8rem" : "0")};
+  line-height: 1.6;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    margin-top: ${({ show }) => (show ? "0.5rem" : "0")};
+  }
 `;
 
 const Chevron = styled(FaChevronDown)<{ rotate: boolean }>`
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
   transform: rotate(${({ rotate }) => (rotate ? "180deg" : "0deg")});
+  color: #888;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const faqs = [
@@ -83,7 +119,7 @@ const AustraliaFAQ = () => {
 
   return (
     <FAQContainer>
-      <FAQTitle> Australia Travel FAQ</FAQTitle>
+      <FAQTitle>Australia Travel FAQ</FAQTitle>
       {faqs.map((faq, i) => (
         <FAQItem key={i} onClick={() => toggleFAQ(i)}>
           <Question>
