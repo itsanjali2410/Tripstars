@@ -109,8 +109,6 @@ const SectionTitle = styled.div`
   align-items: center;
   font-size:1.5rem;
 
-
-  
   @media (max-width: 1340px) {
     padding-top: 4rem;
     padding-bottom: 1rem;
@@ -123,10 +121,8 @@ const SectionTitle = styled.div`
        margin-top: 0;
        font-size: 1.2rem;
        font-width: 600;
-
   }
 `;
-
 const TitileHeading = styled.h2`
   font-size: 1.5rem;
   font-weight: 600;
