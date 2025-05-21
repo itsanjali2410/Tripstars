@@ -57,6 +57,7 @@ const Question = styled.div`
   }
 `;
 
+
 const Answer = styled.div<{ show: boolean }>`
   max-height: ${({ show }) => (show ? "1000px" : "0")};
   overflow: hidden;

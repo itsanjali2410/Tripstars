@@ -2,27 +2,24 @@ import React, { useState, useCallback } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
 interface TripInquiryFormProps {
   onClose: () => void;
 }
 
-const formBoxShadow = "0px 6px 15px rgba(0, 0, 0, 0.15)";
-const inputStyles = `
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-`;
+const formBoxShadow = "0px 10px 30px rgba(0, 0, 0, 0.1)";
+const inputBorderColor = "#ccc";
+const inputFocusBorderColor = "#007BFF";
+const buttonBgColor = "#ffd700";
+const buttonHoverBgColor = "#ffd700";
 
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 500px;
-  background: white;
-  padding: 30px;
+  background: #ffffff;
+  padding: 40px 35px;
   border-radius: 12px;
   box-shadow: ${formBoxShadow};
   transition: all 0.3s ease-in-out;
@@ -31,18 +28,38 @@ const ContactForm = styled.form`
     color: #222;
     margin-bottom: 30px;
     text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
   }
 
   label {
     font-weight: 600;
-    margin-bottom: 6px;
-    display: block;
+    margin-bottom: 8px;
     color: #333;
+    font-size: 1rem;
   }
 
-  input, select {
-    ${inputStyles}
+  input,
+  select {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1.8px solid ${inputBorderColor};
+    border-radius: 8px;
+    font-size: 1rem;
     font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: ${inputFocusBorderColor};
+      
+    }
+
+    &::placeholder {
+      color: #999;
+      font-style: italic;
+    }
   }
 
   input[type="date"] {
@@ -51,29 +68,37 @@ const ContactForm = styled.form`
 
   button {
     margin-top: 10px;
-    background: #000;
+    background: ${buttonBgColor};
     color: #fff;
-    padding: 12px;
+    padding: 14px 20px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 
-  button:hover {
-    background: #444;
-  }
+    &:hover:not(:disabled) {
+      background: ${buttonHoverBgColor};
 
-  button:disabled {
-    background: #aaa;
-    cursor: not-allowed;
+    }
+
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      box-shadow: none;
+      color: #666;
+    }
+
+    &:focus-visible {
+      outline: 2px solid ${inputFocusBorderColor};
+      outline-offset: 2px;
+    }
   }
 `;
 
 const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
-
   const navigate = useNavigate();
   const todayDate = new Date().toISOString().split("T")[0];
 
@@ -87,11 +112,14 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    if (name === "contact" && !/^\d{0,10}$/.test(value)) return;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  }, []);
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+      const { name, value } = e.target;
+      if (name === "contact" && !/^\d{0,10}$/.test(value)) return;
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    },
+    []
+  );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -104,7 +132,10 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
 
     setIsSubmitting(true);
     try {
-      const response = await axios.post("https://stagingbackend.tripstars.in/submit-form", formData);
+      const response = await axios.post(
+        "https://stagingbackend.tripstars.in/submit-form",
+        formData
+      );
       if (response.status === 200) {
         navigate("/thankyou");
       } else {
@@ -119,7 +150,7 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
   };
 
   return (
-    <ContactForm onSubmit={handleSubmit}>
+    <ContactForm onSubmit={handleSubmit} noValidate>
       <h2>Plan Your Trip</h2>
 
       <label htmlFor="name">Name</label>
@@ -127,10 +158,11 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
         id="name"
         type="text"
         name="name"
-        placeholder="Name"
+        placeholder="Your full name"
         value={formData.name}
         onChange={handleChange}
         required
+        autoComplete="name"
       />
 
       <label htmlFor="contact">Contact Number</label>
@@ -143,6 +175,7 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
         onChange={handleChange}
         inputMode="numeric"
         required
+        autoComplete="tel"
       />
 
       <label htmlFor="destination">Destination</label>
@@ -154,6 +187,7 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
         value={formData.destination}
         onChange={handleChange}
         required
+        autoComplete="off"
       />
 
       <label htmlFor="travel_date">Travel Date</label>
@@ -175,7 +209,9 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
         onChange={handleChange}
         required
       >
-        <option value="">When are you looking to book?</option>
+        <option value="" disabled>
+          When are you looking to book?
+        </option>
         <option value="this-week">This Week</option>
         <option value="this-month">This Month</option>
         <option value="Just Inquiry">Just Inquiry</option>

@@ -1,5 +1,5 @@
+// Button.tsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const ButtonStyled = styled.button`
@@ -15,23 +15,20 @@ const ButtonStyled = styled.button`
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(255, 215, 0, 0.8); /* golden hover */
+    background: rgba(255, 215, 0, 0.8);
     color: black;
     border-color: transparent;
   }
 `;
 
+interface ButtonProps {
+  onEnquireClick: () => void;
+}
 
-const Button: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/contact");
-  };
-
+const Button: React.FC<ButtonProps> = ({ onEnquireClick }) => {
   return (
     <div>
-      <ButtonStyled onClick={handleClick}>Enquire Now</ButtonStyled>
+      <ButtonStyled onClick={onEnquireClick}>Enquire Now</ButtonStyled>
     </div>
   );
 };

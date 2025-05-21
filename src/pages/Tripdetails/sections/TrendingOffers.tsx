@@ -107,7 +107,7 @@ const SectionTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  font-size:1.5rem;
 
   @media (max-width: 1340px) {
     padding-top: 4rem;
@@ -116,9 +116,11 @@ const SectionTitle = styled.div`
   @media (max-width: 1080px) {
   }
   @media (max-width: 768px) {
-    padding-top: 0;
+    padding-top: 2rem;
       padding-bottom: 1rem;
        margin-top: 0;
+       font-size: 1.2rem;
+       font-width: 600;
 
   }
 `;

@@ -62,29 +62,30 @@ const Container = styled.div`
 type BanProps = {
   image: string;
   destination: string;
+  onEnquireClick: () => void; // ✅ Added
 };
 
-const Ban2: React.FC<BanProps> = ({ image, destination }) => {
+
+const Ban2: React.FC<BanProps> = ({ image, destination, onEnquireClick }) => {
   return (
     <>
       <Container>
-        
         <div className="image-slider">
           <img src={image} alt={destination} />
           <div className="overlay"></div>
           <div className="text-overlay">
             <h1>Escape to</h1>
             <h2>{destination}</h2>
-            {/* <SearchBar /> */}
-            <Button/>
+            <div style={{ textAlign: "center", margin: "30px 0" }}>
+              <Button onEnquireClick={onEnquireClick} />
+            </div>
           </div>
         </div>
       </Container>
-      <RatingBar/>
-       
-      {/* <Stars /> */}
+      <RatingBar />
     </>
   );
 };
+
 
 export default Ban2;

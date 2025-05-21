@@ -1,28 +1,39 @@
 import React from 'react';
-import { FaFacebookF, FaStar, FaCheckCircle, FaUserFriends } from 'react-icons/fa';
+import { FaStar, FaCheckCircle, FaUserFriends } from 'react-icons/fa';
 import styled from 'styled-components';
 import google from "../../../assets/icons/google.png";
+
 const BannerContainer = styled.div`
-  background-color: #000;
+  background: linear-gradient(90deg, #0a0a0a, #222);
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  user-select: none;
 
   @media (max-width: 768px) {
     justify-content: space-around;
-    gap: 1rem;
+    gap: 1.5rem;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
   }
 `;
 
 const FeatureItem = styled.div<{ alwaysVisible?: boolean }>`
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.6rem;
+  cursor: default;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 
   ${({ alwaysVisible }) =>
     !alwaysVisible &&
@@ -34,12 +45,20 @@ const FeatureItem = styled.div<{ alwaysVisible?: boolean }>`
 `;
 
 const LogoImg = styled.img`
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 `;
 
 const Rating = styled.span`
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.2rem;
+`;
+
+const StyledIcon = styled.span`
+  color: #FFD700;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
 `;
 
 const FeatureBanner: React.FC = () => {
@@ -49,24 +68,26 @@ const FeatureBanner: React.FC = () => {
       <FeatureItem alwaysVisible>
         <LogoImg src={google} alt="Google" />
         <Rating>4.9</Rating>
-        <FaStar style={{ color: '#FFD700' }} />
-        <span>rated</span>
+        <StyledIcon><FaStar /></StyledIcon>
+        <span>Rated</span>
       </FeatureItem>
 
-      {/* Number of Passengers - Always visible */}
+      {/* Assistance - Always visible */}
       <FeatureItem alwaysVisible>
-        <FaUserFriends style={{ color: '#FFD700' }} />
+        <StyledIcon><FaUserFriends /></StyledIcon>
         <span>24x7 Assistance</span>
       </FeatureItem>
 
+      {/* Travelers */}
       <FeatureItem>
-        <FaCheckCircle style={{ color: '#FFD700' }} />
-        <span>20k+ Traveler</span>
+        <StyledIcon><FaCheckCircle /></StyledIcon>
+        <span>20k+ Travelers</span>
       </FeatureItem>
 
+      {/* Customized Trips */}
       <FeatureItem>
-        <FaCheckCircle style={{ color: '#FFD700' }} />
-        <span>100% Customised Trips</span>
+        <StyledIcon><FaCheckCircle /></StyledIcon>
+        <span>100% Customized Trips</span>
       </FeatureItem>
     </BannerContainer>
   );
