@@ -109,6 +109,8 @@ const SectionTitle = styled.div`
   align-items: center;
   font-size:1.5rem;
 
+
+  
   @media (max-width: 1340px) {
     padding-top: 4rem;
     padding-bottom: 1rem;
