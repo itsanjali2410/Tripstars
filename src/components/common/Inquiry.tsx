@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
 interface TripInquiryFormProps {
@@ -53,7 +53,6 @@ const ContactForm = styled.form`
     &:focus {
       outline: none;
       border-color: ${inputFocusBorderColor};
-      
     }
 
     &::placeholder {
@@ -81,7 +80,6 @@ const ContactForm = styled.form`
 
     &:hover:not(:disabled) {
       background: ${buttonHoverBgColor};
-
     }
 
     &:disabled {
@@ -98,14 +96,45 @@ const ContactForm = styled.form`
   }
 `;
 
+const destinationMap: { [key: string]: string } = {
+  maldives: "Maldives",
+  bali: "Bali",
+  dubai: "Dubai",
+  thailand: "Thailand",
+  singapore: "Singapore",
+  malaysia: "Malaysia",
+  hongkong: "Hong Kong",
+  europe: "Europe",
+  vietnam: "Vietnam",
+  australia: "Australia",
+  ladakh: "Ladakh",
+  srilanka: "Sri Lanka",
+  nepal: "Nepal",
+  kashmir: "Kashmir",
+  goa: "Goa",
+  mauritius: "Mauritius",
+  bhutan: "Bhutan",
+  himachal: "Himachal",
+  kerala: "Kerala",
+  bangkok: "Bangkok",
+  baku: "Baku",
+  turkey: "Turkey",
+};
+
 const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const todayDate = new Date().toISOString().split("T")[0];
+
+  // Extract and map destination slug from the path
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+  const destinationSlug = pathSegments[0]?.toLowerCase() || "";
+  const mappedDestination = destinationMap[destinationSlug] || "";
 
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
-    destination: "",
+    destination: mappedDestination,
     travel_date: "",
     bookingTime: "",
   });
@@ -188,6 +217,7 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
         onChange={handleChange}
         required
         autoComplete="off"
+        disabled={!!mappedDestination}
       />
 
       <label htmlFor="travel_date">Travel Date</label>

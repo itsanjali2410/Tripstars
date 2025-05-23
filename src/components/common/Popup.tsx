@@ -11,6 +11,7 @@ import logo2 from "../../assets/popup/Awardwinners .png";
 import logo3 from "../../assets/popup/Customerservice.png";
 import axios from "axios";
 import ThankYou from "./thankyou";
+import { useLocation } from "react-router-dom";
 
 // Animation for popup fade-in
 const fadeIn = keyframes`
@@ -274,10 +275,42 @@ interface PopupProps {
 
 
 const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) => {
+  const location = useLocation();
+
+  // Extract slug from the URL path (e.g., "/bali/..." => "bali")
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+  const destinationSlug = pathSegments[0]?.toLowerCase() || "";
   const [startDate, setStartDate] = useState<Date | null>(null);
   const [pax, setPax] = useState(1);
   const [child, setChild] = useState(0);
   const [submitting, setSubmitting] = useState(false);
+  const destinationMap: { [key: string]: string } = {
+    maldives: "Maldives",
+    bali: "Bali",
+    dubai: "Dubai",
+    thailand: "Thailand",
+    singapore: "Singapore",
+    malaysia: "Malaysia",
+    hongkong: "Hong Kong",
+    europe: "Europe",
+    vietnam: "Vietnam",
+    australia: "Australia",
+    ladakh: "Ladakh",
+    srilanka: "Sri Lanka",
+    nepal: "Nepal",
+    kashmir: "Kashmir",
+    goa: "Goa",
+    mauritius: "Mauritius",
+    bhutan: "Bhutan",
+    himachal: "Himachal",
+    kerala: "Kerala",
+    bangkok: "Bangkok",
+    baku: "Baku",
+    turkey: "Turkey",
+  };
+
+  const mappedDestination = destinationMap[destinationSlug];
+
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -428,37 +461,26 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
             />
             <div className="row">
               <div>
-                <select
-                  name="destination"
-                  value={formData.destination}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="">Select Destination</option>
-                  <option value="maldives">Maldives</option>
-                  <option value="bali">Bali</option>
-                  <option value="dubai">Dubai</option>
-                  <option value="thailand">Thailand</option>
-                  <option value="singapore">Singapore</option>
-                  <option value="malaysia">Malaysia</option>
-                  <option value="hongkong">Hong Kong</option>
-                  <option value="europe">Europe</option>
-                  <option value="vietnam">Vietnam</option>
-                  <option value="australia">Australia</option>
-                  <option value="ladakh">Ladakh</option>
-                  <option value="srilanka">Sri Lanka</option>
-                  <option value="nepal">Nepal</option>
-                  <option value="kashmir">Kashmir</option>
-                  <option value="goa">Goa</option>
-                  <option value="mauritius">Mauritius</option>
-                  <option value="bhutan">Bhutan</option>
-                  <option value="himachal">Himachal</option>
-                  <option value="kerala">Kerala</option>
-                  <option value="bangkok">Bangkok</option>
-                  <option value="baku">Baku</option>
-                  <option value="turkey">Turkey</option>
-                  <option value="Other">Any other place?</option>
-                </select>
+                 <select
+        name="destination"
+        value={formData.destination}
+        onChange={handleChange}
+        required
+        disabled={!!mappedDestination}
+      >
+        {mappedDestination ? (
+          <option value={mappedDestination}>{mappedDestination}</option>
+        ) : (
+          <>
+            <option value="">Select a destination</option>
+            {Object.values(destinationMap).map((dest) => (
+              <option key={dest} value={dest}>{dest}</option>
+            ))}
+            <option value="Other">Any other place?</option>
+          </>
+        )}
+      </select>
+
               </div>
 
               <div>
