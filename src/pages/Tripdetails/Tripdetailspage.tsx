@@ -127,7 +127,7 @@ export default function Tripdetailspage() {
       <VideoThumbnail />
       <WhyTripstars />
       <Choose_your />
-      <TrustindexWidget />
+      <TrustindexWidget /> 
       <FloatingContactButton />
       <Cta />
     </>

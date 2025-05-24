@@ -284,6 +284,8 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
   const [pax, setPax] = useState(1);
   const [child, setChild] = useState(0);
   const [submitting, setSubmitting] = useState(false);
+  const domain = window.location.hostname.includes(".in") ? "tripstars.in" : "tripstars.com";
+
   const destinationMap: { [key: string]: string } = {
     maldives: "Maldives",
     bali: "Bali",
@@ -359,16 +361,18 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
     setSubmitting(true); // ⏳ Start submitting
   
     const formDataToSend = {
-      name: formData.name,
-      contact: formData.contact,
-      email: formData.email,
-      destination: formData.destination,
-      departure_city: formData.departureCity,
-      travel_date: startDate.toISOString().split("T")[0],
-      bookingTime: formData.bookingTime,
-      pax,
-      child,
-    };
+  name: formData.name,
+  contact: formData.contact,
+  email: formData.email,
+  destination: formData.destination,
+  departure_city: formData.departureCity,
+  travel_date: startDate.toISOString().split("T")[0],
+  bookingTime: formData.bookingTime,
+  pax,
+  child,
+  sourceDomain: domain  // <-- Add this line
+};
+
   
     try {
       const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);

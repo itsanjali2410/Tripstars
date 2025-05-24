@@ -71,6 +71,36 @@ const PackageImage = styled.img`
     height: 210px;
   }
 `;
+const PopupOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PopupContent = styled.div`
+  background: #fff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+`;
 
 const normalizeString = (str: string): string =>
   str.toLowerCase().trim().replace(/\s+/g, "-");
@@ -109,10 +139,10 @@ export default function ThirdPage() {
     const timer = setTimeout(() => {
       setPopupVisible(true);
     }, 10000); // 10000ms = 10 seconds
-  
+
     return () => clearTimeout(timer); // Clean up on unmount
   }, []);
-  
+
 
   // Toggle handler (if you still need to manually control popup later)
   const togglePopup = () => {
@@ -181,13 +211,18 @@ export default function ThirdPage() {
 
         {/* Itinerary Section */}
         {packageData.itinerary && (
-          <Itinerary
-            itinerary={packageData.itinerary.map((item) => {
-              const dayKey = Object.keys(item)[0]; // Extract "Day 1", "Day 2", etc.
-              return { day: dayKey, activities: item[dayKey] }; // Convert to expected format
-            })}
-          />
+          <>
+            <Itinerary
+              itinerary={packageData.itinerary.map((item) => {
+                const dayKey = Object.keys(item)[0];
+                return { day: dayKey, activities: item[dayKey] };
+              })}
+            />
+            {/* Show inquiry form right after itinerary if visible */}
+            
+          </>
         )}
+
 
         {/* Tabbed Table Data */}
         {packageData.tableData && <TabbedTable tableData={packageData.tableData} />}
@@ -206,24 +241,31 @@ export default function ThirdPage() {
         <PriceCard
           emiPrice={0}
           emiLink={""}
-          onSubmitQuery={togglePopup} // Pass the function to open the popup
+          onSubmitQuery={togglePopup} // Triggers the form in LeftSection
           totalPackagePrice={totalPackagePrice}
           nights={packageData.nights}
-          {...(packageData.pricePerAdult && { pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0") })}
+          {...(packageData.pricePerAdult && {
+            pricePerAdult: parseFloat(packageData.pricePerAdult.replace(/[^0-9.]/g, "") || "0")
+          })}
         />
         <HelpCard />
-        <div style={{ justifyContent: "center", padding: "40px 20px" }}>
-        <TripInquiryForm onClose={function (): void {
-            throw new Error("Function not implemented.");
-          } } />
-        </div>
       </RightSection>
+
 
       {/* Floating Contact Button */}
       <FloatingContactButton />
 
       {/* Conditionally Render Popup */}
-      {isPopupVisible && <Popup onClose={togglePopup} />}
+      {isPopupVisible && (
+  <PopupOverlay>
+    <PopupContent>
+      <CloseButton onClick={togglePopup}>×</CloseButton>
+      <TripInquiryForm onClose={togglePopup} />
+    </PopupContent>
+  </PopupOverlay>
+)}
+
+
     </Container>
   );
 }

@@ -120,6 +120,7 @@ const destinationMap: { [key: string]: string } = {
   baku: "Baku",
   turkey: "Turkey",
 };
+const domain = window.location.hostname.includes(".in") ? "tripstars.in" : "tripstars.com";
 
 const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
   const navigate = useNavigate();
