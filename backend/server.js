@@ -1,32 +1,48 @@
-// server.js
-import express from 'express';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import packageRoutes from './routes/packageRoutes.js'; // 👈 import your routes
+// Tripstars/backend/server.js
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
+import xlsx from "xlsx";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-dotenv.config();
+// Required to get __dirname in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(express.json());
+const PORT = 5000;
+
 app.use(cors());
+app.use(bodyParser.json());
 
-// MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.error('MongoDB connection error:', err));
+app.post("/api/book-flight", (req, res) => {
+  const formData = req.body;
+  const filePath = path.join(__dirname, "flightBookings.xlsx");
 
-app.get('/', (req, res) => {
-  res.send('Welcome to Tripstars API');
+  let workbook, worksheet;
+
+  if (fs.existsSync(filePath)) {
+    workbook = xlsx.readFile(filePath);
+    worksheet = workbook.Sheets["Bookings"];
+  } else {
+    workbook = xlsx.utils.book_new();
+    worksheet = xlsx.utils.json_to_sheet([]);
+    xlsx.utils.book_append_sheet(workbook, worksheet, "Bookings");
+  }
+
+  const existingData = xlsx.utils.sheet_to_json(worksheet);
+  const updatedData = [...existingData, formData];
+
+  const updatedSheet = xlsx.utils.json_to_sheet(updatedData);
+  workbook.Sheets["Bookings"] = updatedSheet;
+
+  xlsx.writeFile(workbook, filePath);
+
+  res.status(200).json({ message: "Booking saved successfully to Excel." });
 });
 
-// Use modular route
-app.use('/api/packages', packageRoutes); // 👈 mount routes
-
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`✅ Backend server running at http://localhost:${PORT}`);
 });

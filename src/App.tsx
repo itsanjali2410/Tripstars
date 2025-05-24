@@ -18,6 +18,7 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Contact from "./pages/Faq/Contact";
 import Thankyou from "./components/common/thankyou";
+import FlightForm from "./components/common/FlightForm";
 // Styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -41,6 +42,7 @@ function App() {
         {!isVideoPage && <Navbar />}
         <ScrollToTop />
         <Routes>
+          <Route path="/FlightForm" element={<FlightForm  />}/>
           <Route path="/landingpage" element={<LandingPage/>}/>
         <Route path="/test" element={<TestingAPI />} />
           <Route path="/admin" element={<Dashboard />} />
