@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import { Navigation } from "swiper/modules";
+import { useState, useEffect, useRef } from "react";
 import Popup from "../../../components/common/Popup";
 
 const Container = styled.div`
@@ -16,41 +13,6 @@ const Container = styled.div`
   @media (max-width: 768px) {
     padding: 2rem 1rem;
   }
-`;
-
-const CardsWrapper = styled.div`
-  display: flex;
-  width: 100%;
-`;
-
-const Card = styled.div`
-  height: 100%;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-const ImageWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  display: flex;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
-
-const NameWrapper = styled.div`
-  margin-top: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #333;
-  text-transform: capitalize;
-  white-space: nowrap;
 `;
 
 const SectionTitle = styled.div`
@@ -77,33 +39,50 @@ const HighlightedWord = styled.span`
   font-weight: 700;
 `;
 
-const NavIcons = styled.div`
+const ScrollWrapper = styled.div`
   display: flex;
-  gap: 0.5rem;
-  button {
-    cursor: pointer;
-    border: 1px solid #000;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    &:hover {
-      background: black;
-      svg path {
-        fill: white;
-      }
-    }
-    svg {
-      width: 1rem;
-      height: 1rem;
-      path {
-        fill: black;
-      }
-    }
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar for all browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
+`;
+
+
+const Card = styled.div`
+  min-width: 200px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ImageWrapper = styled.div`
+  width: 100%;
+  height: 150px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+const NameWrapper = styled.div`
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+  text-align: center;
 `;
 
 type DestinationProps = {
@@ -112,35 +91,42 @@ type DestinationProps = {
   thingsToDo: { name: string; image: string }[];
 };
 
-export default function PopularDestinations({ title, highlightWord, thingsToDo }: DestinationProps) {
+export default function PopularDestinations({
+  title,
+  highlightWord,
+  thingsToDo,
+}: DestinationProps) {
   const [selectedThing, setSelectedThing] = useState<{ name: string; image: string } | null>(null);
-  const [selectedCard, setSelectedCard] = useState<DestinationProps["thingsToDo"][0] | null>(null);
-  const prevRef = useRef<HTMLButtonElement | null>(null);
-  const nextRef = useRef<HTMLButtonElement | null>(null);
-  const navigate = useNavigate();
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  const handleCardClick = (card: DestinationProps["thingsToDo"][0]) => {
-    setSelectedCard(null); // Reset the selected card first
+  // Auto-scroll effect
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
 
-    // Use a short delay to allow state reset and force re-render
-    setTimeout(() => {
-      setSelectedCard(card);
-    }, 0);
-  };
+    let scrollAmount = 0;
+    const speed = 1; // pixels per tick
+    const interval = 30; // milliseconds
+    const scrollInterval = setInterval(() => {
+      if (scrollContainer.scrollWidth - scrollContainer.scrollLeft <= scrollContainer.clientWidth + 1) {
+        scrollContainer.scrollLeft = 0;
+        scrollAmount = 0;
+      } else {
+        scrollAmount += speed;
+        scrollContainer.scrollLeft = scrollAmount;
+      }
+    }, interval);
+
+    return () => clearInterval(scrollInterval);
+  }, []);
 
   const handleThingClick = (thing: { name: string; image: string }) => {
-    setSelectedThing(null); // Reset the state first
-  
-    // Use a short delay to allow state reset and force re-render
-    setTimeout(() => {
-      setSelectedThing(thing);
-    }, 0);
-  };
-  
-
-  const handleClosePopup = () => {
     setSelectedThing(null);
+    setTimeout(() => setSelectedThing(thing), 0);
   };
+
+  const handleClosePopup = () => setSelectedThing(null);
+
   return (
     <Container>
       <SectionTitle>
@@ -148,44 +134,25 @@ export default function PopularDestinations({ title, highlightWord, thingsToDo }
           {title} <HighlightedWord>{highlightWord}</HighlightedWord>
         </TitleHeading>
       </SectionTitle>
-      <CardsWrapper>
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={20}
-          slidesPerView={2.2}
-          breakpoints={{
-            1080: { slidesPerView: 6 },
-            768: { slidesPerView: 4 },
-            400: { slidesPerView: 2 },
-          }}
-          navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-          onInit={(swiper) => {
-            if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-            }
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
-        >
-          {thingsToDo.map((item, index) => (
-            <SwiperSlide key={index}>
-              <Card onClick={() => handleThingClick(item)}>
-                <ImageWrapper>
-                  <img src={item.image} alt={item.name} />
-                </ImageWrapper>
-                <NameWrapper>{item.name}</NameWrapper>
-              </Card>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        {selectedThing && (
-          <Popup
-            title={selectedThing.name}
-            image={selectedThing.image}
-            onClose={handleClosePopup} pricing={""} info={[]}          />
-        )}
-      </CardsWrapper>
+      <ScrollWrapper ref={scrollRef}>
+        {thingsToDo.map((item, index) => (
+          <Card key={index} onClick={() => handleThingClick(item)}>
+            <ImageWrapper>
+              <img src={item.image} alt={item.name} />
+            </ImageWrapper>
+            <NameWrapper>{item.name}</NameWrapper>
+          </Card>
+        ))}
+      </ScrollWrapper>
+      {selectedThing && (
+        <Popup
+          title={selectedThing.name}
+          image={selectedThing.image}
+          onClose={handleClosePopup}
+          pricing=""
+          info={[]}
+        />
+      )}
     </Container>
   );
 }
