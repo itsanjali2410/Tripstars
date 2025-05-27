@@ -120,7 +120,6 @@ const destinationMap: { [key: string]: string } = {
   baku: "Baku",
   turkey: "Turkey",
 };
-const domain = window.location.hostname.includes(".in") ? "tripstars.in" : "tripstars.com";
 
 const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
   const navigate = useNavigate();
@@ -167,7 +166,7 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
         formData
       );
       if (response.status === 200) {
-        navigate("/thankyou");
+        window.location.href = "/thankyou";
       } else {
         alert(response.data.message || "Submission failed. Please try again.");
       }
