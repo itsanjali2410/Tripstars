@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
 import { useNavigate } from 'react-router-dom';
+import { Navigation, Grid } from 'swiper/modules'; // ✅ Add Grid module
+import 'swiper/css/grid'; // ✅ Swiper grid styles
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -277,29 +278,38 @@ const TrendingOffers: React.FC<TrendingOffersProps> = ({ title, cards }) => {
         <TitileHeading>{title}</TitileHeading>
       </SectionTitle>
       <Swiper
-        className="trending-offers-slider"
-        modules={[Navigation]}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        spaceBetween={10}
-        slidesPerView={4}
-        breakpoints={{
-          1080: {
-            slidesPerView: 4,
-          },
-          768: {
-            slidesPerView: 4,
-          },
-          400: {
-            slidesPerView: 2,
-          },
-          300: {
-            slidesPerView: 2,
-          },
-        }}
-      >
+  className="trending-offers-slider"
+  modules={[Navigation, Grid]} // ✅ Add Grid module
+  navigation={{
+    prevEl: prevRef.current,
+    nextEl: nextRef.current,
+  }}
+  spaceBetween={10}
+  slidesPerView={4}
+  breakpoints={{
+    1080: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    400: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2, // ✅ Two rows of 2 cards each
+        fill: 'row',
+      },
+    },
+    300: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
+  }}
+>
+
         {cards.map((card, index) => (
           <SwiperSlide key={index}>
             <Card onClick={() => handleCardClick(card)}>
