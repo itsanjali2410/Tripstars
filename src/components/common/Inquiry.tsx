@@ -6,6 +6,11 @@ import axios from "axios";
 interface TripInquiryFormProps {
   onClose: () => void;
 }
+declare global {
+  interface Window {
+    dataLayer: Record<string, any>[];
+  }
+}
 
 const formBoxShadow = "0px 10px 30px rgba(0, 0, 0, 0.1)";
 const inputBorderColor = "#ccc";
@@ -151,32 +156,42 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
   );
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const contactRegex = /^[6-9]\d{9}$/;
-    if (!contactRegex.test(formData.contact)) {
-      alert("Please enter a valid 10-digit contact number.");
-      return;
-    }
+  const contactRegex = /^[6-9]\d{9}$/;
+  if (!contactRegex.test(formData.contact)) {
+    alert("Please enter a valid 10-digit contact number.");
+    return;
+  }
 
-    setIsSubmitting(true);
-    try {
-      const response = await axios.post(
-        "https://stagingbackend.tripstars.in/submit-form",
-        formData
-      );
-      if (response.status === 200) {
-        window.location.href = "/thankyou";
-      } else {
-        alert(response.data.message || "Submission failed. Please try again.");
-      }
-    } catch (error: any) {
-      console.error("API Error:", error);
-      alert("Something went wrong. Please try again later.");
-    } finally {
-      setIsSubmitting(false);
+  setIsSubmitting(true);
+  try {
+    const response = await axios.post(
+      "https://stagingbackend.tripstars.in/submit-form",
+      formData
+    );
+
+    if (response.status === 200) {
+      // ✅ Push GTM event here
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "tripInquirySubmitted",
+        formData: formData, // optional — helps debugging or advanced GTM setups
+      });
+
+      // Redirect to thank you page
+      window.location.href = "/thankyou";
+    } else {
+      alert(response.data.message || "Submission failed. Please try again.");
     }
-  };
+  } catch (error: any) {
+    console.error("API Error:", error);
+    alert("Something went wrong. Please try again later.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <ContactForm onSubmit={handleSubmit} noValidate>
