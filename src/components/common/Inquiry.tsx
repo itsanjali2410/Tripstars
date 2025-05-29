@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback,useEffect } from "react";
 import styled from "styled-components";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation} from "react-router-dom";
 import axios from "axios";
 
 interface TripInquiryFormProps {
@@ -126,6 +126,7 @@ const destinationMap: { [key: string]: string } = {
   turkey: "Turkey",
 };
 
+
 const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -142,7 +143,16 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
     destination: mappedDestination,
     travel_date: "",
     bookingTime: "",
+    sourceDomain: "",
   });
+  useEffect(() => {
+  if (typeof window !== "undefined") {
+    setFormData((prev) => ({
+      ...prev,
+      sourceDomain: window.location.hostname,
+    }));
+  }
+}, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -175,9 +185,11 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
       // ✅ Push GTM event here
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: "tripInquirySubmitted",
-        formData: formData, // optional — helps debugging or advanced GTM setups
-      });
+  event: "tripInquirySubmitted",
+  formData: formData,
+  sourceDomain: formData.sourceDomain,
+});
+
 
       // Redirect to thank you page
       window.location.href = "/thankyou";
