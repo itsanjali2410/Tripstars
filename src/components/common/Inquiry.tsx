@@ -143,7 +143,7 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
     destination: mappedDestination,
     travel_date: "",
     bookingTime: "",
-    sourceDomain: "",
+    sourceDomain: tripstars.in,
   });
   useEffect(() => {
   if (typeof window !== "undefined") {
