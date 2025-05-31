@@ -276,16 +276,6 @@ interface PopupProps {
 
 const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) => {
   const location = useLocation();
-
-  // Extract slug from the URL path (e.g., "/bali/..." => "bali")
-  const pathSegments = location.pathname.split("/").filter(Boolean);
-  const destinationSlug = pathSegments[0]?.toLowerCase() || "";
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [pax, setPax] = useState(1);
-  const [child, setChild] = useState(0);
-  const [submitting, setSubmitting] = useState(false);
-  const domain = window.location.hostname.includes(".in") ? "tripstars.in" : "tripstars.com";
-
   const destinationMap: { [key: string]: string } = {
     maldives: "Maldives",
     bali: "Bali",
@@ -310,17 +300,44 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
     baku: "Baku",
     turkey: "Turkey",
   };
+  // Extract slug from the URL path (e.g., "/bali/..." => "bali")
+  const pathSegments = location.pathname.split("/").filter(Boolean);
+  let destinationSlug = "";
 
-  const mappedDestination = destinationMap[destinationSlug];
+  if (destinationMap[pathSegments[0]?.toLowerCase()]) {
+    destinationSlug = pathSegments[0].toLowerCase();
+  } else if (destinationMap[pathSegments[1]?.toLowerCase()]) {
+    destinationSlug = pathSegments[1].toLowerCase();
+  }
+
+  const mappedDestination = destinationMap[destinationSlug] || "";
+
+  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [pax, setPax] = useState(1);
+  const [child, setChild] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
+  const domain = window.location.hostname;
+
 
   const [formData, setFormData] = useState({
-    name: "",
-    contact: "",
-    email: "",
-    destination: "",
-    departureCity: "",
-    bookingTime: "",
-  });
+  name: "",
+  contact: "",
+  email: "",
+  destination: "",
+  departureCity: "",
+  bookingTime: "",
+  sourceDomain: typeof window !== "undefined" ? window.location.href : "",
+});
+
+  useEffect(() => {
+  if (typeof window !== "undefined") {
+    setFormData((prev) => ({
+      ...prev,
+      sourceDomain: window.location.href, // e.g. https://tripstars.in/singapore?utm=...
+    }));
+  }
+}, []);
+
 
   // Open popup after 1 seconds
 
@@ -352,38 +369,39 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-  
+
     if (!startDate) {
       alert("Please select a travel date!");
       return;
     }
-  
-    setSubmitting(true); // ⏳ Start submitting
-  
-    const formDataToSend = {
-  name: formData.name,
-  contact: formData.contact,
-  email: formData.email,
-  destination: formData.destination,
-  departure_city: formData.departureCity,
-  travel_date: startDate.toISOString().split("T")[0],
-  bookingTime: formData.bookingTime,
-  pax,
-  child,
-  sourceDomain: domain  // <-- Add this line
-};
 
-  
+    setSubmitting(true); // ⏳ Start submitting
+
+    const formDataToSend = {
+      name: formData.name,
+      contact: formData.contact,
+      email: formData.email,
+      destination: formData.destination,
+      departure_city: formData.departureCity,
+      travel_date: startDate.toISOString().split("T")[0],
+      bookingTime: formData.bookingTime,
+      pax,
+      child,
+      sourceDomain: formData.sourceDomain  // ✅ Uses full captured href from useEffect
+
+    };
+
+
     try {
       const response = await axios.post(`${API_URL}/submit-form`, formDataToSend);
-  
+
       if (response.status === 200) {
         // Optionally delay for UX
         setTimeout(() => {
           window.location.href = "/thankyou";
         }, 300);
       }
-  
+
       setFormData({
         name: "",
         contact: "",
@@ -391,6 +409,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
         destination: "",
         departureCity: "",
         bookingTime: "",
+        sourceDomain: domain,
       });
       setStartDate(null);
       setPax(1);
@@ -403,7 +422,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
       setSubmitting(false); // ✅ Always reset
     }
   };
-  
+
   return (
     <PopupContainer id="popup-container" onClick={handleOutsideClick}>
       <PopupContent>
@@ -465,25 +484,28 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
             />
             <div className="row">
               <div>
-                 <select
-        name="destination"
-        value={formData.destination}
-        onChange={handleChange}
-        required
-        disabled={!!mappedDestination}
-      >
-        {mappedDestination ? (
-          <option value={mappedDestination}>{mappedDestination}</option>
-        ) : (
-          <>
-            <option value="">Select a destination</option>
-            {Object.values(destinationMap).map((dest) => (
-              <option key={dest} value={dest}>{dest}</option>
-            ))}
-            <option value="Other">Any other place?</option>
-          </>
-        )}
-      </select>
+                <select
+                  name="destination"
+                  value={formData.destination}
+                  onChange={handleChange}
+                  required
+                  disabled={!!mappedDestination} // disables only if a destination is locked from URL
+                >
+                  {mappedDestination ? (
+                    <option value={mappedDestination}>{mappedDestination}</option>
+                  ) : (
+                    <>
+                      <option value="">Select a destination</option>
+                      {Object.values(destinationMap).map((dest) => (
+                        <option key={dest} value={dest}>
+                          {dest}
+                        </option>
+                      ))}
+                      <option value="Other">Any other place?</option>
+                    </>
+                  )}
+                </select>
+
 
               </div>
 
