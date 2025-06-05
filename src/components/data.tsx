@@ -244,58 +244,59 @@ export const Vietnam = [
   {
     title: "Vietnam Highlights",
     image: Vietnam1,
-    pricing: "₹1,00,999/- Onwards",
+    pricing: "₹53,999/- Onwards",
     info: [
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "6N/7D" },
-      { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
+      
     ],
   },
   {
     title: "Vietnam Explorer",
     image: Vietnam2,
-    pricing: "₹1,04,599/- Onwards",
+    pricing: "₹57,499/- Onwards",
     info: [
+      
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "7N/8D" },
-      { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
     ],
   },
   {
     title: "Vietnam Wonders",
     image: Vietnam3,
-    pricing: "₹1,10,499/- Onwards",
+    pricing: "₹63,499/- Onwards",
     info: [
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "8N/9D" },
-      { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
+      
     ],
   },
   {
     title: "Classic Vietnam",
     image: Vietnam4,
-    pricing: "₹92,599/- Onwards",
+    pricing: "₹45,599/- Onwards",
     info: [
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "5N/6D" },
-      { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
+      
     ],
   },
+  
   {
     title: "Vietnam with Sapa",
     image: Vietnam5,
-    pricing: "₹1,22,999/- Onwards",
+    pricing: "₹75,999/- Onwards",
     info: [
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "9N/10D" },
-      { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
+      
     ],
   },
   {
     title: "Vietnam with Phu Quoc",
     image: Vietnam6,
-    pricing: "₹1,15,999/- Onwards",
+    pricing: "₹68,999/- Onwards",
     info: [
       { icon: "https://img.icons8.com/material-outlined/24/FAB005/calendar--v1.png", text: "9N/10D" },
-      { icon: "https://img.icons8.com/ios-glyphs/30/FAB005/airplane-mode-on.png", text: "Flight" },
+      
     ],
   },
-
+  
 ];
 
 // Dubai Popular Destination
