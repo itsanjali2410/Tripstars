@@ -472,7 +472,6 @@ export const destinationsData = {
       { name: "French Village", image: vietnamImg3 },
       { name: "Golden Bridge", image: vietnamImg4 },
       { name: "Ha Long Bay Cruise", image: vietnamImg5 },
-      { name: "Golden Bridge (again)", image: vietnamImg6 },
       { name: "Mekong Delta", image: vietnamImg7 },
     ],
   },
