@@ -333,7 +333,7 @@ const Popup: React.FC<PopupProps> = ({ title, image, pricing, info, onClose }) =
   if (typeof window !== "undefined") {
     setFormData((prev) => ({
       ...prev,
-      sourceDomain: window.location.href, // e.g. https://tripstars.in/singapore?utm=...
+      sourceDomain: window.location.href, // e.g. https://tripstarsholidays.com/singapore?utm=...
     }));
   }
 }, []);
