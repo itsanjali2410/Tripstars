@@ -78,19 +78,26 @@ const PopupOverlay = styled.div`
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 10000;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px; /* Ensures spacing from edges on small screens */
+  overflow-y: auto; /* Allows scrolling if popup content overflows */
 `;
 
 const PopupContent = styled.div`
   background: #fff;
   border-radius: 12px;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
+  max-height: 90vh; /* Keeps it within screen height */
+  overflow-y: auto; /* Makes form scrollable inside */
   position: relative;
+  padding: 20px;
+  box-sizing: border-box;
 `;
+
 
 const CloseButton = styled.button`
   position: absolute;
@@ -99,7 +106,11 @@ const CloseButton = styled.button`
   font-size: 1.5rem;
   background: none;
   border: none;
+  color: #000;
+  z-index: 10001;
   cursor: pointer;
+  padding: 0;
+  line-height: 1;
 `;
 
 const normalizeString = (str: string): string =>
@@ -143,6 +154,17 @@ export default function ThirdPage() {
     return () => clearTimeout(timer); // Clean up on unmount
   }, []);
 
+useEffect(() => {
+  if (isPopupVisible) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [isPopupVisible]);
 
   // Toggle handler (if you still need to manually control popup later)
   const togglePopup = () => {

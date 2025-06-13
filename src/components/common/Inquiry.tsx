@@ -1,6 +1,6 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback,useEffect } from "react";
 import styled from "styled-components";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation} from "react-router-dom";
 import axios from "axios";
 
 interface TripInquiryFormProps {
@@ -136,22 +136,23 @@ const TripInquiryForm: React.FC<TripInquiryFormProps> = ({ onClose }) => {
   const pathSegments = location.pathname.split("/").filter(Boolean);
   const destinationSlug = pathSegments[0]?.toLowerCase() || "";
   const mappedDestination = destinationMap[destinationSlug] || "";
- const urlParams = new URLSearchParams(window.location.search);
-const utmSource = urlParams.get("utm_source") || "";
-const utmMedium = urlParams.get("utm_medium") || "";
-const utmCampaign = urlParams.get("utm_campaign") || "";
 
   const [formData, setFormData] = useState({
-  name: "",
-  contact: "",
-  destination: mappedDestination,
-  travel_date: "",
-  bookingTime: "",
-  utmSource,
-  utmMedium,
-  utmCampaign,
-});
-
+    name: "",
+    contact: "",
+    destination: mappedDestination,
+    travel_date: "",
+    bookingTime: "",
+    sourceDomain: "tripstars.in",
+  });
+  useEffect(() => {
+  if (typeof window !== "undefined") {
+    setFormData((prev) => ({
+      ...prev,
+      sourceDomain: window.location.hostname,
+    }));
+  }
+}, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -174,32 +175,23 @@ const utmCampaign = urlParams.get("utm_campaign") || "";
   }
 
   setIsSubmitting(true);
-
-  const currentDomain =
-    typeof window !== "undefined" ? window.location.origin : "unknown";
-
   try {
-    const response = await axios.post("https://stagingbackend.tripstars.in/submit-form", {
-      ...formData,
-      sourceDomain: currentDomain,
-    });
+    const response = await axios.post(
+      "https://stagingbackend.tripstars.in/submit-form",
+      formData
+    );
 
-    if (response.data.success) {
-      // Push to dataLayer if exists
-      if (window.dataLayer && Array.isArray(window.dataLayer)) {
-        window.dataLayer.push({
-          event: "tripInquirySubmitted",
-          formData: { ...formData },
-          sourceDomain: currentDomain,
-          utm: {
-            source: formData.utmSource,
-            medium: formData.utmMedium,
-            campaign: formData.utmCampaign,
-          },
-        });
-      }
+    if (response.status === 200) {
+      // ✅ Push GTM event here
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+  event: "tripInquirySubmitted",
+  formData: formData,
+  sourceDomain: formData.sourceDomain,
+});
 
-      // Redirect to thank-you page
+
+      // Redirect to thank you page
       window.location.href = "/thankyou";
     } else {
       alert(response.data.message || "Submission failed. Please try again.");
@@ -211,8 +203,6 @@ const utmCampaign = urlParams.get("utm_campaign") || "";
     setIsSubmitting(false);
   }
 };
-
-
 
 
   return (
