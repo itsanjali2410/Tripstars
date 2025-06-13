@@ -253,7 +253,7 @@ export default function Navbar() {
   return (
     <NavbarContainer className={navBg ? "active" : ""}>
       <Logo>
-        <a href="https://tripstars.in/" rel="noopener noreferrer">
+        <a href="https://tripstarsholidays.com/" rel="noopener noreferrer">
           <img src={logoImg} alt="TripStars Holidays" />
         </a>
       </Logo>
@@ -277,7 +277,7 @@ export default function Navbar() {
 
 
         <li>
-          <Link to="https://tripstars.in/" onClick={isMobile ? toggleMenu : undefined}>Home</Link>
+          <Link to="https://tripstarsholidays.com/" onClick={isMobile ? toggleMenu : undefined}>Home</Link>
         </li>
         <li>
           <Link to="/aboutus" onClick={isMobile ? toggleMenu : undefined}>About Us</Link>
@@ -294,26 +294,26 @@ export default function Navbar() {
             <ul>
               <li className="category">
                 <strong style={{ fontSize: "1.2rem" }}>Domestic</strong>
-                <Link to="https://tripstars.in/ladakh" onClick={isMobile ? toggleMenu : undefined}>Ladakh</Link>
-                <Link to="https://tripstars.in/kerala" onClick={isMobile ? toggleMenu : undefined}>Kerala</Link>
-                <Link to="https://tripstars.in/kashmir" onClick={isMobile ? toggleMenu : undefined}>Kashmir</Link>
-                <Link to="https://tripstars.in/andaman" onClick={isMobile ? toggleMenu : undefined}>Andaman</Link>
-                <Link to="https://tripstars.in/goa" onClick={isMobile ? toggleMenu : undefined}>Goa</Link>
+                <Link to="https://tripstarsholidays.com/ladakh" onClick={isMobile ? toggleMenu : undefined}>Ladakh</Link>
+                <Link to="https://tripstarsholidays.com/kerala" onClick={isMobile ? toggleMenu : undefined}>Kerala</Link>
+                <Link to="https://tripstarsholidays.com/kashmir" onClick={isMobile ? toggleMenu : undefined}>Kashmir</Link>
+                <Link to="https://tripstarsholidays.com/andaman" onClick={isMobile ? toggleMenu : undefined}>Andaman</Link>
+                <Link to="https://tripstarsholidays.com/goa" onClick={isMobile ? toggleMenu : undefined}>Goa</Link>
               </li>
               <li className="category">
                 <strong style={{ fontSize: "1.2rem" }}>International</strong>
-                <Link to="https://tripstars.in/dubai" onClick={isMobile ? toggleMenu : undefined}>Dubai</Link>
-                <Link to="https://tripstars.in/thailand" onClick={isMobile ? toggleMenu : undefined}>Thailand</Link>
-                <Link to="https://tripstars.in/singapore" onClick={isMobile ? toggleMenu : undefined}>Singapore</Link>
-                <Link to="https://tripstars.in/malaysia" onClick={isMobile ? toggleMenu : undefined}>Malaysia</Link>
-                <Link to="https://tripstars.in/bali" onClick={isMobile ? toggleMenu : undefined}>Bali</Link>
-                <Link to="https://tripstars.in/hongkong" onClick={isMobile ? toggleMenu : undefined}>Hong Kong</Link>
-                <Link to="https://tripstars.in/europe" onClick={isMobile ? toggleMenu : undefined}>Europe</Link>
-                <Link to="https://tripstars.in/vietnam" onClick={isMobile ? toggleMenu : undefined}>Vietnam</Link>
-                <Link to="https://tripstars.in/maldives" onClick={isMobile ? toggleMenu : undefined}>Maldives</Link>
-                <Link to="https://tripstars.in/australia" onClick={isMobile ? toggleMenu : undefined}>Australia</Link>
-                <Link to="https://tripstars.in/mauritius" onClick={isMobile ? toggleMenu : undefined}>Mauritius</Link>
-                <Link to="https://tripstars.in/japan" onClick={isMobile ? toggleMenu : undefined}>Japan</Link>
+                <Link to="https://tripstarsholidays.com/dubai" onClick={isMobile ? toggleMenu : undefined}>Dubai</Link>
+                <Link to="https://tripstarsholidays.com/thailand" onClick={isMobile ? toggleMenu : undefined}>Thailand</Link>
+                <Link to="https://tripstarsholidays.com/singapore" onClick={isMobile ? toggleMenu : undefined}>Singapore</Link>
+                <Link to="https://tripstarsholidays.com/malaysia" onClick={isMobile ? toggleMenu : undefined}>Malaysia</Link>
+                <Link to="https://tripstarsholidays.com/bali" onClick={isMobile ? toggleMenu : undefined}>Bali</Link>
+                <Link to="https://tripstarsholidays.com/hongkong" onClick={isMobile ? toggleMenu : undefined}>Hong Kong</Link>
+                <Link to="https://tripstarsholidays.com/europe" onClick={isMobile ? toggleMenu : undefined}>Europe</Link>
+                <Link to="https://tripstarsholidays.com/vietnam" onClick={isMobile ? toggleMenu : undefined}>Vietnam</Link>
+                <Link to="https://tripstarsholidays.com/maldives" onClick={isMobile ? toggleMenu : undefined}>Maldives</Link>
+                <Link to="https://tripstarsholidays.com/australia" onClick={isMobile ? toggleMenu : undefined}>Australia</Link>
+                <Link to="https://tripstarsholidays.com/mauritius" onClick={isMobile ? toggleMenu : undefined}>Mauritius</Link>
+                <Link to="https://tripstarsholidays.com/japan" onClick={isMobile ? toggleMenu : undefined}>Japan</Link>
               </li>
             </ul>
           </Dropdown>
